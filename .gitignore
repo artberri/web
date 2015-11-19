@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+berriart-foundation
+bower_components
+node_modules
+vendor
+js

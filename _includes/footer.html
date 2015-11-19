@@ -1,0 +1,35 @@
+
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <nav>
+            <ul>
+              {% for link in site.footer_navigation %}
+                <li {% if page.url == link.url %}class="current"{% endif %}>
+                  <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+
+          <p>Only free software was used and no kitties were harmed in the making of this website.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="{{ "js/app.js" | prepend: site.baseurl }}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+

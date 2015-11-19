@@ -1,0 +1,91 @@
+.menu-button {
+    cursor: pointer;
+    position: absolute;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #888;
+    border: 3px solid #888;
+    display: block;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 1.625rem;
+    padding-top: 4px;
+    z-index: 5;
+    background: #fff;
+
+    span {
+        visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+        color: #888;
+    }
+}
+
+.main-menu {
+    transition: ease 0.5s all;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    z-index: 4;
+    opacity: 0;
+    overflow: hidden;
+
+
+    .main-menu-table {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-menu-cell {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            text-transform: uppercase;
+            font-size: rem-calc(32px);
+            letter-spacing: 0.3em;
+            line-height: 2.5em;
+
+            a {
+                transition: 0.3s ease all;
+                transform: scale(1, 1);
+                display: block;
+
+                &:hover {
+                    transform: scale(1.2, 1.2);
+                }
+            }
+        }
+    }
+}
+
+.menu-opened {
+    .main-menu {
+        opacity: 1;
+        height: 100%;
+
+    }
+
+    .menu-button {
+        background-color: transparent !important;
+    }
+}

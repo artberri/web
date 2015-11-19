@@ -1,0 +1,8 @@
+{
+  "name": "berriart.com",
+  "version": "4.0.0",
+  "private": "true",
+  "dependencies": {
+    "foundation-sites": "~6.0.0"
+  }
+}
