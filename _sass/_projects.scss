@@ -1,0 +1,23 @@
+.projects {
+    h2 {
+        font-size: 24px;
+        background: #fafafa;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.project {
+    h1 {
+        font-size: 24px;
+        color: #000;
+
+        a {
+            color: #000;
+        }
+
+        .icon {
+            float: right;
+        }
+    }
+}
