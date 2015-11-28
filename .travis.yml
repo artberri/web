@@ -2,10 +2,10 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.1.6
+  - 2.2.0
 cache: bundler
 before_script:
-  - npm install karma
+  - npm install
 scripts:
   - grunt build
 notifications:
