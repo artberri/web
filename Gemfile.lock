@@ -47,6 +47,9 @@ GEM
     mini_magick (4.3.6)
     multi_json (1.11.2)
     rack (1.6.4)
+    rake (10.4.2)
+    rake-jekyll (1.1.0)
+      rake (~> 10.0)
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -69,6 +72,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 3.0.0)
+  jekyll
   jekyll-assets-autoprefixer
   jekyll-redirect-from
+  rake
+  rake-jekyll
