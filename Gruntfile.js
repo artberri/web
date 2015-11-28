@@ -14,11 +14,9 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'js/modernizr.js' : [
-                        'bower_components/modernizr/modernizr.js'
-                    ],
                     'js/app.js': [
                         'bower_components/jquery/dist/jquery.js',
+                        'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
                         'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
                         'javascript/*.js'
@@ -32,11 +30,9 @@ module.exports = function(grunt) {
                     compress: false
                 },
                 files: {
-                    'js/modernizr.js' : [
-                        'bower_components/modernizr/modernizr.js'
-                    ],
                     'js/app.js': [
                         'bower_components/jquery/dist/jquery.js',
+                        'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
                         'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
                         'javascript/*.js'
