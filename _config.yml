@@ -37,7 +37,10 @@ exclude: [
     'Gemfile',
     'Gemfile.lock',
     'bower.json',
-    'package.json'
+    'package.json',
+    'scripts',
+    'Rakefile',
+    'Readme.md'
 ]
 
 sass:

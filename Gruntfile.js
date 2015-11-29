@@ -4,11 +4,15 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         app: {
-            dist: '_site'
+            dist: '_site',
+            deploy: {
+                user: process.env.BERRIART_DEPLOY_USER,
+                pass: process.env.BERRIART_DEPLOY_PASS
+            }
         },
 
         clean: {
-            build: ["js"]
+            build: ['js', '_site']
         },
 
         uglify: {
@@ -88,6 +92,23 @@ module.exports = function(grunt) {
                     base: '_site'
                 }
             }
+        },
+
+        environments: {
+            options: {
+                local_path: '_site',
+                current_symlink: 'current',
+                deploy_path: '/home/www/berriart.com'
+            },
+            production: {
+                options: {
+                    host: 'berriart.com',
+                    username: '<%= app.deploy.user %>',
+                    password: '<%= app.deploy.pass %>',
+                    port: '22',
+                    releases_to_keep: '5'
+                }
+            }
         }
     });
 
@@ -96,9 +117,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jekyll');
+    grunt.loadNpmTasks('grunt-ssh-deploy');
 
     grunt.registerTask('serve', ['connect', 'watch']);
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
 
     grunt.registerTask('default', ['serve']);
+
+    grunt.registerTask('deploy', [
+        'ssh_deploy:production'
+    ]);
 };
