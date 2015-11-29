@@ -1,4 +1,5 @@
 require "rubygems"
+require 'html/proofer'
 
 desc "Build project"
 task :build do
@@ -12,4 +13,9 @@ task :build do
   [gruntBuildPid].each { |pid| Process.wait(pid) }
 end
 
-task :default => [:build]
+desc "Test project"
+task :test do
+  HTML::Proofer.new("./_site").run
+end
+
+task :default => [:build, :test]
