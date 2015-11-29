@@ -23,6 +23,11 @@ module.exports = function(grunt) {
                         'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
                         'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+                        'bower_components/foundation-sites/js/foundation.util.keyboard.js',
+                        'bower_components/foundation-sites/js/foundation.util.box.js',
+                        'bower_components/foundation-sites/js/foundation.util.triggers.js',
+                        'bower_components/foundation-sites/js/foundation.util.motion.js',
+                        'bower_components/foundation-sites/js/foundation.reveal.js',
                         'javascript/*.js'
                     ]
                 },
@@ -31,7 +36,8 @@ module.exports = function(grunt) {
                 options: {
                     sourceMap: true,
                     sourceMapIncludeSources: true,
-                    compress: false
+                    compress: false,
+                    mangle: false
                 },
                 files: {
                     'js/app.js': [
@@ -39,6 +45,11 @@ module.exports = function(grunt) {
                         'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
                         'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+                        'bower_components/foundation-sites/js/foundation.util.keyboard.js',
+                        'bower_components/foundation-sites/js/foundation.util.box.js',
+                        'bower_components/foundation-sites/js/foundation.util.triggers.js',
+                        'bower_components/foundation-sites/js/foundation.util.motion.js',
+                        'bower_components/foundation-sites/js/foundation.reveal.js',
                         'javascript/*.js'
                     ]
                 },
