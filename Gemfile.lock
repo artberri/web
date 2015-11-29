@@ -46,6 +46,7 @@ GEM
       jekyll (>= 2.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
+    jekyll-sitemap (0.9.0)
     jekyll-watch (1.3.0)
       listen (~> 3.0)
     json (1.8.3)
@@ -94,5 +95,6 @@ DEPENDENCIES
   jekyll
   jekyll-assets-autoprefixer
   jekyll-redirect-from
+  jekyll-sitemap
   rake
   rake-jekyll
