@@ -15,7 +15,8 @@ end
 
 desc "Test project"
 task :test do
-  HTML::Proofer.new("./_site").run
+  opts = { :disable_external => true }
+  HTML::Proofer.new("./_site", opts).run
 end
 
 task :default => [:build, :test]
