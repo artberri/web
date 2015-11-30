@@ -81,7 +81,7 @@ module.exports = function(grunt) {
         watch: {
             jekyll: {
                 files: [
-                    '*.{html,xml}',
+                    '*.{html,xml,php}',
                     '.html',
                     '_*/**/*.{html,md,mkd,markdown,scss}',
                     'projects/**/*.{html,md,mkd,markdown}',
