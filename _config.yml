@@ -39,7 +39,8 @@ exclude: [
     'scripts',
     'Rakefile',
     'Readme.md',
-    '.scss-lint.yml'
+    '.scss-lint.yml',
+    'eslint.json'
 ]
 
 sass:

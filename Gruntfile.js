@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -133,21 +135,20 @@ module.exports = function(grunt) {
                 config: '.scss-lint.yml',
                 colorizeOutput: true
             },
+        },
+
+        eslint: {
+            options: {
+                configFile: 'eslint.json'
+            },
+            target: ['javascript/app.js']
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-ssh-deploy');
-    grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.registerTask('serve', ['connect', 'watch']);
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
 
-    grunt.registerTask('lint', ['scsslint']);
+    grunt.registerTask('lint', ['scsslint', 'eslint']);
 
     grunt.registerTask('default', ['serve']);
 
