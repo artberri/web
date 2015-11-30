@@ -31,9 +31,12 @@ $redirects = array(
     '/berri-alianzo-widget' => '/projects/',
     '/2008/01/19/un-nuevo-blog-de-viajes' => 'http://www.sinrumbofijo.com',
     '/2008/11/20/os-presento-efemerides-20' => 'http://efemerides20.com',
+    '/presentaciones/code-kids' => '/talks/code-kids/',
+    '/presentaciones/dns' => '/talks/dns/',
     '/inicio.php' => '/',
     '/berriblog' => '/',
     '/alberto-varela' => '/',
+
 );
 
 $redirectTo = false;
