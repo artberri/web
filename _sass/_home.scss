@@ -1,13 +1,13 @@
-body.home {
+.home {
     min-height: 100%;
     background: #000;
 
     &::after {
-        content: "";
-        background: url(../images/back.jpg) no-repeat 50% 40%;
+        content: '';
+        background: url('../images/back.jpg') no-repeat 50% 40%;
         background-size: 100%;
         background-size: cover;
-        opacity: 0.15;
+        opacity: .15;
         top: 0;
         left: 0;
         bottom: 0;
@@ -26,8 +26,10 @@ body.home {
     height: 100%;
     width: 100%;
 
-    h1, h2, p {
-        text-shadow: 3px, 3px, 3px, 3px, rgba(#000, 0.8);
+    h1,
+    h2,
+    p {
+        text-shadow: 3px, 3px, 3px, 3px, rgba(#000, .8);
     }
 
     .brand {
@@ -37,9 +39,10 @@ body.home {
         left: 0;
         text-align: center;
     }
+
     h1 {
         font-size: rem-calc(72px);
-        letter-spacing: 0.7em;
+        letter-spacing: .7em;
         text-transform: uppercase;
         color: $white;
     }
@@ -50,6 +53,7 @@ body.home {
         padding-right: 3%;
         color: $white;
     }
+
     p {
         font-size: rem-calc(24px);
         text-align: center;
@@ -64,32 +68,33 @@ body.home {
     background: #f7f7f7;
 
     .inner {
-        img {
-            height: 120px;
-            width: 120px;
-            border: 3px solid #e8e8e8;
-            border-radius: 60px;
-        }
-
         text-align: center;
         display: block;
         color: #666;
         max-width: 400px;
         padding: 40px 0;
         margin: 0 auto;
+
+        img {
+            height: 120px;
+            width: 120px;
+            border: 3px solid #e8e8e8;
+            border-radius: 60px;
+        }
     }
 
     .social {
         font-size: rem-calc(24px);
+
         i {
             position: relative;
-            top: 0px;
-            left: 0px;
+            top: 0;
+            left: 0;
         }
 
         a {
-            transition: 0.3s ease all;
-            color: white;
+            transition: .3s ease all;
+            color: #fff;
             display: inline-block;
             width: 38px;
             height: 38px;
@@ -114,10 +119,10 @@ body.home {
         }
 
         .linkedin {
-            background: #4875B4;
+            background: #4875b4;
 
             &:hover {
-                background: shade(#4875B4, 20%);
+                background: shade(#4875b4, 20%);
             }
         }
     }
@@ -134,7 +139,8 @@ body.home {
         margin-bottom: 50px;
     }
 
-    h3, p {
+    h3,
+    p {
         color: #666;
     }
 }

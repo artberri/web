@@ -1,8 +1,6 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -13,8 +11,8 @@ ul, ol, dl, figure,
     margin-bottom: 30px / 2;
 }
 
-@import "settings";
-@import "syntax-highlighting";
+@import 'settings';
+@import 'syntax-highlighting';
 @import 'foundation/foundation';
 
 @include foundation-global-styles;
@@ -52,8 +50,8 @@ ul, ol, dl, figure,
 @include foundation-tooltip;
 @include foundation-top-bar;
 
-@import "base";
-@import "menu";
-@import "home";
-@import "projects";
-@import "mediaqueries";
+@import 'base';
+@import 'menu';
+@import 'home';
+@import 'projects';
+@import 'mediaqueries';

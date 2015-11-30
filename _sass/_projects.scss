@@ -1,19 +1,19 @@
 .projects {
     h2 {
+        background: $light-gray;
         font-size: 24px;
-        background: #fafafa;
-        padding: 5px 10px;
         margin-bottom: 20px;
+        padding: 5px 10px;
     }
 }
 
 .project {
     h1 {
+        color: $black;
         font-size: 24px;
-        color: #000;
 
         a {
-            color: #000;
+            color: $black;
         }
 
         .icon {

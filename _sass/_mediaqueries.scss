@@ -1,6 +1,6 @@
 
 @media screen and (max-width: 1280px) {
-    body.home {
+    .home {
         h1 {
             font-size: rem-calc(64px);
         }
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-    body.home {
+    .home {
         h1 {
             font-size: rem-calc(48px);
         }
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    body.home {
+    .home {
         h1 {
             font-size: rem-calc(36px);
         }
@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 639px) {
 
-    body.home {
+    .home {
         h1 {
             font-size: rem-calc(24px);
         }
@@ -49,7 +49,7 @@
         }
     }
 
-    #header h1 {
+    .header h1 {
         font-size: rem-calc(24px);
     }
 
@@ -58,7 +58,7 @@
     }
 
     footer ul li {
-        padding: 15px 15px;
+        padding: 15px;
     }
 
     .nav-links a span {
@@ -73,13 +73,13 @@
 
 @media screen and (max-width: 479px) {
 
-    #header h1 {
+    .header h1 {
         font-size: rem-calc(16px);
         line-height: 50px;
         height: 50px;
     }
 
-    body.home {
+    .home {
         h1 {
             font-size: rem-calc(18px);
         }

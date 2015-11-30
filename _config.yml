@@ -38,7 +38,8 @@ exclude: [
     'package.json',
     'scripts',
     'Rakefile',
-    'Readme.md'
+    'Readme.md',
+    '.scss-lint.yml'
 ]
 
 sass:

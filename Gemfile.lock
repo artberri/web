@@ -63,6 +63,7 @@ GEM
       mini_portile (~> 0.6.0)
     parallel (1.6.1)
     rack (1.6.4)
+    rainbow (2.0.0)
     rake (10.4.2)
     rake-jekyll (1.1.0)
       rake (~> 10.0)
@@ -72,6 +73,9 @@ GEM
     rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.19)
+    scss_lint (0.43.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.15)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -98,3 +102,4 @@ DEPENDENCIES
   jekyll-sitemap
   rake
   rake-jekyll
+  scss_lint

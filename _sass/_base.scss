@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 
-#super-container {
+.super-container {
     height: 100%;
 }
 
@@ -11,17 +11,17 @@ html {
 
     h1 {
         font-size: 2rem;
-        letter-spacing: 0.7em;
+        letter-spacing: .7em;
         text-transform: uppercase;
         line-height: 90px;
         padding: 0 5%;
 
         a {
             color: #666;
-            transition: ease 0.5s all;
+            transition: ease .5s all;
 
             &:hover {
-                letter-spacing: 0.75em;
+                letter-spacing: .75em;
             }
         }
     }
@@ -35,7 +35,8 @@ html {
     padding: 20px 0 40px;
 }
 
-.post, .page {
+.post,
+.page {
     position: relative;
 
     .entry-title {
@@ -44,7 +45,7 @@ html {
         position: absolute;
         height: 100%;
         width: 100%;
-        text-shadow: 2px 2px 5px rgba(136, 136, 136, 0.5);
+        text-shadow: 2px 2px 5px rgba(136, 136, 136, .5);
         position: relative;
         margin: 30px 0 50px;
         text-shadow: none;
@@ -55,12 +56,12 @@ html {
     .entry-content {
         p,
         li,
-        pre  {
+        pre {
             font-size: rem-calc(24px);
         }
 
         p {
-            letter-spacing: 0.05em;
+            letter-spacing: .05em;
         }
 
         li {
@@ -74,7 +75,7 @@ html {
 }
 
 footer {
-    background: white;
+    background: #fff;
 
     ul {
         display: block;

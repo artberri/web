@@ -120,6 +120,19 @@ module.exports = function(grunt) {
                     releases_to_keep: '5'
                 }
             }
+        },
+
+        scsslint: {
+            allFiles: [
+                'css/main.scss',
+                '_sass/_*.scss',
+                '!_sass/_syntax-highlighting.scss'
+            ],
+            options: {
+                bundleExec: true,
+                config: '.scss-lint.yml',
+                colorizeOutput: true
+            },
         }
     });
 
@@ -129,9 +142,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-ssh-deploy');
+    grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.registerTask('serve', ['connect', 'watch']);
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
+
+    grunt.registerTask('lint', ['scsslint']);
 
     grunt.registerTask('default', ['serve']);
 
