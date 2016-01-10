@@ -14,6 +14,16 @@
         $menuIcon.toggleClass('fi-list fi-x');
     });
 
+    $('.smooth').click(function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 105
+        }, 400);
+
+        return false;
+    });
+
     $(document).foundation();
 
 }());

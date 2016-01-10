@@ -13,7 +13,7 @@
     border-radius: 25px;
     font-size: 1.625rem;
     padding-top: 4px;
-    z-index: 5;
+    z-index: 10;
     background: #fff;
 
     span {
@@ -36,7 +36,7 @@
     height: 0;
     background: rgba(0, 0, 0, .9);
     text-align: center;
-    z-index: 4;
+    z-index: 9;
     opacity: 0;
     overflow: hidden;
 

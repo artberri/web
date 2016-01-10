@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.triggers.js',
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
+                        'bower_components/foundation-sites/js/foundation.sticky.js',
                         'javascript/*.js'
                     ]
                 },
@@ -52,26 +53,27 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.triggers.js',
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
+                        'bower_components/foundation-sites/js/foundation.sticky.js',
                         'javascript/*.js'
                     ]
                 },
             }
         },
 
-        jekyll: {                             // Task
-            options: {                          // Universal options
+        jekyll: {
+            options: {
                 bundleExec: true,
                 src : './'
             },
-            watch: {                             // Target
-                options: {                        // Target options
+            watch: {
+                options: {
                     dest: '<%= app.dist %>',
                     config: '_config.yml',
                     incremental: true
                 }
             },
-            dist: {                             // Target
-                options: {                        // Target options
+            dist: {
+                options: {
                     dest: '<%= app.dist %>',
                     config: '_config.yml'
                 }
@@ -145,7 +147,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('serve', ['connect', 'watch']);
+    grunt.registerTask('serve', ['build', 'connect', 'watch']);
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
 
     grunt.registerTask('lint', ['scsslint', 'eslint']);
