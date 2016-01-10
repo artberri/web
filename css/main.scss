@@ -12,7 +12,6 @@ ul, ol, dl, figure,
 }
 
 @import 'settings';
-@import 'syntax-highlighting';
 @import 'foundation/foundation';
 
 @include foundation-global-styles;
@@ -50,6 +49,7 @@ ul, ol, dl, figure,
 // @include foundation-tooltip;
 @include foundation-top-bar;
 
+@import 'syntax-highlighting';
 @import 'base';
 @import 'menu';
 @import 'home';
