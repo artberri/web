@@ -23,7 +23,7 @@
     if (window.location.host !== 'localhost:4000') {
         $('#remote-content-menu').sidr({
             name: 'sidr-remote-content',
-            source: 'http://' + window.location.host + window.location.pathname + 'remote-menu.html'
+            source: window.location.protocol + '//' + window.location.host + window.location.pathname + 'remote-menu.html'
         });
     }
 
