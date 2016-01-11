@@ -189,7 +189,7 @@ $(document).ready(function() {
 
 ###Responsive Menus
 
-<a id="responsive-menu-button" class="demo button" href="#sidr-main">Responsive Menu</a>
+<a data-proofer-ignore id="responsive-menu-button" class="demo button" href="#sidr-main">Responsive Menu</a>
 
 The major reason for creating this plugin was just being able to easily add existing content (like a menu, a search box, social icons,...) to a menu in small screens. Simply load existing html into a sidr, and then, hide this html and show the menu button with media queries.
 
@@ -351,12 +351,12 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
 
 <div class="row themes">
   <div class="medium-6 columns">
-    <a data-toggle="dark-reveal"><img src="/images/documentation/sidr/dark.theme.thumb.png" alt="Dark Theme" /></a>
-    <h3><a data-toggle="dark-reveal">Dark Theme</a></h3>
+    <a data-proofer-ignore data-toggle="dark-reveal"><img src="/images/documentation/sidr/dark.theme.thumb.png" alt="Dark Theme" /></a>
+    <h3><a data-proofer-ignore data-toggle="dark-reveal">Dark Theme</a></h3>
   </div>
   <div class="medium-6 columns">
-    <a data-toggle="light-reveal"><img src="/images/documentation/sidr/light.theme.thumb.png" alt="Light Theme" /></a>
-    <h3><a data-toggle="light-reveal">Light Theme</a></h3>
+    <a data-proofer-ignore data-toggle="light-reveal"><img src="/images/documentation/sidr/light.theme.thumb.png" alt="Light Theme" /></a>
+    <h3><a data-proofer-ignore data-toggle="light-reveal">Light Theme</a></h3>
   </div>
 </div>
 
@@ -423,32 +423,11 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
 <div id="sidr">
   <!-- Your content -->
   <ul>
-    <li><a href="#">List 1</a></li>
-    <li class="active"><a href="#">List 2</a></li>
-    <li><a href="#">List 3</a></li>
+    <li><a href="#menu-button">List 1</a></li>
+    <li class="active"><a href="#menu-button">List 2</a></li>
+    <li><a href="#menu-button">List 3</a></li>
   </ul>
 </div>
-
-<!-- <div id="responsive-reveal" class="reveal-modal small">
-  <p>Resize your window to see how the main menu of this page is hiddened, and how it is converted to a <em>sidr</em> that you can expand with a button that is at the top of the page (or open it directly in your phone).</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="swipe-reveal" class="reveal-modal small">
-  <p>You need to open this page on your mobile, or on a touch device to test this. Once opened, swipe right or left to open or close the menu.</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="dark-reveal" class="reveal-modal small">
-  <img src="images/dark.theme.png" alt="Dark Theme" />
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="light-reveal" class="reveal-modal small">
-  <img src="images/light.theme.png" alt="Light Theme" />
-  <a class="close-reveal-modal">&#215;</a>
-</div>-->
-
 
 <!-- Social -->
 <script type="text/javascript">
