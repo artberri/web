@@ -42,7 +42,7 @@ script: /js/sidr.js
 <div class="documenation-social">
     <div class="row">
         <div class="large-12 columns">
-            <iframe src="http://ghbtns.com/github-btn.html?user=artberri&amp;repo=sidr&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
+            <iframe src="//ghbtns.com/github-btn.html?user=artberri&amp;repo=sidr&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
         </div>
     </div>
 </div>
