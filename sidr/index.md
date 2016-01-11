@@ -74,7 +74,7 @@ You have to include a Sidr Theme stylesheet too, choose between the dark or the 
 
 ### Using bower or NPM
 
-Instead of downloading the plugin, you can install it with with [bower](http://bower.io/) or [npm](https://www.npmjs.com/):
+Instead of downloading the plugin, you can install it with [bower](http://bower.io/) or with [npm](https://www.npmjs.com/):
 
 {% highlight sh %}
 bower install sidr --save
@@ -363,7 +363,7 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
 
 ###Showcase 
 
-Here you can see some famous sites using Sidr and others with a really nice implementation of Sidr.
+The following responsive sites are using Sidr in an original way to implement their menu:
 
 <div class="showcase row small-up-2 medium-up-3">
   <div class="column">
