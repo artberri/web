@@ -19,6 +19,9 @@ menu:
   url: themes
 - text: Development
   url: development
+ad:
+  client: ca-pub-5245097431906186
+  slot: 6701087233
 ---
 
 <div class="row doc-preview">

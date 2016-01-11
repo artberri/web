@@ -4,6 +4,11 @@
     right: -20px;
     border: 0;
     opacity: .3;
+    display: none;
+
+    @include breakpoint(medium) {
+        display: block;
+    }
 }
 
 .documenation-social {
@@ -13,12 +18,6 @@
     .gitforked-button-container {
         bottom: 7px;
         margin-right: 50px;
-    }
-}
-
-.documentation-header.header {
-    h1 {
-        margin: 0;
     }
 }
 
@@ -66,6 +65,7 @@
         font-size: rem-calc(96);
         text-align: center;
         padding: 0;
+        margin-top: 0;
         margin-bottom: 10px;
         line-height: 1;
 
