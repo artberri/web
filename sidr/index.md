@@ -20,8 +20,10 @@ menu:
 - text: Development
   url: development
 ad:
-  client: ca-pub-5245097431906186
+  clients: ca-pub-5245097431906186
   slot: 6701087233
+style: //cdn.jsdelivr.net/jquery.sidr/2.0.0/stylesheets/jquery.sidr.dark.min.css
+script: /js/sidr.js
 ---
 
 <div class="row doc-preview">
@@ -92,6 +94,8 @@ Here are described differents ways of usage for this plugin, you can read and ad
 
 ###The Simplest Usage 
 
+<a id="simple-menu" class="demo button" href="#sidr"><i id="menu-icon" class="fi-list"></i> Simple menu</a>
+
 Create a div called sidr and place your menu there. Then activate the plugin binding it to a link. By default, the menu wont't be visible and it will be displayed or hidden by clicking on the link.
 
 {% highlight html %}
@@ -115,6 +119,8 @@ $(document).ready(function() {
 
 ###Create Multiple Menus
 
+<a id="left-menu" class="demo button" href="#left-menu">Left Menu</a> <a id="right-menu" class="demo button" href="#right-menu">Right Menu</a>
+
 You can create as many menus as you want in the same page, and you can place them at the right or left side. When creating more than one menu, you need to name them. As it is shown in the example, if you don't create the menu div container, the plugin will create it for you.
 
 {% highlight html %}
@@ -137,6 +143,8 @@ $(document).ready(function() {
 
 ###The Menu Content
 
+<a id="existing-content-menu" class="demo button" href="#existing-content-menu">Existing content</a> <a id="remote-content-menu" class="demo button" href="#remote-content-menu">Load remotelly</a> <a id="callback-menu" class="demo button" href="#callback-menu">Callback loaded</a>
+
 There are four ways to load content in the menus, choose yours with the source option.
 
  * We have shown the first way at the 'Simplest Usage' demo, no more than placing the content into the div menu.
@@ -154,7 +162,9 @@ There are four ways to load content in the menus, choose yours with the source o
 </header>
 
 <div id="demo-content">
-    <p>Here are described differents ways of usage for this plugin, you can read and adapt them to your website's requeriments. Below are described all options with details.</p>
+    <p>Here are described differents ways of usage for this plugin, you can 
+    read and adapt them to your website's requeriments. Below are described 
+    all options with details.</p>
 </div>
 
 <script>
@@ -178,6 +188,8 @@ $(document).ready(function() {
 {% endhighlight %}
 
 ###Responsive Menus
+
+<a id="responsive-menu-button" class="demo button" href="#sidr-main">Responsive Menu</a>
 
 The major reason for creating this plugin was just being able to easily add existing content (like a menu, a search box, social icons,...) to a menu in small screens. Simply load existing html into a sidr, and then, hide this html and show the menu button with media queries.
 
@@ -224,20 +236,20 @@ There are some methods you can use to open or close menus as you want, or to bin
 
 {% highlight html %}
 <!-- For this example I include an external library to handle touch events -->
-<script src="//cdn.jsdelivr.net/jquery.touchwipe/1.1.1/jquery.touchwipe.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js"></script>
 
 <script>
-      $(window).touchwipe({
-        wipeLeft: function() {
-          // Close
-          $.sidr('close', 'sidr-main');
+    $('body').swipe( {
+        //Single swipe handler for left swipes
+        swipeLeft: function () {
+            $.sidr('close', 'sidr-main');
         },
-        wipeRight: function() {
-          // Open
-          $.sidr('open', 'sidr-main');
+        swipeRight: function () {
+            $.sidr('open', 'sidr-main');
         },
-        preventDefaultEvents: false
-      });
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold: 45
+    });
 </script>
 {% endhighlight %}
 
@@ -407,6 +419,35 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+
+<div id="sidr">
+  <!-- Your content -->
+  <ul>
+    <li><a href="#">List 1</a></li>
+    <li class="active"><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+  </ul>
+</div>
+
+<!-- <div id="responsive-reveal" class="reveal-modal small">
+  <p>Resize your window to see how the main menu of this page is hiddened, and how it is converted to a <em>sidr</em> that you can expand with a button that is at the top of the page (or open it directly in your phone).</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="swipe-reveal" class="reveal-modal small">
+  <p>You need to open this page on your mobile, or on a touch device to test this. Once opened, swipe right or left to open or close the menu.</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="dark-reveal" class="reveal-modal small">
+  <img src="images/dark.theme.png" alt="Dark Theme" />
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="light-reveal" class="reveal-modal small">
+  <img src="images/light.theme.png" alt="Light Theme" />
+  <a class="close-reveal-modal">&#215;</a>
+</div>-->
 
 
 <!-- Social -->

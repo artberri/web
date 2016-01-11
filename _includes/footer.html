@@ -29,7 +29,9 @@
 
   <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
 
-
+  {% if page.script %}
+    <script src="{{ page.script | prepend: site.baseurl }}"></script>
+  {% endif %}
 
 
 

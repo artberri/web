@@ -125,6 +125,14 @@
                 font-size: rem-calc(24);
             }
         }
+
+        .sidr {
+            ul, li {
+                margin: 0;
+                font-size: rem-calc(14);
+            }
+        }
+
     }
 
     .download-button {
@@ -236,3 +244,4 @@
         }
     }
 }
+

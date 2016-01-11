@@ -8,5 +8,8 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Anonymous+Pro">
   <link rel="stylesheet" href="{{ "/css/fonts/foundation-icons/foundation-icons.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  {% if page.style %}
+    <link rel="stylesheet" href="{{ page.style | prepend: site.baseurl }}">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

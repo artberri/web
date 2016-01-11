@@ -31,7 +31,12 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
-                        'javascript/*.js'
+                        'javascript/app.js'
+                    ],
+                    'js/sidr.js': [
+                        'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
+                        'bower_components/sidr/dist/jquery.sidr.js',
+                        'javascript/sidr.js'
                     ]
                 },
             },
@@ -54,7 +59,12 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
-                        'javascript/*.js'
+                        'javascript/app.js'
+                    ],
+                    'js/sidr.js': [
+                        'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
+                        'bower_components/sidr/dist/jquery.sidr.js',
+                        'javascript/sidr.js'
                     ]
                 },
             }
