@@ -48,31 +48,40 @@ Like any other plugin, you must include it after the jQuery script. For a better
 
 You have to include a Sidr Theme stylesheet too, choose between the dark or the light one, or if you prefer create one by your own.
 
-bower install sidr --save
-
-CDN
-https://github.com/jsdelivr/jsdelivr/tree/master/files/jquery.sidr/2.0.0
-
 {% highlight html %}
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Your stuff -->
+    <!-- Your other stuff  (you can have problems if you don't add minimum scale in the viewport) -->
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-
-    <!-- Include Sidr bundled CSS theme -->
-    <link rel="stylesheet" href="javascripts/sidr/stylesheets/jquery.sidr.dark.css">
+    <!-- Include a Sidr bundled CSS theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.0.0/stylesheets/jquery.sidr.dark.min.css">
   </head>
   <body>
-    <!-- Your stuff -->
-
+    <!-- More stuff -->
     <!-- Include jQuery -->
-    <script src="javascripts/jquery.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
     <!-- Include the Sidr JS -->
-    <script src="javascripts/sidr/jquery.sidr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.0.0/jquery.sidr.js"></script>
   </body>
 </html>
 {% endhighlight %}
+
+### Using bower or NPM
+
+Instead of downloading the plugin, you can install it with with [bower](http://bower.io/) or [npm](https://www.npmjs.com/):
+
+{% highlight sh %}
+bower install sidr --save
+{% endhighlight %}
+
+{% highlight sh %}
+npm install sidr --save
+{% endhighlight %}
+
+### From a CDN
+
+If you want to load the scripts from a CDN to save bandwith or improve the performance you can use [jsDelivr](https://www.jsdelivr.com/projects/jquery.sidr).
 
 ##Demos & Usage
 
@@ -212,7 +221,7 @@ There are some methods you can use to open or close menus as you want, or to bin
 
 {% highlight html %}
 <!-- For this example I include an external library to handle touch events -->
-<script src="javascripts/jquery.touchwipe.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.touchwipe/1.1.1/jquery.touchwipe.min.js"></script>
 
 <script>
       $(window).touchwipe({
@@ -229,73 +238,172 @@ There are some methods you can use to open or close menus as you want, or to bin
 </script>
 {% endhighlight %}
 
+###Cookbook
+
+You can see other recipes in the code repository:
+
+[https://github.com/artberri/sidr/tree/master/examples](https://github.com/artberri/sidr/tree/master/examples)
+
 ##Documentation
 
-.sidr()
-Description: It creates a sidr menu and binds the toggle function to the selector.
+<div class="function">
+  <h3>.sidr()</h3>
+  <div class="usage">
+    <p><strong>Description:</strong> It creates a <em>sidr</em> menu and binds the toggle function to the <em>selector</em>.</p>
 
-jQuery(selector).sidr( [options] )
+    <h4>jQuery(selector).sidr( [options] )</h4>
 
-options (Object)
-A map of options to pass to the method.
-name (String) Default: 'sidr'
-Name for the sidr.
-speed (Number|String) Default: 200
-A string or number determining how long the animation will run.
-side (String) Default: 'left'
-Left or right, the location for the sidebar.
-source (String|Function) Default: null
-A jQuery selector, an url or a callback function.
-renaming (Boolean) Default: true
-When filling the sidr with existing content, choose to rename or not the classes and ids.
-body (String) Default: 'body' [ Version 1.1.0 an above ]
-For doing the page movement the 'body' element is animated by default, you can select another element to animate with this option.
-displace (Boolean) Default: true [ Version 1.2.0 an above ]
-Displace the body content or not.
-onOpen (function) Default: function() {} [ Version 1.2.0 an above ]
-Callback that will be executed on open.
-onClose (function) Default: function() {} [ Version 1.2.0 an above ]
-Callback that will be executed on close.
-jQuery.sidr()
-Description: A generic sidr controller. Can be used to access the sidr methods open, close or toggle
+    <div class="parameter">
+      <p><strong>options</strong> (Object)</p>
+      <p>A map of options to pass to the method.</p>
 
-jQuery.sidr( [method] [, name] [, complete] )
+      <div class="option">
+        <p><strong>name</strong> (String) Default: 'sidr'</p>
+        <p>Name for the <em>sidr</em>.</p>
+      </div>
 
-method (String) Default: 'toggle'
-Choose between toggle, open or close.
-name (String) Default: 'sidr'
-Name of the target sidr.
-complete (Function) Default: none
-A function to call once the animation is complete.
+      <div class="option">
+        <p><strong>speed</strong> (Number|String) Default: 200</p>
+        <p>A string or number determining how long the animation will run.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>side</strong> (String) Default: 'left'</p>
+        <p>Left or right, the location for the sidebar.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>source</strong> (String|Function) Default: null</p>
+        <p>A jQuery selector, an url or a callback function.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>renaming</strong> (Boolean) Default: true</p>
+        <p>When filling the <em>sidr</em> with existing content, choose to rename or not the classes and ids.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>body</strong> (String) Default: 'body' <small>[ Version 1.1.0 an above ]</small></p>
+        <p>For doing the page movement the 'body' element is animated by default, you can select another element to animate with this option.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>displace</strong> (Boolean) Default: true <small>[ Version 1.2.0 an above ]</small></p>
+        <p>Displace the body content or not.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>onOpen</strong> (function) Default: function() {} <small>[ Version 1.2.0 an above ]</small></p>
+        <p>Callback that will be executed on open.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>onClose</strong> (function) Default: function() {} <small>[ Version 1.2.0 an above ]</small></p>
+        <p>Callback that will be executed on close.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="function">
+  <h3>jQuery.sidr()</h3>
+
+  <div class="usage">
+    <p><strong>Description:</strong> A generic <em>sidr</em> controller. Can be used to access the <em>sidr</em> methods <em>open</em>, <em>close</em> or <em>toggle</em></p>
+
+    <h4>jQuery.sidr( [method] [, name] [, complete] )</h4>
+
+    <div class="parameter">
+      <p><strong>method</strong> (String) Default: 'toggle'</p>
+      <p>Choose between toggle, open or close.</p>
+    </div>
+
+    <div class="parameter">
+      <p><strong>name</strong> (String) Default: 'sidr'</p>
+      <p>Name of the target <em>sidr</em>.</p>
+    </div>
+
+    <div class="parameter">
+      <p><strong>complete</strong> (Function) Default: none</p>
+      <p>A function to call once the animation is complete.</p>
+    </div>
+  </div>
+</div>
+
 
 ##Themes
 
 There are two themes (two stylesheets) included with the plugin, a dark one and a light one. You can use them, create a new one or override them with your own styles.
 
-Dark Theme Dark ThemeLight Theme Light Theme
+<div class="row themes">
+  <div class="medium-6 columns">
+    <a data-toggle="dark-reveal"><img src="/images/documentation/sidr/dark.theme.thumb.png" alt="Dark Theme" /></a>
+    <h3><a data-toggle="dark-reveal">Dark Theme</a></h3>
+  </div>
+  <div class="medium-6 columns">
+    <a data-toggle="light-reveal"><img src="/images/documentation/sidr/light.theme.thumb.png" alt="Light Theme" /></a>
+    <h3><a data-toggle="light-reveal">Light Theme</a></h3>
+  </div>
+</div>
 
-##Cookbook
 
-You can see other example codes in Github:
+###Showcase 
 
-[https://github.com/artberri/sidr/tree/master/examples](https://github.com/artberri/sidr/tree/master/examples)
+Here you can see some famous sites using Sidr and others with a really nice implementation of Sidr.
 
-##Real Examples
+<div class="showcase row small-up-2 medium-up-3">
+  <div class="column">
+    <div class="case">
+      <img src="/images/documentation/sidr/showcase-fox.png" alt="Sidr Menu on FOX Broadcasting Company website">
+      <div class="info">
+        <p>FOX Broadcasting Company</p>
+        <p><a href="http://www.fox.com">www.fox.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="case">
+      <img src="/images/documentation/sidr/showcase-uscourts.png" alt="Sidr Menu on United States Courts website">
+      <div class="info">
+        <p>United States Courts</p>
+        <p><a href="http://www.uscourts.gov">www.uscourts.gov</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="case">
+      <img src="/images/documentation/sidr/showcase-sdsu.png" alt="Sidr Menu on San Diego State University website">
+      <div class="info">
+        <p>San Diego State University</p>
+        <p><a href="http://www.sdsu.edu/">www.sdsu.edu</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-Are you using this plugin on your site? Send me an email to alberto@berriart.com
-
-SHowcase 
-
-fox.com http://www.uscourts.gov/
+If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to alberto[at]berriart[dot]com.
 
 ##Development
 
-If you've created a website or an application using this plugin and you want to show it in a future showcase section, send me an email with the url to alberto[at]berriart[dot]com.
+- Source hosted at [GitHub](https://github.com/artberri/sidr)
+- If you have problems implenting this, ask about it in [StackOverflow](http://stackoverflow.com/search?q=sidr)
+- Report issues and feature requests in [GitHub Issues](https://github.com/artberri/sidr/issues)
+- Contributing: [CONTRIBUTING.md](https://github.com/artberri/sidr/blob/master/CONTRIBUTING.md)
 
-Source hosted at GitHub
-Report issues, questions, feature requests on GitHub Issues
-Contributing: CONTRIBUTING.md
 Pull requests are very welcome! Make sure your patches are well tested. Please create a topic branch for every separate change you make.
+
+<div id="dark-reveal" data-reveal class="reveal">
+  <img src="/images/documentation/sidr/dark.theme.png" alt="Dark Theme" />
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div id="light-reveal" data-reveal class="reveal">
+  <img src="/images/documentation/sidr/light.theme.png" alt="Light Theme" />
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
 
 <!-- Social -->

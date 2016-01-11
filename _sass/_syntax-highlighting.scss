@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background-color: #fffbf3;
+    background-color: #fafafa;
     color: #586e75;
     @extend %vertical-rhythm;
     margin-left: 0;
@@ -19,6 +19,8 @@
         border: 0;
         font-size: rem-calc(12);
         line-height: 1em;
+        margin: 0;
+        padding: 0;
     }
 
     .highlighter-rouge & {
