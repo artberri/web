@@ -20,7 +20,7 @@ menu:
 - text: Development
   url: development
 ad:
-  clients: ca-pub-5245097431906186
+  client: ca-pub-5245097431906186
   slot: 6701087233
 style: //cdn.jsdelivr.net/jquery.sidr/2.0.0/stylesheets/jquery.sidr.dark.min.css
 script: /js/sidr.js
