@@ -1,6 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+/* eslint
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -10,6 +11,8 @@ ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: 30px / 2;
 }
+
+@import '../css/fonts/foundation-icons/foundation-icons.css';
 
 @import 'settings';
 @import 'foundation/foundation';
@@ -57,3 +60,24 @@ ul, ol, dl, figure,
 @import 'mediaqueries';
 @import 'notfound';
 @import 'documentation';
+
+@import 'cookies/basic-layouts/bottom';
+@import 'cookies/themes/dark';
+@import 'cookies/animations/slideup';
+
+.cc_banner-wrapper .cc_container {
+    background: #333;
+    padding: 15px 20px;
+
+    .cc_message {
+        a {
+            color: $primary-color;
+        }
+    }
+
+    .cc_btn {
+        background: $primary-color;
+        font-size: rem-calc(14);
+        border-radius: 0;
+    }
+}

@@ -21,6 +21,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/app.js': [
+
                         'bower_components/jquery/dist/jquery.js',
                         'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
@@ -31,7 +32,8 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
-                        'javascript/app.js'
+                        'javascript/app.js',
+                        'bower_components/cookieconsent2/build/cookieconsent.min.js',
                     ],
                     'js/sidr.js': [
                         'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
@@ -59,7 +61,8 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.util.motion.js',
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
-                        'javascript/app.js'
+                        'javascript/app.js',
+                        'bower_components/cookieconsent2/build/cookieconsent.min.js',
                     ],
                     'js/sidr.js': [
                         'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
@@ -161,6 +164,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
 
     grunt.registerTask('lint', ['scsslint', 'eslint']);
+
+    grunt.registerTask('all', ['lint', 'build']);
 
     grunt.registerTask('default', ['serve']);
 
