@@ -4,7 +4,7 @@ title: Sidr
 subtitle: The best jQuery plugin for creating side menus and the easiest way for doing your menu responsive
 excerpt: Berriart contact page
 permalink: /sidr/
-download: https://github.com/artberri/sidr/archive/v2.0.0.zip
+download: https://github.com/artberri/sidr/archive/v2.1.0.zip
 repo: https://github.com/artberri/sidr
 menu:
 - text: Download
@@ -22,7 +22,7 @@ menu:
 ad:
   client: ca-pub-5245097431906186
   slot: 6701087233
-style: //cdn.jsdelivr.net/jquery.sidr/2.0.0/stylesheets/jquery.sidr.dark.min.css
+style: //cdn.jsdelivr.net/jquery.sidr/2.1.0/stylesheets/jquery.sidr.dark.min.css
 script: /js/sidr.js
 ---
 
@@ -35,14 +35,14 @@ script: /js/sidr.js
         You will be able to create multiple <em>sidrs</em> on both sides of your web to make responsives menus (or not, it works perfectly on desktop too).
         </p>
 
-        <p>Fill the <em>sidrs</em> normally, with existent content, remote content,... or what you want.</p>
+        <p>It uses CSS3 transitions (and fallbacks to $.animate with older browsers) and it supports multiple source types.</p>
     </div>
 </div>
 
 <div class="documenation-social">
     <div class="row">
         <div class="large-12 columns">
-            <iframe src="//ghbtns.com/github-btn.html?user=artberri&amp;repo=sidr&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
+            <a class="github-button" href="https://github.com/artberri/sidr" data-icon="octicon-star" data-count-href="/artberri/sidr/stargazers" data-count-api="/repos/artberri/sidr#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star artberri/sidr on GitHub">Star</a> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
         </div>
     </div>
 </div>
@@ -60,14 +60,14 @@ You have to include a Sidr Theme stylesheet too, choose between the dark or the 
     <!-- Your other stuff  (you can have problems if you don't add minimum scale in the viewport) -->
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <!-- Include a Sidr bundled CSS theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.0.0/stylesheets/jquery.sidr.dark.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.1.0/stylesheets/jquery.sidr.dark.min.css">
   </head>
   <body>
     <!-- More stuff -->
     <!-- Include jQuery -->
     <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
     <!-- Include the Sidr JS -->
-    <script src="//cdn.jsdelivr.net/jquery.sidr/2.0.0/jquery.sidr.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.1.0/jquery.sidr.min.js"></script>
   </body>
 </html>
 {% endhighlight %}
@@ -299,7 +299,7 @@ You can see other recipes in the code repository:
 
       <div class="option">
         <p><strong>body</strong> (String) Default: 'body' <small>[ Version 1.1.0 an above ]</small></p>
-        <p>For doing the page movement the 'body' element is animated by default, you can select another element to animate with this option.</p>
+        <p>For displacing the page the 'body' element is animated by default, you can select another element to animate with this option.</p>
       </div>
 
       <div class="option">
@@ -308,13 +308,33 @@ You can see other recipes in the code repository:
       </div>
 
       <div class="option">
+        <p><strong>timing</strong> (String) Default: 'ease' <small>[ Version 2.1.0 an above ]</small></p>
+        <p>Timing function for CSS transitions.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>method</strong> (String) Default: 'toggle' <small>[ Version 2.1.0 an above ]</small></p>
+        <p>The action to execute when clicking the button. 'toggle', 'open' and 'close' are allowed.</p>
+      </div>
+
+      <div class="option">
         <p><strong>onOpen</strong> (function) Default: function() {} <small>[ Version 1.2.0 an above ]</small></p>
-        <p>Callback that will be executed on open.</p>
+        <p>Callback that will be executed when the menu starts opening.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>onOpenEnd</strong> (function) Default: function() {} <small>[ Version 2.1.0 an above ]</small></p>
+        <p>Callback that will be executed when the menu ends opening.</p>
       </div>
 
       <div class="option">
         <p><strong>onClose</strong> (function) Default: function() {} <small>[ Version 1.2.0 an above ]</small></p>
-        <p>Callback that will be executed on close.</p>
+        <p>Callback that will be executed when the menu starts closing.</p>
+      </div>
+
+      <div class="option">
+        <p><strong>onCloseEnd</strong> (function) Default: function() {} <small>[ Version 2.1.0 an above ]</small></p>
+        <p>Callback that will be executed when the menu ends closing.</p>
       </div>
     </div>
   </div>
@@ -359,7 +379,6 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
     <h3><a data-proofer-ignore data-toggle="light-reveal">Light Theme</a></h3>
   </div>
 </div>
-
 
 ###Showcase 
 
@@ -444,3 +463,4 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
 
   })();
 </script>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
