@@ -4,7 +4,7 @@ title: Sidr
 subtitle: The best jQuery plugin for creating side menus and the easiest way for doing your menu responsive
 excerpt: Berriart contact page
 permalink: /sidr/
-download: https://github.com/artberri/sidr/archive/v2.1.0.zip
+download: https://github.com/artberri/sidr/archive/v2.2.0.zip
 repo: https://github.com/artberri/sidr
 menu:
 - text: Download
@@ -22,7 +22,7 @@ menu:
 ad:
   client: ca-pub-5245097431906186
   slot: 6701087233
-style: //cdn.jsdelivr.net/jquery.sidr/2.1.0/stylesheets/jquery.sidr.dark.min.css
+style: //cdn.jsdelivr.net/jquery.sidr/2.2.0/stylesheets/jquery.sidr.dark.min.css
 script: /js/sidr.js
 ---
 
@@ -60,14 +60,14 @@ You have to include a Sidr Theme stylesheet too, choose between the dark or the 
     <!-- Your other stuff  (you can have problems if you don't add minimum scale in the viewport) -->
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <!-- Include a Sidr bundled CSS theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.1.0/stylesheets/jquery.sidr.dark.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.0/stylesheets/jquery.sidr.dark.min.css">
   </head>
   <body>
     <!-- More stuff -->
     <!-- Include jQuery -->
     <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
     <!-- Include the Sidr JS -->
-    <script src="//cdn.jsdelivr.net/jquery.sidr/2.1.0/jquery.sidr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.0/jquery.sidr.min.js"></script>
   </body>
 </html>
 {% endhighlight %}
@@ -92,7 +92,7 @@ If you want to load the scripts from a CDN to save bandwith or improve the perfo
 
 Here are described differents ways of usage for this plugin, you can read and adapt them to your website's requeriments. Below are described all options with details.
 
-###The Simplest Usage 
+###The Simplest Usage
 
 <a id="simple-menu" class="demo button" href="#sidr"><i id="menu-icon" class="fi-list"></i> Simple menu</a>
 
@@ -124,9 +124,9 @@ $(document).ready(function() {
 You can create as many menus as you want in the same page, and you can place them at the right or left side. When creating more than one menu, you need to name them. As it is shown in the example, if you don't create the menu div container, the plugin will create it for you.
 
 {% highlight html %}
-<a id="left-menu" href="#left-menu">Left Menu</a> 
+<a id="left-menu" href="#left-menu">Left Menu</a>
 <a id="right-menu" href="#right-menu">Right Menu</a>
- 
+
 <script>
 $(document).ready(function() {
     $('#left-menu').sidr({
@@ -153,8 +153,8 @@ There are four ways to load content in the menus, choose yours with the source o
  * If you need a more complex way to load content into the menu you can just create a callback function.
 
 {% highlight html %}
-<a id="existing-content-menu" href="#existing-content-menu">Existing content</a> 
-<a id="remote-content-menu" href="#remote-content-menu">Load remotelly</a> 
+<a id="existing-content-menu" href="#existing-content-menu">Existing content</a>
+<a id="remote-content-menu" href="#remote-content-menu">Load remotelly</a>
 <a id="callback-menu" href="#callback-menu">Callback loaded</a>
 
 <header id="demoheader">
@@ -162,8 +162,8 @@ There are four ways to load content in the menus, choose yours with the source o
 </header>
 
 <div id="demo-content">
-    <p>Here are described differents ways of usage for this plugin, you can 
-    read and adapt them to your website's requeriments. Below are described 
+    <p>Here are described differents ways of usage for this plugin, you can
+    read and adapt them to your website's requeriments. Below are described
     all options with details.</p>
 </div>
 
@@ -230,7 +230,7 @@ The major reason for creating this plugin was just being able to easily add exis
 </script>
 {% endhighlight %}
 
-###Open/Close Programatically 
+###Open/Close Programatically
 
 There are some methods you can use to open or close menus as you want, or to bind them to any event. For example, in this page the right/left swipe touch event opens or closes the responsive menu (Note: this plugin doesn't implement touch events, in this case I'm using an external library).
 
@@ -318,6 +318,11 @@ You can see other recipes in the code repository:
       </div>
 
       <div class="option">
+        <p><strong>bind</strong> (String) Default: 'touchstart click' <small>[ Version 2.2.0 an above ]</small></p>
+        <p>The event(s) to trigger the menu. Only 1 event will be triggered each 100ms, so only the first one will be triggered if there are 2 at the same time.</p>
+      </div>
+
+      <div class="option">
         <p><strong>onOpen</strong> (function) Default: function() {} <small>[ Version 1.2.0 an above ]</small></p>
         <p>Callback that will be executed when the menu starts opening.</p>
       </div>
@@ -343,13 +348,13 @@ You can see other recipes in the code repository:
   <h3>jQuery.sidr()</h3>
 
   <div class="usage">
-    <p><strong>Description:</strong> A generic <em>sidr</em> controller. Can be used to access the <em>sidr</em> methods <em>open</em>, <em>close</em> or <em>toggle</em></p>
+    <p><strong>Description:</strong> A generic <em>sidr</em> controller. Can be used to access the <em>sidr</em> methods <em>open</em>, <em>close</em>, <em>toggle</em> or <em>status</em></p>
 
     <h4>jQuery.sidr( [method] [, name] [, complete] )</h4>
 
     <div class="parameter">
       <p><strong>method</strong> (String) Default: 'toggle'</p>
-      <p>Choose between toggle, open or close.</p>
+      <p>Choose between 'toggle', 'open', 'close' or 'status'. <small>[ Status is only available in version 2.1.0 an above ]</small></p>
     </div>
 
     <div class="parameter">
@@ -360,6 +365,15 @@ You can see other recipes in the code repository:
     <div class="parameter">
       <p><strong>complete</strong> (Function) Default: none</p>
       <p>A function to call once the animation is complete.</p>
+    </div>
+
+    <div class="parameter return">
+      <p><strong>return</strong> null || Object <small>[ Version 2.2.0 an above ]</small></p>
+      <p>It returns null when methods 'toggle', 'open' or 'close' are called, or an object when status is called:</p>
+<pre>{
+    moving: (boolean), // A boolean indicating if the menu is currently being moved
+    opened: (string || false) // Name of the opened menu or false if all are closed
+}</pre>
     </div>
   </div>
 </div>
@@ -380,7 +394,7 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
   </div>
 </div>
 
-###Showcase 
+###Showcase
 
 The following responsive sites are using Sidr in an original way to implement their menu:
 

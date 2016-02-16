@@ -5,7 +5,7 @@
   "dependencies": {
     "foundation-sites": "~6.0.0",
     "jquery-touchswipe": "~1.6.15",
-    "sidr": "~2.1.0",
-    "cookieconsent2": "~1.0.10"
+    "cookieconsent2": "~1.0.10",
+    "sidr": "^2.2.0"
   }
 }

@@ -239,8 +239,16 @@
                 }
             }
 
+            pre {
+                font-size: rem-calc(12);
+            }
+
             .option {
                 margin: 10px 0 0 30px;
+            }
+
+            &.return {
+                border-top: 5px solid #e8e8e8;
             }
         }
     }
