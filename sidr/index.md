@@ -4,7 +4,7 @@ title: Sidr
 subtitle: The best jQuery plugin for creating side menus and the easiest way for doing your menu responsive
 excerpt: Berriart contact page
 permalink: /sidr/
-download: https://github.com/artberri/sidr/archive/v2.2.0.zip
+download: https://github.com/artberri/sidr/archive/v2.2.1.zip
 repo: https://github.com/artberri/sidr
 menu:
 - text: Download
@@ -22,7 +22,7 @@ menu:
 ad:
   client: ca-pub-5245097431906186
   slot: 6701087233
-style: //cdn.jsdelivr.net/jquery.sidr/2.2.0/stylesheets/jquery.sidr.dark.min.css
+style: //cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css
 script: /js/sidr.js
 ---
 
@@ -60,14 +60,14 @@ You have to include a Sidr Theme stylesheet too, choose between the dark or the 
     <!-- Your other stuff  (you can have problems if you don't add minimum scale in the viewport) -->
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <!-- Include a Sidr bundled CSS theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.0/stylesheets/jquery.sidr.dark.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
   </head>
   <body>
     <!-- More stuff -->
     <!-- Include jQuery -->
-    <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <!-- Include the Sidr JS -->
-    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.0/jquery.sidr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
   </body>
 </html>
 {% endhighlight %}
