@@ -8,8 +8,7 @@ module.exports = function(grunt) {
         app: {
             dist: '_site',
             deploy: {
-                user: process.env.BERRIART_DEPLOY_USER,
-                key: process.env.BERRIART_DEPLOY_KEY
+                user: process.env.BERRIART_DEPLOY_USER
             }
         },
 
@@ -132,7 +131,7 @@ module.exports = function(grunt) {
                 options: {
                     host: '52.208.104.124',
                     username: '<%= app.deploy.user %>',
-                    privateKey: '<%= app.deploy.key %>',
+                    privateKey: require('fs').readFileSync(process.env.BERRIART_DEPLOY_KEY),
                     port: '22',
                     releases_to_keep: '5'
                 }
