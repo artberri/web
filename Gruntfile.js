@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             dist: '_site',
             deploy: {
                 user: process.env.BERRIART_DEPLOY_USER,
-                pass: process.env.BERRIART_DEPLOY_PASS
+                key: process.env.BERRIART_DEPLOY_KEY
             }
         },
 
@@ -126,13 +126,13 @@ module.exports = function(grunt) {
             options: {
                 local_path: '_site',
                 current_symlink: 'current',
-                deploy_path: '/home/www/berriart.com'
+                deploy_path: '/data/www/berriart.com'
             },
             production: {
                 options: {
-                    host: 'berriart.com',
+                    host: '52.208.104.124',
                     username: '<%= app.deploy.user %>',
-                    password: '<%= app.deploy.pass %>',
+                    privateKey: '<%= app.deploy.key %>',
                     port: '22',
                     releases_to_keep: '5'
                 }
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('serve', ['build', 'connect', 'watch']);
+    grunt.registerTask('serve', ['connect', 'watch']);
     grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
 
     grunt.registerTask('lint', ['scsslint', 'eslint']);
