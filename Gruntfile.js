@@ -160,7 +160,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('serve', ['connect', 'watch']);
-    grunt.registerTask('build', ['clean', 'uglify:dist', 'jekyll:dist']);
+    grunt.registerTask('build', ['clean', 'uglify:dist']);
 
     grunt.registerTask('lint', ['scsslint', 'eslint']);
 

@@ -1,5 +1,6 @@
 require "rubygems"
 require 'html/proofer'
+require 'jekyll'
 
 desc "Lint project"
 task :lint do
@@ -13,8 +14,8 @@ task :lint do
   [lintBuildPid].each { |pid| Process.wait(pid) }
 end
 
-desc "Build project"
-task :build do
+desc "Build JS"
+task :buildjs do
   gruntBuildPid = Process.spawn("grunt build")
 
   trap("INT") {
@@ -25,10 +26,20 @@ task :build do
   [gruntBuildPid].each { |pid| Process.wait(pid) }
 end
 
+desc "Build project"
+task :build do
+  config = Jekyll.configuration({
+    'source' => './',
+    'destination' => './_site'
+  })
+  site = Jekyll::Site.new(config)
+  Jekyll::Commands::Build.build site, config
+end
+
 desc "Test project"
 task :test do
   opts = { :disable_external => true }
   HTML::Proofer.new("./_site", opts).run
 end
 
-task :default => [:lint, :build, :test]
+task :default => [:lint, :buildjs, :build, :test]
