@@ -53,10 +53,6 @@ li {
             font-size: rem-calc(24px);
         }
 
-        p {
-            letter-spacing: .05em;
-        }
-
         li {
             margin-bottom: 15px;
         }
@@ -64,6 +60,11 @@ li {
         ul {
             margin-left: 2rem;
         }
+    }
+
+    h2 {
+        margin: 40px 0 10px;
+        font-size: rem-calc(32px);
     }
 }
 
