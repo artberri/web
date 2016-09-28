@@ -1,0 +1,130 @@
+.zoomInDown {
+    animation-duration: 3.2s;
+    animation-fill-mode: both;
+    animation-name: zoomInDown;
+}
+
+.star-animation {
+    font-size: 20px;
+    animation-duration: 3s;
+    animation-name: starAnimation;
+}
+
+@keyframes starAnimation {
+    from  {
+        animation-timing-function: linear;
+        font-size: 60px;
+        transform: rotate(3000deg);
+        opacity: 0;
+    }
+
+    10%  {
+        animation-timing-function: linear;
+        font-size: 60px;
+        transform: rotate(3000deg);
+        opacity: 0;
+    }
+
+    33% {
+        animation-timing-function: linear;
+        font-size: 60px;
+        transform: rotate(1200deg);
+        opacity: 1;
+    }
+
+    66% {
+        animation-timing-function: ease-out;
+        font-size: 20px;
+        transform: rotate(500deg);
+    }
+
+    to {
+        animation-timing-function: ease-out;
+        font-size: 20px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  75% {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@mixin rotateIn($animationName, $from, $to) {
+    @keyframes #{$animationName} {
+        from {
+            transform: rotate($from);
+            opacity: 0;
+        }
+
+        50% {
+            transform: rotate($from);
+            opacity: 0;
+        }
+
+        to {
+            transform: rotate($to);
+            opacity: 1;
+        }
+    }
+}
+
+@include rotateIn(char1-animation, -230deg, -25.5deg);
+@include rotateIn(char2-animation, -230deg, -18deg);
+@include rotateIn(char3-animation, -230deg, -11deg);
+@include rotateIn(char4-animation, -230deg, -3deg);
+@include rotateIn(char5-animation, -230deg, 5deg);
+@include rotateIn(char6-animation, 230deg, 10deg);
+@include rotateIn(char7-animation, 230deg, 18deg);
+@include rotateIn(char8-animation, 230deg, 25deg);
+
+@mixin slideIn($animationName, $from) {
+    @keyframes #{$animationName} {
+        from {
+            transform: translate3d($from, 0, 0);
+            visibility: visible;
+        }
+
+        85% {
+            transform: translate3d($from, 0, 0);
+            visibility: visible;
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+@include slideIn(slide-left, -400%);
+@include slideIn(slide-right, 400%);
+
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
