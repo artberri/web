@@ -1,0 +1,78 @@
+.main {
+    margin-left: rem-calc(320px);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: rem-calc(320px);
+    background: $primary-color;
+    height: 100%;
+    padding: rem-calc(15px);
+}
+
+.menu {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 30px 0;
+
+        li {
+            text-align: center;
+            font-family: 'Fjalla One', Arial, sans-serif;
+            font-size: rem-calc(20px);
+            text-transform: uppercase;
+            line-height: 45px;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.social {
+    text-align: center;
+    font-size: rem-calc(24px);
+
+    i {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    a {
+        transition: .3s ease all;
+        color: $primary-color;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 19px;
+        margin: 0 5px;
+    }
+
+    .twitter {
+        background: #fff;
+
+        &:hover {
+            color: #00a0d1;
+        }
+    }
+
+    .github {
+        background: #fff;
+
+        &:hover {
+            color: #888;
+        }
+    }
+
+    .linkedin {
+        background: #fff;
+
+        &:hover {
+            color: #4875b4;
+        }
+    }
+}

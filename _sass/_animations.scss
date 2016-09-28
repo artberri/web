@@ -16,6 +16,7 @@
         font-size: 60px;
         transform: rotate(3000deg);
         opacity: 0;
+        color: #666;
     }
 
     10%  {
@@ -23,6 +24,7 @@
         font-size: 60px;
         transform: rotate(3000deg);
         opacity: 0;
+        color: #666;
     }
 
     33% {
@@ -30,68 +32,82 @@
         font-size: 60px;
         transform: rotate(1200deg);
         opacity: 1;
+        color: #666;
     }
 
     66% {
         animation-timing-function: ease-out;
         font-size: 20px;
         transform: rotate(500deg);
+        color: #666;
     }
 
     to {
         animation-timing-function: ease-out;
         font-size: 20px;
         transform: rotate(0);
+        color: $primary-color;
     }
 }
 
 @keyframes zoomInDown {
-  from {
-    opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
+    from {
+        opacity: 0;
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
 
-  75% {
-    opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
+    75% {
+        opacity: 0;
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
 
-  90% {
-    opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-@mixin rotateIn($animationName, $from, $to) {
-    @keyframes #{$animationName} {
-        from {
-            transform: rotate($from);
-            opacity: 0;
-        }
-
-        50% {
-            transform: rotate($from);
-            opacity: 0;
-        }
-
-        to {
-            transform: rotate($to);
-            opacity: 1;
-        }
+    90% {
+        opacity: 1;
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
     }
 }
 
-@include rotateIn(char1-animation, -230deg, -25.5deg);
-@include rotateIn(char2-animation, -230deg, -18deg);
-@include rotateIn(char3-animation, -230deg, -11deg);
-@include rotateIn(char4-animation, -230deg, -3deg);
-@include rotateIn(char5-animation, -230deg, 5deg);
-@include rotateIn(char6-animation, 230deg, 10deg);
-@include rotateIn(char7-animation, 230deg, 18deg);
-@include rotateIn(char8-animation, 230deg, 25deg);
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    50% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    70% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+.flipInX {
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
 
 @mixin slideIn($animationName, $from) {
     @keyframes #{$animationName} {
@@ -128,3 +144,39 @@
         opacity: 1;
     }
 }
+
+@keyframes bounceInUp {
+    from, 85%, 90%, 95%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    95% {
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bounceInUp {
+    animation-name: bounceInUp;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-name: zoomInDown;
+}
+

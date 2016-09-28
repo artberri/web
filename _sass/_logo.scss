@@ -1,0 +1,117 @@
+/*http://codepen.io/littlesnippets/pen/MKOYQM*/
+#logo {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    color: #666;
+    margin: 70px auto;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    h1,
+    h5 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-family: 'Fjalla One', Arial, sans-serif;
+        font-size: 2.4em;
+        position: relative;
+        letter-spacing: normal;
+        height: auto;
+        top: 0;
+        color: #DC6552;
+
+        a {
+            position: relative;
+            z-index: 200;
+            color: #DC6552;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 5px solid #666;
+            left: 50%;
+            top: 50%;
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: rotate(45deg) translate(-50%, -50%);
+            transform: rotate(45deg) translate(-50%, -50%);
+            border-radius: 10%;
+        }
+    }
+
+    h5 {
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 0.7em;
+        font-weight: 800;
+        padding-bottom: 0;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 135px;
+            height: 3px;
+            bottom: -15px;
+            background-color: #666;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .icon {
+        position: relative;
+        display: inline-block;
+        top: -5px;
+        font-size: 24px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            height: 3px;
+            content: '';
+            background: #666;
+            width: 42px;
+            top: 50%;
+        }
+
+        &:before {
+            left: -50px;
+        }
+
+        &:after {
+            right: -50px;
+        }
+    }
+
+    &.mini {
+
+    }
+
+    &.white {
+        color: #fff;
+
+        h1, h5, h1 a {
+            color: #fff;
+        }
+
+        h1:before {
+            border-color: #fff;
+        }
+
+        h5:after,
+        .icon:before,
+        .icon:after {
+            background-color: #fff;
+        }
+    }
+}

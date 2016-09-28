@@ -1,8 +1,11 @@
-  <a id="menu-button" class="menu-button" href="#main-menu"><i id="menu-icon" class="fi-list"></i> <span>Menu</span></a>
+<header class="header">
+    <div id="logo" class="mini white">
+      <div class="icon">&nbsp;&lt;/&gt;&nbsp;</div>
+      <h1><a href="{{ "/" | prepend: site.baseurl }}">Berriart</a></h1>
+      <h5>Full Stack Developer</h5>
+    </div>
 
-  <nav id="main-menu" class="main-menu">
-    <div class="main-menu-table">
-      <div class="main-menu-cell">
+    <nav class="menu">
         <ul>
           {% for link in site.main_navigation %}
             <li {% if page.url == link.url %}class="current"{% endif %}>
@@ -10,11 +13,17 @@
             </li>
           {% endfor %}
         </ul>
-      </div>
+    </nav>
+
+    <p class="social"><a class="linkedin" href="http://www.linkedin.com/in/artberri" title="My Linkedin"><i class="fi-social-linkedin"></i></a> <a class="twitter" href="https://twitter.com/artberri" title="My twitter"><i class="fi-social-twitter"></i></a> <a class="github" href="https://github.com/artberri" title="My github"><i class="fi-social-github"></i></a></p>
+</header>
+
+<footer class="footer">
+  <div class="row">
+    <div class="large-12 columns">
+      <p>Only free software was used and no kitties were harmed in the making of this website.</p>
     </div>
-  </nav>
-  <div class="super-container">
+  </div>
+</footer>
 
-
-
-
+<div class="main">

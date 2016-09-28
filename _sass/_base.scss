@@ -3,33 +3,18 @@ html {
     overflow-x: hidden;
 }
 
+p,
+ul,
+li {
+    font-size: rem-calc(18px);
+}
+
 .center {
     text-align: center;
 }
 
 .super-container {
     height: 100%;
-}
-
-.header {
-    background: #fafafa;
-
-    h1 {
-        font-size: 2rem;
-        letter-spacing: .7em;
-        text-transform: uppercase;
-        line-height: 90px;
-        padding: 0 5%;
-
-        a {
-            color: #666;
-            transition: ease .5s all;
-
-            &:hover {
-                letter-spacing: .75em;
-            }
-        }
-    }
 }
 
 .content-area {
@@ -39,6 +24,9 @@ html {
 
 .site-content {
     padding: 20px 0 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post,
@@ -51,12 +39,11 @@ html {
         position: absolute;
         height: 100%;
         width: 100%;
-        text-shadow: 2px 2px 5px rgba(136, 136, 136, .5);
         position: relative;
-        margin: 30px 0 50px;
+        margin: 50px 0 50px;
         text-shadow: none;
         padding-right: 220px;
-        text-transform: uppercase;
+        border-bottom: 1px solid #aaa;
     }
 
     .entry-content {
@@ -80,47 +67,17 @@ html {
     }
 }
 
-footer {
-    background: #fff;
-
-    ul {
-        display: block;
-        margin: 50px 0 30px;
-        padding: 0;
-        text-align: center;
-
-        li {
-            display: inline-block;
-            padding: 15px 30px;
-            text-transform: uppercase;
-            font-size: rem-calc(16px);
-            border-left: 1px solid #f0f0f0;
-
-            a {
-                color: #666;
-
-                &:hover {
-                    color: #000;
-                }
-            }
-
-            &.current {
-                a {
-                    color: #000;
-                }
-            }
-
-            &:first-child {
-                border: 0;
-            }
-        }
-    }
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: rem-calc(320px);
+    padding: rem-calc(15px);
+    z-index: 20;
 
     p {
+        font-size: rem-calc(10px);
+        color: #fff;
         text-align: center;
-        font-size: rem-calc(12px);
-        color: #666;
-        margin: 0;
-        padding: 20px 0;
     }
 }

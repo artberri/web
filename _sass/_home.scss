@@ -1,6 +1,7 @@
 .home {
     min-height: 100%;
     background: url("../images/2b11918b.png") repeat;
+    overflow: hidden;
 
     .menu-button {
         background-color: transparent;
@@ -15,18 +16,29 @@
     font-weight: 400;
     text-align: center;
 
-    h1 {
-        font-family: 'Changa One', 'sans-serif';
-        font-weight: 400;
+    .button {
+        color: #666;
+        border: 3px solid #666;
+        font-family: 'PT Sans', sans-serif;
         text-transform: uppercase;
-        font-size: 90px;
-        letter-spacing: 15px;
-        margin: 20px 0;
-        height: 180px;
+        margin: 50px;
+        border-radius: 25px;
+        padding: 10px 40px;
+        background: transparent;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    #logo {
+        margin: 140px auto;
     }
 }
 
-h2 {
+.home h2 {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -93,6 +105,10 @@ h2 {
     }
 }
 
+.fa-star {
+    color: $primary-color;
+}
+
 .years {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
@@ -115,98 +131,6 @@ h2 {
     }
 }
 
-.char {
-  display: inline-block;
-  height: 600px;
-  position: absolute;
-  width: 40px;
-  left: 50%;
-  top: 0;
-  transform-origin: bottom center;
-  margin-left: -20px;
-  top: 40px;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-}
-
-.char1 {
-    animation-name: char1-animation;
-    transform: rotate(-25.5deg);
-}
-
-.char2 {
-    animation-name: char2-animation;
-    transform: rotate(-18deg);
-}
-
-.char3 {
-    animation-name: char3-animation;
-    transform: rotate(-11deg);
-}
-
-.char4 {
-    animation-name: char4-animation;
-    transform: rotate(-3deg);
-}
-
-.char5 {
-    animation-name: char5-animation;
-    transform: rotate(5deg);
-}
-
-.char6 {
-    animation-name: char6-animation;
-    transform: rotate(10deg);
-    color: #DC6552;
-}
-
-.char7 {
-    animation-name: char7-animation;
-    transform: rotate(18deg);
-    color: #DC6552;
-}
-
-.char8 {
-    animation-name: char8-animation;
-    transform: rotate(25deg);
-    color: #DC6552;
-}
-
-.inicio {
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    h1,
-    h2,
-    p {
-        text-shadow: 3px, 3px, 3px, 3px, rgba(#000, .8);
-    }
-
-    h1 {
-        font-size: rem-calc(72px);
-        letter-spacing: .7em;
-        text-transform: uppercase;
-        color: $white;
-    }
-
-    h2 {
-        font-size: rem-calc(19px);
-        text-transform: uppercase;
-        padding-right: 3%;
-        color: $white;
-    }
-
-    p {
-        font-size: rem-calc(24px);
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        color: #888;
-    }
-}
-
 .me {
     background: #f7f7f7;
 
@@ -226,49 +150,7 @@ h2 {
         }
     }
 
-    .social {
-        font-size: rem-calc(24px);
 
-        i {
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-
-        a {
-            transition: .3s ease all;
-            color: #fff;
-            display: inline-block;
-            width: 38px;
-            height: 38px;
-            border-radius: 19px;
-            margin: 0 5px;
-        }
-
-        .twitter {
-            background: #00a0d1;
-
-            &:hover {
-                background: shade(#00a0d1, 20%);
-            }
-        }
-
-        .github {
-            background: #888;
-
-            &:hover {
-                background: shade(#888, 20%);
-            }
-        }
-
-        .linkedin {
-            background: #4875b4;
-
-            &:hover {
-                background: shade(#4875b4, 20%);
-            }
-        }
-    }
 }
 
 .skills {
