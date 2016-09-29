@@ -21,8 +21,6 @@ layout: default
 </div>
 
 <div class="content-area " >
-    <a href="{{ page.repo }}"><img class="forkme" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-
     <div id="documentation-container" class="site-content" role="main" >
         {% if page.ad.client and page.ad.slot %}
         <div class="row">
@@ -45,11 +43,16 @@ layout: default
 
                 <article class="post documentation">
 
-
-
                     <header class="entry-header documentation-header">
                         <h1 class="entry-title">{{ page.title }}</h1>
-                        <p class="author">By <a href="//www.berriart.com/">Alberto Varela</a></p>
+
+                        <div class="documenation-social">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <a class="github-button" href="https://github.com/artberri/sidr" data-icon="octicon-star" data-count-href="/artberri/sidr/stargazers" data-count-api="/repos/artberri/sidr#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star artberri/sidr on GitHub">Star</a> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
+                                </div>
+                            </div>
+                        </div>
                     </header>
 
                     <h2 class="entry-subtitle">{{ page.subtitle }}</h2>

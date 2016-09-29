@@ -29,6 +29,12 @@ li {
     margin-right: auto;
 }
 
+.normal-image {
+    max-width: 100%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
 .post,
 .page {
     position: relative;
@@ -44,6 +50,7 @@ li {
         text-shadow: none;
         padding-right: 220px;
         border-bottom: 1px solid #aaa;
+        color: #444;
     }
 
     .entry-content {
@@ -51,6 +58,7 @@ li {
         li,
         pre {
             font-size: rem-calc(24px);
+            color: #444;
         }
 
         li {
@@ -65,6 +73,7 @@ li {
     h2 {
         margin: 40px 0 10px;
         font-size: rem-calc(32px);
+        color: #444;
     }
 }
 

@@ -1,16 +1,3 @@
-.forkme {
-    position: absolute;
-    top: 0;
-    right: -20px;
-    border: 0;
-    opacity: .3;
-    display: none;
-
-    @include breakpoint(medium) {
-        display: block;
-    }
-}
-
 .documenation-social {
     margin: 20px 0 30px;
     text-align: center;
@@ -23,32 +10,37 @@
 
 .documentation-menu {
     a {
-        transition: color .7s;
+        color: #333;
     }
 
     .inner {
         transition: background .7s;
-        background: #333;
+        background: #f0f0f0;
+
+        &:after {
+            content: "";
+            width: 105%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .7);
+            bottom: 2px;
+        }
     }
 
     li {
         text-align: center;
-        line-height: 90px;
-        height: 90px;
+        line-height: 60px;
+        height: 60px;
         font-size: rem-calc(18);
 
-        @include breakpoint(large) {
-            font-size: rem-calc(24);
-        }
-    }
-
-    .is-stuck {
-        .inner {
-            background: #fafafa;
-        }
-
         a {
-            color: #333;
+            display: inline-block;
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(18);
         }
     }
 }
@@ -62,7 +54,8 @@
     }
 
     .entry-title {
-        font-size: rem-calc(96);
+        font-size: rem-calc(72);
+        text-transform: uppercase;
         text-align: center;
         padding: 0;
         margin-top: 0;
@@ -95,8 +88,7 @@
         padding: 0;
 
         @include breakpoint(medium) {
-            font-size: rem-calc(36);
-            width: 80%;
+            font-size: rem-calc(32);
         }
     }
 
@@ -137,10 +129,20 @@
     }
 
     .download-button {
-        margin: 20px auto;
-        display: inline-block;
-        font-size: rem-calc(24);
-        padding: 15px 20px;
+        color: #fff;
+        border: 3px solid $primary-color;
+        font-family: 'PT Sans', sans-serif;
+        text-transform: uppercase;
+        margin: 50px;
+        border-radius: 25px;
+        padding: 10px 40px;
+        background-color: $primary-color;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            background: transparent;
+        }
     }
 
     .doc-preview p {
@@ -206,7 +208,7 @@
         h3 {
             font-size: rem-calc(18);
             font-family: "Courier New", Courier, monospace;
-            color: $primary-color;
+            color: #fff;
             background: #666;
             padding: 10px 20px;
         }
