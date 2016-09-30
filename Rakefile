@@ -1,5 +1,5 @@
 require "rubygems"
-require 'html/proofer'
+require 'html-proofer'
 require 'jekyll'
 
 desc "Lint project"
@@ -39,7 +39,7 @@ end
 desc "Test project"
 task :test do
   opts = { :disable_external => true }
-  HTML::Proofer.new("./_site", opts).run
+  HTMLProofer.check_directory("./_site", opts).run
 end
 
 task :default => [:lint, :buildjs, :build, :test]

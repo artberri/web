@@ -454,9 +454,9 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
 <div id="sidr">
   <!-- Your content -->
   <ul>
-    <li><a href="#menu-button">List 1</a></li>
-    <li class="active"><a href="#menu-button">List 2</a></li>
-    <li><a href="#menu-button">List 3</a></li>
+    <li><a href="#development">List 1</a></li>
+    <li class="active"><a href="#development">List 2</a></li>
+    <li><a href="#development">List 3</a></li>
   </ul>
 </div>
 
