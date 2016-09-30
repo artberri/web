@@ -1,4 +1,5 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+    'use strict';
 
     require('load-grunt-tasks')(grunt);
 
@@ -32,14 +33,14 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
                         'javascript/app.js',
-                        'bower_components/cookieconsent2/build/cookieconsent.min.js',
+                        'bower_components/cookieconsent2/build/cookieconsent.min.js'
                     ],
                     'js/sidr.js': [
                         'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
                         'bower_components/sidr/dist/jquery.sidr.js',
                         'javascript/sidr.js'
                     ]
-                },
+                }
             },
             watch: {
                 options: {
@@ -61,21 +62,21 @@ module.exports = function(grunt) {
                         'bower_components/foundation-sites/js/foundation.reveal.js',
                         'bower_components/foundation-sites/js/foundation.sticky.js',
                         'javascript/app.js',
-                        'bower_components/cookieconsent2/build/cookieconsent.min.js',
+                        'bower_components/cookieconsent2/build/cookieconsent.min.js'
                     ],
                     'js/sidr.js': [
                         'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
                         'bower_components/sidr/dist/jquery.sidr.js',
                         'javascript/sidr.js'
                     ]
-                },
+                }
             }
         },
 
         jekyll: {
             options: {
                 bundleExec: true,
-                src : './'
+                src: './'
             },
             watch: {
                 options: {
@@ -148,7 +149,7 @@ module.exports = function(grunt) {
                 bundleExec: true,
                 config: '.scss-lint.yml',
                 colorizeOutput: true
-            },
+            }
         },
 
         eslint: {

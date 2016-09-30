@@ -1,13 +1,14 @@
 .projects {
     h2 {
-        background: $light-gray;
-        font-size: 24px;
-        margin-bottom: 20px;
-        padding: 5px 10px;
+        margin-bottom: 30px;
     }
 }
 
 .project {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+
     h1 {
         color: $black;
         font-size: 24px;
@@ -15,9 +16,6 @@
         a {
             color: $black;
         }
-
-        .icon {
-            float: right;
-        }
     }
+
 }

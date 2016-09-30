@@ -16,7 +16,7 @@
         "vars-on-top": 2,
         "curly": [2, "all"],
         "operator-assignment": [2, "always"],
-        "space-after-keywords": [2, "always"],
+        "keyword-spacing": [2],
         "brace-style": [2, "1tbs", { "allowSingleLine": false }],
         "wrap-iife": [2, "outside"]
     }

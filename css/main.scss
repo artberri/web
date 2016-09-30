@@ -52,12 +52,15 @@ ul, ol, dl, figure,
 // @include foundation-tooltip;
 @include foundation-top-bar;
 
+@import 'animations';
 @import 'syntax-highlighting';
 @import 'base';
-@import 'menu';
+@import 'logo';
+@import 'header';
+@import 'about';
 @import 'home';
 @import 'projects';
-@import 'mediaqueries';
+@import 'post';
 @import 'notfound';
 @import 'documentation';
 

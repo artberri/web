@@ -1,23 +1,13 @@
 
-    <footer>
-      <div class="row">
-        <div class="large-12 columns">
-          <nav>
-            <ul>
-              {% for link in site.footer_navigation %}
-                <li {% if page.url == link.url %}class="current"{% endif %}>
-                  <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-
-          <p>Only free software was used and no kitties were harmed in the making of this website.</p>
-        </div>
-      </div>
-    </footer>
-
   </div>
+
+  <footer class="footer">
+    <div class="row">
+      <div class="large-12 columns">
+        <p>Only free software was used and no kitties were harmed in the making of this website.</p>
+      </div>
+    </div>
+  </footer>
 
   <div class="large reveal" id="bilbaoModal" data-reveal>
     <img src="{{ "/images/bilbao.jpg" | prepend: site.baseurl }}" alt="Bilbao">
@@ -26,9 +16,3 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-
-  <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
-
-  {% if page.script %}
-    <script src="{{ page.script | prepend: site.baseurl }}"></script>
-  {% endif %}

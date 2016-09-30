@@ -9,15 +9,15 @@ main_navigation:
   url: /
 - text: Projects
   url: /projects/
-- text: Contact
-  url: /contact/
+- text: About me
+  url: /alberto-varela/
 footer_navigation:
 - text: Home
   url: /
 - text: Projects
   url: /projects/
-- text: Contact
-  url: /contact/
+- text: About me
+  url: /alberto-varela/
 
 # Build settings
 markdown: kramdown

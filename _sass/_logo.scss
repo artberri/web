@@ -1,0 +1,153 @@
+// http://codepen.io/littlesnippets/pen/MKOYQM
+.logo {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    color: #666;
+    margin: -10px auto 50px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all .5s;
+
+    @include breakpoint(medium) {
+        margin: 70px auto;
+    }
+
+    h1,
+    h5 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-family: 'Fjalla One', Arial, sans-serif;
+        font-size: 1.6em;
+        position: relative;
+        letter-spacing: normal;
+        height: auto;
+        top: 0;
+        color: $primary-color;
+        transition: all .5s;
+
+        @include breakpoint(medium) {
+            font-size: 2.4em;
+        }
+
+        a {
+            position: relative;
+            z-index: 200;
+            color: $primary-color;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 5px solid #666;
+            left: 50%;
+            top: 50%;
+            transform-origin: 0 0;
+            transform: rotate(45deg) translate(-50%, -50%);
+            border-radius: 10%;
+            transition: all .5s;
+
+            @include breakpoint(medium) {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+
+    h5 {
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: .47em;
+        font-weight: 800;
+        padding-bottom: 0;
+        position: relative;
+        transition: all .5s;
+
+        @include breakpoint(medium) {
+            font-size: .7em;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 84px;
+            height: 3px;
+            bottom: -15px;
+            background-color: #666;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint(medium) {
+                width: 135px;
+            }
+        }
+    }
+
+    .icon {
+        position: relative;
+        display: inline-block;
+        top: -5px;
+        font-size: 15px;
+        transition: all .5s;
+
+        @include breakpoint(medium) {
+            font-size: 24px;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            height: 3px;
+            content: '';
+            background: #666;
+            width: 25px;
+            top: 50%;
+
+            @include breakpoint(medium) {
+                width: 42px;
+            }
+        }
+
+        &::before {
+            left: -31px;
+
+            @include breakpoint(medium) {
+                left: -50px;
+            }
+        }
+
+        &::after {
+            right: -31px;
+
+            @include breakpoint(medium) {
+                right: -50px;
+            }
+        }
+    }
+
+    &.white {
+        color: #fff;
+
+        h1,
+        h5,
+        h1 a {
+            color: #fff;
+        }
+
+        h1::before {
+            border-color: #fff;
+        }
+
+        h5::after,
+        .icon::before,
+        .icon::after {
+            background-color: #fff;
+        }
+    }
+}

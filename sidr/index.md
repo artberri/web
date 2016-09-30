@@ -26,28 +26,26 @@ style: //cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css
 script: /js/sidr.js
 ---
 
+<img src="/images/documentation/sidr/screenshots.png" class="normal-image" alt="Image explanation">
+
+You will be able to create multiple <em>sidrs</em> on both sides of your web to make responsives menus (or not, it works perfectly on desktop too).
+It uses CSS3 transitions (and fallbacks to $.animate with older browsers) and it supports multiple source types.
+
 <div class="row doc-preview">
     <div class="large-8 columns">
-        <img src="/images/documentation/sidr/screenshots.png" alt="Image explanation">
+
     </div>
     <div class="large-4 columns">
         <p>
-        You will be able to create multiple <em>sidrs</em> on both sides of your web to make responsives menus (or not, it works perfectly on desktop too).
+
         </p>
 
-        <p>It uses CSS3 transitions (and fallbacks to $.animate with older browsers) and it supports multiple source types.</p>
+        <p></p>
     </div>
 </div>
 
-<div class="documenation-social">
-    <div class="row">
-        <div class="large-12 columns">
-            <a class="github-button" href="https://github.com/artberri/sidr" data-icon="octicon-star" data-count-href="/artberri/sidr/stargazers" data-count-api="/repos/artberri/sidr#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star artberri/sidr on GitHub">Star</a> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
-        </div>
-    </div>
-</div>
 
-##Get started
+## Get started
 
 Like any other plugin, you must include it after the jQuery script. For a better performance load them at the bottom of your page or in an asynchronous way.
 
@@ -88,11 +86,11 @@ npm install sidr --save
 
 If you want to load the scripts from a CDN to save bandwith or improve the performance you can use [jsDelivr](https://www.jsdelivr.com/projects/jquery.sidr).
 
-##Demos & Usage
+## Demos & Usage
 
 Here are described differents ways of usage for this plugin, you can read and adapt them to your website's requeriments. Below are described all options with details.
 
-###The Simplest Usage
+### The Simplest Usage
 
 <a id="simple-menu" class="demo button" href="#sidr"><i id="menu-icon" class="fi-list"></i> Simple menu</a>
 
@@ -117,7 +115,7 @@ $(document).ready(function() {
 </script>
 {% endhighlight %}
 
-###Create Multiple Menus
+### Create Multiple Menus
 
 <a id="left-menu" class="demo button" href="#left-menu">Left Menu</a> <a id="right-menu" class="demo button" href="#right-menu">Right Menu</a>
 
@@ -141,7 +139,7 @@ $(document).ready(function() {
 </script>
 {% endhighlight %}
 
-###The Menu Content
+### The Menu Content
 
 <a id="existing-content-menu" class="demo button" href="#existing-content-menu">Existing content</a> <a id="remote-content-menu" class="demo button" href="#remote-content-menu">Load remotelly</a> <a id="callback-menu" class="demo button" href="#callback-menu">Callback loaded</a>
 
@@ -187,7 +185,7 @@ $(document).ready(function() {
 </script>
 {% endhighlight %}
 
-###Responsive Menus
+### Responsive Menus
 
 <a data-proofer-ignore id="responsive-menu-button" class="demo button" href="#sidr-main">Responsive Menu</a>
 
@@ -230,7 +228,7 @@ The major reason for creating this plugin was just being able to easily add exis
 </script>
 {% endhighlight %}
 
-###Open/Close Programatically
+### Open/Close Programatically
 
 There are some methods you can use to open or close menus as you want, or to bind them to any event. For example, in this page the right/left swipe touch event opens or closes the responsive menu (Note: this plugin doesn't implement touch events, in this case I'm using an external library).
 
@@ -253,13 +251,13 @@ There are some methods you can use to open or close menus as you want, or to bin
 </script>
 {% endhighlight %}
 
-###Cookbook
+### Cookbook
 
 You can see other recipes in the code repository:
 
 [https://github.com/artberri/sidr/tree/master/examples](https://github.com/artberri/sidr/tree/master/examples)
 
-##Documentation
+## Documentation
 
 <div class="function">
   <h3>.sidr()</h3>
@@ -379,7 +377,7 @@ You can see other recipes in the code repository:
 </div>
 
 
-##Themes
+## Themes
 
 There are two themes (two stylesheets) included with the plugin, a dark one and a light one. You can use them, create a new one or override them with your own styles.
 
@@ -394,7 +392,7 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
   </div>
 </div>
 
-###Showcase
+### Showcase
 
 The following responsive sites are using Sidr in an original way to implement their menu:
 
@@ -430,7 +428,7 @@ The following responsive sites are using Sidr in an original way to implement th
 
 If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to alberto[at]berriart[dot]com.
 
-##Development
+## Development
 
 - Source hosted at [GitHub](https://github.com/artberri/sidr)
 - If you have problems implenting this, ask about it in [StackOverflow](http://stackoverflow.com/search?q=sidr)

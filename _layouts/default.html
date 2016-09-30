@@ -16,11 +16,22 @@
 
 </script>
 
-    {% include header.html %}
+    {% if page.url != "/" %}
+      {% include header.html %}
+    {% endif %}
 
     {{ content }}
 
-    {% include footer.html %}
+    {% if page.url != "/" %}
+      {% include footer.html %}
+    {% endif %}
+
+    <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
+
+    {% if page.script %}
+      <script src="{{ page.script | prepend: site.baseurl }}"></script>
+    {% endif %}
+
 
   </body>
 
