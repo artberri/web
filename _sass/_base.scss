@@ -40,19 +40,19 @@ li {
     padding: rem-calc(15px);
     z-index: 20;
 
-    p {
-        font-size: rem-calc(10px);
-        color: #666;
-        text-align: center;
-    }
-
     @include breakpoint(medium) {
         width: rem-calc(320px);
         position: fixed;
         bottom: 0;
         left: 0;
+    }
 
-        p {
+    p {
+        font-size: rem-calc(10px);
+        color: #666;
+        text-align: center;
+
+        @include breakpoint(medium) {
             color: #fff;
         }
     }

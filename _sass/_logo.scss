@@ -1,5 +1,5 @@
-/*http://codepen.io/littlesnippets/pen/MKOYQM*/
-#logo {
+// http://codepen.io/littlesnippets/pen/MKOYQM
+.logo {
     font-family: 'Raleway', Arial, sans-serif;
     position: relative;
     color: #666;
@@ -28,13 +28,17 @@
         letter-spacing: normal;
         height: auto;
         top: 0;
-        color: #DC6552;
+        color: $primary-color;
         transition: all .5s;
+
+        @include breakpoint(medium) {
+            font-size: 2.4em;
+        }
 
         a {
             position: relative;
             z-index: 200;
-            color: #DC6552;
+            color: $primary-color;
         }
 
         &::before {
@@ -45,10 +49,7 @@
             border: 5px solid #666;
             left: 50%;
             top: 50%;
-            -webkit-transform-origin: 0 0;
-            -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-            -webkit-transform: rotate(45deg) translate(-50%, -50%);
             transform: rotate(45deg) translate(-50%, -50%);
             border-radius: 10%;
             transition: all .5s;
@@ -58,19 +59,19 @@
                 height: 180px;
             }
         }
-
-        @include breakpoint(medium) {
-            font-size: 2.4em;
-        }
     }
 
     h5 {
         font-family: 'Raleway', Arial, sans-serif;
-        font-size: 0.47em;
+        font-size: .47em;
         font-weight: 800;
         padding-bottom: 0;
         position: relative;
         transition: all .5s;
+
+        @include breakpoint(medium) {
+            font-size: .7em;
+        }
 
         &::after {
             position: absolute;
@@ -80,14 +81,9 @@
             bottom: -15px;
             background-color: #666;
             left: 50%;
-            -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-        }
 
-        @include breakpoint(medium) {
-            font-size: 0.7em;
-
-            &::after {
+            @include breakpoint(medium) {
                 width: 135px;
             }
         }
@@ -100,6 +96,10 @@
         font-size: 15px;
         transition: all .5s;
 
+        @include breakpoint(medium) {
+            font-size: 24px;
+        }
+
         &::before,
         &::after {
             position: absolute;
@@ -108,29 +108,24 @@
             background: #666;
             width: 25px;
             top: 50%;
+
+            @include breakpoint(medium) {
+                width: 42px;
+            }
         }
 
         &::before {
             left: -31px;
+
+            @include breakpoint(medium) {
+                left: -50px;
+            }
         }
 
         &::after {
             right: -31px;
-        }
 
-        @include breakpoint(medium) {
-            font-size: 24px;
-
-            &::before,
-            &::after {
-                width: 42px;
-            }
-
-            &::before {
-                left: -50px;
-            }
-
-            &::after {
+            @include breakpoint(medium) {
                 right: -50px;
             }
         }
@@ -139,7 +134,9 @@
     &.white {
         color: #fff;
 
-        h1, h5, h1 a {
+        h1,
+        h5,
+        h1 a {
             color: #fff;
         }
 

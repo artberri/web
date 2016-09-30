@@ -1,17 +1,17 @@
-.zoomInDown {
+.zoom-in-down {
     animation-duration: 3.2s;
     animation-fill-mode: both;
-    animation-name: zoomInDown;
+    animation-name: zoom-in-down;
 }
 
 .star-animation {
     font-size: 20px;
     animation-duration: 3s;
-    animation-name: starAnimation;
+    animation-name: star-animation;
 }
 
-@keyframes starAnimation {
-    from  {
+@keyframes star-animation {
+    from {
         animation-timing-function: linear;
         font-size: 60px;
         transform: rotate(3000deg);
@@ -19,7 +19,7 @@
         color: #666;
     }
 
-    10%  {
+    10% {
         animation-timing-function: linear;
         font-size: 60px;
         transform: rotate(3000deg);
@@ -50,27 +50,27 @@
     }
 }
 
-@keyframes zoomInDown {
+@keyframes zoom-in-down {
     from {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(.550, .055, .675, .190);
     }
 
     75% {
         opacity: 0;
         transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(.550, .055, .675, .190);
     }
 
     90% {
         opacity: 1;
         transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(.175, .885, .320, 1);
     }
 }
 
-@keyframes flipInX {
+@keyframes flip-in-x {
     from {
         transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
         animation-timing-function: ease-in;
@@ -102,15 +102,15 @@
     }
 }
 
-.flipInX {
+.flip-in-x {
     backface-visibility: visible !important;
-    animation-name: flipInX;
+    animation-name: flip-in-x;
     animation-duration: 3s;
     animation-fill-mode: both;
 }
 
-@mixin slideIn($animationName, $from) {
-    @keyframes #{$animationName} {
+@mixin slide-in($animation-name, $from) {
+    @keyframes #{$animation-name} {
         from {
             transform: translate3d($from, 0, 0);
             visibility: visible;
@@ -127,8 +127,8 @@
     }
 }
 
-@include slideIn(slide-left, -400%);
-@include slideIn(slide-right, 400%);
+@include slide-in(slide-left, -400%);
+@include slide-in(slide-right, 400%);
 
 
 @keyframes opacity {
@@ -145,9 +145,9 @@
     }
 }
 
-@keyframes bounceInUp {
+@keyframes bounce-in-up {
     from, 85%, 90%, 95%, to {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(.215, .610, .355, 1);
     }
 
     from {
@@ -173,10 +173,10 @@
     }
 }
 
-.bounceInUp {
-    animation-name: bounceInUp;
+.bounce-in-up {
+    animation-name: bounce-in-up;
     animation-duration: 5s;
     animation-fill-mode: both;
-    animation-name: zoomInDown;
+    animation-name: zoom-in-down;
 }
 

@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
 
     $('.smooth').click(function (e) {
         e.preventDefault();

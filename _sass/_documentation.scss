@@ -17,14 +17,14 @@
         transition: background .7s;
         background: #f0f0f0;
 
-        &:after {
-            content: "";
+        &::after {
+            content: '';
             width: 105%;
             height: 1px;
             display: block;
             position: absolute;
             z-index: -1;
-            box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .7);
+            box-shadow: 0 0 8px 2px rgba(0, 0, 0, .7);
             bottom: 2px;
         }
     }
@@ -35,16 +35,16 @@
         height: 60px;
         font-size: rem-calc(12);
 
-        a {
-            display: inline-block;
-        }
-
         @include breakpoint(xlarge) {
             font-size: rem-calc(14);
         }
 
         @include breakpoint(xxlarge) {
             font-size: rem-calc(18);
+        }
+
+        a {
+            display: inline-block;
         }
     }
 }
@@ -211,7 +211,7 @@
 
         h3 {
             font-size: rem-calc(18);
-            font-family: "Courier New", Courier, monospace;
+            font-family: 'Courier New', Courier, monospace;
             color: #fff;
             background: #666;
             padding: 10px 20px;
@@ -219,7 +219,7 @@
 
         h4 {
             font-size: rem-calc(16);
-            font-family: "Courier New", Courier, monospace;
+            font-family: 'Courier New', Courier, monospace;
             color: $primary-color;
         }
 
@@ -232,7 +232,7 @@
             padding: 10px 0;
 
             strong {
-                font-family: "Courier New", Courier, monospace;
+                font-family: 'Courier New', Courier, monospace;
                 font-size: 1em;
             }
 
