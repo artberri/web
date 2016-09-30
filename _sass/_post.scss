@@ -1,0 +1,54 @@
+.post,
+.page {
+    position: relative;
+
+    .entry-title {
+        font-size: rem-calc(28px);
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        margin: 0 0 20px;
+        text-shadow: none;
+        border-bottom: 1px solid #aaa;
+        color: #444;
+
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(54px);
+            margin: 50px 0;
+        }
+    }
+
+    .entry-content {
+        p,
+        li,
+        pre {
+            font-size: rem-calc(16px);
+            color: #444;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(24px);
+            }
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 2rem;
+        }
+    }
+
+    h2 {
+        margin: 40px 0 10px;
+        font-size: rem-calc(24px);
+        color: #444;
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(32px);
+        }
+    }
+}

@@ -17,62 +17,99 @@
         border: 3px solid #666;
         font-family: 'PT Sans', sans-serif;
         text-transform: uppercase;
-        margin: 50px;
+        margin: 30px auto;
         border-radius: 25px;
         padding: 10px 40px;
         background: transparent;
+        display: block;
+        width: 60%;
 
         &:hover,
         &:focus {
             color: $primary-color;
             border-color: $primary-color;
         }
+
+        @include breakpoint(medium) {
+            margin: 50px;
+            display: inline-block;
+            width: auto;
+        }
+
+        @media screen and (max-width: 41.75em) and (orientation: landscape) {
+            position: absolute;
+            top: -8px;
+            width: auto;
+
+            &.about {
+                left: 15px;
+            }
+
+            &.projects {
+                right: 15px;
+            }
+        }
     }
 
     #logo {
-        margin: 140px auto;
+        margin: 70px auto;
+
+        @include breakpoint(medium) {
+            margin: 140px auto;
+        }
     }
 }
 
 .home h2 {
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin: 70px 0 0;
-  position: relative;
-  letter-spacing: 6px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 70px auto 0;
+    position: relative;
+    letter-spacing: 6px;
+    text-align: center;
+    width: 80%;
 
-  &:before,
-  &:after {
-    content: " ";
-    position: absolute;
-    width: 50px;
-    height: 8px;
-    border-top: 1px solid #666;
-    border-bottom: 1px solid #666;
+    @include breakpoint(medium) {
+        margin: 70px 0 0;
+        width: auto;
+    }
 
-  }
+    &:before,
+    &:after {
+        content: " ";
+        position: absolute;
+        width: 50px;
+        height: 8px;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
 
-  &:before  {
-    margin: 8px 0 0 -65px;
-  }
-  &:after {
-    margin: 7px 0 0 10px;
-  }
+    }
+
+    &:before  {
+        margin: 8px 0 0 -65px;
+    }
+    &:after {
+        margin: 7px 0 0 10px;
+    }
 }
 
 .claim {
-    margin: 20px 0 50px;
     position: relative;
     text-align: center;
-    margin: 50px auto;
+    margin: 20px auto;
     display: block;
-    font-size: 20px;
+    font-size: 16px;
 
-    a {
+    @include breakpoint(medium) {
+        font-size: 20px;
+        margin: 50px auto;
+    }
+
+    span {
         text-decoration: none;
-        display: inline-block;
+        display: none;
         text-align: left;
         color: #666;
         animation-name: slide-right;
@@ -82,6 +119,10 @@
         &:nth-child(1) {
             text-align: right;
             animation-name: slide-left;
+        }
+
+        @include breakpoint(lsmall) {
+            display: inline-block;
         }
     }
 
@@ -107,7 +148,7 @@
 
 .years {
     font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 5px;
     animation-name: opacity;
     animation-duration: 4.3s;
@@ -124,5 +165,9 @@
         font-size: 16px;
         margin: 0 10px;
         top: 2px;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 16px;
     }
 }

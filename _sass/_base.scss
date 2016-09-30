@@ -35,59 +35,25 @@ li {
     display: block;
 }
 
-.post,
-.page {
-    position: relative;
-
-    .entry-title {
-        font-size: rem-calc(54px);
-        top: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        margin: 50px 0 50px;
-        text-shadow: none;
-        padding-right: 220px;
-        border-bottom: 1px solid #aaa;
-        color: #444;
-    }
-
-    .entry-content {
-        p,
-        li,
-        pre {
-            font-size: rem-calc(24px);
-            color: #444;
-        }
-
-        li {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 2rem;
-        }
-    }
-
-    h2 {
-        margin: 40px 0 10px;
-        font-size: rem-calc(32px);
-        color: #444;
-    }
-}
-
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: rem-calc(320px);
+    width: 100%;
     padding: rem-calc(15px);
     z-index: 20;
 
     p {
         font-size: rem-calc(10px);
-        color: #fff;
+        color: #666;
         text-align: center;
+    }
+
+    @include breakpoint(medium) {
+        width: rem-calc(320px);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        p {
+            color: #fff;
+        }
     }
 }
