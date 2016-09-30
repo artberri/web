@@ -37,7 +37,7 @@
             color: #DC6552;
         }
 
-        &:before {
+        &::before {
             content: '';
             position: absolute;
             width: 120px;
@@ -72,7 +72,7 @@
         position: relative;
         transition: all .5s;
 
-        &:after {
+        &::after {
             position: absolute;
             content: '';
             width: 84px;
@@ -87,7 +87,7 @@
         @include breakpoint(medium) {
             font-size: 0.7em;
 
-            &:after {
+            &::after {
                 width: 135px;
             }
         }
@@ -100,8 +100,8 @@
         font-size: 15px;
         transition: all .5s;
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             position: absolute;
             height: 3px;
             content: '';
@@ -110,27 +110,27 @@
             top: 50%;
         }
 
-        &:before {
+        &::before {
             left: -31px;
         }
 
-        &:after {
+        &::after {
             right: -31px;
         }
 
         @include breakpoint(medium) {
             font-size: 24px;
 
-            &:before,
-            &:after {
+            &::before,
+            &::after {
                 width: 42px;
             }
 
-            &:before {
+            &::before {
                 left: -50px;
             }
 
-            &:after {
+            &::after {
                 right: -50px;
             }
         }
@@ -143,13 +143,13 @@
             color: #fff;
         }
 
-        h1:before {
+        h1::before {
             border-color: #fff;
         }
 
-        h5:after,
-        .icon:before,
-        .icon:after {
+        h5::after,
+        .icon::before,
+        .icon::after {
             background-color: #fff;
         }
     }

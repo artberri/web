@@ -33,13 +33,17 @@
         text-align: center;
         line-height: 60px;
         height: 60px;
-        font-size: rem-calc(18);
+        font-size: rem-calc(12);
 
         a {
             display: inline-block;
         }
 
-        @include breakpoint(large) {
+        @include breakpoint(xlarge) {
+            font-size: rem-calc(14);
+        }
+
+        @include breakpoint(xxlarge) {
             font-size: rem-calc(18);
         }
     }
@@ -256,3 +260,10 @@
     }
 }
 
+.documentation-adblock-1 {
+    margin-bottom: 20px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
+}
