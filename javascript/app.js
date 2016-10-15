@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
     'use strict';
 
     $('.smooth').click(function (e) {
@@ -21,4 +21,4 @@
         'theme': 'dark-bottom'
     };
 
-}());
+}(jQuery));

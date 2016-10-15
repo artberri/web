@@ -1,6 +1,8 @@
 # Site settings
 title: Berriart | Desarrollo web con software libre
 email: alberto@berriart.com
+author:
+  twitter: artberri
 description: Personal page of Alberto Varela a Full Stack Web Developer based in Bilbao.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.berriart.com" # the base hostname & protocol for your site
@@ -42,6 +44,18 @@ exclude: [
 sass:
     style: compressed
 
+assets:
+  compress:
+    css: true
+    js: false
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-assets

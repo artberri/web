@@ -13,15 +13,15 @@
         border-bottom: 1px solid #aaa;
         color: #444;
 
-        &.in-post {
-            margin-bottom: 0;
-        }
-
         @include breakpoint(medium) {
             font-size: rem-calc(54px);
             margin: 50px 0;
+        }
 
-            .in-post {
+        &.in-post {
+            margin-bottom: 0;
+
+            @include breakpoint(medium) {
                 margin-bottom: 0;
             }
         }
@@ -36,24 +36,28 @@
         font-weight: bold;
     }
 
-    .post .entry-title {
-        font-size: rem-calc(20px);
-        border: 0;
-        margin: 0;
+    .post {
+        margin-bottom: 50px;
 
-        a {
-            text-decoration: none;
-        }
-
-        @include breakpoint(medium) {
-            font-size: rem-calc(36px);
+        .entry-title {
+            font-size: rem-calc(20px);
+            border: 0;
             margin: 0;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(36px);
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 
     .entry-image {
         margin-bottom: 20px;
-        border:1px solid #ddd;
+        border: 1px solid #ddd;
     }
 
     .entry-content {

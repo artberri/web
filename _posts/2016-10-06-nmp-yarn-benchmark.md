@@ -6,8 +6,7 @@ excerpt: >
     much faster and reliable than its predecessor. Let see if it's true.
 ogImage: /images/blog/2016/nmp-yarn-benchmark-og.png
 featuredImage: /images/blog/2016/nmp-yarn-benchmark.png
-category: [developer]
-tags: [scratch,develop,kids]
+category: [javascript]
 ---
 
 If you are a Javascript developer, specially if you work with Node.js, you have probably read something

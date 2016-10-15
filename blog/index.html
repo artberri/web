@@ -5,7 +5,6 @@ title: Blog
 
 <div class="content-area">
     <div class="site-content page" role="main" itemscope itemtype="http://schema.org/Blog">
-
         <div class="row">
             <div class="large-12 columns">
 
@@ -20,7 +19,12 @@ title: Blog
                         </header>
 
                         <div class="post-details-info">
-                            <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Published on {{ post.date | date: "%B %-d, %Y" }}</time></p>
+                            <p class="post-meta">
+                                <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Published on {{ post.date | date: "%B %-d, %Y" }}</time>
+                                {% if post.external %}
+                                    <span class="external-entry">in <a href="{{ post.redirect_to[0] }}">{{ post.external }}</a> [External link]</span>
+                                {% endif %}
+                            </p>
                         </div>
 
                         <div class="entry-image-wrapper">
@@ -61,6 +65,7 @@ title: Blog
                     {% endif %}
                     </div>
                 {% endif %}
+
             </div>
         </div>
 
