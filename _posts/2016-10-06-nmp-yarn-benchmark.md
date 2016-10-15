@@ -26,7 +26,7 @@ Anyway, I wanted to make a benchmarking and here it is.
 
 ## The Method
 
-The tool I've used to measure the speed of both managers is just the linux command `time`. I've created a litle Bash
+The tool I've used to measure the speed of both managers is just the linux command `time`. I've created a little Bash
 script, based on [this gist][7] made by Peter Mitchell, that will perform multiple installations of three famous JS
 frameworks using Yarn and NPM.
 
@@ -135,7 +135,7 @@ I have been testing Yarn since the first day, as I said it's something I had wan
 [Puppet][16] for software provisioning in most of my projects. Because of this, I have created a Puppet module for installing
 Yarn that you can see here: [https://forge.puppetlabs.com/artberri/yarn][17].
 
-I hope you enjoy this reading!
+I hope you enjoyed this reading!
 
 [1]: https://yarnpkg.com/
 [2]: https://code.facebook.com/posts/1840075619545360

@@ -24,7 +24,7 @@
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:image" content="{% if page.ogImage %}{{ page.ogImage | prepend: site.baseurl | prepend: site.url }}{% else %}http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg{% endif %}" />
+  <meta property="og:image" content="{% if page.ogImage %}{{ page.ogImage | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/images/berriart.png' | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 
   {% if page.url == '/sidr/' %}
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
