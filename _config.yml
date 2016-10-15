@@ -9,15 +9,13 @@ main_navigation:
   url: /
 - text: Projects
   url: /projects/
+- text: Blog
+  url: /blog/
 - text: About me
   url: /alberto-varela/
-footer_navigation:
-- text: Home
-  url: /
-- text: Projects
-  url: /projects/
-- text: About me
-  url: /alberto-varela/
+permalink: /blog/:year/:month/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
 
 # Build settings
 markdown: kramdown
@@ -45,3 +43,4 @@ sass:
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate

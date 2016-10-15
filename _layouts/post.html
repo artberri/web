@@ -1,15 +1,38 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+<div class="content-area">
+    <div class="site-content page" role="main">
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+        <div class="row">
+            <div class="large-12 columns">
 
-</article>
+                  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                      <header class="entry-header">
+                          <h1 class="entry-title in-post" itemprop="name headline">{{ page.title }}</h1>
+                      </header>
+
+                      <div class="post-details-info">
+                          <p class="post-meta in-post"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Published on {{ page.date | date: "%B %-d, %Y" }}</time></p>
+                      </div>
+
+                      <div class="entry-image-wrapper">
+                          <img itemprop="image" alt="{{ page.title }}" class="entry-image" src="{{ page.featuredImage }}" width="870" height="455">
+                      </div>
+
+                      <div class="entry-content" itemprop="articleBody">
+                          <p class="entry-excerpt">{{ page.excerpt }}</p>
+
+                          <p>{{ content }}</p>
+                      </div>
+
+                  </article>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

@@ -100,6 +100,7 @@ module.exports = function (grunt) {
                     '.html',
                     '_*/**/*.{html,md,mkd,markdown,scss}',
                     'projects/**/*.{html,md,mkd,markdown}',
+                    'blog/**/*.{html,md,mkd,markdown}',
                     'contact/**/*.{html,md,mkd,markdown}',
                     'css/*',
                     'js/*',

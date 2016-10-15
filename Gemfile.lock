@@ -51,6 +51,7 @@ GEM
     jekyll-assets-autoprefixer (1.0.0.pre.alpha3)
       autoprefixer-rails
       jekyll-assets (~> 1.0.0.pre.alpha0)
+    jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.11.0)
       jekyll (>= 2.0)
     jekyll-sass-converter (1.4.0)
@@ -114,6 +115,7 @@ DEPENDENCIES
   html-proofer
   jekyll
   jekyll-assets-autoprefixer
+  jekyll-paginate
   jekyll-redirect-from
   jekyll-sitemap
   rake

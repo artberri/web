@@ -1,4 +1,3 @@
-.post,
 .page {
     position: relative;
 
@@ -14,11 +13,47 @@
         border-bottom: 1px solid #aaa;
         color: #444;
 
+        &.in-post {
+            margin-bottom: 0;
+        }
 
         @include breakpoint(medium) {
             font-size: rem-calc(54px);
             margin: 50px 0;
+
+            .in-post {
+                margin-bottom: 0;
+            }
         }
+    }
+
+    .post-meta.in-post {
+        margin-bottom: 50px;
+        margin-top: 5px;
+    }
+
+    .entry-excerpt {
+        font-weight: bold;
+    }
+
+    .post .entry-title {
+        font-size: rem-calc(20px);
+        border: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+        }
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(36px);
+            margin: 0;
+        }
+    }
+
+    .entry-image {
+        margin-bottom: 20px;
+        border:1px solid #ddd;
     }
 
     .entry-content {
@@ -39,6 +74,15 @@
 
         ul {
             margin-left: 2rem;
+        }
+
+        .pre {
+            font-size: rem-calc(12px);
+            margin-bottom: 20px;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(16px);
+            }
         }
     }
 
