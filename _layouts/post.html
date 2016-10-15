@@ -8,26 +8,63 @@ layout: default
         <div class="row">
             <div class="large-12 columns">
 
-                  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-                      <header class="entry-header">
-                          <h1 class="entry-title in-post" itemprop="name headline">{{ page.title }}</h1>
-                      </header>
+                <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                    <header class="entry-header">
+                        <h1 class="entry-title in-post" itemprop="name headline">{{ page.title }}</h1>
+                    </header>
 
-                      <div class="post-details-info">
-                          <p class="post-meta in-post"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Published on {{ page.date | date: "%B %-d, %Y" }}</time></p>
-                      </div>
+                    <div class="post-details-info">
+                        <p class="post-meta in-post"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Published on {{ page.date | date: "%B %-d, %Y" }}</time></p>
+                    </div>
 
-                      <div class="entry-image-wrapper">
-                          <img itemprop="image" alt="{{ page.title }}" class="entry-image" src="{{ page.featuredImage }}" width="870" height="455">
-                      </div>
+                    <div class="entry-image-wrapper">
+                        <img itemprop="image" alt="{{ page.title }}" class="entry-image" src="{{ page.featuredImage }}" width="870" height="455">
+                    </div>
 
-                      <div class="entry-content" itemprop="articleBody">
-                          <p class="entry-excerpt">{{ page.excerpt }}</p>
+                    <div class="entry-content" itemprop="articleBody">
+                        <p class="entry-excerpt">{{ page.excerpt }}</p>
 
-                          <p>{{ content }}</p>
-                      </div>
+                        <p>{{ content }}</p>
+                    </div>
 
-                  </article>
+                </article>
+
+                {% include share.html %}
+
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup" class="signup">
+                    <form action="//berriart.us8.list-manage.com/subscribe/post?u=dffb188d250f71ebfb7f19c3a&amp;id=8841d79d0d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <h2>Subscribe to mailing list and receive post updates on your email</h2>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address </label>
+                                <input type="email" value="" name="EMAIL" placeholder="yourname@example.org" class="required email" id="mce-EMAIL">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dffb188d250f71ebfb7f19c3a_8841d79d0d" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+
+                <div id="disqus_thread"></div>
+                <script>
+                var disqus_config = function () {
+                    this.page.url = '{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}';
+                    this.page.identifier = '{{ page.id }}';
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = '//berriart.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
             </div>
         </div>

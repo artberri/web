@@ -16,6 +16,7 @@ main_navigation:
 permalink: /blog/:year/:month/:title/
 paginate: 10
 paginate_path: "/blog/page:num/"
+twitter_username: artberri
 
 # Build settings
 markdown: kramdown
