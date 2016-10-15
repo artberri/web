@@ -21,7 +21,6 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'js/app.js': [
-
                         'bower_components/jquery/dist/jquery.js',
                         'bower_components/what-input/what-input.js',
                         'bower_components/foundation-sites/js/foundation.core.js',
@@ -100,6 +99,7 @@ module.exports = function (grunt) {
                     '.html',
                     '_*/**/*.{html,md,mkd,markdown,scss}',
                     'projects/**/*.{html,md,mkd,markdown}',
+                    'blog/**/*.{html,md,mkd,markdown}',
                     'contact/**/*.{html,md,mkd,markdown}',
                     'css/*',
                     'js/*',

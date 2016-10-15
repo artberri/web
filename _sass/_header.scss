@@ -36,11 +36,11 @@
     li {
         text-align: center;
         font-family: 'Fjalla One', Arial, sans-serif;
-        font-size: rem-calc(20px);
+        font-size: rem-calc(18px);
         text-transform: uppercase;
         line-height: 45px;
         display: inline-block;
-        padding: 0 10px;
+        padding: 0 5px;
 
         @include breakpoint(medium) {
             display: block;
@@ -55,7 +55,7 @@
             content: '·';
             color: #fff;
             position: relative;
-            left: -10px;
+            left: -5px;
 
             @include breakpoint(medium) {
                 display: none;

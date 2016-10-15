@@ -1,0 +1,40 @@
+.share-page {
+    margin-top: 40px;
+    line-height: 30px;
+
+    span {
+        display: inline-block;
+        line-height: 30px;
+    }
+
+    i {
+        display: inline-block;
+        font-size: rem-calc(24px);
+        position: relative;
+        top: 3px;
+    }
+
+    .fa-twitter-square {
+        color: #55acee;
+    }
+
+    .fa-facebook-square {
+        color: #3b5998;
+    }
+
+    .fa-google-plus-square {
+        color: #dd4b39;
+    }
+
+    .fa-linkedin-square {
+        color: #007bb5;
+    }
+
+    .fa-reddit-square {
+        color: #ff5700;
+    }
+
+    .fa-hacker-news {
+        color: #f60;
+    }
+}
