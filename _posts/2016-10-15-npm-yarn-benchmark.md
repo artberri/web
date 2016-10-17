@@ -27,7 +27,7 @@ Anyway, I wanted to make a benchmarking and here it is.
 ## The Method
 
 The tool I've used to measure the speed of both managers is just the linux command `time`. I've created a little Bash
-script, based on [this gist][7] made by Peter Mitchell, that will perform multiple installations of three famous JS
+script, based on [this gist][7] made by Peter Mitchell, that will perform multiple installations of three popular JS
 frameworks using Yarn and NPM.
 
 The script will run multiple installations of [Angular][8], [Ember][9] and [React][10] using both, NPM and Yarn, and it
