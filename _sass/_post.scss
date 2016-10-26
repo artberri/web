@@ -99,4 +99,19 @@
             font-size: rem-calc(32px);
         }
     }
+
+    .series {
+        border: 1px solid #ffeba4;
+        background: #fffbe5;
+        color: #444;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: rem-calc(16px);
+        color: #d4ab19;
+
+        a {
+            color: #d4ab19;
+            text-decoration: underline;
+        }
+    }
 }
