@@ -93,8 +93,8 @@ add some new functionality that can not be done by extending it. In those cases 
 Github repo, but if you can not wait until the owners of that repo implement it and bump a new version, you can just
 fork it and do it by yourself.
 
-The first step is to fork the that project and clone it. Then, you should create a new branch from `master` and commit your
-modifications there, finally, push the changes to the forked repo. Now, you are ready use your own fork by updating the
+The first step is to fork that project and clone it. Then, you should create a new branch from `master` and commit your
+modifications there, finally, push the changes to the forked repo. Now, you are ready to use your own fork by updating the
 project's `composer.json`:
 
 Add your fork as a repository and update the version field to point to your custom branch by prepending the `dev-` prefix
@@ -117,8 +117,8 @@ to the branch name. This is an example assuming you patched the Doctrine ORM to 
 Don't forget to create a pull request to the original project once you are done, but ensure that you read carefully the
 contributing guide of that project first.
 
-While making this changes to the dependency, you can feel the need to test it inside your project before pushing any change.
-You will be able to do it also, in this case, by adding as a repository the local path where you cloned the fork:
+While making changes to the dependency, you can feel the need to test it inside your project before pushing any change.
+You will be able to do it also, in this case, by adding the local path where you cloned the fork as a repository:
 
 {% highlight json %}
 {
