@@ -6,7 +6,7 @@ excerpt: >
     If you are PHP developer, you need to master Composer in order to achieve it.
 ogImage: /images/blog/2016/managing-php-dependencies-og.png
 featuredImage: /images/blog/2016/managing-php-dependencies.jpg
-category: [javascript]
+category: [php]
 ---
 
 <div class="series">
