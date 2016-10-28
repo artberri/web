@@ -11,7 +11,7 @@ category: [javascript]
 
 <div class="series">
     <i class="fa fa-info-circle" aria-hidden="true"></i> This is the first post of the
-    <a href="#">The Perfect Continous Delivery Pipeline For PHP</a> series.
+    <a href="#other-posts-of-the-series">The Perfect Continous Delivery Pipeline For PHP</a> series.
 </div>
 
 [Composer][1] is the *de facto* dependency manager for PHP and [Packagist][2] is its official package repository.
