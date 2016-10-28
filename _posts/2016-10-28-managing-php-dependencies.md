@@ -165,7 +165,7 @@ composer install --no-dev --prefer-dist --classmap-authoritative
 
 This is just the beginning, in future posts we will cover the rest of the Continous Delivery pipeline process:
 
-1. [Managing PHP Dependencies Properly]({% post_url 2016-10-25-managing-php-dependencies %})
+1. [Managing PHP Dependencies Properly]({% post_url 2016-10-28-managing-php-dependencies %})
 1. PHP Code Analysis (TBD)
 1. Unit Testing With PHP (TBD)
 1. Artifacts, Packaging PHP Applications (TBD)
