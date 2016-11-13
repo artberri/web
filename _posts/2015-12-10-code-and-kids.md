@@ -6,7 +6,7 @@ excerpt: >
     talk that I did internally at Ve Bilbao in order to find people to create a Coder Dojo.
 ogImage: /images/blog/2015/code-and-kids.jpg
 featuredImage: /images/blog/2015/code-and-kids.jpg
-category: [code-kids]
+category: [personal]
 external: Ve Interactive's Tech Blog
 redirect_to:
   - http://tech.veinteractive.com/code-and-kids.html
