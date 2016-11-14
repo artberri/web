@@ -120,7 +120,7 @@ ffmpeg -i inputvideo.ext -c:v libtheora -an output.ogv # Convert to OGV
 ffmpeg -i inputvideo.ext -c:v libvpx -an output.webm # Convert to Webm
 {% endhighlight %}
 
-As you can see we've just replace the audio codec paramenter with `-an`, this will remove the audio completely. Apart from making the
+As you can see we've just replace the audio codec parameter with `-an`, this will remove the audio completely. Apart from making the
 website more pleasant for the user, by removing the audio we are reducing the size of our video which is also nice for the user. But... Which is
 the proper size for a web video?
 
@@ -144,7 +144,7 @@ Tools as reference:
 
 If the bitrate of your video is greater than the connection speed of your audience, they will have visualization problems and the user experience
 of your webpage won't be the one you expected. This is why you should reduce the size of your video, but, take into account that this will
-reduce also it's quality.
+reduce also its quality.
 
 If you still don't understand how the size affects streaming, you can check [this article][5] where you can find a deeper and better explanation
 than mine.
@@ -152,7 +152,7 @@ than mine.
 #### Frame rate
 
 Reducing the frame rate to 24fps when the video has been recorded with a bigger amount, like 60fps or 30fps, is one of the first actions to take,
-this is the typical film rate and it's smooth enough for most of the situations. If your video has not much motion you can even reduce it a bit more. Unfortunately,
+24fps is the typical film rate and it's smooth enough for most of the situations. If your video has not much motion you can even reduce it a bit more. Unfortunately,
 if your bitrate is too high for your user's connection, this action will not be enough, and it will be useless if your origin video already have 24fps.
 
 {% highlight bash %}
@@ -161,19 +161,108 @@ ffmpeg -i inputvideo.ext -c:v libtheora -an -r:v 24 output.ogv # Convert to OGV
 ffmpeg -i inputvideo.ext -c:v libvpx -an -r:v 24 output.webm # Convert to Webm
 {% endhighlight %}
 
-Reducing each frame size by scaling down the video dimensions or by compressing the frame images is how we are going to achieve the bigger size
-reduction.
+#### Video dimensions
+
+Reducing each frame size by scaling down the video dimensions can reduce a lot the overall video size, of course, the video will not look the same. But
+sometimes, we don't need 1920x1080 videos if we are just going to use them as ambient videos. The standard FullHD (1080p) or just HD (720p) videos
+have usually enough quality to be used as backgrounds.
+
+You can also create different videos with different dimensions and switch between them using
+media queries, because the screen size is usually related with the internet connection speed (and because you should adapt your content to the
+user's device as you do with images).
+
+Scaling the video with ffmpeg is easy:
+
+{% highlight bash %}
+ffmpeg -i inputvideo.ext -c:v h264 -an -r:v 24 -s 720x480 output.mp4 # Convert to MP4
+ffmpeg -i inputvideo.ext -c:v libtheora -an -r:v 24 -s 720x480 output.ogv # Convert to OGV
+ffmpeg -i inputvideo.ext -c:v libvpx -an -r:v 24 -s 720x480 output.webm # Convert to Webm
+{% endhighlight %}
+
+Take into account the proportions of your video when passing the size parameter, because the `-s` option will just create an output file with the dimensions
+that you pass to the command and it won't take care of the proportions. If you just want to set one of the side lengths and let the program choose the
+other, you can do it by using the scale filter instead:
+
+{% highlight bash %}
+ffmpeg -i inputvideo.ext -c:v h264 -an -r:v 24 -filter:v scale=720:-1 output.mp4 # Convert to MP4
+ffmpeg -i inputvideo.ext -c:v libtheora -an -r:v 24 -filter:v scale=720:-1 output.ogv # Convert to OGV
+ffmpeg -i inputvideo.ext -c:v libvpx -an -r:v 24 -filter:v scale=720:-1 output.webm # Convert to Webm
+{% endhighlight %}
+
+#### Set the output bitrate
+
+Finally, if you don't want to reduce the video dimensions, you can just add the output bitrate as a parameter and the program
+will reduce the quality of your frames until it gets the wanted bitrate:
+
+{% highlight bash %}
+ffmpeg -i inputvideo.ext -c:v h264 -an -r:v 24 -b:v 1500k output.mp4 # Convert to MP4
+ffmpeg -i inputvideo.ext -c:v libtheora -an -r:v 24 -b:v 1500k output.ogv # Convert to OGV
+ffmpeg -i inputvideo.ext -c:v libvpx -an -r:v 24 -b:v 1500k output.webm # Convert to Webm
+{% endhighlight %}
 
 ### Croping
 
+If you are not adding a video for a full screen background, it's better to crop the video to match the container dimension. This can be done by using
+the `-filter` parameter with the crop option. The format of this option is: `"crop=width:heigh:x:y"`, where width and height are the new dimensions of
+the video and, x and y indicate the starting position for the crop.
+
+{% highlight bash %}
+ffmpeg -i inputvideo.ext -c:v h264 -an -r:v 24 -filter:v "crop=1920:400:0:300" output.mp4 # Convert to MP4
+ffmpeg -i inputvideo.ext -c:v libtheora -an -r:v 24 -filter:v "crop=1920:400:0:300" output.ogv # Convert to OGV
+ffmpeg -i inputvideo.ext -c:v libvpx -an -r:v 24 -filter:v "crop=1920:400:0:300" output.webm # Convert to Webm
+{% endhighlight %}
+
 ## Headers on web servers
+
+We talked about the HTML markup and the video formats, this should be enough to have a video working on our website, but sometimes the
+servers are not configured to serve the proper video headers by default and we need to configure them also. Here you can see some configurations
+for NGINX, Apache or IIS servers:
+
+{% highlight bash %}
+# NGINX /etc/nginx/mime.types
+types {
+    #...
+
+    video/mp4   mp4;
+    video/ogg   ogv;
+    video/webm  webm;
+
+    #...
+}
+{% endhighlight %}
+
+{% highlight bash %}
+# Apache
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+{% endhighlight %}
+
+{% highlight xml %}
+<!-- IIS -->
+<system.webServer>
+    <staticContent>
+        <remove fileExtension=".mp4" />
+        <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
+        <remove fileExtension=".ogv" />
+        <mimeMap fileExtension=".ogv" mimeType="video/ogg" />
+        <remove fileExtension=".webm" />
+        <mimeMap fileExtension=".webm" mimeType="video/webm" />
+    </staticContent>
+<system.webServer>
+{% endhighlight %}
 
 ## Video sources
 
-Usually,
+I want to conclude by suggesting you a couple of web pages where you can download ambient videos for free to use them in any kind
+of website, including commercial sites. They are [Pixabay][6] and [Pexels][7], they have a lot of videos with the [Creative Commons 0][8]
+license, that you are free to adapt and use them without attributing the original author or source.
 
 [1]: https://www.smashingmagazine.com/2011/01/creative-use-of-background-video-web-design-showcase/
 [2]: https://www.w3.org/TR/2011/WD-html5-20110113/video.html
 [3]: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats
 [4]: https://www.ffmpeg.org/
 [5]: http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
+[6]: https://pixabay.com/videos/
+[7]: https://videos.pexels.com/
+[8]: https://creativecommons.org/publicdomain/zero/1.0/deed.en
