@@ -13,10 +13,10 @@
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "^2.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
-    "grunt-jekyll": "^0.4.4",
+    "grunt-jekyll": "^0.4.6",
     "grunt-scss-lint": "^0.5.0",
     "grunt-ssh-deploy": "^0.4.1",
     "load-grunt-tasks": "^3.5.2"
