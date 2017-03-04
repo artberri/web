@@ -14,7 +14,7 @@
         color: #444;
 
         @include breakpoint(medium) {
-            font-size: rem-calc(54px);
+            font-size: rem-calc(48px);
             margin: 50px 0;
         }
 
@@ -68,7 +68,7 @@
             color: #444;
 
             @include breakpoint(medium) {
-                font-size: rem-calc(24px);
+                font-size: rem-calc(18px);
             }
         }
 
