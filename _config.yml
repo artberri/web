@@ -53,9 +53,21 @@ assets:
       - "last 2 versions"
       - "IE > 9"
 
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 85
+  sizes:
+    - width: 870
+    - width: 640
+    - width: 480
+    - width: 320
+  base_path: images
+  output_path_format: images/resized/%{dirname}/%{width}.%{basename}
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-assets
+  - jekyll-responsive-image

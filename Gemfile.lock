@@ -51,6 +51,9 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
+    jekyll-responsive-image (1.1.0)
+      jekyll (>= 2.0, < 4.0)
+      rmagick (>= 2.0, < 3.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-sitemap (1.0.0)
@@ -78,6 +81,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    rmagick (2.16.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
@@ -104,6 +108,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-paginate
   jekyll-redirect-from
+  jekyll-responsive-image
   jekyll-sitemap
   rake
   rake-jekyll

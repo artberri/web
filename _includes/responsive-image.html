@@ -1,0 +1,14 @@
+{% capture srcset %}
+    {% for i in resized %}
+        /{{ i.path }} {{ i.width }}w,
+    {% endfor %}
+{% endcapture %}
+
+<img {% if featured %}itemprop="image"{% endif %}
+    src="/{{ path }}"
+    sizes="(min-width: 80em) 870px,
+        (max-width: 79.99em) and (min-width: 53.75em) calc(100vw - 395px),
+        calc(100vw - 72px)"
+    alt="{{ alt }}"
+    class="entry-image"
+    srcset="{{ srcset | strip_newlines }} /{{ original.path }} {{ original.width }}w">

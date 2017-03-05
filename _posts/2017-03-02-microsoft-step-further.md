@@ -4,8 +4,7 @@ title: Microsoft, you need to take it one step further
 excerpt: >
     The war is over. It seems that 2016 has been the year of the peace deal between Microsoft and the FOSS community,
     the hostility has ceased, but let us make no mistake, there is still a long way to go.
-ogImage: /images/blog/2017/microsoft-loves-linux-og.jpg
-featuredImage: /images/blog/2017/microsoft-loves-linux.jpg
+featuredImage: images/blog/2017/microsoft-loves-linux-og.jpg
 category: [linux]
 ---
 

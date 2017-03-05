@@ -18,7 +18,11 @@ layout: default
                     </div>
 
                     <div class="entry-image-wrapper">
-                        <img itemprop="image" alt="{{ page.title }}" class="entry-image" src="{{ page.featuredImage }}" width="870" height="455">
+                        {% responsive_image_block %}
+                            path: {{ page.featuredImage }}
+                            alt: {{ page.title }}
+                            featured: true
+                        {% endresponsive_image_block %}
                     </div>
 
                     <div class="entry-content" itemprop="articleBody">
