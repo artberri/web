@@ -64,6 +64,8 @@ responsive_image:
   base_path: images
   output_path_format: images/resized/%{dirname}/%{width}.%{basename}
 
+minify_html: true
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
@@ -71,3 +73,4 @@ gems:
   - jekyll-redirect-from
   - jekyll-assets
   - jekyll-responsive-image
+  - octopress-minify-html
