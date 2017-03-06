@@ -41,7 +41,7 @@ APM in our PHP project. I love New Relic, but paying for another tool when theor
 that I'm already paying for doesn't seem a good choice and it seemed that App Insights had a Microsoft supported PHP SDK, so we
 started testing it.
 
-After [one of my workmates fixed an important bug][11], App Insights become usable for us and we integrated it in our project.
+After [one of my workmates fixed an important bug][11], App Insights became usable for us and we integrated it in our project.
 Later, we added some third party provider APIs to the project that we wanted to measure, App Insights has a great feature
 to track dependencies, but we realized that it was not implemented yet in our version of the PHP SDK. We took a look to the Github
 repository in order to check how was the status about that feature and [we found a non-desirable status][12]: 'We don't currently have any plans to
