@@ -8,7 +8,7 @@ featuredImage: images/blog/2017/microsoft-loves-linux-og.jpg
 category: [linux]
 ---
 
-I have been a hater. Since I started in web development I has been a Linux user, a FOSS consumer and, to a lesser degree,
+I have been a hater. Since I started in web development I have been a Linux user, a FOSS consumer and, to a lesser degree,
 a free software contributor. Somehow, this made me despise Microsoft and, at some point, I was even not able to see
 any of their products on an objective basis, I just flat out rejected everything coming from them.
 
