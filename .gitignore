@@ -6,4 +6,5 @@ berriart-foundation
 bower_components
 node_modules
 /vendor
+/images/resized/
 js

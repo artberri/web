@@ -29,7 +29,11 @@ title: Blog
 
                         <div class="entry-image-wrapper">
                             <a class="entry-image-link" href="{{ post.url }}">
-                                <img itemprop="image" alt="{{ post.title }}" class="entry-image" src="{{ post.featuredImage }}" width="870" height="455">
+                                {% responsive_image_block %}
+                                    path: {{ post.featuredImage }}
+                                    alt: {{ post.title }}
+                                    featured: true
+                                {% endresponsive_image_block %}
                             </a>
                         </div>
 
