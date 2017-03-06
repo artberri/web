@@ -2,38 +2,38 @@
 layout: post
 title: Microsoft, you need to take it one step further
 excerpt: >
-    The war is over. It seems that 2016 has been the year of the peace deal between Microsoft and the FOSS community,
+    The war is over. It seems that 2016 has been the year of the peace deal between Microsoft and the FOSS community, 
     the hostility has ceased, but let us make no mistake, there is still a long way to go.
 featuredImage: images/blog/2017/microsoft-loves-linux-og.jpg
 category: [linux]
 ---
 
-I has been a hater. Since I started in web development I has been a Linux user, a FOSS consumer and, to a lesser degree,
+I have been a hater. Since I started in web development I has been a Linux user, a FOSS consumer and, to a lesser degree,
 a free software contributor. Somehow, this made me despise Microsoft and, at some point, I was even not able to see
-any of their products on an objective basis, I just rejected everything coming from them.
+any of their products on an objective basis, I just flat out rejected everything coming from them.
 
-This is not happening anymore, I am now a more mature developer (or just an older one), and I know that taking proffesional
-technical decissions based on sentiments is just not an option. The last years that I have been working in a company plenty
+This is not happening anymore, I am now a more mature developer (or just an older one), and I know that taking professional
+technical decisions based on sentiments is just not an option. The last years that I have been working in a company with plenty
 of Microsoft-friendly mates and also the last movements of Microsoft have opened my mind even more and, now, I can agree with
 David Heinemeier Hansson when he says: ["Microsoft, I forgive you!"][1].
 
 [The romance between Google's Angular2 team and Microsoft's Typescript team][2], [Microsoft joining the Linux Foundation][3],
 [SQL Servers running on Linux][4], [Microsoft being top rated in Github's 2016 Octoverse][5],... If someone had made
-these predictions in 2010, I would have called him crazy (or stupid), but this is already a reality. So, can we just love
+these predictions in 2010, I would have called them crazy (or stupid), but this is already a reality. So, can we just love
 Microsoft now? The answer is NO.
 
-I'm now an active user of several products of Microsoft, Visual Studio Team Services, VSCode, Azure,... I use some of them
+I'm currently an active user of several Microsoft products: Visual Studio Team Services, VSCode, Azure,... I use some of them
 because my job required me to do it, but there are others in my stack just because I want them to be there, because I like them,
-although doing it is sometimes a pain in the neck, and I will explain myself:
+although doing it is sometimes a pain in the neck, and I will explain myself further:
 
-In the company were I work we were using Visual Studio Online as an Agile project management tool and as a CI tool for .NET projects when
+In the company where I work we were using Visual Studio Online as an Agile project management tool and as a CI tool for .NET projects when
 Microsoft announced that [Visual Studio Online Supports True Cross-Platform Development][6]. That was nice, we could
-switch from the old fashioned Jenkins interface to VSO in our PHP project and unify company's CI tools. What a surprise
-when [I found in the documentation][7] of their 'True Cross-Platform Development' tool the following sentence:
+switch from the old fashioned Jenkins interface to VSO in our PHP project and unify company's CI tools. But it was quite a surprise
+when I found the following sentence [in the documentation][7] of their 'True Cross-Platform Development' tool:
 'OSX only for right now. Linux soon'.
 
-Soon. That was in May 2015. One year later, in May 2016, the full support for Linux wasn't still there so I ended [by
-adding it by myself][8]. I know, this is how open source works, if you want something, just do it. But well, I was
+Soon. That was in May 2015. One year later, in May 2016, the full support for Linux still wasn't there so I ended [by
+adding it by myself][8]. I know, this is how open source works, if you want something, just do it. Yet, I was
 expecting something more from a company of thousands of employees that make that kind of announcements.
 
 I can talk about other situations also. As I said, our current hosting company is Azure, so App Insights seems a proper option for
@@ -44,13 +44,13 @@ started testing it.
 After [one of my workmates fixed an important bug][11], App Insights become usable for us and we integrated it in our project.
 Later, we added some third party provider APIs to the project that we wanted to measure, App Insights has a great feature
 to track dependencies, but we realized that it was not implemented yet in our version of the PHP SDK. We took a look to the Github
-repository in order to check how was the status about that feature and [we find out a non desirable status][12]: 'We don't currently have any plans to
+repository in order to check how was the status about that feature and [we found a non-desirable status][12]: 'We don't currently have any plans to
 add this. The SDK is currently supported on a best-effort basis but isn't actively being developed. We're happy to take PRs though'.
 
 Again the same message from Microsoft, 'if you want something, just do it'. So, instead of complaining, I thought: 'It is not so bad,
-it does not seem a costly change, so, let's do it'. [I did it just some days ago][13], it was not a difficult change, the problem actually
-is that they are not offering documentation for their own API, so, I needed to find other language SDK which already implements the feature,
-analyze it and guess how it works.
+it does not seem to be a costly change, so, let's do it'. [I did it just some days ago][13], it was not a difficult change, the problem is actually
+that they are not offering documentation for their own API, so, I needed to find other language SDK which already implements the feature,
+analyses it and guesses how it works.
 
 These are just some examples to try to explain why I feel so sad when I see articles with headings like
 '[Microsoft is #1 on GitHub open source][14]', which in my opinion are a very bad interpretation of the fact that Microsoft ranks
@@ -66,10 +66,6 @@ I think that need need to take their new attitude one step further.
 > want to get metrics of your requests, you need to implement it by calling a REST API with PHP, and if this is not well
 > implemented you can find out that by monitoring your requests' speed you are also slowing them. (We avoided this by using
 > the `fastcgi_finish_request` function and PHP-FPM, especifically by using the `kernel.terminate` [event of the Symfony framework][10]).*
-
-
-
-
 
 [1]: https://m.signalvnoise.com/microsoft-i-forgive-you-2fb6d6061a2c#.qedz7idke
 [2]: https://techcrunch.com/2015/03/05/microsoft-and-google-collaborate-on-typescript-hell-has-not-frozen-over-yet/
