@@ -21,22 +21,22 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'js/app.js': [
-                        'bower_components/jquery/dist/jquery.js',
-                        'bower_components/what-input/what-input.js',
-                        'bower_components/foundation-sites/js/foundation.core.js',
-                        'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
-                        'bower_components/foundation-sites/js/foundation.util.keyboard.js',
-                        'bower_components/foundation-sites/js/foundation.util.box.js',
-                        'bower_components/foundation-sites/js/foundation.util.triggers.js',
-                        'bower_components/foundation-sites/js/foundation.util.motion.js',
-                        'bower_components/foundation-sites/js/foundation.reveal.js',
-                        'bower_components/foundation-sites/js/foundation.sticky.js',
+                        'node_modules/jquery/dist/jquery.js',
+                        'node_modules/what-input/what-input.js',
+                        'node_modules/foundation-sites/js/foundation.core.js',
+                        'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+                        'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+                        'node_modules/foundation-sites/js/foundation.util.box.js',
+                        'node_modules/foundation-sites/js/foundation.util.triggers.js',
+                        'node_modules/foundation-sites/js/foundation.util.motion.js',
+                        'node_modules/foundation-sites/js/foundation.reveal.js',
+                        'node_modules/foundation-sites/js/foundation.sticky.js',
                         'javascript/app.js',
-                        'bower_components/cookieconsent2/build/cookieconsent.min.js'
+                        'node_modules/cookieconsent/src/cookieconsent.js'
                     ],
                     'js/sidr.js': [
-                        'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
-                        'bower_components/sidr/dist/jquery.sidr.js',
+                        'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
+                        'node_modules/sidr/dist/jquery.sidr.js',
                         'javascript/sidr.js'
                     ]
                 }
@@ -50,22 +50,22 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'js/app.js': [
-                        'bower_components/jquery/dist/jquery.js',
-                        'bower_components/what-input/what-input.js',
-                        'bower_components/foundation-sites/js/foundation.core.js',
-                        'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
-                        'bower_components/foundation-sites/js/foundation.util.keyboard.js',
-                        'bower_components/foundation-sites/js/foundation.util.box.js',
-                        'bower_components/foundation-sites/js/foundation.util.triggers.js',
-                        'bower_components/foundation-sites/js/foundation.util.motion.js',
-                        'bower_components/foundation-sites/js/foundation.reveal.js',
-                        'bower_components/foundation-sites/js/foundation.sticky.js',
+                        'node_modules/jquery/dist/jquery.js',
+                        'node_modules/what-input/what-input.js',
+                        'node_modules/foundation-sites/js/foundation.core.js',
+                        'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+                        'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+                        'node_modules/foundation-sites/js/foundation.util.box.js',
+                        'node_modules/foundation-sites/js/foundation.util.triggers.js',
+                        'node_modules/foundation-sites/js/foundation.util.motion.js',
+                        'node_modules/foundation-sites/js/foundation.reveal.js',
+                        'node_modules/foundation-sites/js/foundation.sticky.js',
                         'javascript/app.js',
-                        'bower_components/cookieconsent2/build/cookieconsent.min.js'
+                        'node_modules/cookieconsent/src/cookieconsent.js'
                     ],
                     'js/sidr.js': [
-                        'bower_components/jquery-touchswipe/jquery.touchSwipe.js',
-                        'bower_components/sidr/dist/jquery.sidr.js',
+                        'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
+                        'node_modules/sidr/dist/jquery.sidr.js',
                         'javascript/sidr.js'
                     ]
                 }

@@ -66,7 +66,7 @@ responsive_image:
 
 minify_html: true
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
