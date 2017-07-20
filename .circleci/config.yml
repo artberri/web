@@ -78,7 +78,6 @@ jobs:
 
       - persist_to_workspace:
           root: ./
-	        # Must be relative path from root
           paths:
             - _site
   test:
