@@ -145,8 +145,6 @@ jobs:
             - node_modules
           key: v2-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: ls -l ~/.ssh && cat ~/.ssh/config
-
       - add_ssh_keys:
           fingerprints:
             - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
