@@ -37,15 +37,6 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
-      # run tests!
-      - run:
-          name: run everything
-          command: |
-            wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] \&& . "$NVM_DIR/nvm.sh"
-            nvm install v8.2.0
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -53,7 +44,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v2-dependencies-
 
-      - run: npm install -g grunt-cli && npm install
+      - run: sudo npm install -g grunt-cli && npm install
 
       - save_cache:
           paths:
