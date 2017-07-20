@@ -117,7 +117,7 @@ workflows:
   lint-build-test-deploy:
     jobs:
       - lint
-      - build
+      - build:
           requires:
             - lint
       - test:
