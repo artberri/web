@@ -23,6 +23,6 @@
     "grunt-ssh-deploy": "^0.4.1",
     "jquery-touchswipe": "^1.6.15",
     "load-grunt-tasks": "^3.5.2",
-    "sidr": "^2.2.0"
+    "sidr": "^2.2.1"
   }
 }
