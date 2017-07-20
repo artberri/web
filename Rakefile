@@ -27,7 +27,7 @@ task :buildjs do
 end
 
 desc "Build project"
-task :build do
+task :buildjekyil do
   config = Jekyll.configuration({
     'source' => './',
     'destination' => './_site'
@@ -42,4 +42,5 @@ task :test do
   HTMLProofer.check_directory("./_site", opts).run
 end
 
-task :default => [:lint, :buildjs, :build, :test]
+task :build => [:buildjs, :buildjekyil]
+task :default => [:lint, :build, :test]
