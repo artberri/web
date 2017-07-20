@@ -34,19 +34,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v2-dependencies-
 
-      - run: sudo npm install -g grunt-cli && npm install
+      - run: sudo npm install -g grunt-cli
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v2-dependencies-{{ checksum "package-lock.json" }}
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v2-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v2-dependencies-
 
       - run: bundle exec rake lint
 
@@ -79,7 +73,8 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v2-dependencies-
 
-      - run: sudo npm install -g grunt-cli && npm install
+      - run: sudo npm install -g grunt-cli
+      - run: npm install
 
       - save_cache:
           paths:
@@ -94,6 +89,7 @@ jobs:
           root: ./
           paths:
             - _site
+
   test:
     <<: *defaults
     steps:
@@ -119,6 +115,21 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
+      - run: bundle exec rake test
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site
+
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ./
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -126,7 +137,20 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v2-dependencies-
 
-      - run: bundle exec rake test
+      - run: sudo npm install -g grunt-cli
+      - run: npm install && ls -l ~/.ssh
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package-lock.json" }}
+
+      - add_ssh_keys:
+          fingerprints:
+            - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
+
+      - deploy:
+          command: grunt deploy
 
 workflows:
   version: 2
@@ -138,3 +162,6 @@ workflows:
       - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test

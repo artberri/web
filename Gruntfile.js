@@ -130,7 +130,7 @@ module.exports = function (grunt) {
             },
             production: {
                 options: {
-                    host: '52.208.104.124',
+                    host: 'berriart.com',
                     username: '<%= app.deploy.user %>',
                     privateKey: require('fs').readFileSync(process.env.BERRIART_DEPLOY_KEY),
                     port: '22',
