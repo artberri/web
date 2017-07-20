@@ -138,7 +138,7 @@ jobs:
           - v2-dependencies-
 
       - run: sudo npm install -g grunt-cli
-      - run: npm install && ls -l ~/.ssh
+      - run: npm install
 
       - save_cache:
           paths:
@@ -148,6 +148,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
+
+      - run: ls -l ~/.ssh
 
       - deploy:
           command: grunt deploy
@@ -164,4 +166,5 @@ workflows:
             - build
       - deploy:
           requires:
+            - lint
             - test
