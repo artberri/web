@@ -9,12 +9,12 @@ redirect_from:
 
 <img src="{{ "/images/alberto-varela.jpg" | prepend: site.baseurl }}" alt="Alberto Varela" />
 
-I am 34 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Development Manager at <a href="http://www.travioor.com">Travioor</a>. The easiest way
+I am 35 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Software Development Engineer at <a href="https://www.plainconcepts.com/">Plain Concepts</a>. The easiest way
 to get in touch is via email: [alberto@berriart.com](mailto:alberto@berriart.com).
 
 ## <i class="fi-monitor"></i> Web development
 
-My preferred back-end languages are PHP and Javascript (Node.js). I'm also front-end developer, I've worked with AngularJS, Vue and
+My preferred back-end languages are PHP and Javascript (Node.js). I'm also front-end developer, I've worked with Angular, Vue and
 a lot of Vanilla JS. I have used MySQL and MongoDB as data storage. I'm open for alternatives when is necessary.
 
 ## <i class="fi-widget"></i> Continuous Integration
@@ -42,4 +42,3 @@ I am a self-taught, but I love working with people who know and can teach me. I 
 that I know I have still a lot to learn.
 
 *You can see my formal CV [in LinkedIn](http://www.linkedin.com/in/artberri).*
-
