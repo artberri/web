@@ -9,6 +9,9 @@ featuredImage: images/blog/2017/we-are-closed-og.jpg
 category: [linux]
 ---
 
+
+
+
 Muchas veces se habla de lo que arriesgan los emprendedores cuando se embarcan en una nueva aventura, pero en este caso yo voy a
 hablar de algunos riesgos que corremos los trabajadores por cuenta ajena cuando decidimos unirnos a ellos en una de esas aventuras.
 En una de esas, que además, necesita mucha gasolina para arrancar y otra tanta para empezar a cubrir costes. Hay quien no es del

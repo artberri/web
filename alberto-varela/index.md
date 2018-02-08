@@ -9,7 +9,7 @@ redirect_from:
 
 <img src="{{ "/images/alberto-varela.jpg" | prepend: site.baseurl }}" alt="Alberto Varela" />
 
-I am 35 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Software Development Engineer at <a href="https://www.plainconcepts.com/">Plain Concepts</a>. The easiest way
+I am 35 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Software Developer at <a href="https://www.plainconcepts.com/">Plain Concepts</a>. The easiest way
 to get in touch is via email: [alberto@berriart.com](mailto:alberto@berriart.com).
 
 ## <i class="fi-monitor"></i> Web development
@@ -29,12 +29,14 @@ I have worked in Agile teams and I have experience heading the dev department in
 ## <i class="fi-lock"></i> DevOps
 
 I believe that collaboration between development and operations is possible and I like contributing making it real. I have experience managing Linux
-servers and with cloud technologies., infrastructure as code has been a must in the last projects I worked for and I have been part on making it real.
+servers and with cloud technologies (AWS and Azure). Infrastructure as code has been a must in the last projects I worked for and I like
+to spread the idea.
 
 ## <i class="fi-target-two"></i> SEO and Web Analytics
 
 I like SEO, not all kinds, but the in-page SEO. I allways try to optimize the sites for search engines when coding: web performance,
-the HTML structure, semantics, microdata, linkbuilding... I've also configured analytics in sites to measure ROI.
+the HTML structure, semantics, microdata, linkbuilding... I've also configured advanced analytics to measure ROI in multiple
+websites.
 
 ## <i class="fi-lightbulb"></i> Others
 
