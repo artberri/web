@@ -1,0 +1,17 @@
+<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name headline"><a href="{{ .URL }}">{{ .Title }}</a></h1>
+    </header>
+
+    <div class="post-details-info">
+        <p class="post-meta">
+            <time datetime="{{ .PublishDate.Format "2006-01-02" }}" itemprop="datePublished">Published on {{ .PublishDate.Format "January 2, 2006" }}</time>
+        </p>
+    </div>
+
+    {{ partial "image.html" . }}
+
+    <div class="entry-content" itemprop="articleBody">
+        <p>{{ .Params.excerpt }}</p>
+    </div>
+</article>

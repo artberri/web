@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <div class="main">
+        {{- partial "header.html" . -}}
+        <section class="page" role="main" itemscope itemtype="http://schema.org/Blog">
+            <div class="list">
+                <header class="entry-header">
+                    <h1 class="entry-title">{{ .Title }}</h1>
+                    <main>
+                        {{- .Content -}}
+                    </main>
+                </header>
+
+                {{ range .Paginator.Pages }}
+                    {{- partial "summary.html" . -}}
+                {{ end }}
+
+                {{- template "_internal/pagination.html" . -}}
+            </div>
+        </section>
+        {{- partial "footer.html" . -}}
+    </div>
+{{ end }}

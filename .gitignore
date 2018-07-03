@@ -1,10 +1,11 @@
-_site
-.sass-cache
-.jekyll-metadata
-.bundle/
 berriart-foundation
-bower_components
 node_modules
-/vendor
 /images/resized/
 js
+
+# Hugo
+themes/berriart/static/css/dist
+themes/berriart/static/css/fonts
+themes/gohugo-theme-ananke
+public/
+resources/_gen/

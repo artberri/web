@@ -1,0 +1,13 @@
+$color-black-soft: #666;
+$color-white: #fff;
+$color-red: #dc6552;
+$color-text: $color-black-soft;
+$color-primary: $color-red;
+/* Colors */
+
+$breakpoint-small: 668px;
+$breakpoint-medium: 860px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+/* Media Queries */

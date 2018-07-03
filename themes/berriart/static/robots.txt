@@ -1,0 +1,3 @@
+Sitemap: https://www.berriart.com/sitemap.xml
+User-Agent: *
+Disallow: feed.xml

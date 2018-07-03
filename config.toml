@@ -1,0 +1,22 @@
+baseURL = "https://www.berriart.com/"
+languageCode = "en"
+title = "Berriart | Web Development With Free Software"
+theme = "berriart"
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+googleAnalytics = "UA-2004323-1"
+
+[permalinks]
+    blog = "/:section/:year/:month/:slug/"
+
+[sitemap]
+    changefreq = "monthly"
+    filename = "sitemap.xml"
+    priority = 0.5
+
+[params]
+    author = "Alberto Varela"
+    description = "Personal page of Alberto Varela a Full Stack Web Developer based in Bilbao."
+    favicon = "favicon.ico"
+
+[author]
+    name = "Alberto Varela"

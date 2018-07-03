@@ -1,28 +1,35 @@
 {
-  "name": "albertovarela",
-  "version": "1.0.0",
+  "name": "berriart",
+  "version": "5.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "lint:css": "stylelint \"themes/berriart/static/css/*.css\"",
+    "copy:fonts": "cp -r \"node_modules/font-awesome/fonts\" \"themes/berriart/static/css\"",
+    "build:css": "npm run lint:css && postcss \"themes/berriart/static/css/app.css\" --output \"themes/berriart/static/css/dist/app.css\"",
+    "build": "npm run copy:fonts && concurrently \"npm:build:css\"",
+    "watch:css": "onchange \"themes/berriart/static/css/*.css\" -- npm run build:css",
+    "serve:hugo": "hugo server",
+    "serve": "npm run build && concurrently \"npm:watch:css\" \"npm:serve:hugo\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alberto Varela",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "concurrently": "^3.6.0",
     "cookieconsent": "^3.0.4",
-    "foundation-sites": "^6.0.6",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^20.0.0",
-    "grunt-jekyll": "^0.4.6",
-    "grunt-scss-lint": "^0.5.0",
-    "grunt-ssh-deploy": "^0.4.1",
-    "jquery-touchswipe": "^1.6.15",
-    "load-grunt-tasks": "^3.5.2",
-    "sidr": "^2.2.1"
+    "cssnano": "^3.10.0",
+    "font-awesome": "^4.7.0",
+    "onchange": "^4.0.0",
+    "postcss-cli": "^5.0.1",
+    "postcss-import": "^11.1.0",
+    "precss": "^3.1.2",
+    "prettier": "1.13.7",
+    "reset-css": "^4.0.1",
+    "sidr": "^2.2.1",
+    "stylelint": "^9.3.0",
+    "stylelint-config-prettier": "^3.3.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
