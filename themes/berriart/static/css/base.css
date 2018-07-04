@@ -168,4 +168,19 @@ textarea {
     text-align: center;
 }
 
+.cc_banner-wrapper .cc_container {
+    background: #333;
+    padding: 15px 20px;
+    .cc_message {
+        a {
+            color: $color-primary;
+        }
+    }
+    .cc_btn {
+        background: $color-primary;
+        font-size: 14px;
+        border-radius: 0;
+    }
+}
+
 @include scrollbars(.5em, #888);
