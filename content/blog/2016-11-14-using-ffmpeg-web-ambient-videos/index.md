@@ -142,7 +142,7 @@ There are a lot of statistics about internet connection speed in internet, some 
 probably need to gather that data by your own. As an example, I usually take the values shown in the throttling options of the Google Chrome's Dev
 Tools as reference:
 
-<img alt="Screenshot with network speeds" src="/images/blog/2016/network-speed-chrome.png">
+![Screenshot with network speeds](images/network-speed-chrome.png)
 
 If the bitrate of your video is greater than the connection speed of your audience, they will have visualization problems and the user experience
 of your webpage won't be the one you expected. This is why you should reduce the size of your video, but, take into account that this will

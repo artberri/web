@@ -1,7 +1,5 @@
-berriart-foundation
-node_modules
-/images/resized/
-js
+# Node
+node_modules/
 
 # Hugo
 themes/berriart/static/css/dist

@@ -5,7 +5,7 @@
   ],
   "rules": {
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "content"]
+      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "content", "import-normalize"]
     }],
     "comment-empty-line-before": "never"
   }

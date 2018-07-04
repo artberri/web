@@ -1,3 +1,4 @@
+@import-normalize;
 *,
 *::before,
 *::after {
@@ -28,7 +29,8 @@ a {
 
 p,
 ul,
-li {
+li,
+time {
     font-size: 18px;
 }
 
@@ -55,6 +57,19 @@ h6 {
     line-height: 1.4;
 }
 
+ul {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+}
+
+ul,
+ol,
+dl {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -68,6 +83,58 @@ a img {
     border: 0;
 }
 
+em {
+    font-style: italic;
+}
+
+label {
+    display: block;
+    margin: 0;
+    font-size: .875rem;
+    font-weight: normal;
+    line-height: 1.8;
+    color: #666;
+}
+
+pre {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4375rem;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #8a8a8a;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(102, 102, 102, 0.1);
+    border-radius: 0;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
 .main {
     flex: 1;
     display: flex;
@@ -78,6 +145,27 @@ a img {
         flex-direction: row;
         min-height: 100%;
     }
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: all 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.85em 1em;
+    margin: 0 1rem 1rem 0;
+    font-size: .9rem;
+    background: $color-primary;
+    color: $color-white;
+}
+
+.text-center {
+    text-align: center;
 }
 
 @include scrollbars(.5em, #888);

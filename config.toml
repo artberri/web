@@ -4,9 +4,11 @@ title = "Berriart | Web Development With Free Software"
 theme = "berriart"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 googleAnalytics = "UA-2004323-1"
+disqusShortname = "berriart"
 
 [permalinks]
     blog = "/:section/:year/:month/:slug/"
+    pages = "/:slug/"
 
 [sitemap]
     changefreq = "monthly"
@@ -20,3 +22,26 @@ googleAnalytics = "UA-2004323-1"
 
 [author]
     name = "Alberto Varela"
+    twitter = "artberri"
+
+[privacy]
+    [privacy.disqus]
+        disable = false
+    [privacy.googleAnalytics]
+        anonymizeIP = true
+        disable = false
+        respectDoNotTrack = true
+        useSessionStorage = true
+    [privacy.instagram]
+        disable = false
+        simple = true
+    [privacy.twitter]
+        disable = false
+        enableDNT = true
+        simple = true
+    [privacy.vimeo]
+        disable = false
+        simple = true
+    [privacy.youtube]
+        disable = false
+        privacyEnhanced = true

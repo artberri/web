@@ -4,5 +4,9 @@
     "files.associations": {
         "*.css": "scss",
         "*.html": "gohtml"
+    },
+    "[markdown]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": false
     }
 }

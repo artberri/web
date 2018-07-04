@@ -1,1 +1,34 @@
-sdfsdf
+{{ define "main" }}
+    <div class="main">
+        {{- partial "header.html" . -}}
+        <article class="page" role="main" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <div class="list">
+                <header class="entry-header">
+                    <h1 class="entry-title in-post" itemprop="name headline">{{- .Title -}}</h1>
+                </header>
+
+                <div class="post-details-info">
+                    <p class="post-meta in-post"><time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">Published on {{ .PublishDate.Format "January 2, 2006" }}</time></p>
+                </div>
+
+                {{- partial "image.html" . -}}
+
+                <div class="entry-content" itemprop="articleBody">
+                    <p class="entry-excerpt">{{ .Params.excerpt }}</p>
+
+                    {{- .Content -}}
+                </div>
+
+                {{- partial "share.html" . -}}
+
+                {{- partial "subscription-form.html" . -}}
+
+                <div class="disquss">
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+
+            </div>
+        </article>
+        {{- partial "footer.html" . -}}
+    </div>
+{{ end }}
