@@ -63,7 +63,9 @@ jobs:
     docker:
       - image: cibuilds/hugo:latest
     steps:
-      - checkout
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ./
 
       - run:
           name: release project
