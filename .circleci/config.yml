@@ -24,10 +24,6 @@ jobs:
             - node_modules
           key: npm-dependencies-{{ checksum "package-lock.json" }}
 
-      - add_ssh_keys:
-          fingerprints:
-            - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
-
       - run: npm run lint
 
   build:
@@ -42,7 +38,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - npm-dependencies-
 
-      - run: snap install hugo
       - run: npm install
 
       - save_cache:
@@ -50,18 +45,35 @@ jobs:
             - node_modules
           key: npm-dependencies-{{ checksum "package-lock.json" }}
 
-      - add_ssh_keys:
-          fingerprints:
-            - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
+      - run:
+          name: build project
+          command: npm run build
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - archetypes
+            - config.toml
+            - content
+            - layouts
+            - themes
+
+  release:
+    <<: *defaults
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - checkout
 
       - run:
           name: build project
-          command: npm run release
+          command: hugo
 
       - persist_to_workspace:
           root: ./
           paths:
             - public
+
 
   test:
     <<: *defaults
@@ -128,12 +140,15 @@ workflows:
     jobs:
       - lint
       - build
-      - test:
-          requires:
-            - build
-      - deploy:
+      - release:
           requires:
             - lint
+            - build
+      - test:
+          requires:
+            - release
+      - deploy:
+          requires:
             - test
           filters:
             branches:
