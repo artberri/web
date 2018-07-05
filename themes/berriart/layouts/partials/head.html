@@ -9,8 +9,9 @@
 
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One|Raleway:800|Fjalla+One">
   <link href="/css/dist/app.css" rel="stylesheet">
-  {{ if .Params.custom_css }}
-    <link rel="stylesheet" href="{{ .Params.custom_css }}">
+
+  {{ range .Params.custom_css }}
+    <link rel="stylesheet" href="{{ . }}">
   {{ end }}
 
   {{ block "favicon" . }}

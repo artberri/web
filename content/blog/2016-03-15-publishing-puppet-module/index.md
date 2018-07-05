@@ -108,7 +108,7 @@ If your code passes all these checks you will have 5 points in the Quality Score
 
 ## Documentation
 
-Proper documentation is key for an Open Source project. Puppet provides a [README template](https://docs.puppetlabs.com/puppet/latest/reference/READMEtemplate.txt) that you can follow to describe your module and write all the module information: description, requirements, limitations, usage and a complete reference.
+Proper documentation is key for an Open Source project. Puppet provides a [README template](https://puppet.com/docs/puppet/latest/modules_documentation.html#the-readme-template) that you can follow to describe your module and write all the module information: description, requirements, limitations, usage and a complete reference.
 
 When you apply your module to be Puppet approved the documentation validation is based on a human review, which is obvious taking into account that the documentation is intendeed to be read by humans. You should show the documentation to your mates and ensure that they can use your module without any explanation, remember that the final users will not be able to ask you if they have any doubt.
 

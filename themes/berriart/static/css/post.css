@@ -68,13 +68,15 @@
     }
     .entry-content {
         p,
-        li,
-        pre {
+        li {
             font-size: 16px;
             color: #444;
             @include breakpoint($breakpoint-medium) {
-                font-size: 18px;
+                font-size: 24px;
             }
+        }
+        pre {
+            font-size: 16px;
         }
         li {
             margin-bottom: 15px;

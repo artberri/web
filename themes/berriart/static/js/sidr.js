@@ -1,4 +1,5 @@
-;(function () {
+;
+(function () {
     'use strict';
 
     var hasTouchEvents = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
@@ -23,7 +24,7 @@
     if (window.location.host !== 'localhost:4000') {
         $('#remote-content-menu').sidr({
             name: 'sidr-remote-content',
-            source: window.location.protocol + '//' + window.location.host + window.location.pathname + 'remote-menu.html'
+            source: window.location.protocol + '//' + window.location.host + '/remote-menu.html'
         });
     }
 
@@ -40,7 +41,7 @@
     });
 
     if (hasTouchEvents) {
-        $('body').swipe( {
+        $('body').swipe({
             //Single swipe handler for left swipes
             swipeLeft: function () {
                 $.sidr('close', 'sidr-main');
@@ -56,7 +57,7 @@
     /* Analytics */
     $('#download').click(function () {
         if (ga) {
-          ga('send', 'event', 'Sidr', 'Download');
+            ga('send', 'event', 'Sidr', 'Download');
         }
     });
 

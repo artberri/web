@@ -13,5 +13,8 @@
             };
         </script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+        {{ range .Params.custom_scripts }}
+            <script src="{{ . }}"></script>
+        {{ end }}
     </body>
 </html>

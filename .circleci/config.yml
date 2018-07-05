@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/ruby:2.4.1-node-browsers
+    - image: circleci/node:8-browsers
 
 version: 2
 jobs:
@@ -13,40 +13,22 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - npm-dependencies-{{ checksum "package-lock.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - npm-dependencies-
 
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --with=development --path vendor/bundle
-
-      - save_cache:
-          paths:
-            - ./vendor
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v2-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v2-dependencies-
-
-      - run: sudo npm install -g grunt-cli
       - run: npm install
 
       - save_cache:
           paths:
             - node_modules
-          key: v2-dependencies-{{ checksum "package-lock.json" }}
+          key: npm-dependencies-{{ checksum "package-lock.json" }}
 
       - add_ssh_keys:
           fingerprints:
             - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
 
-      - run: bundle exec rake lint
+      - run: npm run lint
 
   build:
     <<: *defaults
@@ -56,34 +38,17 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - npm-dependencies-{{ checksum "package-lock.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - npm-dependencies-
 
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --with=development --path vendor/bundle
-
-      - save_cache:
-          paths:
-            - ./vendor
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v2-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v2-dependencies-
-
-      - run: sudo npm install -g grunt-cli
+      - run: snap install hugo
       - run: npm install
 
       - save_cache:
           paths:
             - node_modules
-          key: v2-dependencies-{{ checksum "package-lock.json" }}
+          key: npm-dependencies-{{ checksum "package-lock.json" }}
 
       - add_ssh_keys:
           fingerprints:
@@ -91,12 +56,12 @@ jobs:
 
       - run:
           name: build project
-          command: bundle exec rake build
+          command: npm run release
 
       - persist_to_workspace:
           root: ./
           paths:
-            - _site
+            - public
 
   test:
     <<: *defaults
@@ -109,26 +74,23 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - npm-dependencies-{{ checksum "package-lock.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - npm-dependencies-
 
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --with=development --path vendor/bundle
+      - run: npm install
 
       - save_cache:
           paths:
-            - ./vendor
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - node_modules
+          key: npm-dependencies-{{ checksum "package-lock.json" }}
 
-      - run: bundle exec rake test
+      - run: npm test
 
       - persist_to_workspace:
           root: ./
           paths:
-            - _site
+            - public
 
   deploy:
     <<: *defaults
@@ -141,11 +103,10 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v2-dependencies-{{ checksum "package-lock.json" }}
+          - npm-dependencies-{{ checksum "package-lock.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v2-dependencies-
+          - npm-dependencies-
 
-      - run: sudo npm install -g grunt-cli
       - run: npm install
 
       - save_cache:
@@ -158,7 +119,7 @@ jobs:
             - "08:4f:f7:d8:18:12:4b:3a:47:cb:1a:71:3d:f0:be:63"
 
       - deploy:
-          command: grunt deploy
+          command: npm run deploy
 
 workflows:
   version: 2

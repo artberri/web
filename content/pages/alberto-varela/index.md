@@ -41,4 +41,4 @@ websites.
 I am a self-taught, but I love working with people who know and can teach me. I think my two best qualities are that I like to teach what I know and
 that I know I have still a lot to learn.
 
-*You can see my formal CV [in LinkedIn](http://www.linkedin.com/in/artberri).*
+*You can see my formal CV [in LinkedIn](https://www.linkedin.com/in/artberri).*

@@ -7,3 +7,6 @@ themes/berriart/static/css/fonts
 themes/gohugo-theme-ananke
 public/
 resources/_gen/
+
+# Link checker
+reports/

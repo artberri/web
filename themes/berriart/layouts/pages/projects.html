@@ -1,0 +1,155 @@
+{{ define "main" }}
+    <div class="main">
+        {{- partial "header.html" . -}}
+        <article class="page" role="main" >
+            <div class="list">
+
+                <div class="projects">
+                    <h1 class="entry-title">My Pet Projects</h1>
+
+                    <div class="row">
+                        {{ .Content }}
+                    </div>
+
+                    <h2>Supported Projects</h2>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <a href="http://www.numcol.com/"><img height="200" width="200" src="images/numcol.png" class="thumbnail" alt="Numcol"></a>
+                        </div>
+                        <div class="project-content">
+                            <h1><a href="http://www.numcol.com/">Numcol</a> <a class="icon" title="Download Numcol in Google Play Store" href="https://play.google.com/store/apps/details?id=com.numcol.free"><i class="fa fa-download" aria-hidden="true"></i></a></h1>
+                            <p>The Brain Training Game About Matching Numbers And Colours. It's the first and the unique game for phones I've ever developed. I've done it with Cordova and vanilla Javascript. I know that is not the best game you ever seen, but is fine for an elevator trip.</p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="/sidr/"><img height="200" width="200" src="images/sidr.png" class="thumbnail" alt="Sidr"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="/sidr/">Sidr</a> <a class="icon" title="Sidr in Github" href="https://github.com/artberri/sidr"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Sidr is a jQuery plugin for creating off-canvas side menus and an the easiest way for doing your menu responsive. It's the most popular code I've ever wrote and it's used in more than 150.000 websites including fox.com, uscourts.gov,...</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://github.com/artberri/rollup-plugin-istanbul"><img height="200" width="200" src="images/rollup-javascript.png" class="thumbnail" alt="rollup-plugin-istanbul"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://github.com/artberri/rollup-plugin-istanbul">rollup-plugin-istanbul</a> <a class="icon" title="rollup-plugin-istanbul" href="https://github.com/artberri/rollup-plugin-istanbul"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Seamless integration between the module bundler <a href="https://rollupjs.org/">Rollup.js</a> and the code coverage tool <a href="https://istanbul.js.org/">Istanbul</a> (node.js).</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://play.google.com/store/apps/details?id=com.berriart.bilbonbizi"><img height="200" width="200" src="images/bilbonbizi.png" class="thumbnail" alt="BilbonBizi"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://play.google.com/store/apps/details?id=com.berriart.bilbonbizi">BilbonBizi</a> <a class="icon" title="Download BilbonBizi in Google Play Store" href="https://play.google.com/store/apps/details?id=com.berriart.bilbonbizi"><i class="fa fa-download" aria-hidden="true"></i></a></h1>
+                                <p>BilbonBizi is an Android Application to view detailed information about the stations of the public bike rental service in Bilbao, and it supports Android Wear! It has been developed with Nativescript.</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://market.nativescript.org/plugins/nativescript-wear-messaging"><img height="200" width="200" src="images/nwmp.png" class="thumbnail" alt="Wear Messaging Nativescript Plugin"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://market.nativescript.org/plugins/nativescript-wear-messaging">Wear Messaging Nativescript Plugin</a> <a class="icon" title="puppet-nvm in Github" href="https://github.com/artberri/nativescript-wear-messaging"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>It is a <a href="https://www.nativescript.org/">Nativescript</a> Plugin that adds support for sending messages between the phone and the watch using the Android MessageClient API. This plugin is intended to be used to communicate between a handled app and an Android Wear app.</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://forge.puppetlabs.com/artberri/nvm"><img height="200" width="200" src="images/puppet-nvm.png" class="thumbnail" alt="puppet-nvm"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://forge.puppetlabs.com/artberri/nvm">puppet-nvm</a> <a class="icon" title="puppet-nvm in Github" href="https://github.com/artberri/puppet-nvm"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Node Version Manager (NVM) is a little bash script that allows you to manage multiple versions of Node.js on the same box. This Puppet module simplifies the task of installing it and allows to install unique or multiple versions of Node.js.</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://forge.puppetlabs.com/artberri/yarn"><img height="200" width="200" src="images/puppet-yarn.png" class="thumbnail" alt="puppet-yarn"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://forge.puppetlabs.com/artberri/yarn">puppet-yarn</a> <a class="icon" title="puppet-yarn in Github" href="https://github.com/artberri/puppet-yarn"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Yarn is a fast, reliable, and secure dependency manager for npm and bower. This Puppet module simplifies the task of installing it and supports package, npm or source installation methods.</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project end">
+
+                            <div class="project-image">
+                                <a href="http://www.beatrealtime.com/"><img height="200" width="200" src="images/beatrealtime.png" class="thumbnail" alt="BeatRealtime"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="http://www.beatrealtime.com/">BeatRealtime</a> <a class="icon" title="puppet-nvm in Github" href="https://github.com/artberri/beatrealtime"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>This a little experiment I did to try the Google Analytics Real Time API. You can login with your Google Analytics account and see the your current visitors in real time. You can see also their location in a world map built with D3.js.</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project">
+
+                            <div class="project-image">
+                                <a href="https://www.npmjs.com/package/cordova-plugin-play-games-services"><img height="200" width="200" src="images/cordova.png" class="thumbnail" alt="puppet-nvm"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://www.npmjs.com/package/cordova-plugin-play-games-services">Google Play Games Services Cordova Plugin</a> <a class="icon" title="Google Play Games Services Cordova Plugin for Android in Github" href="https://github.com/artberri/cordova-plugin-play-games-services"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Cordova plugin to use Google Play Games Services. It includes methods for login, achievements, leaderboards,... (Available also through npm, new Plugin Registry Format).</p>
+                            </div>
+
+                    </article>
+
+                    <article class="project end">
+
+                            <div class="project-image">
+                                <a href="https://github.com/artberri/devenv"><img height="200" width="200" src="images/devenv.png" class="thumbnail" alt="DevEnv"></a>
+                            </div>
+                            <div class="project-content">
+                                <h1><a href="https://github.com/artberri/devenv">DevEnv</a> <a class="icon" title="DevEnv in Github" href="https://github.com/artberri/devenv"><i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                                <p>Devenv is my automated development environment builder project. It's made with Puppet and I use it to preprare my development environment at home or at work. Feel free to fork it and then adapt it to your needs.</p>
+                            </div>
+
+                    </article>
+
+                    <article>
+                        <div>
+                            <h2>Unsupported / Deprecated Projects</h2>
+                            <p>I've built and I've used these projects in some moment but now I'm not supporting them due to different reasons. You can use them but I'm not going to give support to any issue you could have, at least for now.</p>
+                            <ul>
+                                <li><a href="https://plugins.jquery.com/html5storage/">Html5 Storage jQuery Plugin</a>: A light (1,2K) jQuery Plugin to use Local Storage or Session Storage without worrying about HTML5 support. It uses Cookies for backward compatibility.</li>
+                                <li><a href="https://github.com/artberri/BerriartSitemapBundle">BerriartSitemapBundle</a>: The BerriartSitemapBundle provides a way to create a xml sitemap using doctrine in Symfony2.</li>
+                                <li><a href="https://github.com/artberri/ajaxize">Axaxize jQuery Plugin</a>: Ajaxize is a jQuery plugin for converting your classic web into an SPA-like page. It uses the HTML5 Native History API.</li>
+                                <li><a href="https://github.com/artberri/LienzoJS">LienzoJS</a>: It's a HTML5 Canvas mini-framework with an API in spanish that I used to teach kids in CoderDojo.</li>
+                                <li><a href="https://github.com/artberri/TecladoJS">TecladoJS</a>: A fork of KeyboardJS with tha API translated to Spanish that I used to teach kids in CoderDojo.</li>
+                                <li><a href="https://profiles.wordpress.org/artberri/#content-plugins">Wordpress Plugins and Themes</a>: All my Wordpress plugins/themes are unsupported/deprecated.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </article>
+        {{- partial "footer.html" . -}}
+    </div>
+{{ end }}
