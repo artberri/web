@@ -1,7 +1,7 @@
 ---
 slug: personal-branding-for-developers
 date: "2016-09-07T00:00:00Z"
-excerpt: |
+description: |
   Being internally passionate about your job is necessary but not enough, you need to shout it out for the entire world to hear.
 title: My Point Of View About Personal Branding For Developers
 resources:

@@ -1,7 +1,7 @@
 ---
 slug: its-alive
 date: "2016-09-30T00:00:00Z"
-excerpt: |
+description: |
   Berriart Blog is alive. Again. My blog-off time didn't last very much, I know that probably I will not write in a regular way, but that isn't a good reason for not having a blog.
 featuredImage: images/blog/2016/its-alive-og.jpg
 title: It's Alive

@@ -12,6 +12,6 @@
     {{ partial "image.html" . }}
 
     <div class="entry-content" itemprop="articleBody">
-        <p>{{ .Params.excerpt }}</p>
+        <p>{{- .Description -}}</p>
     </div>
 </article>

@@ -1,7 +1,7 @@
 ---
 slug: npm-yarn-benchmark
 date: "2016-10-15T00:00:00Z"
-excerpt: |
+description: |
   Yarn, the recently launched alternative for NPM as Node.js dependency manager, claims to be much faster and reliable than its predecessor. Let see if it's true.
 title: NPM vs Yarn benchmark
 resources:

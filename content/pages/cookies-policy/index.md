@@ -1,7 +1,7 @@
 ---
 slug: cookies-policy
 title: Cookies Policy
-excerpt: Berriart Cookies Policy
+description: Berriart Cookies Policy
 ---
 
 ## What are cookies?

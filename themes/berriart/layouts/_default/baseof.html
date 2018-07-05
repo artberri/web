@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<html lang="{{ .Params.Language | default "en" }}">
     {{- partial "head.html" . -}}
     <body itemscope itemtype="http://schema.org/WebPage">
         {{- block "main" . }}{{- end }}

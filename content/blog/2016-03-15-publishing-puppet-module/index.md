@@ -1,7 +1,7 @@
 ---
 slug: publishing-puppet-module
 date: "2016-03-15T00:00:00Z"
-excerpt: |
+description: |
   Like with any other Open Source Software, it doesn't mean just making your code public. In this post I tell how I get my modules to be approved by Puppet Labs.
 title: Publishing a Puppet Module
 resources:

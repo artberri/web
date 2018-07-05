@@ -1,9 +1,10 @@
 ---
 slug: empresa-quiebra-que-hacer.1
 date: "2017-12-29"
-excerpt: |
+description: |
   Eso fue exactamente lo que yo me pregunté a 24 de Julio de 2017 cuando nuestra CEO nos informaba de que se iban a iniciar los trámites para un concurso de acreedores, un ERE de extinción... En definitiva, que la empresa no tenía un duro.
 title: (Spanish) La empresa para la que trabajo ha quebrado, y ahora... ¿Qué hago?
+language: es
 resources:
 - name: "featured"
   src: "images/we-are-closed-og.jpg"

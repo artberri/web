@@ -1,7 +1,7 @@
 ---
 slug: using-ffmpeg-web-ambient-videos
 date: "2016-11-14T00:00:00Z"
-excerpt: |
+description: |
   FFMPEG is a cross-platform command line that can be used to convert videos in order to use them as a background using the 'video' HTML5 tag.
 title: Creating Background Ambient Videos In HTML5 using FFMPEG
 resources:

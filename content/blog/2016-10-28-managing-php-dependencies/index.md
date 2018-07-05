@@ -1,7 +1,7 @@
 ---
 slug: managing-php-dependencies
 date: "2016-10-28T00:00:00Z"
-excerpt: |
+description: |
   The first step to build a proper CD pipeline is to manage your dependencies in the right way. If you are PHP developer, you need to master Composer in order to achieve it.
 title: Managing PHP Dependencies Properly
 resources:

@@ -2,7 +2,7 @@
 slug: sidr
 layout: documentation
 title: Sidr
-excerpt: Berriart contact page
+description: Berriart contact page
 download: https://github.com/artberri/sidr/archive/v2.2.1.zip
 repo: https://github.com/artberri/sidr
 subtitle: The best jQuery plugin for creating side menus and the easiest way for doing your menu responsive

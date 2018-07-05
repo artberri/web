@@ -14,7 +14,7 @@
                 {{- partial "image.html" . -}}
 
                 <div class="entry-content" itemprop="articleBody">
-                    <p class="entry-excerpt">{{ .Params.excerpt }}</p>
+                    <p class="entry-excerpt">{{- .Description -}}</p>
 
                     {{- .Content -}}
                 </div>
@@ -24,7 +24,7 @@
                 {{- partial "subscription-form.html" . -}}
 
                 <div class="disquss">
-                    {{ template "_internal/disqus.html" . }}
+                    {{- template "_internal/disqus.html" . -}}
                 </div>
 
             </div>

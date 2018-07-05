@@ -16,7 +16,8 @@
     "release": "npm run build && hugo",
     "serve:hugo": "hugo server",
     "serve": "npm run build && concurrently \"npm:watch:css\" \"npm:serve:hugo\"",
-    "start": "http-server public -p 1313"
+    "start": "http-server public -p 1313",
+    "deploy": "node deploy.js"
   },
   "author": "Alberto Varela",
   "private": true,
@@ -35,6 +36,7 @@
     "prettier": "1.13.7",
     "reset-css": "^4.0.1",
     "sidr": "^2.2.1",
+    "ssh-deploy-release": "^2.1.9",
     "start-server-and-test": "^1.5.0",
     "stylelint": "^9.3.0",
     "stylelint-config-prettier": "^3.3.0",
