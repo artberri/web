@@ -7,7 +7,7 @@ resources:
   src: "images/alberto-varela.jpg"
 ---
 
-I am 35 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Software Developer at <a href="https://www.plainconcepts.com/">Plain Concepts</a>. The easiest way
+I am 36 years old and I am Full Stack Developer based in <a data-toggle="bilbaoModal" href="#bilbaoModal">Bilbao</a> with more than 10 years of experience. I am passionate about everything related to web development and I'm currently working as Software Developer at <a href="https://www.plainconcepts.com/">Plain Concepts</a>. The easiest way
 to get in touch is via email: [alberto@berriart.com](mailto:alberto@berriart.com).
 
 ## <i class="fa fa-code" aria-hidden="true"></i> Web development
