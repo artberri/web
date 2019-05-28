@@ -3,7 +3,7 @@ slug: decoupling-from-framework
 date: "2019-05-28"
 description: |
   The javascript framework war that we are seeing today is harder than the one we've seen in the Game of Thrones series. To choose the proper framework is one of the most important decisions we need to take when starting a new project and that's why there are hundreds of posts on the internet comparing frameworks: reactivity, extensibility, adoption... This is not one of those posts.
-title: Decoupling an SPA from the framework
+title: Decoupling SPAs from the framework, a practical example
 language: es
 resources:
 - name: "featured"
@@ -23,7 +23,7 @@ and [Vue](https://vuejs.org/).
 
 I apologize to the pure javascript lovers, I've chosen Typescript to do the job. I've been working with it
 recently, I love some of its benefits and it helps me following an OO approach. Anyway, a similar way could
-be followed by using vanilla JS. And remember, this is just my point of view,  It's not evidence ;)
+be followed by using vanilla JS. And remember, this is just my point of view, it's not evidence ;)
 
 ## Model-View-Presenter
 
@@ -70,7 +70,7 @@ export interface ITodoView extends ITodoUserActions {
 
 There are different approaches when implementing the view, I prefer to use the
 [Passive View](https://martinfowler.com/eaaDev/PassiveScreen.html) pattern and let the presenter control it
-entirely. In this case, I'm defining an input Todo, some user events, and some explicit methods to change the
+entirely. In this case, I'm defining an input Todo entity, some user events, and some explicit methods to change the
 view. Those methods shouldn't have any logic but UI.
 
 ## The presenter
@@ -97,7 +97,7 @@ export abstract class BasePresenter<V> {
 
 All the presenters of the application extend this base class. As you can see it completely couples the presenter
 to a view, but this is the way it should work: <nobr>1 view <-> 1 presenter</nobr>, and each presenter will control just one
-component. Let's take a look at the todo.presenter.ts:
+component. Let's take a look at the presenter of the TodoItem component:
 
 {{< highlight typescript >}}
 import { Service, BasePresenter, Mediator } from '../framework';
@@ -176,12 +176,12 @@ export function TodoMixin<TBase extends Type>(base: TBase) {
 }
 {{< / highlight >}}
 
-Looking deep into the presenter we won't see much logic there either, this is because I tried to isolate
+Looking deep into the presenter we won't see much logic either, this is because I tried to isolate
 the model of my application in a FLUX/REDUX like architecture. I've created my own system because I wanted
-to make it dependency free, but you can use some common library, like redux itself, to implement it. The aim
+to make it dependency free, but you can use some common library, like [redux](https://redux.js.org/) itself, to implement it. The aim
 of using a mediator or a task dispatcher is also to isolate the application use cases from the way we represent
 them. In the same way I've created my own dependency injector, but probably it will be worth to use
-Inversify or other similar instead.
+[Inversify](http://inversify.io/) or similar library instead.
 
 The basic principle of what I did in every presenter is to subscribe to the application state in every view
 initialization in order to update it accordingly and to wrap any query or command sent to the model by using
@@ -191,7 +191,10 @@ a mediator.
 
 In our case, the model will define the data of the application, the repository or the store we are
 going to use (or at least its interface) and the use cases. Taking into account our previous example
-I'll show you a couple of the actions and the Todo state container:
+I'll show you a couple of the actions and the Todo state container.
+
+This one is a simple use case that should be triggered when the user edits a todo. It just calls
+the edit action defined in the state container.
 
 {{< highlight typescript >}}
 import { CommandHandler, Service } from '../../../../framework';
@@ -212,26 +215,41 @@ export class EditTodoCommandHandler extends CommandHandler<IEditTodoPayload> {
 }
 {{< / highlight >}}
 
+The next one is another example. In this case it is not from the TodoItem component
+but from the TodoList component. It's the handler responsible of getting the visible
+todos. We can consider it like a 'selector' in the redux-language.
+
 {{< highlight typescript >}}
-import { CommandHandler, Service } from '../../../../framework';
-import { ToggleTodoCommand } from '../toggle-todo.command';
-import { TodosState } from '../../../state';
+import { SimpleQueryHandler, Service } from '../../../../framework';
+import { GetVisibleTodosQuery } from '../get-visible-todos.query';
+import { FilterState, TodosState } from '../../../state';
 import { Todo } from '../../../domain';
 
 @Service()
-export class ToggleTodoCommandHandler extends CommandHandler<Todo> {
+export class GetVisibleTodosQueryHandler extends SimpleQueryHandler<Todo[]> {
   constructor(
+    private readonly filterState: FilterState,
     private readonly todosState: TodosState
   ) {
-    super(ToggleTodoCommand);
+    super(GetVisibleTodosQuery);
   }
 
-  public handle(todo: Todo): void {
-    this.todosState.toggle(todo);
+  public handle(): Todo[] {
+    switch (this.filterState.state) {
+      case 'active':
+          return this.todosState.state.filter(t => !t.isCompleted);
+      case 'completed':
+        return this.todosState.state.filter(t => t.isCompleted);
+      default:
+        return this.todosState.state;
+    }
   }
 }
-
 {{< / highlight >}}
+
+You can see that both handlers are using some state objects. These objects
+are what I called the state containers that are the only responsible of mutating
+the state (reducers in redux-language).
 
 {{< highlight typescript >}}
 import { Todo } from '../../model';
@@ -295,8 +313,8 @@ It seems clear what they do, doesn't it? I'm not going to go deeper on how I imp
 container and its reactivity, you can check the repo code if you are curious or you can just use
 a better-tested tool like redux.
 
-What is important to know also is that you shouldn't depend on the framework or in any concrete implementation
-to persist or retrieve any data. It's your model who should define an interface that should be implemented
+What is important to know is that you shouldn't depend on the framework or in any concrete implementation
+to persist or retrieve any data. It's your model who should define an interface that will be implemented
 depending on the framework or the service you will reach. This is what I defined:
 
 {{< highlight typescript >}}
@@ -309,7 +327,7 @@ export abstract class TodoStorageService {
 
 {{< / highlight >}}
 
-And it is my main app component the one who will be in charge of retrieving the data on the application start 
+And, in this case, it is the main app component the one who will be in charge of retrieving the data on the application load
 and to save it on any state change:
 
 {{< highlight typescript >}}
@@ -367,7 +385,8 @@ Here you can see a little fragment of the todo.presenter.spec.ts file:
     });
 {{< / highlight >}}
 
-For this project, I've just tested the presenters, but you can make also small unit tests covering just the user actions in the model.
+For this project, I've just tested the presenters, but you can make also small unit tests covering just
+the user actions in the model.
 
 ## The framework implementation
 
@@ -375,6 +394,10 @@ I didn't talk about any framework yet, but now, I want you to see how easy and s
 this TodoItem component with any framework that you can choose.
 
 ### Angular
+
+The angular component needs to implement the view interface we defined before. The methods will just
+change the value of some class properties that will be used in the view to control how the html is shown.
+If you are sure that you will be using Angular, you can change the mixin with an abstract class.
 
 {{< highlight typescript >}}
 import { Component, Input, HostBinding, OnInit } from '@angular/core';
@@ -395,6 +418,7 @@ export class TodoComponent extends TodoMixin(BaseView) implements ITodoView, OnI
 
   @HostBinding('class.editing')
   public isEditing: boolean = false;
+
   public todoTitleInput: string;
 
   public readonly presenter: TodoPresenter = Injector.resolve(TodoPresenter);
@@ -438,6 +462,10 @@ export class TodoComponent extends TodoMixin(BaseView) implements ITodoView, OnI
 {{< / highlight >}}
 
 ### React
+
+The React implementation has some differences with the Angular one because of the nature of
+this framework. The view won't be updated unless we call the `setState` method, so, this is
+what our methods will do.
 
 {{< highlight tsx >}}
 import React, { Component, KeyboardEvent, ChangeEvent } from 'react';
@@ -562,22 +590,18 @@ export default class TodoItem extends TodoMixin(Component)<ITodoItemProps, ITodo
 
 ### Vue
 
-{{< highlight html >}}
-<template>
-  <li :class="{ 'completed': isCompleted, 'editing': isEditing }">
-    <div class="view">
-      <input class="toggle" type="checkbox" :checked="isCompleted" v-on:click="onToggleCheckboxClicked()">
-      <label v-on:dblclick="onDoubleClicked()">{{ todo.title }}</label>
-      <button class="destroy" v-on:click="onRemoveButtonClicked()"></button>
-    </div>
-    <input class="edit" v-model="todoTitleInput" v-on:blur="onInputBlur(todoTitleInput)" v-on:keyup.enter="onInputBlur(todoTitleInput)" />
-  </li>
-</template>
+The implementation in Vue is more similar to the one with Angular. By using Typescript, we
+can just update the class properties directly and the reactivity will update our view.
+The most different thing using Vue is that we need to create a middleware component
+to extend using the mixin, because is how Vue works with Typescript.
 
+{{< highlight html >}}
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { Todo, ITodoView } from '../../../app/src';
-import { VueTodoMixin } from '../mixins';
+
+@Component
+export class VueTodoMixin extends TodoMixin(Vue) {}
 
 @Component({
   mixins: [VueTodoMixin]
@@ -612,14 +636,25 @@ export default class TodoItem extends VueTodoMixin implements ITodoView {
   }
 }
 </script>
+
+<template>
+  <li :class="{ 'completed': isCompleted, 'editing': isEditing }">
+    <div class="view">
+      <input class="toggle" type="checkbox" :checked="isCompleted" v-on:click="onToggleCheckboxClicked()">
+      <label v-on:dblclick="onDoubleClicked()">{{ todo.title }}</label>
+      <button class="destroy" v-on:click="onRemoveButtonClicked()"></button>
+    </div>
+    <input class="edit" v-model="todoTitleInput" v-on:blur="onInputBlur(todoTitleInput)" v-on:keyup.enter="onInputBlur(todoTitleInput)" />
+  </li>
+</template>
 {{< / highlight >}}
 
-Looking at the three together I expect that you will be able to see how I was able to implement it
-without worrying about the framework. Of course, the templating or the state management of each one
-is quite different, but it's just a matter of adapting them to our presenter.
+Looking at the three together I expect that you will be able to see how similar they are. Of course, the
+templating or the state management of each one is quite different, but it's just a matter of adapting
+them to our presenter.
 
 [My todomvp repository](https://github.com/artberri/todomvp) holds the full implementation of the
 TodoMVC app with the three frameworks, not just the TodoItem component. Check it if you want and poke me on
-Twitter or by email if you have some doubts or if you found any issue.
+Twitter or by email if you have doubts or if you found any issue.
 
 Use the framework and don't be used by it.
