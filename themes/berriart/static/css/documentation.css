@@ -1,222 +1,222 @@
 .documenation-social {
-    margin: 20px 0 30px;
-    text-align: center;
-    .gitforked-button-container {
-        bottom: 7px;
-        margin-right: 50px;
-    }
+  margin: 20px 0 30px;
+  text-align: center;
+  .gitforked-button-container {
+    bottom: 7px;
+    margin-right: 50px;
+  }
 }
 
 .documentation-menu {
+  a {
+    color: #333;
+  }
+  .inner {
+    transition: background 0.7s;
+    background: #f0f0f0;
+    &::after {
+      content: "";
+      width: 105%;
+      height: 1px;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.7);
+      bottom: 2px;
+    }
+  }
+  li {
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 12px;
+    @mixin breakpoint $breakpoint-xlarge {
+      font-size: 14px;
+    }
+    @mixin breakpoint $breakpoint-xxlarge {
+      font-size: 18px;
+    }
     a {
-        color: #333;
+      display: inline-block;
     }
-    .inner {
-        transition: background .7s;
-        background: #f0f0f0;
-        &::after {
-            content: '';
-            width: 105%;
-            height: 1px;
-            display: block;
-            position: absolute;
-            z-index: -1;
-            box-shadow: 0 0 8px 2px rgba(0, 0, 0, .7);
-            bottom: 2px;
-        }
-    }
-    li {
-        text-align: center;
-        line-height: 60px;
-        height: 60px;
-        font-size: 12px;
-        @include breakpoint($breakpoint-xlarge) {
-            font-size: 14px;
-        }
-        @include breakpoint($breakpoint-xxlarge) {
-            font-size: 18px;
-        }
-        a {
-            display: inline-block;
-        }
-    }
+  }
 }
 
 .documentation {
-    max-width: 960px;
-    margin: auto;
-    .entry-header {
-        position: relative;
+  max-width: 960px;
+  margin: auto;
+  .entry-header {
+    position: relative;
+  }
+  .entry-title {
+    font-size: 72px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1;
+    @mixin breakpoint $breakpoint-medium {
+      font-size: 148px;
+      line-height: 1.4;
     }
-    .entry-title {
-        font-size: 72px;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0;
-        margin-top: 0;
-        margin-bottom: 10px;
-        line-height: 1;
-        @include breakpoint($breakpoint-medium) {
-            font-size: 148px;
-            line-height: 1.4;
-        }
+  }
+  .author {
+    text-align: center;
+    @mixin breakpoint $breakpoint-medium {
+      text-align: left;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: 24px;
     }
-    .author {
-        text-align: center;
-        @include breakpoint($breakpoint-medium) {
-            text-align: left;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: 24px;
-        }
+  }
+  .entry-subtitle {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    @mixin breakpoint $breakpoint-medium {
+      font-size: 32px;
     }
-    .entry-subtitle {
-        font-size: 18px;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-        @include breakpoint($breakpoint-medium) {
-            font-size: 32px;
-        }
+  }
+  .entry-content {
+    h2 {
+      font-size: 32px;
+      @mixin breakpoint $breakpoint-medium {
+        font-size: 48px;
+      }
     }
-    .entry-content {
-        h2 {
-            font-size: 32px;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 48px;
-            }
-        }
-        h3 {
-            font-size: 24px;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 32px;
-            }
-        }
-        p,
-        li {
-            font-size: 16px;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 24px;
-            }
-        }
-        .sidr {
-            ul,
-            li {
-                margin: 0;
-                font-size: 14px;
-            }
-        }
+    h3 {
+      font-size: 24px;
+      @mixin breakpoint $breakpoint-medium {
+        font-size: 32px;
+      }
     }
-    .download-button {
+    p,
+    li {
+      font-size: 16px;
+      @mixin breakpoint $breakpoint-medium {
+        font-size: 24px;
+      }
+    }
+    .sidr {
+      ul,
+      li {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .download-button {
+    color: $color-white;
+    border: 3px solid $color-primary;
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    margin: 50px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    background-color: $color-primary;
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      background: transparent;
+    }
+  }
+  .doc-preview p {
+    margin: 10px 0;
+    @mixin breakpoint $breakpoint-medium {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  .themes {
+    margin-bottom: 20px;
+    .columns {
+      position: relative;
+    }
+    h3 {
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0 0 50px 40px;
+      position: absolute;
+      a {
+        color: #555;
+      }
+    }
+    img {
+      margin-bottom: 30px;
+    }
+  }
+  .showcase {
+    margin-bottom: 20px;
+    .case {
+      position: relative;
+      overflow: hidden;
+    }
+    .info {
+      position: absolute;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.8);
+      bottom: 0;
+      left: 0;
+      p {
         color: $color-white;
-        border: 3px solid $color-primary;
-        font-family: 'PT Sans', sans-serif;
-        text-transform: uppercase;
-        margin: 50px;
-        border-radius: 25px;
-        padding: 10px 40px;
-        background-color: $color-primary;
-        &:hover,
-        &:focus {
-            color: $color-primary;
-            background: transparent;
-        }
+        margin: 0;
+      }
     }
-    .doc-preview p {
-        margin: 10px 0;
-        @include breakpoint($breakpoint-medium) {
-            font-size: 14px;
-            color: #333;
-        }
+  }
+  .function {
+    background: #f8f8f8;
+    margin-bottom: 30px;
+    h3 {
+      font-size: 18px;
+      font-family: "Courier New", Courier, monospace;
+      color: $color-white;
+      background: #666;
+      padding: 10px 20px;
     }
-    .themes {
-        margin-bottom: 20px;
-        .columns {
-            position: relative;
-        }
-        h3 {
-            bottom: 0;
-            left: 0;
-            margin: 0;
-            padding: 0 0 50px 40px;
-            position: absolute;
-            a {
-                color: #555;
-            }
-        }
-        img {
-            margin-bottom: 30px;
-        }
+    h4 {
+      font-size: 16px;
+      font-family: "Courier New", Courier, monospace;
+      color: $color-primary;
     }
-    .showcase {
-        margin-bottom: 20px;
-        .case {
-            position: relative;
-            overflow: hidden;
-        }
-        .info {
-            position: absolute;
-            width: 100%;
-            padding: 15px;
-            background: rgba(0, 0, 0, .8);
-            bottom: 0;
-            left: 0;
-            p {
-                color: $color-white;
-                margin: 0;
-            }
-        }
+    .usage {
+      padding: 10px 20px;
     }
-    .function {
-        background: #f8f8f8;
-        margin-bottom: 30px;
-        h3 {
-            font-size: 18px;
-            font-family: 'Courier New', Courier, monospace;
-            color: $color-white;
-            background: #666;
-            padding: 10px 20px;
+    .parameter {
+      border-top: 1px solid #e8e8e8;
+      padding: 10px 0;
+      strong {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1em;
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+        &:last-child {
+          color: #666;
         }
-        h4 {
-            font-size: 16px;
-            font-family: 'Courier New', Courier, monospace;
-            color: $color-primary;
-        }
-        .usage {
-            padding: 10px 20px;
-        }
-        .parameter {
-            border-top: 1px solid #e8e8e8;
-            padding: 10px 0;
-            strong {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 1em;
-            }
-            p {
-                margin: 0;
-                font-size: 14px;
-                &:last-child {
-                    color: #666;
-                }
-            }
-            pre {
-                font-size: 12px;
-            }
-            .option {
-                margin: 10px 0 0 30px;
-            }
-            &.return {
-                border-top: 5px solid #e8e8e8;
-            }
-        }
+      }
+      pre {
+        font-size: 12px;
+      }
+      .option {
+        margin: 10px 0 0 30px;
+      }
+      &.return {
+        border-top: 5px solid #e8e8e8;
+      }
     }
+  }
 }
 
 .documentation-adblock-1 {
-    margin-bottom: 20px;
-    @include breakpoint($breakpoint-medium) {
-        margin-bottom: 0;
-    }
+  margin-bottom: 20px;
+  @mixin breakpoint $breakpoint-medium {
+    margin-bottom: 0;
+  }
 }

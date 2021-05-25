@@ -1,31 +1,10 @@
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:8-browsers
+    - image: circleci/node:16-browsers
 
 version: 2
 jobs:
-  lint:
-    <<: *defaults
-    steps:
-      - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - npm-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - npm-dependencies-
-
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: npm-dependencies-{{ checksum "package-lock.json" }}
-
-      - run: npm run lint
-
   build:
     <<: *defaults
     steps:
@@ -34,9 +13,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - npm-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - npm-dependencies-
+            - npm-dependencies-{{ checksum "package-lock.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - npm-dependencies-
 
       - run: npm install
 
@@ -76,7 +55,6 @@ jobs:
           paths:
             - public
 
-
   test:
     <<: *defaults
     steps:
@@ -88,9 +66,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - npm-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - npm-dependencies-
+            - npm-dependencies-{{ checksum "package-lock.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - npm-dependencies-
 
       - run: npm install
 
@@ -117,9 +95,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - npm-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - npm-dependencies-
+            - npm-dependencies-{{ checksum "package-lock.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - npm-dependencies-
 
       - run: npm install
 
@@ -138,13 +116,11 @@ jobs:
 workflows:
   version: 2
 
-  lint-build-test-deploy:
+  build-test-deploy:
     jobs:
-      - lint
       - build
       - release:
           requires:
-            - lint
             - build
       - test:
           requires:

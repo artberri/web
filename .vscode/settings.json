@@ -1,6 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "stylelint.enable": true,
     "files.associations": {
         "*.css": "scss",
         "*.html": "gohtml"

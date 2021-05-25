@@ -1,38 +1,5 @@
-@mixin slide-in($animation-name, $from) {
-    @keyframes $animation-name {
-        from {
-            transform: translate3d($from, 0, 0);
-            visibility: visible;
-        }
-        85% {
-            transform: translate3d($from, 0, 0);
-            visibility: visible;
-        }
-        to {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-}
-
-@mixin breakpoint($breakpoint) {
-    @media screen and (min-width: $breakpoint) {
-        @content;
-    }
-}
-
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
-    ::-webkit-scrollbar {
-        width: $size;
-        height: $size;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: $foreground-color;
-    }
-    ::-webkit-scrollbar-track {
-        background: $background-color;
-    }
-    body {
-        scrollbar-face-color: $foreground-color;
-        scrollbar-track-color: $background-color;
-    }
+@define-mixin breakpoint $breakpoint {
+  @media screen and (min-width: $breakpoint) {
+    @mixin-content;
+  }
 }

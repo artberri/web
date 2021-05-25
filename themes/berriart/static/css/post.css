@@ -1,113 +1,113 @@
 .list {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .page {
-    flex: 1;
-    padding: 20px 36px 40px;
-    @include breakpoint($breakpoint-medium) {
-        height: 100vh;
-        overflow: auto;
+  flex: 1;
+  padding: 20px 36px 40px;
+  @mixin breakpoint $breakpoint-medium {
+    height: 100vh;
+    overflow: auto;
+  }
+  .series {
+    border: 1px solid #ffeba4;
+    background: #fffbe5;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #d4ab19;
+    a {
+      color: #d4ab19;
+      text-decoration: underline;
     }
-    .series {
-        border: 1px solid #ffeba4;
-        background: #fffbe5;
-        padding: 10px;
-        margin-bottom: 15px;
-        font-size: 16px;
-        color: #d4ab19;
-        a {
-            color: #d4ab19;
-            text-decoration: underline;
-        }
+  }
+  .entry-title {
+    font-size: 28px;
+    margin: 0 0 20px;
+    text-shadow: none;
+    border-bottom: 1px solid #aaa;
+    color: #444;
+    @mixin breakpoint $breakpoint-medium {
+      font-size: 48px;
+      margin: 50px 0;
     }
+    &.in-post {
+      margin-bottom: 0;
+      @mixin breakpoint $breakpoint-medium {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .post-meta.in-post {
+    margin-bottom: 50px;
+    margin-top: 5px;
+  }
+  .entry-excerpt {
+    font-weight: bold;
+  }
+  .post {
+    margin-bottom: 50px;
     .entry-title {
-        font-size: 28px;
-        margin: 0 0 20px;
-        text-shadow: none;
-        border-bottom: 1px solid #aaa;
-        color: #444;
-        @include breakpoint($breakpoint-medium) {
-            font-size: 48px;
-            margin: 50px 0;
-        }
-        &.in-post {
-            margin-bottom: 0;
-            @include breakpoint($breakpoint-medium) {
-                margin-bottom: 0;
-            }
-        }
+      font-size: 20px;
+      border: 0;
+      margin: 0;
+      @mixin breakpoint $breakpoint-medium {
+        font-size: 36px;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+      }
     }
-    .post-meta.in-post {
-        margin-bottom: 50px;
-        margin-top: 5px;
-    }
-    .entry-excerpt {
-        font-weight: bold;
-    }
-    .post {
-        margin-bottom: 50px;
-        .entry-title {
-            font-size: 20px;
-            border: 0;
-            margin: 0;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 36px;
-                margin: 0;
-            }
-            a {
-                text-decoration: none;
-            }
-        }
-    }
-    .entry-image {
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        width: 100%;
-    }
-    .entry-content {
-        p,
-        li {
-            font-size: 16px;
-            color: #444;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 24px;
-            }
-        }
-        pre {
-            font-size: 16px;
-        }
-        li {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-left: 2rem;
-        }
-        .pre {
-            font-size: 12px;
-            margin-bottom: 20px;
-            @include breakpoint($breakpoint-medium) {
-                font-size: 16px;
-            }
-        }
-        blockquote {
-            background: #f8f8f8;
-            border-left: 4px solid #bbb;
-            padding: 15px 0 15px 20px;
-            color: #000;
-            margin-bottom: 20px;
-            p {
-                margin: 0;
-            }
-        }
-    }
-    h2 {
-        margin: 40px 0 10px;
+  }
+  .entry-image {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  .entry-content {
+    p,
+    li {
+      font-size: 16px;
+      color: #444;
+      @mixin breakpoint $breakpoint-medium {
         font-size: 24px;
-        color: #444;
-        @include breakpoint($breakpoint-medium) {
-            font-size: 32px;
-        }
+      }
     }
+    pre {
+      font-size: 16px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    ul {
+      margin-left: 2rem;
+    }
+    .pre {
+      font-size: 12px;
+      margin-bottom: 20px;
+      @mixin breakpoint $breakpoint-medium {
+        font-size: 16px;
+      }
+    }
+    blockquote {
+      background: #f8f8f8;
+      border-left: 4px solid #bbb;
+      padding: 15px 0 15px 20px;
+      color: #000;
+      margin-bottom: 20px;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  h2 {
+    margin: 40px 0 10px;
+    font-size: 24px;
+    color: #444;
+    @mixin breakpoint $breakpoint-medium {
+      font-size: 32px;
+    }
+  }
 }
