@@ -18,6 +18,9 @@ body {
   background: $color-white;
   color: $color-text;
   font-family: "PT+Sans", sans-serif;
+  @mixin breakpoint $breakpoint-medium {
+    overflow: hidden;
+  }
 }
 
 a {
