@@ -16,7 +16,7 @@ but it will help you update it to a new version with very low effort also. Apart
 will be that it will let you test your application logic without depending on the view.
 
 In order to illustrate how we can achieve it, I've created [a repository](https://github.com/artberri/todomvp)
-that implements the famous [TodoMVC](http://todomvc.com/)
+that implements the famous [TodoMVC](https://todomvc.com/)
 app using the MVP pattern to decouple from the framework. To demonstrate how decoupled it is it includes
 three implementations that use the same core code: [Angular](https://angular.io/), [React](https://reactjs.org/)
 and [Vue](https://vuejs.org/).
@@ -38,8 +38,8 @@ or receiving the data from the model and formatting it to present in the view.
 </center>
 
 But this is a practical article, if you want more theoretical and interesting readings about the MVP or other design
-patterns, you can take a look at these articles by [Martin Fowler](http://www.martinfowler.com/eaaDev/uiArchs.html),
-[Derek Greer](http://www.aspiringcraftsman.com/2007/08/25/interactive-application-architecture/) or
+patterns, you can take a look at these articles by [Martin Fowler](https://www.martinfowler.com/eaaDev/uiArchs.html),
+[Derek Greer](https://www.aspiringcraftsman.com/2007/08/25/interactive-application-architecture/) or
 [Addy Osmany](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/).
 
 ## The View
@@ -181,7 +181,7 @@ the model of my application in a FLUX/REDUX like architecture. I've created my o
 to make it dependency free, but you can use some common library, like [redux](https://redux.js.org/) itself, to implement it. The aim
 of using a mediator or a task dispatcher is also to isolate the application use cases from the way we represent
 them. In the same way I've created my own dependency injector, but probably it will be worth to use
-[Inversify](http://inversify.io/) or similar library instead.
+[Inversify](https://inversify.io/) or similar library instead.
 
 The basic principle of what I did in every presenter is to subscribe to the application state in every view
 initialization in order to update it accordingly and to wrap any query or command sent to the model by using

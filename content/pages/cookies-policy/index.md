@@ -8,7 +8,7 @@ description: Berriart Cookies Policy
 
 A cookie is a file that is placed in your terminal when you access certain webpages. Cookies allow a webpage to store and retrieve, among other things, information on the browsing habits of a user or its terminal and, depending on the information contained therein and the way in which you use your terminal, they can be applied to recognize the user.
 
-For more information, please visit  [http://www.allaboutcookies.org](http://www.allaboutcookies.org).
+For more information, please visit  [https://www.allaboutcookies.org](https://www.allaboutcookies.org).
 
 ### What type of cookies use this webpage?
 
@@ -27,11 +27,10 @@ The user may enable, block or eliminate the cookies installed in its terminal th
 
 Below you will find information on how to manage or disable cookies on the main browsers:
 
-- Cookie settings in Internet Explorer: [http://windows.microsoft.com/en-us/windows7/block-enable-or-allow-cookies](http://windows.microsoft.com/en-us/windows7/block-enable-or-allow-cookies)
-- Cookie settings in Firefox: [https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences)
+- Cookie settings in Microsoft Edge: [https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd](https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd)
+- Cookie settings in Firefox: [https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 - Cookie settings in Google Chrome: [https://support.google.com/chromebook/answer/95647?hl=en](https://support.google.com/chromebook/answer/95647?hl=en)
-- Cookie settings in Safari: [http://support.apple.com/kb/ht1677](http://support.apple.com/kb/ht1677)
-- Cookie settings in Windows Phone: [http://www.windowsphone.com/en-us/how-to/wp7/web/changing-privacy-and-other-browser-settings](http://www.windowsphone.com/en-us/how-to/wp7/web/changing-privacy-and-other-browser-settings)
+- Cookie settings in Safari: [https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)
 
 If you continue browsing the website, you consent the installation and use of the cookies mentioned in the precedent section. At any time you may revoke your consent by disabling the cookies of our website, as indicated in this section. However, we inform you that disabling technical cookies may limit the functions of the website.
 

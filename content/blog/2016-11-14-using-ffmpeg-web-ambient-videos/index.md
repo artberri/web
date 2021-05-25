@@ -271,7 +271,7 @@ license, that you are free to adapt and use them without attributing the origina
 [2]: https://www.w3.org/TR/2011/WD-html5-20110113/video.html
 [3]: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats
 [4]: https://www.ffmpeg.org/
-[5]: http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
+[5]: https://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
 [6]: https://pixabay.com/videos/
-[7]: https://videos.pexels.com/
+[7]: https://www.pexels.com/videos/
 [8]: https://creativecommons.org/publicdomain/zero/1.0/deed.en

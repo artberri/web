@@ -165,17 +165,17 @@ composer install --no-dev --prefer-dist --classmap-authoritative
 
 This is just the beginning, in future posts we will cover the rest of the Continous Delivery pipeline process:
 
-1.  Managing PHP Dependencies Properly
-1.  PHP Code Analysis (TBD)
-1.  Unit Testing With PHP (TBD)
-1.  Artifacts, Packaging PHP Applications (TBD)
-1.  PHP Task Runners (TBD)
-1.  Continous Integration Tools For PHP (TBD)
-1.  Continous Deployment for PHP (TBD)
-1.  Functional Testing PHP Applications (TBD)
-1.  Automated Provisioning For PHP (TBD)
+1. Managing PHP Dependencies Properly
+1. PHP Code Analysis (TBD)
+1. Unit Testing With PHP (TBD)
+1. Artifacts, Packaging PHP Applications (TBD)
+1. PHP Task Runners (TBD)
+1. Continous Integration Tools For PHP (TBD)
+1. Continous Deployment for PHP (TBD)
+1. Functional Testing PHP Applications (TBD)
+1. Automated Provisioning For PHP (TBD)
 
 [1]: https://getcomposer.org/
-[2]: http://packagist.org/
+[2]: https://packagist.org/
 [3]: https://git-scm.com/
 [4]: https://getcomposer.org/doc/00-intro.md

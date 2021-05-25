@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Params.Language | default "en" }}">
     {{- partial "head.html" . -}}
-    <body itemscope itemtype="http://schema.org/WebPage">
+    <body itemscope itemtype="https://schema.org/WebPage">
         {{- block "main" . }}{{- end }}
         <script>
             window.cookieconsent_options = {

@@ -73,7 +73,7 @@
             //event bindings
             twttr.events.bind('tweet', function (intent_event) {
                 if (intent_event && ga) {
-                    ga('send', 'social', 'twitter', 'tweet', 'http://www.berriart.com/sidr/');
+                    ga('send', 'social', 'twitter', 'tweet', 'https://www.berriart.com/sidr/');
                 }
             });
         });

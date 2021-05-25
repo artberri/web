@@ -9,7 +9,7 @@ resources:
   src: "images/personal-branding-for-developers.jpg"
 ---
 
-I work at Ve's Development Center in Bilbao. It's a little city in the north of Spain where the people are usually infected by [the special Basque shyness](http://saskiabasquecountry.blogspot.com.es/2008/11/dont-be-shy.html) and this is why I'm not absolutely sure whether this post will be useful for everyone or just something that is totally obvious, but I hope that you can at least find parts of it enlightening or mildly entertaining. I'll write about my personal experience because, even though I'm quite far from being a superstar and you've probably never heard about me before, I have been employed since I finished my studies and I'm quite happy about how my career has grown.
+I work at Ve's Development Center in Bilbao. It's a little city in the north of Spain where the people are usually infected by [the special Basque shyness](https://saskiabasquecountry.blogspot.com.es/2008/11/dont-be-shy.html) and this is why I'm not absolutely sure whether this post will be useful for everyone or just something that is totally obvious, but I hope that you can at least find parts of it enlightening or mildly entertaining. I'll write about my personal experience because, even though I'm quite far from being a superstar and you've probably never heard about me before, I have been employed since I finished my studies and I'm quite happy about how my career has grown.
 
 One of the things that I love about being a developer is that I only need a laptop and a [good text editor](https://xkcd.com/378/) to do my job. Can you imagine a surgeon practicing at home? Or a bricklayer sharpening their craft at Starbucks? Learning and improving technical skills is an easy task for a developer as well as building web/apps/libraries/whatever on a small scale, therefore, it's hard to believe that someone loves app development if they can't show you an app they've created.
 
@@ -51,6 +51,3 @@ Just one last thing, if your company has a tech blog don't miss the opportunity 
 
 _PS: If you come here looking for how to become a Rock Star Developer, sorry about that, I'll tell you once I achieve it. In the meantime, you can have [a good read](https://books.google.es/books?id=flEnCgAAQBAJ) about it._
 
----
-
-This post was originally published in the [Ve Global Developers Blog](https://developers.veinteractive.com/tech-blog/personal-branding-for-developers).

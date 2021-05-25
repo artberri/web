@@ -77,7 +77,7 @@ In [Travis][12]:
  -----------------------------------------------------------------------
 </pre>
 
-In [Snap CI][13]:
+In Snap CI:
 
 <pre class="pre">
  -----------------------------------------------------------------------
@@ -139,17 +139,16 @@ I hope you enjoyed this reading!
 
 [1]: https://yarnpkg.com/
 [2]: https://code.facebook.com/posts/1840075619545360
-[3]: http://yehudakatz.com/2016/10/11/im-excited-to-work-on-yarn-the-new-js-package-manager-2/
+[3]: https://yehudakatz.com/2016/10/11/im-excited-to-work-on-yarn-the-new-js-package-manager-2/
 [4]: https://www.npmjs.com/
 [5]: https://yarnpkg.com/en/docs/yarn-lock
 [6]: https://yarnpkg.com/en/compare
 [7]: https://gist.github.com/peterjmit/3864743
 [8]: https://angular.io/
-[9]: http://emberjs.com/
+[9]: https://emberjs.com/
 [10]: https://facebook.github.io/react/
 [11]: https://github.com/artberri/npm-yarn-benchmark
 [12]: https://travis-ci.org/artberri/npm-yarn-benchmark
-[13]: https://snap-ci.com/artberri/npm-yarn-benchmark/
 [14]: https://semaphoreci.com/artberri/npm-yarn-benchmark/
 [15]: https://circleci.com/gh/artberri/npm-yarn-benchmark
 [16]: https://puppet.com/

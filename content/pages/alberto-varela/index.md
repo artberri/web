@@ -38,7 +38,7 @@ websites.
 
 ## <i class="fa fa-microphone" aria-hidden="true"></i> Meetups &amp; Conferences
 
-I like to attend meetups and conferences, especially local ones. I have been also giving some workshops and talks at events like [Software Crafters Barcelona](https://scbcn.github.io/) or [Bilbao Tech Week](http://bilbaotechweek.eus/), and I usally try to partipate on open spaces.
+I like to attend meetups and conferences, especially local ones. I have been also giving some workshops and talks at events like [Software Crafters Barcelona](https://softwarecrafters.barcelona/) or [Commit Conf](https://commit-conf.com), and I usally try to partipate on open spaces.
 
 ## <i class="fa fa-hand-spock-o" aria-hidden="true"></i> Others
 

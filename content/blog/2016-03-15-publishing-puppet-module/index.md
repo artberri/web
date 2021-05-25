@@ -9,7 +9,7 @@ resources:
   src: "images/publishing-puppet-module.png"
 ---
 
-There's a lot [of](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html) [great](http://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppetlabs.com/) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
+There's a lot [of](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html) [great](https://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppetlabs.com/) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
 
 I'm assuming you've either built an entirely new module, or substantially improved one on the [Forge](https://forge.puppetlabs.com/), and that you'd like to prove this is a good quality module, so that it could gain approval by PuppetLabs.
 
@@ -19,7 +19,7 @@ Once you've published your module to the Forge, you've got a [Quality Score](htt
 
 ## Code Quality
 
-The Puppet Language has a [style guide](https://docs.puppetlabs.com/guides/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](http://puppet-lint.com/).
+The Puppet Language has a [style guide](https://docs.puppetlabs.com/guides/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](https://puppet-lint.com/).
 
 We will use [Rake](https://github.com/ruby/rake) (the common build utility for Ruby) to build our project, so add it to your gem dependencies if it has not been added already and create a Rakefile with this content:
 
@@ -87,7 +87,7 @@ bundle exec rake validate
 
 To publish a module to the Forge we need a [metadata.json](https://docs.puppetlabs.com/puppet/latest/reference/modules_metadata.html) file which contains important information about the module and can configure certain features. In addition to a basic JSON validation we need to ensure also that:
 
-- It contains a valid license using the [SPDX syntax](http://spdx.org/licenses/).
+- It contains a valid license using the [SPDX syntax](https://spdx.org/licenses/).
 - It sets an upper bound version limit for all the dependencies. The fact that your module is compatible with the 2.x.x version of another module doesn't mean that it will also be compatible with the 3.x.x version.
 - It provides OS compatibilty information.
 - It contains valid project, source and issue URLs.
@@ -112,17 +112,17 @@ Proper documentation is key for an Open Source project. Puppet provides a [READM
 
 When you apply your module to be Puppet approved the documentation validation is based on a human review, which is obvious taking into account that the documentation is intendeed to be read by humans. You should show the documentation to your mates and ensure that they can use your module without any explanation, remember that the final users will not be able to ask you if they have any doubt.
 
-A CHANGELOG.md file is also helpful and definitely needed if you have added new functionalities or backward incompatibilities. Remember also to use [semantic versioning](http://semver.org/) strictly.
+A CHANGELOG.md file is also helpful and definitely needed if you have added new functionalities or backward incompatibilities. Remember also to use [semantic versioning](https://semver.org/) strictly.
 
 ## Testing
 
-Now it is time to prove that your module works. Puppet provides different test frameworks to be able to test your code, and third-parties are also creating tools to help testing our Puppet module, like [Serverspec](http://serverspec.org/) that allow us to write RSpec tests so we can check that our servers are configured correctly.
+Now it is time to prove that your module works. Puppet provides different test frameworks to be able to test your code, and third-parties are also creating tools to help testing our Puppet module, like [Serverspec](https://serverspec.org/) that allow us to write RSpec tests so we can check that our servers are configured correctly.
 
 ## Unit Testing
 
 > Unit tests tell a developer that the code is doing things right.
 
-The [rspec-puppet](http://rspec-puppet.com/) gem is the common framework for unit testing with Puppet. You should add also the [puppetlabsspechelper](https://github.com/puppetlabs/puppetlabs_spec_helper) gem that is a set of shared spec helpers specific to Puppet projects, and [mocha](https://github.com/freerange/mocha) that is a mocking and stubbing library for Ruby.
+The [rspec-puppet](https://rspec-puppet.com/) gem is the common framework for unit testing with Puppet. You should add also the [puppetlabsspechelper](https://github.com/puppetlabs/puppetlabs_spec_helper) gem that is a set of shared spec helpers specific to Puppet projects, and [mocha](https://github.com/freerange/mocha) that is a mocking and stubbing library for Ruby.
 
 Then, create a directory called spec with a _spec_helper.rb_ file inside it, and include the _puppetlabsspechelper_:
 
@@ -130,7 +130,7 @@ Then, create a directory called spec with a _spec_helper.rb_ file inside it, and
 require 'puppetlabs_spec_helper/module_spec_helper'
 {{< / highlight >}}
 
-You need to create unit tests for all your classes and defines if you want to be approved. You can [read the documentation](http://rspec-puppet.com/) to know how to write the tests or check the [tests of a good module](https://github.com/puppetlabs/puppetlabs-apt/tree/master/spec) to get an idea on how you should do it.
+You need to create unit tests for all your classes and defines if you want to be approved. You can [read the documentation](https://rspec-puppet.com/) to know how to write the tests or check the [tests of a good module](https://github.com/puppetlabs/puppetlabs-apt/tree/master/spec) to get an idea on how you should do it.
 
 If your module has dependencies you should create a .fixtures.yml file to allow your tests to automatically install dependencies, for example if you depend on stdlib:
 
@@ -158,7 +158,7 @@ bundle exec rake spec
 
 > Functional tests tell a developer that the code is doing the right things.
 
-With [Vagrant](https://www.vagrantup.com/) we will be able to build different environments where we can test our module, and with the [beaker-rspec](https://github.com/puppetlabs/beaker-rspec) framework, which is a bridge between the Puppet acceptance test harness ([beaker](https://github.com/puppetlabs/beaker)) and [rspec](http://rspec.info/), we will be able to set up machines, run any configuration on those machines, run the tests and then exit.
+With [Vagrant](https://www.vagrantup.com/) we will be able to build different environments where we can test our module, and with the [beaker-rspec](https://github.com/puppetlabs/beaker-rspec) framework, which is a bridge between the Puppet acceptance test harness ([beaker](https://github.com/puppetlabs/beaker)) and [rspec](https://rspec.info/), we will be able to set up machines, run any configuration on those machines, run the tests and then exit.
 
 Create a spechelperacceptance.rb file inside the spec directory which should include beaker and install your module:
 
@@ -187,7 +187,7 @@ RSpec.configure do |c|
 end
 {{< / highlight >}}
 
-The acceptance tests should be included inside the spec/acceptance directory. At least they should ensure that the module is being installed without errors and that it is idempotent, which means that it can be safely run multiple times. Of course it should check that the module does what it is intended for, and [serverspec](http://serverspec.org/) is a good tool to do it.
+The acceptance tests should be included inside the spec/acceptance directory. At least they should ensure that the module is being installed without errors and that it is idempotent, which means that it can be safely run multiple times. Of course it should check that the module does what it is intended for, and [serverspec](https://serverspec.org/) is a good tool to do it.
 
 An acceptance test should look like this:
 
@@ -356,7 +356,7 @@ class yourmodule (
 }
 {{< / highlight >}}
 
-With this approach you will allow to use the defines to the people that are using [hiera](http://docs.puppetlabs.com/hiera/3.0/), or tools like [Foreman](http://theforeman.org/), to configure their nodes.
+With this approach you will allow to use the defines to the people that are using [hiera](https://docs.puppetlabs.com/hiera/3.0/), or tools like [Foreman](https://theforeman.org/), to configure their nodes.
 
 Stay tuned to the issues and to the pull requests of your module in Github, and try to implement the feature requests of the users of your module when they are reasonible. PuppetLabs look for "a level of community engagement" around your module to approve it.
 
@@ -365,7 +365,3 @@ Stay tuned to the issues and to the pull requests of your module in Github, and 
 Probably not, but these are the steps that I followed to get [my NVM module](https://forge.puppetlabs.com/artberri/nvm) approved by Puppetlabs.
 
 That's all folks!
-
----
-
-This post was originally published in the [Ve Global Developers Blog](https://developers.veinteractive.com/tech-blog/publishing-puppet-module).

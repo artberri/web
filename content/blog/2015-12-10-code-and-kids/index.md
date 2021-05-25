@@ -3,9 +3,6 @@ slug: code-and-kids
 date: "2015-12-10T00:00:00Z"
 description: |
   Why we should give kids the oportunity to learn code and how can we do it. This is a little video with a talk that I did internally at Ve Bilbao in order to find people to create a Coder Dojo.
-external: Ve Interactive's Tech Blog
-redirect_to:
-- http://tech.veinteractive.com/code-and-kids.html
 title: Code and Kids
 resources:
 - name: "featured"
@@ -23,12 +20,8 @@ Due to the great experience I had being a mentor in the [CoderDojo](https://code
 {{< youtube XzDRIlLZuHU >}}
 <br>
 
-You can see [here](http://www.berriart.com/talks/code-kids/) the slides of the presentation where you will find several links to useful resources that will help kids learn code in a fun way.
+You can see [here](https://www.berriart.com/talks/code-kids/) the slides of the presentation where you will find several links to useful resources that will help kids learn code in a fun way.
 
 ## Hour of code
 
 Remember that one of the best events that promotes coding with kids is the [Hour of code](https://hourofcode.com/) that happens this week (the second one of every December) and I'm pretty sure that you will be able to [find a place](https://hourofcode.com/events/all) near you where you can go with your children and see if they will enjoy coding.
-
----
-
-This post was originally published in the [Ve Global Developers Blog](https://developers.veinteractive.com/tech-blog/code-and-kids).

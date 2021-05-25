@@ -70,15 +70,15 @@ I think that need need to take their new attitude one step further.
 
 [1]: https://m.signalvnoise.com/microsoft-i-forgive-you-2fb6d6061a2c#.qedz7idke
 [2]: https://techcrunch.com/2015/03/05/microsoft-and-google-collaborate-on-typescript-hell-has-not-frozen-over-yet/
-[3]: http://open.microsoft.com/2016/11/17/microsoft-joins-linux-foundation/
-[4]: https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-linux
+[3]: https://cloudblogs.microsoft.com/opensource/2016/11/17/microsoft-joins-linux-foundation/
+[4]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup
 [5]: https://octoverse.github.com/
 [6]: https://blogs.msdn.microsoft.com/visualstudioalm/2015/06/05/visual-studio-online-supports-true-cross-platform-development/
 [7]: https://github.com/Microsoft/vso-agent/blob/master/docs/service.md
 [8]: https://github.com/bryanmacfarlane/svcinstall/pull/3
 [9]: https://docs.microsoft.com/en-us/azure/application-insights/app-insights-platforms
-[10]: http://symfony.com/doc/current/components/http_kernel.html#the-kernel-terminate-event
+[10]: https://symfony.com/doc/current/components/http_kernel.html#the-kernel-terminate-event
 [11]: https://github.com/Microsoft/ApplicationInsights-PHP/pull/13
 [12]: https://github.com/Microsoft/ApplicationInsights-PHP/issues/18
 [13]: https://github.com/Microsoft/ApplicationInsights-PHP/pull/24
-[14]: http://www.businessinsider.com/microsoft-github-open-source-2016-9
+[14]: https://www.businessinsider.com/microsoft-github-open-source-2016-9

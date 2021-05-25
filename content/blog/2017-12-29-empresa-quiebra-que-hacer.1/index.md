@@ -148,7 +148,7 @@ PD.2. No para todos ha acabado bien. Había algún becario/prácticas que por el
 PD.3. Si con todo este lío hacer la renta tiene alguna complicación ampliaré el post.
 
 [1]: https://loentiendo.com/plazos-administrativos-judiciales-agosto/
-[2]: http://www.empleo.gob.es/fogasa/
+[2]: https://www.mites.gob.es/fogasa/default.html
 [3]: https://vlex.es/tags/articulo-85-ley-concursal-794024
 [4]: https://www.boe.es/diario_boe/txt.php?id=BOE-B-2017-59484
-[5]: http://www.empleo.gob.es/fogasa/faqs.html
+[5]: https://www.mites.gob.es/fogasa/faqs.html

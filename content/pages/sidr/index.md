@@ -63,7 +63,7 @@ You have to include a Sidr Theme stylesheet too, choose between the dark or the 
 
 ### Using bower or NPM
 
-Instead of downloading the plugin, you can install it with [bower](http://bower.io/) or with [npm](https://www.npmjs.com/):
+Instead of downloading the plugin, you can install it with [bower](https://bower.io/) or with [npm](https://www.npmjs.com/):
 
 {{< highlight bash >}}
 bower install sidr --save
@@ -164,7 +164,7 @@ $(document).ready(function() {
     });
     $('#remote-content-menu').sidr({
       name: 'sidr-remote-content',
-      source: 'http://www.example.com/remote-menu.html'
+      source: 'https://www.example.com/remote-menu.html'
     });
     $('#callback-menu').sidr({
       name: 'sidr-callback',
@@ -367,7 +367,7 @@ The following responsive sites are using Sidr in an original way to implement th
       <img src="images/showcase-fox.png" alt="Sidr Menu on FOX Broadcasting Company website">
       <div class="info">
         <p>FOX Broadcasting Company</p>
-        <p><a href="http://www.fox.com">www.fox.com</a></p>
+        <p><a href="https://www.fox.com">www.fox.com</a></p>
       </div>
     </div>
   </div>
@@ -376,7 +376,7 @@ The following responsive sites are using Sidr in an original way to implement th
       <img src="images/showcase-uscourts.png" alt="Sidr Menu on United States Courts website">
       <div class="info">
         <p>United States Courts</p>
-        <p><a href="http://www.uscourts.gov">www.uscourts.gov</a></p>
+        <p><a href="https://www.uscourts.gov">www.uscourts.gov</a></p>
       </div>
     </div>
   </div>
@@ -385,7 +385,7 @@ The following responsive sites are using Sidr in an original way to implement th
       <img src="images/showcase-sdsu.png" alt="Sidr Menu on San Diego State University website">
       <div class="info">
         <p>San Diego State University</p>
-        <p><a href="http://www.sdsu.edu/">www.sdsu.edu</a></p>
+        <p><a href="https://www.sdsu.edu/">www.sdsu.edu</a></p>
       </div>
     </div>
   </div>
@@ -396,7 +396,7 @@ If you've created a website or an application using this plugin and you want to 
 ## Development
 
 - Source hosted at [GitHub](https://github.com/artberri/sidr)
-- If you have problems implenting this, ask about it in [StackOverflow](http://stackoverflow.com/search?q=sidr)
+- If you have problems implenting this, ask about it in [StackOverflow](https://stackoverflow.com/search?q=sidr)
 - Report issues and feature requests in [GitHub Issues](https://github.com/artberri/sidr/issues)
 - Contributing: [CONTRIBUTING.md](https://github.com/artberri/sidr/blob/master/CONTRIBUTING.md)
 
