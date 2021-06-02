@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'animations';
 @import 'base';
+@import 'syntax';
 @import 'font-awesome';
 @import 'logo';
 @import 'header';
@@ -10,6 +11,5 @@
 @import 'home';
 @import 'post';
 @import 'share';
-@import 'signup';
 @import 'projects';
 @import 'documentation';

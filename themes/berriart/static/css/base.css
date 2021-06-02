@@ -17,7 +17,7 @@ body {
   padding: 0;
   background: $color-white;
   color: $color-text;
-  font-family: "PT+Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   @mixin breakpoint $breakpoint-medium {
     overflow: hidden;
   }
@@ -34,7 +34,7 @@ p,
 ul,
 li,
 time {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 p {
@@ -58,6 +58,13 @@ h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+}
+
+h3 {
+  font-size: 20px;
+  @mixin breakpoint $breakpoint-medium {
+    font-size: 24px;
+  }
 }
 
 ul {
@@ -169,6 +176,10 @@ textarea {
 
 .text-center {
   text-align: center;
+}
+
+.highlight {
+  line-height: 1.6rem;
 }
 
 .cc_banner-wrapper .cc_container {

@@ -17,7 +17,6 @@ module.exports = {
     "excludeLinkPatterns": [
         "https://twitter.com/intent/*",
         "https://facebook.com/sharer.php*",
-        "https://plus.google.com/share*",
         "https://www.linkedin.com/shareArticle*",
         "https://www.reddit.com/submit*",
         "https://news.ycombinator.com/submit*"

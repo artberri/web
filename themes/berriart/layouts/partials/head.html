@@ -7,7 +7,7 @@
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Web Development With Free Software {{ end }} {{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
 
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:700|Pacifico|Changa+One|Raleway:800|Fjalla+One">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans|Pacifico|Changa+One|Raleway:800|Fjalla+One">
   <link href="/css/dist/app.css" rel="stylesheet">
 
   {{ range .Params.custom_css }}

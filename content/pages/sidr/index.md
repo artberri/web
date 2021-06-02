@@ -419,11 +419,5 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
       js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
       return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
     }(document, "script", "twitter-wjs"));
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-
-  })();
 </script>
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>

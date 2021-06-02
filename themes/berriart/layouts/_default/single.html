@@ -11,17 +11,16 @@
                     <p class="post-meta in-post"><time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">Published on {{ .PublishDate.Format "January 2, 2006" }}</time></p>
                 </div>
 
-                {{- partial "image.html" . -}}
+                {{- partial "single-image.html" . -}}
 
                 <div class="entry-content" itemprop="articleBody">
                     <p class="entry-excerpt">{{- .Description -}}</p>
+                    <p>-</p>
 
                     {{- .Content -}}
                 </div>
 
                 {{- partial "share.html" . -}}
-
-                {{- partial "subscription-form.html" . -}}
 
                 <div class="disquss">
                     {{- template "_internal/disqus.html" . -}}

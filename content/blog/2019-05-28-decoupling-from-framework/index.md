@@ -4,7 +4,6 @@ date: "2019-05-28"
 description: |
   The javascript framework war that we are seeing today is harder than the one we've seen in the Game of Thrones series. To choose the proper framework is one of the most important decisions we need to take when starting a new project and that's why there are hundreds of posts on the internet comparing frameworks: reactivity, extensibility, adoption... This is not one of those posts.
 title: Decoupling SPAs from the framework, a practical example
-language: es
 resources:
 - name: "featured"
   src: "images/framework-war-og.png"
