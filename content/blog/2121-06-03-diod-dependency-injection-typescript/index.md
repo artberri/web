@@ -1,6 +1,6 @@
 ---
 slug: diod-dependency-injection-typescript
-date: "2021-06-02"
+date: "2021-06-03"
 description: |
   Dependency injection is a recurrent pattern in complex applications, and each day it is becoming more common to see it applied with Typescript. But TS has some quirks when comparing with classic languages, like Java or C#, that we need to bear in mind. In this post, I'll talk about them and about how they pushed me to reinvent the wheel by creating a new-brand DI library: DIOD.
 title: "Reinventing the wheel: DIOD (a new Typescript dependency injection library)"
@@ -180,14 +180,44 @@ class MyDbEnginePostRepository {
 
 If you examine the generated code shown above, you will see that now it has enough information to implement the ideal library that I was thinking about in the first section of this post. Still, I will theorize about one thing more.
 
-If you apply the dependency inversion principle to a layered architecture, you will end up with what is call [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) (or Ports & Adapters). This kind of architecture tries to keep the core of your applications decoupled from your infrastructure or concrete dependencies, which also means that it should not be aware of your inversion-of-control container or your dependency injection tool. It is hard to accomplish with the currently existing libraries because most of them require you to use their decorators on every service, including those in the inner layers of your app. My ideal library will allow users to use their own.
+If you apply the dependency inversion principle to a layered architecture, you will end up with what is call [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) (or Ports & Adapters). This kind of architecture tries to keep the core of your applications decoupled from your infrastructure or concrete dependencies, which also means that it should not be aware of your inversion-of-control container or your dependency injection tool. It is hard to accomplish with the currently existing libraries because most of them require you to use their decorators on every service, including those in the inner layers of your app. The following example is what I don't want to see through my whole app:
+
+```ts
+import { Injectable } from 'some-fancy-di-lib'
+
+@Injectable()
+export class ThisIsADomainService {
+  // ...
+}
+```
+
+This code would couple every single service with the `some-fancy-di-lib` library. Furthermore, if I want to stop using it in the future, I would need to change every service file to remove or change it. So, why not...
+
+```ts
+export const MyService = (): ClassDecorator => {
+  return <TFunction extends Function>(target: TFunction): TFunction => {
+    return target
+  }
+}
+```
+
+```ts
+import { MyService } from '../MyService'
+
+@MyService()
+export class ThisIsADomainService {
+  // ...
+}
+```
+
+Every decorator, including those like the one shown above and that do nothing, will trigger metadata generation, and that's all we need. The problem with most existing DI libraries is that they won't work with custom decorators like this because a critical part of their logic resides in the decorators they provide. My ideal library, and the one that I'd built, allows users to use their own created decorators if they want.
 
 ## The new wheel: DIOD
 
 [DIOD](https://github.com/artberri/diod) is the new Dependency Injection library that I created for Typescript (Node.js or Browser) that has some unique features that are difficult (if not impossible) to be found in other libraries:
 
 - Dependencies will be auto wired based on constructor types exclusively; so, it will accept only abstract or concrete classes as constructor types.
-- The functionality will never be compromised by the use of the decorators provided by the library. Main features will be available using decorators created by the user to avoid vendor-locking and coupling.
+- The functionality will never be compromised by the requirement to use the decorators provided by the library. Main features will be available using any decorator created by the user to avoid vendor-locking and coupling.
 
 Apart from those special ones, it also provides the following features out-of-the-box:
 
@@ -200,4 +230,4 @@ Apart from those special ones, it also provides the following features out-of-th
 - Tagging: Ability to tag services in the container and to query services based on tags.
 - Support for vanilla JS: Usage with vanilla Javascript is possible by manually defining service dependencies.
 
-Take a look at it in the [NPM Registry](https://www.npmjs.com/package/diod) or in [Github](https://github.com/artberri/diod). Do not hesitate to tell me your opinion about it, and to star it on Github if you like or use it. I'll be very grateful.
+Take a look at it in the [NPM Registry](https://www.npmjs.com/package/diod) or in [Github](https://github.com/artberri/diod), where you will find all the documentation. Do not hesitate to tell me your opinion about it, and to star it on Github if you like or use it. I'll be very grateful.
