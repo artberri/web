@@ -9,17 +9,17 @@ resources:
   src: "images/publishing-puppet-module.png"
 ---
 
-There's a lot [of](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html) [great](https://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppetlabs.com/) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
+There's a lot [of](https://forge.puppet.com/about/approved/criteria) [great](https://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppetlabs.com/) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
 
 I'm assuming you've either built an entirely new module, or substantially improved one on the [Forge](https://forge.puppetlabs.com/), and that you'd like to prove this is a good quality module, so that it could gain approval by PuppetLabs.
 
 ## Quality Score
 
-Once you've published your module to the Forge, you've got a [Quality Score](https://docs.puppetlabs.com/forge/assessingmodulequality.html) to start with, and you can aim to improve it. This score comprises the code quality, the Puppet compatibility and the metadata quality.
+Once you've published your module to the Forge, you've got a [Quality Score](https://forge.puppet.com/about/scoring) to start with, and you can aim to improve it. This score comprises the code quality, the Puppet compatibility and the metadata quality.
 
 ## Code Quality
 
-The Puppet Language has a [style guide](https://docs.puppetlabs.com/guides/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](https://puppet-lint.com/).
+The Puppet Language has a [style guide](https://puppet.com/docs/puppet/7/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](https://puppet-lint.com/).
 
 We will use [Rake](https://github.com/ruby/rake) (the common build utility for Ruby) to build our project, so add it to your gem dependencies if it has not been added already and create a Rakefile with this content:
 
@@ -85,7 +85,7 @@ bundle exec rake validate
 
 ## Metadata Quality
 
-To publish a module to the Forge we need a [metadata.json](https://docs.puppetlabs.com/puppet/latest/reference/modules_metadata.html) file which contains important information about the module and can configure certain features. In addition to a basic JSON validation we need to ensure also that:
+To publish a module to the Forge we need a [metadata.json](https://forge.puppet.com/about/approved/criteria#8-metadata) file which contains important information about the module and can configure certain features. In addition to a basic JSON validation we need to ensure also that:
 
 - It contains a valid license using the [SPDX syntax](https://spdx.org/licenses/).
 - It sets an upper bound version limit for all the dependencies. The fact that your module is compatible with the 2.x.x version of another module doesn't mean that it will also be compatible with the 3.x.x version.
@@ -362,6 +362,6 @@ Stay tuned to the issues and to the pull requests of your module in Github, and 
 
 ## Is that all?
 
-Probably not, but these are the steps that I followed to get [my NVM module](https://forge.puppetlabs.com/artberri/nvm) approved by Puppetlabs.
+Probably not, but these are the steps that I followed to get [my NVM module](https://forge.puppetlabs.com/modules/artberri/nvm) approved by Puppetlabs.
 
 That's all folks!

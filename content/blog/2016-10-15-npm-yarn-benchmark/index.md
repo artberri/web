@@ -133,7 +133,7 @@ Semaphore when comparing it with the rest of tools used in this example.
 
 I have been testing Yarn since the first day, as I said it's something I had wanted for a long time, and, right now, I'm using
 [Puppet][16] for software provisioning in most of my projects. Because of this, I have created a Puppet module for installing
-Yarn that you can see here: [https://forge.puppetlabs.com/artberri/yarn][17].
+Yarn that you can see here: [https://forge.puppetlabs.com/modules/artberri/yarn][17].
 
 I hope you enjoyed this reading!
 
@@ -152,4 +152,4 @@ I hope you enjoyed this reading!
 [14]: https://semaphoreci.com/artberri/npm-yarn-benchmark/
 [15]: https://circleci.com/gh/artberri/npm-yarn-benchmark
 [16]: https://puppet.com/
-[17]: https://forge.puppetlabs.com/artberri/yarn
+[17]: https://forge.puppetlabs.com/modules/artberri/yarn
