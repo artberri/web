@@ -7,6 +7,7 @@ themes/berriart/static/css/fonts
 themes/gohugo-theme-ananke
 public/
 resources/_gen/
+.hugo_build.lock
 
 # Link checker
 reports/
