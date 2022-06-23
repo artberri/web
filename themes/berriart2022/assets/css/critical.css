@@ -1,0 +1,6 @@
+@import "reset-css";
+@import "themes/berriart2022/assets/css/critical/vars.css";
+@import "themes/berriart2022/assets/css/critical/base.css";
+@import "themes/berriart2022/assets/css/critical/header.css";
+@import "themes/berriart2022/assets/css/critical/page.css";
+@import "themes/berriart2022/assets/css/critical/single.css";

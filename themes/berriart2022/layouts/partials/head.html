@@ -1,0 +1,41 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Web Development With Free Software {{ end }} {{ end }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
+
+  {{ $css := resources.Get "css/main.css" | resources.PostCSS }}
+  {{ $critical := resources.Get "css/critical.css" | resources.PostCSS }}
+
+  {{ if hugo.IsProduction }}
+    {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+    {{ $critical = $css | minify | resources.PostProcess }}
+  {{ end }}
+
+  <style>{{ $critical.Content | safeCSS }}</style>
+
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
+  <noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
+
+  {{ range .Params.custom_css }}
+    <link rel="stylesheet" href="{{ . }}">
+  {{ end }}
+
+  {{ block "favicon" . }}
+    {{ partial "site-favicon.html" . }}
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+  {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/google_news.html" . }}
+  {{ template "_internal/schema.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+</head>

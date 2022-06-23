@@ -1,0 +1,7 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #303030;
+  --border: 1px solid #f0f0f0;
+  --header-height: 5.5rem;
+  --transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}

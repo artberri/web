@@ -1,0 +1,5 @@
+{{ $featured_image := .Resources.GetMatch "featured" }} {{ if $featured_image }}
+<div class="featured-image">
+  {{- partial "image.html" . -}}
+</div>
+{{ end }}

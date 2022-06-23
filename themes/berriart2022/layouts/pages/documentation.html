@@ -1,0 +1,45 @@
+{{ define "main" }}
+    {{- partial "header.html" . -}}
+    <div class="page" role="main" >
+        <div class="list">
+            <div id="documentation-container" class="site-content" role="main" >
+                <div class="">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Bloque Sidr -->
+                    <ins class="adsbygoogle documentation-adblock-1"
+                        style="display:block"
+                        data-ad-client="{{ $.Param "ad.client" }}"
+                        data-ad-slot="{{ $.Param "ad.slot" }}"
+                        data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <article class=" documentation">
+
+                    <header class="entry-header documentation-header">
+                        <h1 class="entry-title">{{ .Title }}</h1>
+
+                        <div class="documenation-social">
+                            <a class="github-button" href="https://github.com/artberri/sidr" data-icon="octicon-star" data-show-count="true" aria-label="Star artberri/sidr on GitHub">Star</a>
+                            <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-related="artberri">Tweet</a>
+                        </div>
+                    </header>
+
+                    <h2 class="entry-subtitle">{{ $.Param "subtitle" }}</h2>
+
+                    <div class="text-center">
+                        <a href="{{ $.Param "download" }}" id="download" class="button download-button">Download</a>
+                    </div>
+
+                    <div class="entry-content" >
+                        {{ .Content }}
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+    {{- partial "footer.html" . -}}
+{{ end }}

@@ -8,6 +8,7 @@ themes/gohugo-theme-ananke
 public/
 resources/_gen/
 .hugo_build.lock
+hugo_stats.json
 
 # Link checker
 reports/

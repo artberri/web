@@ -1,0 +1,17 @@
+{{ define "main" }}
+    {{- partial "header.html" . -}}
+    <article class="page single" role="main" >
+        <header class="header">
+            <div class="container">
+                <h1 class="title" itemprop="name headline">{{- .Title -}}</h1>
+            </div>
+        </header>
+
+        {{- partial "single-image.html" . -}}
+
+        <div class="content" itemprop="articleBody">
+            {{- .Content -}}
+        </div>
+    </article>
+    {{- partial "footer.html" . -}}
+{{ end }}

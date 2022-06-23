@@ -1,0 +1,10 @@
+.main-header {
+  position: fixed;
+  transition: var(--transition);
+
+  & .menu {
+    & a {
+      transition: var(--transition);
+    }
+  }
+}

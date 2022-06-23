@@ -1,7 +1,7 @@
 baseURL = "https://www.berriart.com/"
 languageCode = "en"
 title = "Berriart"
-theme = "berriart"
+theme = "berriart2022"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 googleAnalytics = "UA-2004323-1"
 disqusShortname = "berriart"
@@ -46,3 +46,6 @@ pygmentsUseClasses = true
     [privacy.youtube]
         disable = false
         privacyEnhanced = true
+
+[build]
+  writeStats = true

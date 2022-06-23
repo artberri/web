@@ -1,11 +1,23 @@
 {
+  "editor.formatOnSave": false,
+  "files.associations": {
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.insertSpaces": false,
     "editor.formatOnSave": false,
-    "files.associations": {
-        "*.css": "scss",
-        "*.html": "gohtml"
-    },
-    "[markdown]": {
-        "editor.insertSpaces": false,
-        "editor.formatOnSave": false
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
     }
+  }
 }

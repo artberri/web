@@ -1,0 +1,55 @@
+.main-header {
+  border-bottom: var(--border);
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  font-family: "Fjalla One", Arial, sans-serif;
+  align-items: flex-end;
+  background: var(--bg-color);
+
+  & .title {
+    flex-grow: 1;
+    padding: 0.75rem 1.5rem;
+
+    & h1 {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin: 0;
+    }
+
+    & a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+  }
+
+  & .menu {
+    & ul {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+    }
+
+    & li {
+      border-left: var(--border);
+      font-size: 1.2rem;
+      line-height: 1;
+      margin: 0;
+    }
+
+    & a {
+      display: block;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem 1.5rem 0.75rem 6rem;
+      height: var(--header-height);
+      color: var(--text-color);
+      text-decoration: none;
+      opacity: 0.4;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
