@@ -1,4 +1,6 @@
 @import "reset-css";
+@import "@fontsource/fjalla-one/400.css";
+@import "@fontsource/poly";
 @import "themes/berriart2022/assets/css/critical/vars.css";
 @import "themes/berriart2022/assets/css/critical/base.css";
 @import "themes/berriart2022/assets/css/critical/header.css";

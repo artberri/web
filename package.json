@@ -9,41 +9,33 @@
   },
   "scripts": {
     "check-links": "blc run -c linkchecker.js",
-    "copy:fonts": "cp -r \"node_modules/font-awesome/fonts\" \"themes/berriart/static/css\"",
-    "build:css": "postcss \"themes/berriart/static/css/app.css\" --output \"themes/berriart/static/css/dist/app.css\"",
-    "build": "pnpm run copy:fonts && pnpm run build:css",
-    "watch:css": "onchange \"themes/berriart/static/css/*.css\" -- pnpm run build:css",
+    "build": "hugo",
     "test": "start-server-and-test :1313 check-links",
-    "release": "pnpm run build && hugo",
-    "serve:hugo": "hugo server",
-    "serve": "pnpm run build && concurrently \"npm:watch:css\" \"npm:serve:hugo\"",
+    "serve": "hugo server",
     "start": "http-server public -p 1313",
     "deploy": "node deploy.js"
   },
   "author": "Alberto Varela",
   "private": true,
   "devDependencies": {
+    "@fontsource/fira-code": "^4.5.10",
+    "@fontsource/fjalla-one": "^4.5.7",
+    "@fontsource/poly": "^4.5.9",
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "browserslist": "^4.21.0",
     "bs-broken-links-checker": "^0.2.0",
-    "concurrently": "^7.2.2",
-    "font-awesome": "^4.7.0",
     "http-server": "^14.1.1",
-    "onchange": "^7.1.0",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
-    "postcss-font-magician": "^3.0.0",
     "postcss-import": "^14.0.2",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.7.1",
+    "postcss-url": "^10.1.3",
     "prettier": "^2.3.0",
     "reset-css": "^5.0.1",
     "sidr": "^2.2.1",
     "ssh-deploy-release": "^4.0.1",
     "start-server-and-test": "^1.12.3"
   },
-  "browserslist": "last 2 versions",
-  "dependencies": {
-    "@fontsource/poly": "^4.5.9"
-  }
+  "browserslist": "last 2 versions"
 }

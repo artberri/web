@@ -1,1 +1,5 @@
+@import "@fontsource/fira-code/400.css";
+@import "themes/berriart2022/assets/css/main/base.css";
 @import "themes/berriart2022/assets/css/main/header.css";
+@import "themes/berriart2022/assets/css/main/single.css";
+@import "themes/berriart2022/assets/css/main/syntax.css";

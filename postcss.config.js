@@ -13,23 +13,17 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   },
   safelist: [],
 });
-const fontMagician = require("postcss-font-magician")({
-  variants: {
-    "Fjalla One": {
-      400: [],
-    },
-    Poly: {
-      400: [],
-      700: [],
-    },
+const postcssUrl = require("postcss-url")([
+  {
+    url: "inline",
   },
-});
+]);
 
 module.exports = {
   plugins: [
     postcssImport,
+    postcssUrl,
     postcssNormalize,
-    fontMagician,
     postcssPresetEnv,
     ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
   ],
