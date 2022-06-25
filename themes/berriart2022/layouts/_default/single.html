@@ -1,7 +1,6 @@
 {{ define "main" }}
-    {{- partial "header.html" . -}}
-    <article class="page single" role="main" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-        <header class="header">
+    <article class="single" role="main" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <header class="subheader">
             <div class="container">
                 <h1 class="title" itemprop="name headline">{{- .Title -}}</h1>
 
@@ -43,5 +42,4 @@
             </div>
         </div>
     </article>
-    {{- partial "footer.html" . -}}
 {{ end }}

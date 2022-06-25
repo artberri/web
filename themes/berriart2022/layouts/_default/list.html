@@ -1,20 +1,20 @@
 {{ define "main" }}
-    {{- partial "header.html" . -}}
-    <section class="page" role="main" itemscope itemtype="https://schema.org/Blog">
-        <div class="list">
-            <header class="entry-header">
-                <h1 class="entry-title">{{ .Title }}</h1>
-                <main>
-                    {{- .Content -}}
-                </main>
-            </header>
+    <section class="list" role="main" itemscope itemtype="https://schema.org/Blog">
+        <header class="subheader">
+            <div class="container">
+                <h1 class="title">{{ .Title }}</h1>
+            </div>
+        </header>
+        <main class="content container">
+            {{- .Content -}}
 
-            {{ range .Paginator.Pages }}
-                {{- partial "summary.html" . -}}
-            {{ end }}
+            <div class="grid">
+                {{ range .Paginator.Pages }}
+                    {{- partial "summary.html" . -}}
+                {{ end }}
+            </div>
+        </main>
 
-            {{- template "_internal/pagination.html" . -}}
-        </div>
+        {{- template "_internal/pagination.html" . -}}
     </section>
-    {{- partial "footer.html" . -}}
 {{ end }}

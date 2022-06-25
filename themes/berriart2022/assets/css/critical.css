@@ -4,5 +4,8 @@
 @import "themes/berriart2022/assets/css/critical/vars.css";
 @import "themes/berriart2022/assets/css/critical/base.css";
 @import "themes/berriart2022/assets/css/critical/header.css";
+@import "themes/berriart2022/assets/css/critical/subheader.css";
+@import "themes/berriart2022/assets/css/critical/content.css";
 @import "themes/berriart2022/assets/css/critical/single.css";
+@import "themes/berriart2022/assets/css/critical/list.css";
 @import "themes/berriart2022/assets/css/critical/share.css";

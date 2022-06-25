@@ -1,4 +1,4 @@
-.main-header {
+.header {
   position: sticky;
   top: 0;
   transition: var(--transition);

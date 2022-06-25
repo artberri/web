@@ -1,66 +1,16 @@
 .single {
-  & header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
-    border-bottom: var(--border);
-
-    & .container {
-      max-width: 79rem;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-  }
-
-  & .title {
-    font-size: 3rem;
-  }
-
-  & .post-details-info {
-    font-size: 1rem;
-    font-family: Arial, sans-serif;
-    color: var(--text-color-secondary);
-  }
-
   & .content {
     max-width: var(--content-with);
     margin: 0 auto;
-    font-size: var(--text-size);
-    line-height: 1.4;
     padding: 0 2rem;
-
-    & h2 {
-      font-size: 2.4rem;
-      padding: 2rem 0 1rem;
-    }
-
-    & h3 {
-      font-size: 1.8rem;
-      padding: 2rem 0 1rem;
-    }
-
-    & p {
-      margin-bottom: 1.5rem;
-
-      &.excerpt {
-        padding-bottom: 2rem;
-        border-bottom: var(--border);
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
-    }
-
-    & li {
-      margin-bottom: 1.5rem;
-    }
   }
+}
 
-  & .featured-image {
-    & img {
-      display: block;
-      margin: 0 auto;
-      padding-bottom: 1.5rem;
-      max-width: 75rem;
-    }
+.featured-image {
+  & img {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    max-width: 75rem;
   }
 }

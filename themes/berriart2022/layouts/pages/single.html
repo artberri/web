@@ -1,7 +1,6 @@
 {{ define "main" }}
-    {{- partial "header.html" . -}}
     <article class="page single" role="main" >
-        <header class="header">
+        <header class="subheader">
             <div class="container">
                 <h1 class="title" itemprop="name headline">{{- .Title -}}</h1>
             </div>
@@ -13,5 +12,4 @@
             {{- .Content -}}
         </div>
     </article>
-    {{- partial "footer.html" . -}}
 {{ end }}

@@ -1,86 +1,14 @@
-.single {
-  & .content {
-    & h2 {
-      font-size: 2.4rem;
-      padding: 2rem 0 1rem;
-    }
+.previous-next {
+  border-top: var(--border);
+  display: flex;
 
-    & h3 {
-      font-size: 1.8rem;
-      padding: 2rem 0 1rem;
-    }
-
-    & ul,
-    & ol {
-      list-style-position: outside;
-      margin-left: 2rem;
-    }
-
-    & p,
-    & li {
-      & code {
-        background: #fafafa;
-        border: 1px solid #eaeaea;
-        display: inline-block;
-        padding: 0rem 0.2rem;
-        font-size: 1.5rem;
-      }
-    }
-
-    & li {
-      margin-bottom: 1.5rem;
-    }
-
-    & blockquote {
-      background: #f0f0f0;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-
-      & p {
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-
-    & .chroma {
-      overflow-x: auto;
-      padding: 2rem;
-      border-radius: 0.2em;
-      transition: var(--transition);
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
-
-      &:hover {
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    & pre {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    & .license {
-      margin-bottom: 2.5rem;
-      font-size: 1rem;
-    }
-  }
-
-  & .previous-next {
-    border-top: var(--border);
+  & > * {
+    flex: 1 0 50%;
+    padding: 4rem 2rem;
     display: flex;
-
-    & > * {
-      flex: 1 0 50%;
-      padding: 4rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-right: var(--border);
-      font-family: var(--header-font);
-    }
+    justify-content: center;
+    align-items: center;
+    border-right: var(--border);
+    font-family: var(--header-font);
   }
 }

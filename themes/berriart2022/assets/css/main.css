@@ -2,7 +2,9 @@
 @import "themes/berriart2022/assets/css/main/base.css";
 @import "themes/berriart2022/assets/css/main/header.css";
 @import "themes/berriart2022/assets/css/main/single.css";
+@import "themes/berriart2022/assets/css/main/content.css";
 @import "themes/berriart2022/assets/css/main/syntax.css";
 @import "themes/berriart2022/assets/css/main/author.css";
 @import "themes/berriart2022/assets/css/main/footer.css";
 @import "themes/berriart2022/assets/css/main/share.css";
+@import "themes/berriart2022/assets/css/main/pagination.css";

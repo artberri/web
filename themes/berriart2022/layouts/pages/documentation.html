@@ -1,5 +1,4 @@
 {{ define "main" }}
-    {{- partial "header.html" . -}}
     <div class="page" role="main" >
         <div class="list">
             <div id="documentation-container" class="site-content" role="main" >
@@ -19,7 +18,7 @@
                 <article class=" documentation">
 
                     <header class="entry-header documentation-header">
-                        <h1 class="entry-title">{{ .Title }}</h1>
+                        <h1 class="title">{{ .Title }}</h1>
 
                         <div class="documenation-social">
                             <a class="github-button" href="https://github.com/artberri/sidr" data-icon="octicon-star" data-show-count="true" aria-label="Star artberri/sidr on GitHub">Star</a>
@@ -41,5 +40,4 @@
             </div>
         </div>
     </div>
-    {{- partial "footer.html" . -}}
 {{ end }}

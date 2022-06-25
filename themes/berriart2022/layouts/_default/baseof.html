@@ -2,7 +2,9 @@
 <html lang="{{ .Params.Language | default "en" }}">
     {{- partial "head.html" . -}}
     <body itemscope itemtype="https://schema.org/WebPage">
+        {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
         {{ range .Params.custom_scripts }}
             <script type="text/javascript" src="{{ . }}"></script>
         {{ end }}

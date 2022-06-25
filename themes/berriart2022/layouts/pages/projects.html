@@ -1,10 +1,9 @@
 {{ define "main" }}
-    {{- partial "header.html" . -}}
     <article class="page" role="main" >
         <div class="list">
 
             <div class="projects">
-                <h1 class="entry-title">My Pet Projects</h1>
+                <h1 class="title">My Pet Projects</h1>
 
                 <div class="row">
                     {{ .Content }}
@@ -88,5 +87,4 @@
 
         </div>
     </article>
-    {{- partial "footer.html" . -}}
 {{ end }}
