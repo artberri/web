@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 pre,
 code {
-  font-family: "Fira Code", monospace;
+  font-family: var(--monospace-font);
 }
 
 a {

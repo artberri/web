@@ -19,7 +19,7 @@ a {
   color: var(--text-color);
 
   &:hover {
-    opacity: 0.8;
+    color: var(--text-color-secondary);
   }
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Fjalla One", Arial, sans-serif;
+  font-family: var(--header-font);
   font-weight: normal;
   font-style: normal;
   color: var(--text-color);

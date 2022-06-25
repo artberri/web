@@ -13,16 +13,34 @@
 
         {{- partial "single-image.html" . -}}
 
+        {{- partial "share.html" . -}}
+
         <div class="content" itemprop="articleBody">
             <p class="excerpt">{{- .Description -}}</p>
 
             {{- .Content -}}
+
+            <p class="license">This text is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
         </div>
 
-        {{- partial "share.html" . -}}
+        {{- partial "author.html" . -}}
 
-        <div class="disquss">
-            {{- template "_internal/disqus.html" . -}}
+        <div class="previous-next">
+            <div class="previous-post">
+                {{ if .PrevPage }}
+                <a class="link-reverse" href="{{ .PrevPage.Permalink }}">
+                    « {{ .PrevPage.Title | truncate 50 "..."}}
+                </a>
+                {{ end }}
+            </div>
+
+            <div class="next-post">
+                {{ if .NextPage }}
+                <a class="link-reverse" href="{{ .NextPage.Permalink }}">
+                    {{ .NextPage.Title | truncate 50 "..." }} »
+                </a>
+                {{ end }}
+            </div>
         </div>
     </article>
     {{- partial "footer.html" . -}}

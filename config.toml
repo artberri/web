@@ -4,7 +4,6 @@ title = "Berriart"
 theme = "berriart2022"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 googleAnalytics = "UA-2004323-1"
-disqusShortname = "berriart"
 pygmentsUseClasses = true
 
 [permalinks]

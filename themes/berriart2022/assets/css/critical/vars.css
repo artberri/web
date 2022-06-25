@@ -1,8 +1,12 @@
 :root {
   --bg-color: #fff;
   --text-color: #303030;
+  --text-color-secondary: #808080;
   --text-size: 1.8rem;
   --border: 1px solid #f0f0f0;
   --header-height: 5.5rem;
+  --header-font: "Fjalla One", Arial, sans-serif;
+  --monospace-font: "Fira Code", monospace;
   --transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+  --content-with: 54rem;
 }

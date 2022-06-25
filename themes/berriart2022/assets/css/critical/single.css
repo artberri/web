@@ -19,11 +19,11 @@
   & .post-details-info {
     font-size: 1rem;
     font-family: Arial, sans-serif;
-    opacity: 0.6;
+    color: var(--text-color-secondary);
   }
 
   & .content {
-    max-width: 870px;
+    max-width: var(--content-with);
     margin: 0 auto;
     font-size: var(--text-size);
     line-height: 1.4;

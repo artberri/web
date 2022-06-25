@@ -3,7 +3,7 @@
   height: var(--header-height);
   width: 100%;
   display: flex;
-  font-family: "Fjalla One", Arial, sans-serif;
+  font-family: var(--header-font);
   align-items: flex-end;
   background: var(--bg-color);
 
@@ -12,7 +12,7 @@
     padding: 0.75rem 1.5rem;
 
     & h1 {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       line-height: 1;
       margin: 0;
     }
@@ -45,12 +45,11 @@
       align-items: flex-end;
       padding: 0.75rem 1.5rem 0.75rem 6rem;
       height: var(--header-height);
-      color: var(--text-color);
       text-decoration: none;
-      opacity: 0.4;
+      color: var(--text-color-secondary);
 
       &:hover {
-        opacity: 1;
+        color: var(--text-color);
       }
     }
   }

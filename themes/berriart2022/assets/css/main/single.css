@@ -62,5 +62,25 @@
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
     }
+
+    & .license {
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  & .previous-next {
+    border-top: var(--border);
+    display: flex;
+
+    & > * {
+      flex: 1 0 50%;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: var(--border);
+      font-family: var(--header-font);
+    }
   }
 }

@@ -1,0 +1,46 @@
+.author {
+  max-width: var(--content-with);
+  margin: 0 auto;
+  line-height: 1.4;
+  padding: 4rem 2rem;
+  border-top: var(--border);
+  display: flex;
+
+  & .image {
+    padding-right: 2rem;
+  }
+
+  & .description {
+    flex-grow: 1;
+    font-size: 1.2rem;
+  }
+
+  & .about {
+    font-family: var(--header-font);
+    font-size: 1rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 0.2rem;
+  }
+
+  & .title {
+    font-family: var(--header-font);
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  & .social {
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin-right: 0.4rem;
+    }
+
+    & a {
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
