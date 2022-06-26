@@ -70,6 +70,7 @@ strong {
   font-size: 1rem;
   font-family: Arial, sans-serif;
   color: var(--text-color-secondary);
+  transition: var(--transition);
 }
 
 .grid {

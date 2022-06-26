@@ -3,6 +3,7 @@
   padding-bottom: 3rem;
   margin-bottom: 3rem;
   border-bottom: var(--border);
+  transition: var(--transition);
 
   & .title {
     font-size: 3rem;

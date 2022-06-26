@@ -63,6 +63,7 @@
   & .function {
     border: var(--border);
     margin-bottom: 2rem;
+    transition: var(--transition);
 
     & h3 {
       font-size: 2rem;
@@ -84,6 +85,7 @@
 
     & .parameter {
       border-top: var(--border);
+      transition: var(--transition);
       padding: 1rem 0;
 
       & strong {
@@ -97,6 +99,7 @@
 
         &:last-child {
           color: var(--text-color-secondary);
+          transition: var(--transition);
         }
       }
 
@@ -110,6 +113,7 @@
 
       &.return {
         border-top: var(--border);
+        transition: var(--transition);
       }
     }
   }

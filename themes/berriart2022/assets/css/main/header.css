@@ -4,6 +4,10 @@
   transition: var(--transition);
 
   & .menu {
+    & li {
+      transition: var(--transition);
+    }
+
     & a {
       transition: var(--transition);
     }

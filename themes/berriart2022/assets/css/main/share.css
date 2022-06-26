@@ -22,7 +22,7 @@
     border-radius: 1.5rem;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: var(--bg-color-secondary);
     color: var(--text-color-secondary);
     margin-bottom: 2rem;
 

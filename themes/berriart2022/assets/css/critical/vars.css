@@ -1,12 +1,44 @@
 :root {
-  --bg-color: #fff;
-  --text-color: #303030;
-  --text-color-secondary: #707070;
   --text-size: 1.8rem;
-  --border: 1px solid #eeeeee;
   --header-height: 5.5rem;
   --header-font: "Fjalla One", Arial, sans-serif;
   --monospace-font: "Fira Code", monospace;
   --transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
   --content-with: 54rem;
+}
+
+body {
+  --bg-color: #fff;
+  --bg-color-secondary: #eee;
+  --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;
+  --text-color: #303030;
+  --text-color-secondary: #707070;
+  --border: 1px solid #eeeeee;
+}
+body.dark-mode {
+  --bg-color: #292639;
+  --bg-color-secondary: #1b1928;
+  --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
+  --text-color: #ebeaf7;
+  --text-color-secondary: #bebbd2;
+  --border: 1px solid #3a3650;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #292639;
+    --bg-color-secondary: #1b1928;
+    --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
+    --text-color: #ebeaf7;
+    --text-color-secondary: #bebbd2;
+    --border: 1px solid #3a3650;
+  }
+  body.light-mode {
+    --bg-color: #fff;
+    --bg-color-secondary: #eee;
+    --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;
+    --text-color: #303030;
+    --text-color-secondary: #707070;
+    --border: 1px solid #eeeeee;
+  }
 }

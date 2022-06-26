@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: var(--transition);
+}
+
 pre,
 code {
   font-family: var(--monospace-font);
@@ -18,4 +22,34 @@ ul {
 
 ol {
   list-style-type: decimal;
+}
+
+p {
+  transition: var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  transition: var(--transition);
+}
+
+img {
+  filter: none;
+}
+
+.dark-mode img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  .light-mode img {
+    filter: none;
+  }
 }

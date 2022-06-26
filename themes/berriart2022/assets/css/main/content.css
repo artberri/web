@@ -18,8 +18,9 @@
   & p,
   & li {
     & code {
-      background: #fafafa;
-      border: 1px solid #eaeaea;
+      background: var(--bg-color-secondary);
+      transition: var(--transition);
+      border: var(--border);
       display: inline-block;
       padding: 0rem 0.2rem;
       font-size: 1.5rem;
@@ -31,7 +32,8 @@
   }
 
   & blockquote {
-    background: #f0f0f0;
+    background: var(--bg-color-secondary);
+    transition: var(--transition);
     padding: 2rem;
     margin-bottom: 1.5rem;
 

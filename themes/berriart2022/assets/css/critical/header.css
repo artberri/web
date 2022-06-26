@@ -6,6 +6,7 @@
   font-family: var(--header-font);
   align-items: flex-end;
   background: var(--bg-color);
+  z-index: 1;
 
   & .title {
     flex-grow: 1;
@@ -49,16 +50,19 @@
       font-size: 1.8rem;
       line-height: 1;
       margin: 0;
+      width: 15rem;
+      height: var(--header-height);
     }
 
     & a {
-      display: block;
       display: flex;
+      justify-content: flex-end;
       align-items: flex-end;
-      padding: 0.75rem 1.5rem 0.75rem 6rem;
+      padding: 1rem;
       height: var(--header-height);
       text-decoration: none;
       color: var(--text-color-secondary);
+      text-align: r;
 
       &:hover {
         color: var(--text-color);
