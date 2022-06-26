@@ -5,13 +5,13 @@ console.log({ matches: !!prefersDarkScheme.matches });
 
 btn.addEventListener("click", () => {
   if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-mode");
-    var theme = document.body.classList.contains("light-mode")
+    document.documentElement.classList.toggle("light-mode");
+    var theme = document.documentElement.classList.contains("light-mode")
       ? "light"
       : "dark";
   } else {
-    document.body.classList.toggle("dark-mode");
-    var theme = document.body.classList.contains("dark-mode")
+    document.documentElement.classList.toggle("dark-mode");
+    var theme = document.documentElement.classList.contains("dark-mode")
       ? "dark"
       : "light";
   }

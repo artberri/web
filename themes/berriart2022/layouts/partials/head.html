@@ -34,4 +34,12 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
+
+  <script type="text/javascript">
+    (function () {
+        var currentTheme = localStorage.getItem("theme");
+        if (currentTheme == "dark") document.documentElement.classList.toggle("dark-mode");
+        else if (currentTheme == "light") document.documentElement.classList.toggle("light-mode");
+    })();
+  </script>
 </head>

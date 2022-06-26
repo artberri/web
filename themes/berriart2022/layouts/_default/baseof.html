@@ -2,13 +2,6 @@
 <html lang="{{ .Params.Language | default "en" }}">
     {{- partial "head.html" . -}}
     <body itemscope itemtype="https://schema.org/WebPage">
-        <script type="text/javascript">
-            (function () {
-                var currentTheme = localStorage.getItem("theme");
-                if (currentTheme == "dark") document.body.classList.toggle("dark-mode");
-                else if (currentTheme == "light") document.body.classList.toggle("light-mode");
-            })();
-        </script>
         {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
