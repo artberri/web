@@ -1,0 +1,28 @@
+.project {
+  border: var(--border);
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
+
+  & h1 {
+    font-size: 2.4rem;
+  }
+
+  & .project-image {
+    margin-right: 2rem;
+
+    & img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  & .project-content {
+    flex-grow: 1;
+
+    & p {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+  }
+}

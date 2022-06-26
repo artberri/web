@@ -1,0 +1,52 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  list-style: none;
+  margin: 0;
+
+  & .page-item {
+    & a {
+      display: block;
+      border: var(--border);
+      border-color: var(--text-color-secondary);
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-family: var(--header-font);
+      font-size: 1rem;
+      color: var(--text-color-secondary);
+      transition: var(--transition);
+      border-radius: 1.5rem;
+      height: 3rem;
+      width: 3rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+
+      &:hover {
+        border-color: var(--text-color);
+        color: var(--text-color);
+      }
+    }
+
+    &.active a {
+      background-color: var(--text-color-secondary);
+      color: var(--bg-color);
+      cursor: default;
+
+      &:hover {
+        border-color: var(--text-color-secondary);
+        color: var(--bg-color);
+      }
+    }
+
+    &.disabled {
+      display: none;
+    }
+  }
+}
