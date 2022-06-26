@@ -1,7 +1,0 @@
-{{ $featured_image := .Resources.GetMatch "featured" }} {{ if $featured_image }}
-<div class="entry-image-wrapper">
-  <a href="{{ .RelPermalink }}" class="entry-image-link">
-    {{- partial "image.html" . -}}
-  </a>
-</div>
-{{ end }}

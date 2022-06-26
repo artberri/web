@@ -14,3 +14,8 @@
     max-width: 75rem;
   }
 }
+
+.share {
+  transition: var(--transition);
+  opacity: 0;
+}
