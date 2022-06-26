@@ -3,7 +3,7 @@
 
   & .claim {
     padding: 4rem 2rem;
-    font-size: clamp(2rem, 12vw - 1rem, 9rem);
+    font-size: clamp(2rem, 12vh, 9rem);
 
     & h1 {
       display: flex;
@@ -12,7 +12,7 @@
   }
 
   & .resume {
-    font-size: clamp(1.4rem, 6vw - 2rem, 3rem);
+    font-size: clamp(1.4rem, 6vh - 1.5rem, 3rem);
     line-height: 1.4;
 
     & a {

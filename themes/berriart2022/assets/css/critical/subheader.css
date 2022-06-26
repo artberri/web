@@ -9,3 +9,10 @@
     font-size: 3rem;
   }
 }
+
+@media (width <= 1200px) {
+  .single .subheader {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
