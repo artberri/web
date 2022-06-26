@@ -14,5 +14,15 @@
   & .resume {
     font-size: clamp(1.4rem, 6vw - 2rem, 3rem);
     line-height: 1.4;
+
+    & a {
+      display: inline-block;
+      transform: translateY(0);
+
+      &:hover {
+        color: var(--text-color);
+        transform: translateY(-0.4rem);
+      }
+    }
   }
 }

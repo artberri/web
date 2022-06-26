@@ -1,0 +1,31 @@
+.theme-switch {
+  & .label {
+    transition: var(--transition);
+
+    &:hover {
+      & .moon {
+        transform: rotate(360deg);
+      }
+
+      & .sun {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  & .ball {
+    transition: var(--transition);
+  }
+
+  & .moon {
+    transform-origin: center center;
+    transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    transform: rotate(0);
+  }
+
+  & .sun {
+    transform-origin: center center;
+    transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    transform: rotate(0);
+  }
+}

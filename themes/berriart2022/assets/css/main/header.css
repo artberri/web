@@ -3,6 +3,26 @@
   top: 0;
   transition: var(--transition);
 
+  & .title a {
+    & .a {
+      transition: var(--transition);
+      transform: translateX(0);
+    }
+    & .v {
+      transition: var(--transition);
+      transform: translateX(0);
+    }
+
+    &:hover {
+      & .a {
+        transform: translateX(-1.5rem);
+      }
+      & .v {
+        transform: translateX(1.5rem);
+      }
+    }
+  }
+
   & .menu {
     & li {
       transition: var(--transition);
@@ -10,6 +30,13 @@
 
     & a {
       transition: var(--transition);
+      transform: scale(1);
+      transform-origin: bottom right;
+
+      &:hover {
+        color: var(--text-color);
+        transform: scale(1.1);
+      }
     }
   }
 }

@@ -63,10 +63,6 @@
       text-decoration: none;
       color: var(--text-color-secondary);
       text-align: r;
-
-      &:hover {
-        color: var(--text-color);
-      }
     }
   }
 }

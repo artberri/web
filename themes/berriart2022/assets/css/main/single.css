@@ -11,4 +11,13 @@
     border-right: var(--border);
     font-family: var(--header-font);
   }
+
+  & a {
+    transform: scale(1);
+    transform-origin: center center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

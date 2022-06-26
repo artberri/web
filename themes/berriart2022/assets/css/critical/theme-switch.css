@@ -19,7 +19,6 @@
     height: 40px;
     width: 80px;
     cursor: pointer;
-    transition: var(--transition);
     box-shadow: var(--switch-shadow);
   }
 
@@ -31,7 +30,6 @@
     left: 5px;
     height: 30px;
     width: 30px;
-    transition: var(--transition);
   }
 
   & .moon {
