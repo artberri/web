@@ -46,7 +46,6 @@
   }
 
   & .chroma {
-    overflow-x: auto;
     padding: 2rem;
     border-radius: 0.2em;
     transition: var(--transition);

@@ -5,6 +5,7 @@ html {
 pre,
 code {
   font-family: var(--monospace-font);
+  overflow-x: auto;
 }
 
 a {

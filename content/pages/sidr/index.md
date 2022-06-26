@@ -19,9 +19,6 @@ menu:
   url: themes
 - text: Development
   url: development
-ad:
-  client: ca-pub-5245097431906186
-  slot: 6701087233
 custom_css:
 - //cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css
 custom_scripts:
@@ -31,10 +28,10 @@ custom_scripts:
 
 ---
 
-![Image explanation](images/screenshots.png)
+![Sidr effect preview image](images/screenshots.png)
 
 You will be able to create multiple _sidrs_ on both sides of your web to make responsives menus (or not, it works perfectly on desktop too).
-It uses CSS3 transitions (and fallbacks to $.animate with older browsers) and it supports multiple source types.
+It uses CSS3 transitions (and fallbacks to `$.animate` with older browsers) and it supports multiple source types.
 
 ## Get started
 
@@ -83,7 +80,9 @@ Here are described differents ways of usage for this plugin, you can read and ad
 
 ### The Simplest Usage
 
-<a id="simple-menu" class="demo button" href="#sidr"><i id="menu-icon" class="fi-list"></i> Simple menu</a>
+{{< rawhtml >}}
+<a id="simple-menu" class="demo button" href="#sidr">Simple menu</a>
+{{< /rawhtml >}}
 
 Create a div called sidr and place your menu there. Then activate the plugin binding it to a link. By default, the menu wont't be visible and it will be displayed or hidden by clicking on the link.
 
@@ -108,7 +107,9 @@ $(document).ready(function() {
 
 ### Create Multiple Menus
 
+{{< rawhtml >}}
 <a id="left-menu" class="demo button" href="#left-menu">Left Menu</a> <a id="right-menu" class="demo button" href="#right-menu">Right Menu</a>
+{{< /rawhtml >}}
 
 You can create as many menus as you want in the same page, and you can place them at the right or left side. When creating more than one menu, you need to name them. As it is shown in the example, if you don't create the menu div container, the plugin will create it for you.
 
@@ -132,14 +133,16 @@ $(document).ready(function() {
 
 ### The Menu Content
 
+{{< rawhtml >}}
 <a id="existing-content-menu" class="demo button" href="#existing-content-menu">Existing content</a> <a id="remote-content-menu" class="demo button" href="#remote-content-menu">Load remotelly</a> <a id="callback-menu" class="demo button" href="#callback-menu">Callback loaded</a>
+{{< /rawhtml >}}
 
 There are four ways to load content in the menus, choose yours with the source option.
 
- * We have shown the first way at the 'Simplest Usage' demo, no more than placing the content into the div menu.
- * The most common way is to load existing html into the menu, you can add as many selectors as you want and they will be loaded in order.
- * There is the possibility to load remote content easily via AJAX.
- * If you need a more complex way to load content into the menu you can just create a callback function.
+* We have shown the first way at the 'Simplest Usage' demo, no more than placing the content into the div menu.
+* The most common way is to load existing html into the menu, you can add as many selectors as you want and they will be loaded in order.
+* There is the possibility to load remote content easily via AJAX.
+* If you need a more complex way to load content into the menu you can just create a callback function.
 
 {{< highlight html >}}
 <a id="existing-content-menu" href="#existing-content-menu">Existing content</a>
@@ -178,7 +181,9 @@ $(document).ready(function() {
 
 ### Responsive Menus
 
+{{< rawhtml >}}
 <a data-proofer-ignore id="responsive-menu-button" class="demo button" href="#sidr-main">Responsive Menu</a>
+{{< / rawhtml >}}
 
 The major reason for creating this plugin was just being able to easily add existing content (like a menu, a search box, social icons,...) to a menu in small screens. Simply load existing html into a sidr, and then, hide this html and show the menu button with media queries.
 
@@ -250,6 +255,7 @@ You can see other recipes in the code repository:
 
 ## Documentation
 
+{{< rawhtml >}}
 <div class="function">
   <h3>.sidr()</h3>
   <div class="usage">
@@ -317,7 +323,7 @@ You can see other recipes in the code repository:
 <div class="function">
   <h3>jQuery.sidr()</h3>
   <div class="usage">
-    <p><strong>Description:</strong> A generic <em>sidr</em> controller. Can be used to access the <em>sidr</em> methods <em>open</em>, <em>close</em>, <em>toggle</em> or <em>status</em></p>
+    <p><strong>Description:</strong> A generic <em>sidr</em> controller. Can be used to access the <em>sidr</em> methods: <em>open</em>, <em>close</em>, <em>toggle</em> or <em>status</em></p>
     <h4>jQuery.sidr( [method] [, name] [, complete] )</h4>
     <div class="parameter">
       <p><strong>method</strong> (String) Default: 'toggle'</p>
@@ -341,67 +347,67 @@ You can see other recipes in the code repository:
     </div>
   </div>
 </div>
+{{< /rawhtml >}}
 
 ## Themes
 
 There are two themes (two stylesheets) included with the plugin, a dark one and a light one. You can use them, create a new one or override them with your own styles.
 
-<div class="row themes">
-  <div class="medium-6 columns">
-    <a data-proofer-ignore data-toggle="dark-reveal"><img src="images/dark.theme.thumb.png" alt="Dark Theme" /></a>
+{{< rawhtml >}}
+<div class="grid">
+  <div>
     <h3><a data-proofer-ignore data-toggle="dark-reveal">Dark Theme</a></h3>
+    <a data-proofer-ignore data-toggle="dark-reveal"><img src="images/dark.theme.thumb.png" alt="Dark Theme" /></a>
   </div>
-  <div class="medium-6 columns">
-    <a data-proofer-ignore data-toggle="light-reveal"><img src="images/light.theme.thumb.png" alt="Light Theme" /></a>
+  <div>
     <h3><a data-proofer-ignore data-toggle="light-reveal">Light Theme</a></h3>
+    <a data-proofer-ignore data-toggle="light-reveal"><img src="images/light.theme.thumb.png" alt="Light Theme" /></a>
   </div>
 </div>
+{{< /rawhtml >}}
 
 ### Showcase
 
 The following responsive sites are using Sidr in an original way to implement their menu:
 
-<div class="showcase row small-up-2 medium-up-3">
-  <div class="column">
-    <div class="case">
-      <img src="images/showcase-fox.png" alt="Sidr Menu on FOX Broadcasting Company website">
-      <div class="info">
-        <p>FOX Broadcasting Company</p>
-        <p><a href="https://www.fox.com">www.fox.com</a></p>
-      </div>
+{{< rawhtml >}}
+<div style="display: grid;grid-template-columns: 33% 33% 33%;grid-column-gap: 2rem;">
+  <div>
+    <img src="images/showcase-fox.png" alt="Sidr Menu on FOX Broadcasting Company website">
+    <div style="font-size: 1rem">
+      <p style="margin: 0">FOX Broadcasting Company</p>
+      <p><a href="https://www.fox.com" target="_blank" rel="noopener noreferrer">www.fox.com</a></p>
     </div>
   </div>
-  <div class="column">
-    <div class="case">
-      <img src="images/showcase-uscourts.png" alt="Sidr Menu on United States Courts website">
-      <div class="info">
-        <p>United States Courts</p>
-        <p><a href="https://www.uscourts.gov">www.uscourts.gov</a></p>
-      </div>
+  <div>
+    <img src="images/showcase-uscourts.png" alt="Sidr Menu on United States Courts website">
+    <div style="font-size: 1rem">
+      <p style="margin: 0">United States Courts</p>
+      <p><a href="https://www.uscourts.gov" target="_blank" rel="noopener noreferrer">www.uscourts.gov</a></p>
     </div>
   </div>
-  <div class="column">
-    <div class="case">
-      <img src="images/showcase-sdsu.png" alt="Sidr Menu on San Diego State University website">
-      <div class="info">
-        <p>San Diego State University</p>
-        <p><a href="https://www.sdsu.edu/">www.sdsu.edu</a></p>
-      </div>
+  <div>
+    <img src="images/showcase-sdsu.png" alt="Sidr Menu on San Diego State University website">
+    <div style="font-size: 1rem">
+      <p style="margin: 0">San Diego State University</p>
+      <p><a href="https://www.sdsu.edu/" target="_blank" rel="noopener noreferrer">www.sdsu.edu</a></p>
     </div>
   </div>
 </div>
+{{< /rawhtml >}}
 
-If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to alberto[at]berriart[dot]com.
+If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to [alberto@berriart.com](mailto:alberto@berriart.com).
 
 ## Development
 
-- Source hosted at [GitHub](https://github.com/artberri/sidr)
-- If you have problems implenting this, ask about it in [StackOverflow](https://stackoverflow.com/search?q=sidr)
-- Report issues and feature requests in [GitHub Issues](https://github.com/artberri/sidr/issues)
-- Contributing: [CONTRIBUTING.md](https://github.com/artberri/sidr/blob/master/CONTRIBUTING.md)
+* Source hosted at [GitHub](https://github.com/artberri/sidr)
+* If you have problems implenting this, ask about it in [StackOverflow](https://stackoverflow.com/search?q=sidr)
+* Report issues and feature requests in [GitHub Issues](https://github.com/artberri/sidr/issues)
+* Contributing: [CONTRIBUTING.md](https://github.com/artberri/sidr/blob/master/CONTRIBUTING.md)
 
 Pull requests are very welcome! Make sure your patches are well tested. Please create a topic branch for every separate change you make.
 
+{{< rawhtml >}}
 <div id="sidr">
   <!-- Your content -->
   <ul>
@@ -410,14 +416,4 @@ Pull requests are very welcome! Make sure your patches are well tested. Please c
     <li><a href="#development">List 3</a></li>
   </ul>
 </div>
-
-<!-- Social -->
-<script type="text/javascript">
-    window.twttr = (function (d,s,id) {
-      var t, js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-      js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-</script>
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+{{< /rawhtml >}}

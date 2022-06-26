@@ -1,0 +1,116 @@
+.demo.button {
+  display: inline-block;
+  border: var(--border);
+  border-color: var(--text-color-secondary);
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-family: var(--header-font);
+  font-size: 1rem;
+  color: var(--text-color-secondary);
+  transition: var(--transition);
+  border-radius: 1.5rem;
+  margin: 0 1.5rem 1.5rem 0;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1.5;
+
+  &:hover {
+    border-color: var(--text-color);
+    color: var(--text-color);
+  }
+}
+
+.documentation {
+  & .buttons {
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & a {
+      display: inline-block;
+      margin-left: 2rem;
+      display: flex;
+      border: var(--border);
+      border-color: var(--text-color-secondary);
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+      font-family: var(--header-font);
+      font-size: 1.6rem;
+      color: var(--text-color-secondary);
+      transition: var(--transition);
+      border-radius: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      height: 3rem;
+
+      &:hover {
+        border-color: var(--text-color);
+        color: var(--text-color);
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  & .function {
+    border: var(--border);
+    margin-bottom: 2rem;
+
+    & h3 {
+      font-size: 2rem;
+      font-family: var(--monospace-font);
+      color: var(--bg-color);
+      background: var(--text-color);
+      padding: 1rem 2rem;
+    }
+
+    & h4 {
+      font-size: 1.6rem;
+      font-family: var(--monospace-font);
+      color: var(--text-color);
+    }
+
+    & .usage {
+      padding: 1rem 2rem;
+    }
+
+    & .parameter {
+      border-top: var(--border);
+      padding: 1rem 0;
+
+      & strong {
+        font-family: var(--monospace-font);
+        font-weight: bold;
+      }
+
+      & p {
+        margin: 0;
+        font-size: 1.4rem;
+
+        &:last-child {
+          color: var(--text-color-secondary);
+        }
+      }
+
+      & pre {
+        font-size: 1.2rem;
+      }
+
+      & .option {
+        margin: 1rem 0 0 2rem;
+      }
+
+      &.return {
+        border-top: var(--border);
+      }
+    }
+  }
+}
