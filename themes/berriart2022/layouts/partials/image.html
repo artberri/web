@@ -4,10 +4,10 @@
   {{ $image_medium := $featured_image.Resize "640x q90" }}
   {{ $image_small := $featured_image.Resize "360x" }}
   <img
-    srcset="{{ $image_small.Permalink }} 360w,
-            {{ $image_medium.Permalink }} 640w,
-            {{ $image.Permalink }} 1200w"
-    src="{{ $image.Permalink }}"
+    srcset="{{ $image_small.RelPermalink }} 360w,
+            {{ $image_medium.RelPermalink }} 640w,
+            {{ $image.RelPermalink }} 1200w"
+    src="{{ $image.RelPermalink }}"
     class="entry-image"
     alt="image from {{ .Title }}"
   />

@@ -11,8 +11,8 @@
   {{ $critical := resources.Get "css/critical.css" | resources.PostCSS }}
 
   {{ if hugo.IsProduction }}
-    {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-    {{ $critical = $css | minify | resources.PostProcess }}
+    {{ $css = $css | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}
+    {{ $critical = $critical | resources.Minify | resources.PostProcess }}
   {{ end }}
 
   <style>{{ $critical.Content | safeCSS }}</style>
@@ -36,5 +36,4 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/google_analytics_async.html" . }}
 </head>
