@@ -41,3 +41,37 @@
     }
   }
 }
+
+@media (width <= 1200px) {
+  .share {
+    position: fixed;
+    bottom: 2rem;
+    top: auto;
+    right: 2rem;
+    width: auto;
+    background-color: var(--text-color);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 3rem;
+
+    & .inner {
+      position: relative;
+      flex-direction: row;
+      left: auto;
+      top: auto;
+      margin: 0;
+    }
+
+    & .item,
+    & .item.back {
+      margin-bottom: 0;
+      margin-left: 1rem;
+      background-color: var(--text-color);
+      color: var(--bg-color);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

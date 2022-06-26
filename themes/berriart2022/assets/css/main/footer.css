@@ -8,3 +8,14 @@
   font-size: 0.8rem;
   transition: var(--transition);
 }
+
+@media (width <= 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 3.5rem 2rem;
+
+    & > * {
+      width: 50%;
+    }
+  }
+}

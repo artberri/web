@@ -371,7 +371,7 @@ There are two themes (two stylesheets) included with the plugin, a dark one and 
 The following responsive sites are using Sidr in an original way to implement their menu:
 
 {{< rawhtml >}}
-<div style="display: grid;grid-template-columns: 33% 33% 33%;grid-column-gap: 2rem;">
+<div style="display: grid;grid-template-columns: 1fr 1fr 1fr;grid-column-gap: 2rem;">
   <div>
     <img src="images/showcase-fox.png" alt="Sidr Menu on FOX Broadcasting Company website">
     <div style="font-size: 1rem">
