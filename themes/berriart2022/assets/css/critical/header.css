@@ -10,14 +10,26 @@
   & .title {
     flex-grow: 1;
     padding: 0.75rem 1.5rem;
+    height: 100%;
 
     & h1 {
+      display: flex;
+      align-items: center;
       font-size: 1.8rem;
       line-height: 1;
       margin: 0;
+      height: 100%;
+
+      & span {
+        font-size: 1rem;
+        color: var(--text-color-secondary);
+      }
     }
 
     & a {
+      display: flex;
+      align-items: center;
+      height: 100%;
       color: var(--text-color);
       text-decoration: none;
     }
@@ -34,7 +46,7 @@
 
     & li {
       border-left: var(--border);
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       line-height: 1;
       margin: 0;
     }

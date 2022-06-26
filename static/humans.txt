@@ -1,8 +1,8 @@
 /* TEAM */
-        The Code Man: Alberto Varela
-        Contact: alberto [at] berriart.com
+        Who: Alberto Varela
+        Contact: alberto@berriart.com
         Twitter: @artberri
-        From: 43°16'53.580" N / -2°58'59.124" W (I don't understand borders)
+        From: 43°16'53.580" N / -2°58'59.124" W
 
 /* SITE */
         Language: English

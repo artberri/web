@@ -19,7 +19,6 @@ paginate = 6
 [params]
     author = "Alberto Varela"
     description = "Personal page of Alberto Varela a Full Stack Web Developer based in Bilbao."
-    favicon = "favicon.ico"
 
 [author]
     name = "Alberto Varela"
