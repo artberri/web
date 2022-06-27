@@ -27,7 +27,7 @@
   }
 }
 
-@media all and (orientation: portrait) {
+@media (orientation: portrait) {
   .home {
     & .claim {
       font-size: clamp(2rem, 12vw, 9rem);
@@ -35,6 +35,14 @@
 
     & .resume {
       font-size: clamp(1.4rem, 6vw - 1.5rem, 3rem);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .home {
+    & .claim {
+      padding: 3rem 2rem;
     }
   }
 }

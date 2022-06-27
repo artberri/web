@@ -10,17 +10,26 @@
   </div>
 
   <nav class="menu">
-    <ul>
-      <li>
-        <a href="/projects/">Projects</a>
+    <input type="checkbox" id="menuToggle" class="menu-checkbox">
+    <label for="menuToggle" class="menu-icon">
+      <svg width="32" height="32" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <title>Toggle menu</title>
+        <path class="h1" d="M3 5H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="h2" d="M3 12H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="h3" d="M3 19H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </label>
+    <ul class="menu-items">
+      <li class="menu-item">
+        <a class="menu-link" href="/projects/">Projects</a>
       </li>
-      <li>
-        <a href="/blog/">Blog</a>
+      <li class="menu-item">
+        <a class="menu-link" href="/blog/">Blog</a>
       </li>
-      <li>
-        <a href="/alberto-varela/">About me</a>
+      <li class="menu-item">
+        <a class="menu-link" href="/alberto-varela/">About me</a>
       </li>
-      <li>
+      <li class="menu-item">
         {{ partial "theme-switch.html" . }}
       </li>
     </ul>

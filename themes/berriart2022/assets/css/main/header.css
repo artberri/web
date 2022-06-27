@@ -23,20 +23,18 @@
     }
   }
 
-  & .menu {
-    & li {
-      transition: var(--transition);
-    }
+  & .menu-item {
+    transition: var(--transition);
+  }
 
-    & a {
-      transition: var(--transition);
-      transform: scale(1);
-      transform-origin: bottom right;
+  & .menu-link {
+    transition: var(--transition);
+    transform: scale(1);
+    transform-origin: bottom right;
 
-      &:hover {
-        color: var(--text-color);
-        transform: scale(1.1);
-      }
+    &:hover {
+      color: var(--text-color);
+      transform: scale(1.1);
     }
   }
 }

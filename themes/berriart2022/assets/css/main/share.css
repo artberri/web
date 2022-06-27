@@ -42,7 +42,7 @@
   }
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .share {
     position: fixed;
     bottom: 2rem;

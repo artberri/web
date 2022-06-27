@@ -1,8 +1,6 @@
 const btn = document.querySelector(".theme-switch input");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-console.log({ matches: !!prefersDarkScheme.matches });
-
 btn.addEventListener("click", () => {
   if (prefersDarkScheme.matches) {
     document.documentElement.classList.toggle("light-mode");

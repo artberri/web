@@ -9,13 +9,23 @@
   transition: var(--transition);
 }
 
-@media (width <= 1024px) {
+@media (max-width: 1024px) {
   .footer {
     flex-direction: column;
     padding: 3.5rem 2rem;
 
     & > * {
       width: 50%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1rem 2rem;
+
+    & > * {
+      width: 100%;
     }
   }
 }

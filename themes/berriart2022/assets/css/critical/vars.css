@@ -3,7 +3,7 @@
   --header-height: 5.5rem;
   --header-font: "Fjalla One", Arial, sans-serif;
   --monospace-font: "Fira Code", monospace;
-  --transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+  --transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
   --content-with: 54rem;
 }
 

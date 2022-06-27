@@ -10,7 +10,7 @@
   }
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .single .subheader {
     border-bottom: 0;
     margin-bottom: 0;
