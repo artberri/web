@@ -37,3 +37,19 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .list {
+    & .title {
+      font-size: 2.5rem;
+    }
+
+    & .summary {
+      font-size: 1.8rem;
+
+      &.more a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

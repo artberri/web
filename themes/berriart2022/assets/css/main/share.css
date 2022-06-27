@@ -75,3 +75,9 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .share {
+    padding: 0.5rem;
+  }
+}

@@ -28,3 +28,24 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .project {
+    display: block;
+
+    & h1 {
+      font-size: 3.5rem;
+    }
+
+    & .project-image {
+      float: left;
+      margin-bottom: 1rem;
+    }
+
+    & .project-content {
+      & p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
