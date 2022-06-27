@@ -1,11 +1,11 @@
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: cimg/node:16.2-browsers
+    - image: cimg/node:16.15.1-browsers
 
 version: 2
 jobs:
-  build:
+  deps:
     <<: *defaults
     steps:
       - checkout
@@ -13,20 +13,17 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - npm7-dependencies-{{ checksum "package-lock.json" }}
+            - pnpm-dependencies-{{ checksum "pnpm-lock.yaml" }}
             # fallback to using the latest cache if no exact match is found
-            - npm7-dependencies-
+            - pnpm-dependencies-
 
-      - run: npm ci
+      - run: npm install -g pnpm
+      - run: pnpm i --frozen-lockfile
 
       - save_cache:
           paths:
             - node_modules
-          key: npm7-dependencies-{{ checksum "package-lock.json" }}
-
-      - run:
-          name: build project
-          command: npm run build
+          key: pnpm-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - persist_to_workspace:
           root: ./
@@ -34,10 +31,15 @@ jobs:
             - archetypes
             - config.toml
             - content
-            - layouts
+            - deploy.js
+            - node_modules
+            - package.json
+            - pnpm-lock.yaml
+            - postcss.config.js
+            - static
             - themes
 
-  release:
+  build:
     <<: *defaults
     docker:
       - image: cibuilds/hugo:latest
@@ -47,8 +49,8 @@ jobs:
           at: ./
 
       - run:
-          name: release project
-          command: hugo
+          name: build project
+          command: pnpm run build
 
       - persist_to_workspace:
           root: ./
@@ -66,16 +68,16 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - npm7-dependencies-{{ checksum "package-lock.json" }}
+            - pnpm-dependencies-{{ checksum "pnpm-lock.yaml" }}
             # fallback to using the latest cache if no exact match is found
-            - npm7-dependencies-
+            - pnpm-dependencies-
 
       - run: npm ci
 
       - save_cache:
           paths:
             - node_modules
-          key: npm7-dependencies-{{ checksum "package-lock.json" }}
+          key: pnpm-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - add_ssh_keys:
           fingerprints:
@@ -89,13 +91,13 @@ workflows:
 
   build-deploy:
     jobs:
-      - build
-      - release:
+      - deps
+      - build:
           requires:
-            - build
+            - deps
       - deploy:
           requires:
-            - release
+            - build
           filters:
             branches:
               only: main
