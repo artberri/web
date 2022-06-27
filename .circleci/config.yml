@@ -50,7 +50,7 @@ jobs:
 
       - run:
           name: build project
-          command: pnpm run build
+          command: hugo
 
       - persist_to_workspace:
           root: ./
