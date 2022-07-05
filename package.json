@@ -12,6 +12,7 @@
     "build": "hugo",
     "test": "start-server-and-test :1313 check-links",
     "serve": "hugo server",
+    "draft": "hugo server --buildDrafts --buildFuture",
     "start": "http-server public -p 1313",
     "deploy": "node deploy.js"
   },

@@ -15,7 +15,7 @@ body {
   --text-color-secondary: #707070;
   --border: 1px solid #eeeeee;
 }
-.dark-mode body {
+.dark body {
   --bg-color: #292639;
   --bg-color-secondary: #1b1928;
   --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
@@ -33,7 +33,7 @@ body {
     --text-color-secondary: #bebbd2;
     --border: 1px solid #3a3650;
   }
-  .light-mode body {
+  .light body {
     --bg-color: #fff;
     --bg-color-secondary: #eee;
     --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;

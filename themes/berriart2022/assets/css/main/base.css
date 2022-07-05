@@ -56,16 +56,16 @@ img {
   filter: none;
 }
 
-.dark-mode img {
-  filter: brightness(0.8) contrast(1.2);
+.dark img {
+  filter: brightness(0.9) contrast(1.1);
 }
 
 @media (prefers-color-scheme: dark) {
   img {
-    filter: brightness(0.8) contrast(1.2);
+    filter: brightness(0.9) contrast(1.1);
   }
 
-  .light-mode img {
+  .light img {
     filter: none;
   }
 }

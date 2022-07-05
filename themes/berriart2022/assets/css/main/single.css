@@ -1,8 +1,10 @@
 .previous-next {
+  transition: var(--transition);
   border-top: var(--border);
   display: flex;
 
   & > * {
+    transition: var(--transition);
     flex: 1 0 50%;
     padding: 4rem 2rem;
     display: flex;

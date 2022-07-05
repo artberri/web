@@ -15,6 +15,14 @@
     {{ $critical = $critical | resources.Minify | resources.PostProcess }}
   {{ end }}
 
+  <script type="text/javascript">
+    (function () {
+        var userCurrentPreference = localStorage.getItem("theme");
+        if (userCurrentPreference === "dark") document.documentElement.classList.toggle("dark");
+        else if (userCurrentPreference === "light") document.documentElement.classList.toggle("light");
+    })();
+  </script>
+
   <style>{{ $critical.Content | safeCSS }}</style>
 
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
@@ -34,12 +42,4 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
-
-  <script type="text/javascript">
-    (function () {
-        var currentTheme = localStorage.getItem("theme");
-        if (currentTheme == "dark") document.documentElement.classList.toggle("dark-mode");
-        else if (currentTheme == "light") document.documentElement.classList.toggle("light-mode");
-    })();
-  </script>
 </head>
