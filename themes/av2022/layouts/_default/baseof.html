@@ -7,12 +7,12 @@
         {{- partial "footer.html" . -}}
         {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
         {{ if hugo.IsProduction }}
-            {{ $built = $built | resources.Minify | resources.PostProcess }}
+        {{ $built = $built | resources.Minify | resources.PostProcess }}
         {{ end }}
-        <script type="text/javascript" src="{{ $built.RelPermalink }}"></script>
-
+        <script defer type="text/javascript" src="{{ $built.RelPermalink }}"></script>
         {{ range .Params.custom_scripts }}
-            <script type="text/javascript" src="{{ . }}"></script>
+        <script defer type="text/javascript" src="{{ . }}"></script>
         {{ end }}
+        <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f600a2768f8642e2b32bfd5735036049"}'></script><!-- End Cloudflare Web Analytics -->
     </body>
 </html>
