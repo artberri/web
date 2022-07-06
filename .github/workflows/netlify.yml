@@ -47,6 +47,36 @@ jobs:
         run: pnpm install --frozen-lockfile --strict-peer-dependencies
       - name: Build
         run: pnpm run build
+
+      - name: Checkout talks
+        uses: actions/checkout@v3
+        with:
+          repository: 'git@github.com:artberri/reveal.js.git'
+          ref: 'berriart-talks'
+          path: './talks'
+      - name: Setup npm cache
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install talks dependencies
+        run: npm ci
+        working-directory: './talks'
+      - name: Build talks
+        run: npm run build
+        working-directory: './talks'
+      - name: Create talks output dir
+        run: mkdir -p ./public/talks
+      - name: Copy talks
+        run: cp -r ./talks/{dist,plugin,automation,code-kids,dns,http2-best-practices,personal-branding-developers,terraform-101,wasm-blazor,wear-os-101,wordpress-deployment,wordpress-deployment-es} ./public/talks/
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
