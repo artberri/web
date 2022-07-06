@@ -2,7 +2,7 @@ name: Build and Deploy to Netlify
 on:
   push:
     branches:
-      - new_version
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-22.04
@@ -82,6 +82,7 @@ jobs:
         with:
           publish-dir: "./public"
           production-branch: main
+          production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           netlify-config-path: "./netlify.toml"
