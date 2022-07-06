@@ -396,7 +396,7 @@ The following responsive sites are using Sidr in an original way to implement th
 </div>
 {{< /rawhtml >}}
 
-If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to [alberto@berriart.com](mailto:alberto@berriart.com).
+If you've created a website or an application using this plugin and you want to show it in this section, send me an email with the url to [hello@albertovarela.net](mailto:hello@albertovarela.net).
 
 ## Development
 
