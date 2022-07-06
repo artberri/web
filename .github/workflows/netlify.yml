@@ -75,7 +75,7 @@ jobs:
       - name: Create talks output dir
         run: mkdir -p ./public/talks
       - name: Copy talks
-        run: cp -r ./talks/{dist,plugin,automation,code-kids,dns,http2-best-practices,personal-branding-developers,terraform-101,wasm-blazor,wear-os-101,wordpress-deployment,wordpress-deployment-es} ./public/talks/
+        run: cp -r ./talks/{dist,plugin,automation,code-kids,dependencias-npm,dns,http2-best-practices,personal-branding-developers,terraform-101,wasm-blazor,wear-os-101,wordpress-deployment,wordpress-deployment-es} ./public/talks/
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
