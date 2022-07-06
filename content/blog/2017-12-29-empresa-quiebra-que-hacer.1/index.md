@@ -26,7 +26,7 @@ Fue entonces cuando surgió la pregunta: **¿Qué hago ahora?** Y lo primero es 
 
 <div class="text-center">
 <center>
-<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">From now on, I am officially job searching. Based on Bilbao area or remote. Contact: DM or alberto[at]berriart[dot]com. RTs are very welcome</p>&mdash; Alberto Varela (@artberri) <a href="https://twitter.com/artberri/status/889512323228020738?ref_src=twsrc%5Etfw">24 de julio de 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">From now on, I am officially job searching. Based on Bilbao area or remote. Contact: DM or hello[at]albertovarela[dot]net. RTs are very welcome</p>&mdash; Alberto Varela (@artberri) <a href="https://twitter.com/artberri/status/889512323228020738?ref_src=twsrc%5Etfw">24 de julio de 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 <em><small>Gracias a todos los que contribuisteis a su difusión y a los a que contactasteis porque <br>encontrar trabajo fue fácil gracias a vosotros</small></em><br><br>
