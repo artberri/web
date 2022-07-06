@@ -1,3 +1,5 @@
 Sitemap: https://albertovarela.net/sitemap.xml
 User-Agent: *
-Disallow: /feed.xml
+Disallow: /
+# Disallow: /feed.xml
+# Disallow: /pages/

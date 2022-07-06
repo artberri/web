@@ -9,7 +9,7 @@
   },
   "scripts": {
     "check-links": "blc run -c linkchecker.js",
-    "build": "hugo",
+    "build": "hugo --minify",
     "test": "start-server-and-test :1313 check-links",
     "serve": "hugo server",
     "draft": "hugo server --buildDrafts --buildFuture",
@@ -35,7 +35,6 @@
     "prettier": "^2.3.0",
     "reset-css": "^5.0.1",
     "sidr": "^2.2.1",
-    "ssh-deploy-release": "^4.0.1",
     "start-server-and-test": "^1.12.3"
   },
   "browserslist": "last 2 versions"
