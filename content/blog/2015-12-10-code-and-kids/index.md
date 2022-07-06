@@ -20,7 +20,7 @@ Due to the great experience I had being a mentor in the [CoderDojo](https://code
 {{< youtube XzDRIlLZuHU >}}
 <br>
 
-You can see [here](https://albertovarela.net/talks/code-kids/) the slides of the presentation where you will find several links to useful resources that will help kids learn code in a fun way.
+You can see [here](https://www.albertovarela.net/talks/code-kids/) the slides of the presentation where you will find several links to useful resources that will help kids learn code in a fun way.
 
 ## Hour of code
 

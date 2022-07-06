@@ -1,4 +1,4 @@
-Sitemap: https://albertovarela.net/sitemap.xml
+Sitemap: https://www.albertovarela.net/sitemap.xml
 User-Agent: *
 Disallow: /
 # Disallow: /feed.xml
