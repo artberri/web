@@ -11,6 +11,8 @@
     text-decoration: none;
 
     & img {
+      background: rgba(0, 0, 0, 0.05);
+      aspect-ratio: 1.91 / 1;
       max-width: 100%;
     }
   }

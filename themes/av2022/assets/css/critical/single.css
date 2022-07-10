@@ -7,12 +7,15 @@
 }
 
 .featured-image {
+  max-width: 75rem;
+  margin: 0 auto;
+
   & img {
+    width: 100%;
     display: block;
-    margin: 0 auto;
     margin-bottom: 1.5rem;
-    max-width: 75rem;
     aspect-ratio: 1.91 / 1;
+    background: rgba(0, 0, 0, 0.05);
   }
 }
 

@@ -3,12 +3,25 @@
   {{ $image := $featured_image.Resize "1200x q90 Linear" }}
   {{ $image_medium := $featured_image.Resize "640x q90" }}
   {{ $image_small := $featured_image.Resize "360x" }}
-  <img
-    srcset="{{ $image_small.RelPermalink }} 360w,
-            {{ $image_medium.RelPermalink }} 640w,
-            {{ $image.RelPermalink }} 1200w"
-    src="{{ $image.RelPermalink }}"
-    class="entry-image"
-    alt="image from {{ .Title }}"
-  />
+  {{ $image_webp := $featured_image.Resize "1200x webp q90 Linear" }}
+  {{ $image_medium_webp := $featured_image.Resize "640x webp q90" }}
+  {{ $image_small_webp := $featured_image.Resize "360x webp" }}
+  <picture>
+    <source
+      type="image/webp"
+      srcset="{{ $image_small_webp.RelPermalink }} 360w,
+              {{ $image_medium_webp.RelPermalink }} 640w,
+              {{ $image_webp.RelPermalink }} 1200w"
+    />
+    <source
+      type="image/jpeg"
+      srcset="{{ $image_small.RelPermalink }} 360w,
+              {{ $image_medium.RelPermalink }} 640w,
+              {{ $image.RelPermalink }} 1200w"
+    />
+    <img
+      src="{{ $image.RelPermalink }}"
+      alt="Featured image for '{{ .Title }}' post"
+    />
+  </picture>
 {{ end }}

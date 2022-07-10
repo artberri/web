@@ -25,6 +25,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.101.0'
+          extended: true
       - name: Cache Hugo
         uses: actions/cache@v3
         with:

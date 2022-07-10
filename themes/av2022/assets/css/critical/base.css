@@ -24,6 +24,10 @@ a {
   color: var(--text-color);
 }
 
+picture {
+  display: block;
+}
+
 img {
   max-width: 100%;
 }

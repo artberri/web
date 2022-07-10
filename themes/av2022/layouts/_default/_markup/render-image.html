@@ -1,0 +1,28 @@
+{{ $featured_image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $image := $featured_image.Resize "800x q90 Linear" }}
+{{ $image_medium := $featured_image.Resize "640x q90" }}
+{{ $image_small := $featured_image.Resize "360x" }}
+{{ $image_webp := $featured_image.Resize "800x webp q90 Linear" }}
+{{ $image_medium_webp := $featured_image.Resize "640x webp q90" }}
+{{ $image_small_webp := $featured_image.Resize "360x webp" }}
+<p class="content-img">
+  <picture>
+    <source
+      type="image/webp"
+      srcset="{{ $image_small_webp.RelPermalink }} 360w,
+              {{ $image_medium_webp.RelPermalink }} 640w,
+              {{ $image_webp.RelPermalink }} 800w"
+    />
+    <source
+      type="image/jpeg"
+      srcset="{{ $image_small.RelPermalink }} 360w,
+              {{ $image_medium.RelPermalink }} 640w,
+              {{ $image.RelPermalink }} 800w"
+    />
+    <img
+      src="{{ $image.RelPermalink }}"
+      alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}
+      style="aspect-ratio: {{ $image.Width }} / {{ $image.Height }}"
+    />
+  </picture>
+</p>

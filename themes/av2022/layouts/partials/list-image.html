@@ -6,19 +6,37 @@
     {{ $image := $featured_image.Resize "1200x q90 Linear" }}
     {{ $image_medium := $featured_image.Resize "600x q90" }}
     {{ $image_small := $featured_image.Resize "360x" }}
-    <img
-      srcset="{{ $image_small.RelPermalink }} 360w,
-              {{ $image_medium.RelPermalink }} 600w,
-              {{ $image.RelPermalink }} 1200w"
-      sizes="(max-width: 440px) 360px,
-              (max-width: 720px) 640px,
-              (max-width: 860px) 780px,
-              (max-width: 1040px) 640px,
-              600px"
-      src="{{ $image.RelPermalink }}"
-      class="entry-image"
-      alt="image from {{ .Title }}"
-    />
+    {{ $image_webp := $featured_image.Resize "1200x webp q90 Linear" }}
+    {{ $image_medium_webp := $featured_image.Resize "600x webp q90" }}
+    {{ $image_small_webp := $featured_image.Resize "360x webp" }}
+    <picture>
+      <source
+        type="image/webp"
+        srcset="{{ $image_small_webp.RelPermalink }} 360w,
+                {{ $image_medium_webp.RelPermalink }} 600w,
+                {{ $image_webp.RelPermalink }} 1200w"
+        sizes="(max-width: 440px) 360px,
+                (max-width: 720px) 640px,
+                (max-width: 860px) 780px,
+                (max-width: 1040px) 640px,
+                600px"
+      />
+      <source
+        type="image/jpeg"
+        srcset="{{ $image_small.RelPermalink }} 360w,
+                {{ $image_medium.RelPermalink }} 600w,
+                {{ $image.RelPermalink }} 1200w"
+        sizes="(max-width: 440px) 360px,
+                (max-width: 720px) 640px,
+                (max-width: 860px) 780px,
+                (max-width: 1040px) 640px,
+                600px"
+      />
+      <img
+        src="{{ $image.RelPermalink }}"
+        alt="Featured image for '{{ .Title }}' post"
+      />
+    </picture>
 {{ end }}
   </a>
 </div>
