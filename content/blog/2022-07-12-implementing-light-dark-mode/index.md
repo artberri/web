@@ -1,7 +1,7 @@
 ---
 draft: true
 slug: implementing-light-dark-mode
-date: "2022-07-11"
+date: "2022-07-12"
 description: |
   I've recently redesigned the whole look and feel of my website. As a part of that redesign, I've implemented both a light and a dark theme that will automatically be selected based on the user's preferences; it also includes a toggle switch that will allow the user to change that preference for this website. In this post, I will show you how I did it.
 title: "How to implement light and dark modes with a toggle switch for your web"
