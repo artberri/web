@@ -17,11 +17,10 @@
 
     & a {
       display: inline-block;
-      transform: translateY(0);
 
       &:hover {
         color: var(--text-color);
-        transform: translateY(-0.4rem);
+        animation: move-links 0.2s both;
       }
     }
   }
@@ -44,5 +43,14 @@
     & .claim {
       padding: 3rem 2rem;
     }
+  }
+}
+
+@keyframes move-links {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.4rem);
   }
 }

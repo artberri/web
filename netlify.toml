@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://berriart.com/*"
+  to = "https://www.albertovarela.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.berriart.com/*"
+  to = "https://www.albertovarela.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/alberto-varela/"
+  to = "/about-me/"
+  status = 301
+  force = true
