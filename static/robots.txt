@@ -3,3 +3,6 @@ User-Agent: *
 Disallow: /
 # Disallow: /feed.xml
 # Disallow: /pages/
+# Disallow: /categories/
+# Disallow: /tags/
+# Disallow: /404/
