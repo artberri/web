@@ -18,7 +18,7 @@
     {{ $critical = $critical | resources.Minify | resources.PostProcess }}
   {{ end }}
 
-  <script type="text/javascript">
+  <script type="text/javascript" nonce="themeswitch">
     (function () {
         var userCurrentPreference = localStorage.getItem("theme");
         if (userCurrentPreference === "dark") document.documentElement.classList.toggle("dark");
