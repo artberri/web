@@ -3,6 +3,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preload" href="/fonts/node_modules/.pnpm/@fontsource+fjalla-one@4.5.7/node_modules/@fontsource/fjalla-one/files/fjalla-one-latin-400-normal.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/node_modules/.pnpm/@fontsource+poly@4.5.9/node_modules/@fontsource/poly/files/poly-latin-400-normal.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/node_modules/.pnpm/@fontsource+fira-code@4.5.10/node_modules/@fontsource/fira-code/files/fira-code-latin-400-normal.woff2" as="font" type="font/woff2">
+
   {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
