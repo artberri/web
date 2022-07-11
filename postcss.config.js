@@ -1,4 +1,4 @@
-const path = require("path");
+const isProduction = process.env.HUGO_ENVIRONMENT === "production";
 const postcssImport = require("postcss-import");
 const postcssNormalize = require("postcss-normalize");
 const postcssPresetEnv = require("postcss-preset-env")({
@@ -15,22 +15,18 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   safelist: [],
 });
 
+const fontsPath = isProduction ? "public/fonts" : "static/fonts";
 const postcssUrl = require("postcss-url")([
   {
     filter: /\/@fontsource\//,
     url: "copy",
-    assetsPath: "static/fonts",
-    // base path to search assets from
-    // basePath: path.resolve("node_modules/@fontsource"),
-    // dir to copy assets
-    // assetsPath: "fonts",
-    // using hash names for assets (generates from asset content)
-    // useHash: true,
+    assetsPath: fontsPath,
+    useHash: true,
   },
   {
     filter: /\/@fontsource\//,
     url: (asset) => {
-      return asset.url.replace("static/fonts", "/fonts");
+      return asset.url.replace(fontsPath, "/fonts");
     },
     multi: true,
   },
@@ -42,6 +38,6 @@ module.exports = {
     postcssUrl,
     postcssNormalize,
     postcssPresetEnv,
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
+    ...(isProduction ? [purgecss] : []),
   ],
 };

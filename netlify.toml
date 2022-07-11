@@ -20,3 +20,8 @@
   from = "/*"
   to = "/404/"
   status = 404
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=365000000, immutable"
