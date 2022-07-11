@@ -2,9 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="/fonts/de22ffac.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="/fonts/3885fe28.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="/fonts/98d62cbe.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/de22ffac.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/3885fe28.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/98d62cbe.woff2" as="font" type="font/woff2" crossorigin>
 
   {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
