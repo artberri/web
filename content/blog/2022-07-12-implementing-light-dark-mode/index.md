@@ -1,10 +1,9 @@
 ---
-draft: true
 slug: implementing-light-dark-mode
 date: "2022-07-12"
 description: |
-  I've recently redesigned the whole look and feel of my website. As a part of that redesign, I've implemented both a light and a dark theme that will automatically be selected based on the user's preferences; it also includes a toggle switch that will allow the user to change that preference for this website. In this post, I will show you how I did it.
-title: "How to implement light and dark modes with a toggle switch for your web"
+  I've recently rebranded and redesigned the look and feel of my website. As a part of that redesign, I've implemented both a light and a dark theme that will automatically be selected based on the user's preferences; it also includes a toggle switch that will allow the user to change that preference for this website. In this post, I will show you how I did it.
+title: "How to implement light and dark modes with a toggle switch on your website"
 resources:
 - name: "featured"
   src: "images/light-dark-mode2.jpg"
@@ -72,7 +71,7 @@ body {
 
 ### Some UX considerations
 
-Don't get me wrong; I'm not a UX designer. Anyway, I'll feel comfortable enought to give you some tips regarding UX on light/dark themes:
+Don't get me wrong; I'm not a UX designer. Anyway, I feel comfortable enough to give you some tips regarding UX on light/dark themes:
 
 **Dark is not black**. There are lots of dark colors apart from the `#000000`, in fact, you can see that I'm not using black as a background color in this site. Light is not necessarily white either. There are a lot of places to get inspiration from; if you are not an expert in color theory either, review what other sites do or take some ideas from IDE themes.
 
@@ -196,4 +195,4 @@ This little modification will get the current mode based on the class of the `ht
 
 Wondering why I'm asking you to add some synchronous Javascript code directly in the `head` of your HTML? By adding this snippet asynchronously, or after the HTML and the CSS is loaded, you will run the risk of having a flash of incorrect theme color (this means that the wrong theme could be shown during some milliseconds). The overload of this code is worth in my opinion. Some people use a cookie-based solution to avoid this code, but it needs to be implemented server-side, which is not a possibility if you have a static generated site like me.
 
-I hope you find this reading useful; don't forget to share it on your preferred social network if you do so. You can also give me your thoughts about the whole site redesign and rebranding.
+I hope you enjoy reading; don’t forget to share it on your preferred social network if you do so. You can also give me your thoughts about the whole site redesign and rebranding.
