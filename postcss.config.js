@@ -12,7 +12,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     const els = JSON.parse(content).htmlElements;
     return ["light", "dark", ...(els.tags || []), ...(els.classes || [])];
   },
-  safelist: [],
+  safelist: { deep: [/chroma/] },
 });
 
 const fontsPath = isProduction ? "public/fonts" : "static/fonts";
