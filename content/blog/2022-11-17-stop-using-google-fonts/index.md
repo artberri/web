@@ -70,4 +70,4 @@ import "@fontsource/open-sans/900-italic.css";
 
 After that, you'll be able to use `font-family: "Open Sans"` in your CSS files as usual. A bit more complicated than adding a single line but easy enough, isn't it?
 
-I hope that this reading has generated in you, if not the conviction, at least the doubt that you should stop using Google Fonts. If you want to try other alternatives or fine-tune your website to load your fonts faster [this article](https://sia.codes/posts/making-google-fonts-faster/) from [Sia Karamalegos](https://sia.codes/) will make your day.
+I hope that this reading has generated in you, if not the conviction, at least the doubt that you should stop using Google Fonts. If you want to try other alternatives or fine-tune your website to load your fonts faster [this article](https://sia.codes/posts/making-google-fonts-faster/) from [Sia Karamalegos](https://sia.codes/) or [this one](https://www.zachleat.com/web/font-checklist/) from [Zach Leatherman](https://www.zachleat.com/) will make your day.
