@@ -6,6 +6,7 @@
 {{ $image_medium_webp := $featured_image.Resize "640x webp q90" }}
 {{ $image_small_webp := $featured_image.Resize "360x webp" }}
 <p class="content-img">
+  {{ if .Title }}<figure>{{ end }}
   <picture>
     <source
       type="image/webp"
@@ -21,8 +22,10 @@
     />
     <img
       src="{{ $image.RelPermalink }}"
-      alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}
+      alt="{{ .Text }}"
       style="aspect-ratio: {{ $image.Width }} / {{ $image.Height }}"
     />
   </picture>
+  {{ if .Title }}<figcaption>{{ .Title | safeHTML }}</figcaption>{{ end }}
+  {{ if .Title }}</figure>{{ end }}
 </p>

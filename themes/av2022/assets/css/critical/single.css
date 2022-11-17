@@ -9,13 +9,30 @@
 .featured-image {
   max-width: 75rem;
   margin: 0 auto;
+  margin-bottom: 1.5rem;
 
   & img {
     width: 100%;
     display: block;
-    margin-bottom: 1.5rem;
     aspect-ratio: 1.91 / 1;
     background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+figcaption,
+.featured-image-caption {
+  padding-top: 0.5rem;
+  width: 100%;
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-size: 1rem;
+
+  & a {
+    color: var(--text-color-secondary);
+
+    &:hover {
+      color: var(--text-color);
+    }
   }
 }
 

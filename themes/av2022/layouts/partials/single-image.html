@@ -1,5 +1,11 @@
 {{ $featured_image := .Resources.GetMatch "featured" }} {{ if $featured_image }}
 <div class="featured-image">
   {{- partial "image.html" . -}}
+  {{ if $.Params.featured_caption }}
+    <p class="featured-image-caption">
+      Photo by <a href="{{ $.Params.featured_caption.author_url }}">{{ $.Params.featured_caption.author }}</a>
+      on <a href="{{ $.Params.featured_caption.url }}">{{ $.Params.featured_caption.source }}</a>
+    </p>
+  {{ end }}
 </div>
 {{ end }}

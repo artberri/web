@@ -15,7 +15,11 @@
     "draft": "hugo server --buildDrafts --buildFuture",
     "start": "http-server public -p 1313"
   },
-  "author": "Alberto Varela",
+  "author": {
+    "name": "Alberto Varela",
+    "email": "hello@albertovarela.net",
+    "url": "https://www.albertovarela.net"
+  },
   "private": true,
   "devDependencies": {
     "@fontsource/fira-code": "^4.5.12",
@@ -36,5 +40,8 @@
     "sidr": "^2.2.1",
     "start-server-and-test": "^1.12.3"
   },
-  "browserslist": "last 2 versions"
+  "browserslist": "last 2 versions",
+  "volta": {
+    "node": "18.12.1"
+  }
 }
