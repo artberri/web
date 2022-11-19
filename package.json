@@ -13,7 +13,8 @@
     "test": "start-server-and-test :1313 check-links",
     "serve": "hugo server",
     "draft": "hugo server --buildDrafts --buildFuture",
-    "start": "http-server public -p 1313"
+    "start": "http-server public -p 1313",
+    "deploy": "wrangler pages publish public --project-name albertovarela"
   },
   "author": {
     "name": "Alberto Varela",
@@ -38,7 +39,8 @@
     "prettier": "^2.7.1",
     "reset-css": "^5.0.1",
     "sidr": "^2.2.1",
-    "start-server-and-test": "^1.14.0"
+    "start-server-and-test": "^1.14.0",
+    "wrangler": "^2.4.2"
   },
   "browserslist": "last 2 versions",
   "volta": {
