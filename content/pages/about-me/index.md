@@ -4,7 +4,7 @@ title: About me
 description: Alberto Varela's contact page
 ---
 
-I'm **Alberto Varela**, a 39 years old **full-stack developer** based in Bilbao with more than 15 years of experience. I'm passionate about everything related to web development, and I'm currently working as a Product Engineer at [Genially](https://www.genial.ly/). The easiest way to get in touch is via email: [hello@albertovarela.net](mailto:hello@albertovarela.net).
+I'm **Alberto Varela**, a 40 years old **full-stack developer** based in Bilbao with more than 15 years of experience. I'm passionate about everything related to web development, and I'm currently working as a Product Engineer at [Paired](https://www.paired.com/). The easiest way to get in touch is via email: [hello@albertovarela.net](mailto:hello@albertovarela.net).
 
 ![Alberto Varela](images/alberto-varela-2.jpg)
 
