@@ -24,20 +24,16 @@ Ahora está claro que me equivocaba :P
 
 Fue entonces cuando surgió la pregunta: **¿Qué hago ahora?** Y lo primero es lo primero:
 
-<div class="text-center">
-<center>
-<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">From now on, I am officially job searching. Based on Bilbao area or remote. Contact: DM or hello[at]albertovarela[dot]net. RTs are very welcome</p>&mdash; Alberto Varela (@artberri) <a href="https://twitter.com/artberri/status/889512323228020738?ref_src=twsrc%5Etfw">24 de julio de 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</center>
-<em><small>Gracias a todos los que contribuisteis a su difusión y a los a que contactasteis porque <br>encontrar trabajo fue fácil gracias a vosotros</small></em><br><br>
-</div>
+> From now on, I am officially job searching. Based on Bilbao area or remote. Contact: DM or hello[at]albertovarela[dot]net. RTs are very welcome
+>
+> Alberto Varela ([@artberri](https://twitter.com/artberri)) en Twitter a [24 de julio de 2017](https://twitter.com/artberri/status/889512323228020738)
 
 Al menos así es como lo vi yo: si me quedo sin empleo... a buscar otro. Eso fue algo que personalmente tuve claro, pero a partir de ahí
 me surgían muchas dudas porque era una situación en la que, afortunadamente, no había estado anteriormente. Así que lo que quiero hacer con este
 post es simplemente contaros cuales fueron mis dudas y como se resolvieron en mi caso por si os sirve de algo.
 
 Ese mismo día confirmamos lo que era evidente, que no ibamos a cobrar nada en julio, ni la nómina ni la extra. Pero la razón no era solo
-la falta de <em>cash</em>, sino que en una situación así parece ser que es el administrador concursal quien reparte
+la falta de _cash_, sino que en una situación así parece ser que es el administrador concursal quien reparte
 el dinero que (no) queda en la hucha entre los acreedores, que por cierto, no somos solo los trabajadores. Entonces surge la primera
 duda: **¿Cuándo voy a cobrar?**, o más importante aún **¿Voy a cobrar?**, o **¿Quién c... es ese tal Administrador Concursal?**.
 También nos dicen que no nos pueden echar, resulta que es necesario presentar un ERE de extinción porque en la empresa somos
@@ -77,7 +73,7 @@ es que estos se merecen un enorme "gracias" por su soporte durante todo el proce
 - Podemos buscar trabajo. Como ya he dicho la baja voluntaria es una opción, pero debido a que tenemos permiso para no trabajar hay otra opción con bastante mejor pinta: el pluriempleo. No sé qué leyenda urbana rondaba en mi cabeza que me hacía pensar que eso era ilegal, pero resulta que no. Al menos bajo ciertas condiciones (entre ellas las de informar y tener la aprobación de ambas empresas).
 - Todo esto iba a durar mucho o muchísimo. Nosotros pensábamos en semanas, pero resulta que iban a ser meses. Meses hasta ver un euro.
 
-<em>Y van... 2 sueldos de deuda</em>
+_Y van... 2 sueldos de deuda_
 
 El 3 de agosto nos confirman del sindicato que efectivamente la empresa había presentado algo en el juzgado, pero que era un preconcurso, no
 un concurso de acreedores. Esto nos asusta un poco porque parece ser que es algo que se suele presentar para alargar el plazo de negociación con
@@ -90,7 +86,7 @@ está a tope, y que hay una comunidad de la HOSTIA, así, con mayúsculas. La ma
 de agosto los 6 desarrolladores ya habíamos cerrado algo con otras empresas aunque la entrada no fuera inmediata. Lo malo es que todos
 los sectores no están igual, y los compañeros de otros departamentos no tuvieron tanta suerte.
 
-<em>Y van... 3 sueldos de deuda</em>
+_Y van... 3 sueldos de deuda_
 
 Llega septiembre y algo de movimiento. La empresa el día 1 nos comunica que sus abogados dicen que a comienzos de septiembre tramitarán el concurso
 y que este podría estar resuelto antes de fin de mes. Solicitamos a la empresa permiso por escrito para trabajar en otras empresas (para pluriemplearnos) por si alguien no puede esperar al ERE. Después de varias conversaciones y alguna excusa nos lo conceden. "Comienzos de septiembre" se
@@ -104,7 +100,7 @@ Tres compañeros se hicieron cargo de la burocracia pertinente (¡mil gracias!) 
 **El 27 de septiembre la empresa nos comunica que ya tenemos adminsitrador concursal** (el auto del juez es del 26) y nos cita para
 una reunión a tres bandas. (El [14 de octubre se publica en el BOE][4])
 
-<em>Y van... 4 sueldos de deuda</em>
+_Y van... 4 sueldos de deuda_
 
 Después de varios cambios de fecha, empresa, trabajadores y administrador se reúnen el día 5 de octubre donde se nos hace una propuesta
 de ERE (para finalizar nuestra relación laboral) que nos parece correcta. También nos llega la carta del administrador concursal por ser
@@ -119,7 +115,7 @@ El 10 de octubre se presenta el ERE en el juzgado y el 27 de octubre nos llega e
 A partir de este día los que aún no han encontrado trabajo pueden ir a solicitar el paro. Ojo, ¡después de 4 meses sin cobrar!
 Aunque esto aún no ha acabado ¿Y nuestro dinero?
 
-<em>Total deuda: ~5 sueldos + vacaciones + indemnización</em>
+_Total deuda: ~5 sueldos + vacaciones + indemnización_
 
 Después de hacer mil calculos para saber exactamente a cuánto ascendía la deuda y mil preguntas sobre la forma correcta
 de reclamarla, esto se arregló entre representantes, sindicato, abogado/asesoría
