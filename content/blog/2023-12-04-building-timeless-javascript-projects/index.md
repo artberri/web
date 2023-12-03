@@ -1,5 +1,5 @@
 ---
-slug: stop-using-google-fonts
+slug: building-timeless-javascript-projects
 date: "2023-12-04"
 description: |
   There's a unique satisfaction in revisiting a project a year later and finding it seamlessly functional, but, in the ever-evolving world of JavaScript, there's a common sentiment that leaving a project untouched for a few months is akin to signing its death warrant. In this guide, we'll explore strategies for setting up a JavaScript project to ensure that it remains not only functional, but also robust.
