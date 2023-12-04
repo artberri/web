@@ -91,7 +91,7 @@ In Snap CI:
  -----------------------------------------------------------------------
 </pre>
 
-In [Semaphore][14]:
+In Semaphore:
 
 <pre class="pre">
  -----------------------------------------------------------------------
@@ -149,7 +149,6 @@ I hope you enjoyed this reading!
 [10]: https://facebook.github.io/react/
 [11]: https://github.com/artberri/npm-yarn-benchmark
 [12]: https://travis-ci.org/artberri/npm-yarn-benchmark
-[14]: https://semaphoreci.com/artberri/npm-yarn-benchmark/
 [15]: https://circleci.com/gh/artberri/npm-yarn-benchmark
 [16]: https://puppet.com/
 [17]: https://forge.puppetlabs.com/modules/artberri/yarn
