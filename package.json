@@ -40,7 +40,7 @@
     "reset-css": "^5.0.2",
     "sidr": "^2.2.1",
     "start-server-and-test": "^2.0.3",
-    "wrangler": "^3.18.0"
+    "wrangler": "^3.19.0"
   },
   "browserslist": "last 2 versions",
   "volta": {
