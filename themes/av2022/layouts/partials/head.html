@@ -10,8 +10,8 @@
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
 
-  {{ $css := resources.Get "css/main.css" | resources.PostCSS }}
-  {{ $critical := resources.Get "css/critical.css" | resources.PostCSS }}
+  {{ $css := resources.Get "css/main.css" | css.PostCSS }}
+  {{ $critical := resources.Get "css/critical.css" | css.PostCSS }}
 
   {{ if hugo.IsProduction }}
     {{ $css = $css | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}

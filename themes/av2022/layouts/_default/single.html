@@ -26,17 +26,17 @@
 
         <div class="previous-next">
             <div class="previous-post">
-                {{ if .PrevPage }}
-                <a class="link-reverse" href="{{ .PrevPage.RelPermalink }}">
-                    « {{ .PrevPage.Title | truncate 50 "..."}}
+                {{ if .Prev }}
+                <a class="link-reverse" href="{{ .Prev.RelPermalink }}">
+                    « {{ .Prev.Title | truncate 50 "..."}}
                 </a>
                 {{ end }}
             </div>
 
             <div class="next-post">
-                {{ if .NextPage }}
-                <a class="link-reverse" href="{{ .NextPage.RelPermalink }}">
-                    {{ .NextPage.Title | truncate 50 "..." }} »
+                {{ if .Next }}
+                <a class="link-reverse" href="{{ .Next.RelPermalink }}">
+                    {{ .Next.Title | truncate 50 "..." }} »
                 </a>
                 {{ end }}
             </div>
