@@ -68,7 +68,7 @@ I think that need need to take their new attitude one step further.
 > implemented you can find out that by monitoring your requests' speed you are also slowing them. (We avoided this by using
 > the `fastcgi_finish_request` function and PHP-FPM, especifically by using the `kernel.terminate` [event of the Symfony framework][10])._
 
-[1]: https://m.signalvnoise.com/microsoft-i-forgive-you-2fb6d6061a2c#.qedz7idke
+[1]: https://signalvnoise.com/svn3/microsoft-i-forgive-you/
 [2]: https://techcrunch.com/2015/03/05/microsoft-and-google-collaborate-on-typescript-hell-has-not-frozen-over-yet/
 [3]: https://cloudblogs.microsoft.com/opensource/2016/11/17/microsoft-joins-linux-foundation/
 [4]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup

@@ -24,4 +24,4 @@ You can see [here](https://www.albertovarela.net/talks/code-kids/) the slides of
 
 ## Hour of code
 
-Remember that one of the best events that promotes coding with kids is the [Hour of code](https://hourofcode.com/) that happens this week (the second one of every December) and I'm pretty sure that you will be able to [find a place](https://hourofcode.com/events/all) near you where you can go with your children and see if they will enjoy coding.
+Remember that one of the best events that promotes coding with kids is the [Hour of code](https://hourofcode.com/) that happens this week (the second one of every December) and I'm pretty sure that you will be able to find a place near you where you can go with your children and see if they will enjoy coding.

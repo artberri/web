@@ -38,7 +38,7 @@ or receiving the data from the model and formatting it to present in the view.
 
 But this is a practical article, if you want more theoretical and interesting readings about the MVP or other design
 patterns, you can take a look at these articles by [Martin Fowler](https://www.martinfowler.com/eaaDev/uiArchs.html),
-[Derek Greer](https://www.aspiringcraftsman.com/2007/08/25/interactive-application-architecture/) or
+[Derek Greer](https://lostechies.com/derekgreer/2007/08/25/interactive-application-architecture/) or
 [Addy Osmany](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/).
 
 ## The View
