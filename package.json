@@ -14,7 +14,7 @@
     "serve": "hugo server",
     "draft": "hugo server --buildDrafts --buildFuture",
     "start": "http-server public -p 1313",
-    "deploy": "wrangler pages publish public --project-name albertovarela"
+    "deploy": "wrangler pages deploy public --project-name albertovarela"
   },
   "author": {
     "name": "Alberto Varela",
