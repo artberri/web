@@ -6,7 +6,8 @@ const postcssPresetEnv = require('postcss-preset-env')({
 		'nesting-rules': true,
 	},
 })
-const purgecss = require('@fullhuman/postcss-purgecss')({
+const { purgeCSSPlugin } = require('@fullhuman/postcss-purgecss');
+const purgecss = purgeCSSPlugin({
 	content: ['./hugo_stats.json'],
 	defaultExtractor: (content) => {
 		const els = JSON.parse(content).htmlElements

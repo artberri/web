@@ -1,0 +1,30 @@
+.shop-item {
+	& .shop-images {
+		& img {
+			position: relative;
+			z-index: 1;
+			transition: var(--transition);
+			transform: scale(1);
+			transform-origin: center center;
+			box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+			&:hover {
+				z-index: 5;
+				transform: scale(1.5);
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
+
+	& .shop-cta {
+		transition: var(--transition);
+		transform: scale(1);
+		transform-origin: center center;
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+		&:hover {
+			transform: scale(1.02);
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+		}
+	}
+}
