@@ -13,8 +13,5 @@
         {{ range .Params.custom_scripts }}
         <script defer type="text/javascript" src="{{ . }}"></script>
         {{ end }}
-        {{ if hugo.IsProduction }}
-        <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3c897a7543a84b2d89d7f079acf47ea6"}'></script><!-- End Cloudflare Web Analytics -->
-        {{ end }}
     </body>
 </html>
