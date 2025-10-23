@@ -11,21 +11,15 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v5
+      - name: Setup Toolchain
+        uses: moonrepo/setup-toolchain@v0
         with:
-          node-version: "22.x"
-          registry-url: "https://registry.npmjs.org"
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: false
+          auto-install: true
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.140.2'
+          hugo-version: '0.152.0'
           extended: true
       - name: Cache Hugo
         uses: actions/cache@v4

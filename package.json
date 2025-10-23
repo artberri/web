@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {
     "node": "^22.0.0",
-    "pnpm": "^9.0.0"
+    "pnpm": "^10.0.0"
   },
   "scripts": {
     "check-links": "blc run -c linkchecker.js",
@@ -23,27 +23,24 @@
   },
   "private": true,
   "devDependencies": {
-    "@fontsource/fira-code": "^5.1.1",
-    "@fontsource/fjalla-one": "^5.1.1",
-    "@fontsource/poly": "^5.1.1",
+    "@fontsource/fira-code": "^5.2.7",
+    "@fontsource/fjalla-one": "^5.2.7",
+    "@fontsource/poly": "^5.2.8",
     "@fullhuman/postcss-purgecss": "^7.0.2",
-    "browserslist": "^4.24.4",
+    "browserslist": "^4.27.0",
     "bs-broken-links-checker": "^0.2.0",
     "http-server": "^14.1.1",
-    "postcss": "^8.5.1",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
     "postcss-normalize": "^13.0.1",
-    "postcss-preset-env": "^10.1.3",
+    "postcss-preset-env": "^10.4.0",
     "postcss-url": "^10.1.3",
-    "prettier": "^3.4.2",
+    "prettier": "^3.6.2",
     "reset-css": "^5.0.2",
     "sidr": "^2.2.1",
-    "start-server-and-test": "^2.0.10",
+    "start-server-and-test": "^2.1.2",
     "wrangler": "^3.107.0"
   },
-  "browserslist": "last 2 versions",
-  "volta": {
-    "node": "22.8.0"
-  }
+  "browserslist": "last 2 versions"
 }
