@@ -1,9 +1,9 @@
 ---
-slug: timezone-change-break-apps
+slug: time-zone-change-break-apps
 date: "2025-10-27"
 description: |
   Spain's prime minister Pedro Sánchez has recently reignited the long-standing debate over daylight saving time (DST), calling on the European Union to end the clock change every spring and autumn. If this were to happen, time zones such as Europe/Madrid would stop switching between UTC+1 and UTC+2, and would instead keep the same time all year. Let's go through what would really happen and why developers should care. After all, changing or creating time zones isn't just politics.
-title: "How a Timezone Change Could Break Your Apps"
+title: "How a Time Zone Change Could Break Your Apps"
 featured_caption:
   author: Vince Veras
   author_url: https://unsplash.com/@vinceveras?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash

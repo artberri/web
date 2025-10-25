@@ -12,10 +12,12 @@
 
   {{ $css := resources.Get "css/main.css" | css.PostCSS }}
   {{ $critical := resources.Get "css/critical.css" | css.PostCSS }}
+  {{ $printCss := resources.Get "css/print.css" | css.PostCSS }}
 
   {{ if hugo.IsProduction }}
     {{ $css = $css | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}
     {{ $critical = $critical | resources.Minify | resources.PostProcess }}
+    {{ $printCss = $printCss | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}
   {{ end }}
 
   <script type="text/javascript" nonce="themeswitch">
@@ -30,6 +32,7 @@
 
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
   <noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
+  <link rel="stylesheet" href="{{ $printCss.RelPermalink }}" integrity="{{ $printCss.Data.Integrity }}" media="print">
 
   {{ range .Params.custom_css }}
     <link rel="stylesheet" href="{{ . }}">

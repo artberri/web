@@ -80,6 +80,10 @@ strong {
   row-gap: 4rem;
 }
 
+.print-only {
+  display: none;
+}
+
 @media (max-width: 640px) {
   html {
     font-size: 12px;
