@@ -46,7 +46,7 @@ It means “run at 8:00 a.m. local time, every day".
 
 If your server is in Europe, and Europe stops switching time, your job will continue running at 8:00 local time, but you need to ensure that the machine running your cron has stopped changing the clock for the summer season and adopted the right permanent offset.
 
-As long as the machine has an up-to-date `tzdata`, cron will do the right thing. So, you should ensure to keep your OS and timezone packages up to date.
+As long as the machine has an up-to-date `tzdata`, cron will do the right thing. So, **you should keep your OS and timezone packages up to date**.
 
 ## Runtime Specific Issues
 
@@ -58,7 +58,7 @@ This means that if `Europe/Madrid` stops changing time, older Node versions will
 
 Each language/runtime might handle this differently, if I remember correctly `.NET` uses Linux `tzdata` or Windows registry time zones; in that case, keeping your OS up to date should be enough.
 
-The key point here is that you need to know how your tools handle `tzdata` and be prepared for these kind of changes, especially if the timezone change affects a significant number of your users.
+**The key point here is that you need to know how your tools handle `tzdata` and be prepared for these kind of changes**, especially if the timezone change affects a significant number of your users.
 
 ##  Distributed Systems and APIs
 
@@ -68,7 +68,7 @@ This is the kind of silent bug that costs hours to debug because nothing crashes
 
 ## The Other Possibility: New Time Zones
 
-Now, forget about Europe removing the DST switch, I would like it, but this initiative will probably lead to nothing, the same end that the same proposal from the former European Commission President, Jean-Claude Juncker, made in 2018. 
+Now, forget about Europe removing the DST switch, I would like it, but this initiative will probably come to nothing, just as the same proposal by former European Commission President Jean-Claude Juncker did in 2018.
 
 Let's imagine another hypothetical situation: Galicia, the Spanish region above Portugal, creates its own timezone aligned with Lisbon: `Europe/Santiago`. With the same rules as `Europe/Lisbon`. Same offset, different name.
 
@@ -78,11 +78,11 @@ For months, half the software on the planet will probably respond with:
 RangeError: Invalid time zone specified: Europe/Santiago
 ```
 
-Because `tzdata` updates take time to propagate: from IANA to Linux, to ICU, to Node, to browsers, to Docker images... you'll probably need to create aliases or find a way to deal with those users.
+Because `tzdata` updates take time to propagate: from IANA to Linux, to ICU, to Node, to browsers, to Docker images... You'll probably need to create aliases or find a way to deal with those users.
 
-This is exactly what happened in 2023, when we started getting users reporting they were in the `America/Ciudad_Juarez` timezone. We were not aware of the problem until the number of users from that region increased, and our system monitoring started alerting us about a new recurrent error: `RangeError: Invalid time zone specified: America/Ciudad_Juarez`.
+This is exactly what happened in 2023, when the app I was working on started getting users from the `America/Ciudad_Juarez` timezone. We were not aware of the problem until the number of users from that region increased, and our monitoring system alerted us about a new recurrent error: `RangeError: Invalid time zone specified: America/Ciudad_Juarez`.
 
-In our case, until Node.js launched an update reflecting Mexico's new time zones, we created our own timezone validation system. Easy but effective:
+The latest version of Node.js had not yet included the new time zone at that point, so updating our systems would not solve the problem. That's why we created our own time zone validation system. Easy but effective:
 
 ```ts
 const DEFAULT_TIME_ZONE = "Europe/London";
@@ -113,7 +113,7 @@ export const getValidTimeZone = (timeZone: string): string => {
 
 ## The Bigger Picture
 
-Time changes are a political decision, but they directly affect our tools, and we can end up with our apps broken. 
+Time zone changes are a political decision, but they directly affect our tools, and we can end up with our apps broken. 
 
 We are talking here about hypothetical situations, but as I said, we've seen this before and it is more common that what we would expect: when Russia (2014), Turkey (2016) or Mexico (2023) stopped DST; or when new zones like `America/Ciudad_Juarez` appeared (2023); or when `Europe/Kiev` was officialy renamed to `Europe/Kyiv` three years ago.
 

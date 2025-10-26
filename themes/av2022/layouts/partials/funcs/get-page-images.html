@@ -1,0 +1,81 @@
+{{- $imgs := slice }}
+{{- if .IsPage -}}
+  {{ $img := resources.Get "img/og_base.png" }}
+  {{ $fjallaOne := resources.Get "fonts/FjallaOne-Regular.ttf"}}
+  {{ $firaCode := resources.Get "fonts/FiraCode-Regular.otf"}}
+  {{ $poly := resources.Get "fonts/Poly-Regular.ttf"}}
+  {{ $img = $img.Filter (images.Text .Permalink (dict
+    "color" "#303030"
+    "size" 24
+    "linespacing" 2
+    "x" 48
+    "y" 560
+    "font" $poly
+  ))}}
+
+  {{ $img = $img.Filter (images.Text .Page.Title (dict
+    "color" "#303030"
+    "size" 72
+    "linespacing" 16
+    "x" 48
+    "y" 530
+    "aligny" "bottom"
+    "font" $fjallaOne
+  ))}}
+  {{ $img = resources.Copy (path.Join .Page.RelPermalink "images/og.png") $img }}
+  {{- with $img -}}
+        {{/* Image resource. */}}
+        {{- $imgs = $imgs | append (dict
+          "Image" .
+          "RelPermalink" .RelPermalink
+          "Permalink" .Permalink) }}
+  {{- end }}
+
+{{- else }}
+  {{- $imgParams := .Params.images }}
+  {{- $resources := .Resources.ByType "image" -}}
+  {{/* Find featured image resources if the images parameter is empty. */}}
+  {{- if not $imgParams }}
+    {{- $featured := $resources.GetMatch "*feature*" -}}
+    {{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+    {{- with $featured }}
+      {{- $imgs = $imgs | append (dict
+        "Image" .
+        "RelPermalink" .RelPermalink
+        "Permalink" .Permalink) }}
+    {{- end }}
+  {{- end }}
+  {{/* Use the first one of site images as the fallback. */}}
+  {{- if and (not $imgParams) (not $imgs) }}
+    {{- with site.Params.images }}
+      {{- $imgParams = first 1 . }}
+    {{- end }}
+  {{- end }}
+  {{/* Parse page's images parameter. */}}
+  {{- range $imgParams }}
+    {{- $img := . }}
+    {{- $url := urls.Parse $img }}
+    {{- if eq $url.Scheme "" }}
+      {{/* Internal image. */}}
+      {{- with $resources.GetMatch $img -}}
+        {{/* Image resource. */}}
+        {{- $imgs = $imgs | append (dict
+          "Image" .
+          "RelPermalink" .RelPermalink
+          "Permalink" .Permalink) }}
+      {{- else }}
+        {{- $imgs = $imgs | append (dict
+          "RelPermalink" (relURL $img)
+          "Permalink" (absURL $img)
+        ) }}
+      {{- end }}
+    {{- else }}
+      {{/* External image */}}
+      {{- $imgs = $imgs | append (dict
+        "RelPermalink" $img
+        "Permalink" $img
+      ) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- return $imgs }}

@@ -45,7 +45,7 @@
   {{ end -}}
 
   {{/* NOTE: These Hugo Internal Templates can be found in https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/schema.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ partial "opengraph.html" . }}
+  {{ partial "schema.html" . }}
+  {{ partial "twitter_cards.html" . }}
 </head>
