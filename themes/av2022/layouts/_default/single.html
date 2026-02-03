@@ -5,7 +5,7 @@
                 <h1 class="title" itemprop="name headline">{{- .Title -}}</h1>
 
                 <div class="post-details-info">
-                    <p class="post-meta in-post"><time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">Published on {{ .PublishDate.Format "January 2, 2006" }}</time> · {{ div .WordCount 265 }} min read</p>
+                    <p class="post-meta in-post"><time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">Published on {{ .PublishDate.Format "January 2, 2006" }}</time> · {{ .ReadingTime }} min read</p>
                 </div>
             </div>
         </header>
