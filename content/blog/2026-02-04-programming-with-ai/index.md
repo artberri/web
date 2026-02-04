@@ -2,7 +2,7 @@
 slug: programming-with-ai
 date: "2026-02-04"
 description: |
-  I use AI tools every day, both at work and in my side projects. I'm very skeptical skeptical of the hype that surrounds them, but very interested in what actually works. In this post, I share both my experience programming with AI in real codebases and my own perspective on what's genuinely useful, what tends to be overhyped, where these tools fall short, and how I'm actually working with them right now.
+  I use AI tools every day, both at work and in my side projects. I'm very skeptical of the hype that surrounds them, but very interested in what actually works. In this post, I share both my experience programming with AI in real codebases and my own perspective on what's genuinely useful, what tends to be overhyped, where these tools fall short, and how I'm actually working with them right now.
 title: "Programming with AI, Without the Hype"
 featured_caption:
   author: Andy Kelly
