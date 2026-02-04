@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource/karma':
+        specifier: ^5.2.8
+        version: 5.2.8
     devDependencies:
       '@fontsource/fira-code':
         specifier: ^5.2.7
@@ -14,9 +18,6 @@ importers:
       '@fontsource/fjalla-one':
         specifier: ^5.2.7
         version: 5.2.7
-      '@fontsource/poly':
-        specifier: ^5.2.8
-        version: 5.2.8
       '@fullhuman/postcss-purgecss':
         specifier: ^8.0.0
         version: 8.0.0(postcss@8.5.6)
@@ -586,8 +587,8 @@ packages:
   '@fontsource/fjalla-one@5.2.7':
     resolution: {integrity: sha512-mVbi3EAfIZeW2mgeFkISixDTB4OMG8BWOGdxxIARUK/6K+B5DX7LK/dhOLq1hTJxuSkrJaM8QAITedEJi+jcJQ==}
 
-  '@fontsource/poly@5.2.8':
-    resolution: {integrity: sha512-tWQOA2rhfj3ytKuseoxqdpmwrHnnM+9uH/OM1mokfPHLHjbcKUaCiIcQO4rFfqAkXv7XFz1VinasYCrgE6WGFA==}
+  '@fontsource/karma@5.2.8':
+    resolution: {integrity: sha512-5Mv0EF1PO2+U6pKuzogkvzk+jGXbPdMmy1GnE7gacrNQRuNpolbT6ScTPlvL+88DCH6l/8mZdoXTRv3yr7jWQA==}
 
   '@fullhuman/postcss-purgecss@8.0.0':
     resolution: {integrity: sha512-fSRaBGf6+DYdfQMxedWfnIW8FSYE1LBpgy16jpK1L2vNb1HgeBRRZ+UX4UokNmW7YEAwPdvwkKdYtlkYpH+Aqg==}
@@ -2508,7 +2509,7 @@ snapshots:
 
   '@fontsource/fjalla-one@5.2.7': {}
 
-  '@fontsource/poly@5.2.8': {}
+  '@fontsource/karma@5.2.8': {}
 
   '@fullhuman/postcss-purgecss@8.0.0(postcss@8.5.6)':
     dependencies:

@@ -2,7 +2,7 @@
 slug: programming-with-ai
 date: "2026-02-04"
 description: |
-  I've been called an AI hater more than once, yet I use these tools every day, both at work and in my side projects. I'm skeptical of the hype, but very interested in what actually works. This is my take on the current state of programming with AI: cutting through the noise, staying practical, and sharing the workflows that are genuinely helping me ship code right now, along with the trade-offs, limits, and lessons I'm learning along the way.
+  I use AI tools every day, both at work and in my side projects. I'm very skeptical skeptical of the hype that surrounds them, but very interested in what actually works. In this post, I share both my experience programming with AI in real codebases and my own perspective on what's genuinely useful, what tends to be overhyped, where these tools fall short, and how I'm actually working with them right now.
 title: "Programming with AI, Without the Hype"
 featured_caption:
   author: Andy Kelly
@@ -25,7 +25,7 @@ First it was Vibe Coding (which even became "word of the year" [according to Col
 
 For me, all of this feels like unnecessary noise.
 
-We're product developers. We use tools to help us do it. That's it.
+**We're product developers**. We use tools to help us do it. That's it.
 
 So in this post, I'm just going to call it "programming with AI". Not because it's the perfect term, but because it doesn't try to turn a set of tools into a philosophy or a job position. 
 
@@ -43,7 +43,7 @@ From a company or product perspective, software is still just the medium. The go
 
 From a developer's perspective, there's an additional layer.
 
-Our personal goals should overlap with the company's, but we also have our own as individuals. We need to stay up to date with the state of the industry, keep our skills relevant, and be prepared to grow in our careers (or even change direction if needed or desired).
+Our personal goals should overlap with the company's, but we also have our own as individuals. **We need to stay up to date with the state of the industry**, keep our skills relevant, and be prepared to grow in our careers (or even change direction if needed or desired).
 
 Tools like AI are clearly a major shift in how software is built, and ignoring them isn't being cautious, it's falling behind. Understanding how they work, where they help, where they fail, and how to use them responsibly is part of our craft.
 

@@ -13,7 +13,7 @@ html {
 
 body {
   min-height: 100%;
-  font-family: "Poly", serif;
+  font-family: "Karma", serif;
   background: var(--bg-color);
   color: var(--text-color);
   display: flex;

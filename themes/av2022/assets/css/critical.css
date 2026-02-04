@@ -1,6 +1,7 @@
 @import 'reset-css';
 @import '@fontsource/fjalla-one/400.css';
-@import '@fontsource/poly';
+@import '@fontsource/karma/400.css';
+@import '@fontsource/karma/700.css';
 @import 'themes/av2022/assets/css/critical/vars.css';
 @import 'themes/av2022/assets/css/critical/base.css';
 @import 'themes/av2022/assets/css/critical/header.css';

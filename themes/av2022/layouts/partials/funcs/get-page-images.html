@@ -3,14 +3,14 @@
   {{ $img := resources.Get "img/og_base.png" }}
   {{ $fjallaOne := resources.Get "fonts/FjallaOne-Regular.ttf"}}
   {{ $firaCode := resources.Get "fonts/FiraCode-Regular.otf"}}
-  {{ $poly := resources.Get "fonts/Poly-Regular.ttf"}}
+  {{ $karma := resources.Get "fonts/Karma-Regular.ttf"}}
   {{ $img = $img.Filter (images.Text .Permalink (dict
     "color" "#303030"
     "size" 24
     "linespacing" 2
     "x" 48
     "y" 560
-    "font" $poly
+    "font" $karma
   ))}}
 
   {{ $img = $img.Filter (images.Text .Page.Title (dict

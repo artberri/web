@@ -25,7 +25,6 @@
   "devDependencies": {
     "@fontsource/fira-code": "^5.2.7",
     "@fontsource/fjalla-one": "^5.2.7",
-    "@fontsource/poly": "^5.2.8",
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "browserslist": "^4.28.1",
     "bs-broken-links-checker": "^0.2.0",
@@ -42,5 +41,8 @@
     "start-server-and-test": "^2.1.3",
     "wrangler": "^4.62.0"
   },
-  "browserslist": "last 2 versions"
+  "browserslist": "last 2 versions",
+  "dependencies": {
+    "@fontsource/karma": "^5.2.8"
+  }
 }
