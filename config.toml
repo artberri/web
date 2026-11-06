@@ -46,3 +46,7 @@ pygmentsUseClasses = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[security.node.permissions]
+# postcss-url copies @fontsource files here (see postcss.config.js).
+allowWrite = ["public/fonts", "static/fonts"]
