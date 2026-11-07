@@ -31,4 +31,4 @@ I'd say also that I do it because I know that a lot of you are willing to read [
 
 ## See you soon!
 
-[1]: https://ostatic.com/blog/more-bad-english-please
+[1]: https://web.archive.org/web/20240602095222/http://ostatic.com/blog/more-bad-english-please

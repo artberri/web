@@ -147,4 +147,4 @@ PD.3. Si con todo este lío hacer la renta tiene alguna complicación ampliaré 
 [2]: https://www.mites.gob.es/fogasa/default.html
 [3]: https://vlex.es/tags/articulo-85-ley-concursal-794024
 [4]: https://www.boe.es/diario_boe/txt.php?id=BOE-B-2017-59484
-[5]: https://www.mites.gob.es/fogasa/faqs.html
+[5]: https://www.mites.gob.es/fogasa/default.html

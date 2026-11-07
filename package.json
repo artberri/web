@@ -8,9 +8,9 @@
     "pnpm": "^12.0.0"
   },
   "scripts": {
-    "check-links": "blc run -c linkchecker.js",
+    "check-links": "linkinator public",
     "build": "hugo --minify",
-    "test": "start-server-and-test :1313 check-links",
+    "test": "pnpm run check-links",
     "serve": "hugo server",
     "draft": "hugo server --buildDrafts --buildFuture",
     "start": "http-server public -p 1313",
@@ -27,8 +27,8 @@
     "@fontsource/fjalla-one": "^5.3.0",
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "browserslist": "^4.29.5",
-    "bs-broken-links-checker": "^0.2.0",
     "http-server": "^14.1.1",
+    "linkinator": "^8.1.0",
     "postcss": "^8.5.32",
     "postcss-cli": "^12.0.0",
     "postcss-import": "^17.0.1",
@@ -38,7 +38,6 @@
     "prettier": "^3.9.10",
     "reset-css": "^5.0.2",
     "sidr": "^2.2.1",
-    "start-server-and-test": "^3.0.13",
     "wrangler": "^4.158.0"
   },
   "browserslist": "last 2 versions",

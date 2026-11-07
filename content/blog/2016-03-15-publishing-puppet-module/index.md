@@ -9,7 +9,7 @@ resources:
   src: "images/publishing-puppet-module.png"
 ---
 
-There's a lot [of](https://forge.puppet.com/about/approved/criteria) [great](https://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppetlabs.com/) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
+There's a lot [of](https://forge.puppet.com/about/approved/criteria) [great](https://bombasticmonkey.com/2011/12/27/stop-writing-puppet-modules-that-suck/) [information](https://www.devco.net/archives/2012/12/13/simple-puppet-module-structure-redux.php) online about how to write a good [Puppet](https://puppet.com) module. In this post I'm going to focus on the techniques we've used to have our modules officially '[approved](https://forge.puppetlabs.com/approved)' by PuppetLabs.
 
 I'm assuming you've either built an entirely new module, or substantially improved one on the [Forge](https://forge.puppetlabs.com/), and that you'd like to prove this is a good quality module, so that it could gain approval by PuppetLabs.
 
@@ -19,7 +19,7 @@ Once you've published your module to the Forge, you've got a [Quality Score](htt
 
 ## Code Quality
 
-The Puppet Language has a [style guide](https://puppet.com/docs/puppet/7/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](https://puppet-lint.com/).
+The Puppet Language has a [style guide](https://puppet.com/docs/puppet/7/style_guide.html) that you should follow. You can use the same tool that they use to validate your code before publishing, it's called [puppet-lint](https://github.com/rodjek/puppet-lint).
 
 We will use [Rake](https://github.com/ruby/rake) (the common build utility for Ruby) to build our project, so add it to your gem dependencies if it has not been added already and create a Rakefile with this content:
 
@@ -356,7 +356,7 @@ class yourmodule (
 }
 {{< / highlight >}}
 
-With this approach you will allow to use the defines to the people that are using [hiera](https://docs.puppetlabs.com/hiera/3.0/), or tools like [Foreman](https://theforeman.org/), to configure their nodes.
+With this approach you will allow to use the defines to the people that are using [hiera](https://help.puppet.com/core/current/Content/PuppetCore/hiera.htm), or tools like [Foreman](https://theforeman.org/), to configure their nodes.
 
 Stay tuned to the issues and to the pull requests of your module in Github, and try to implement the feature requests of the users of your module when they are reasonible. PuppetLabs look for "a level of community engagement" around your module to approve it.
 

@@ -1,0 +1,18 @@
+{
+	"recurse": true,
+	"concurrency": 100,
+	"timeout": 5000,
+	"retryErrors": true,
+	"retryErrorsCount": 5,
+	"verbosity": "error",
+	"//": "The last three skips are links that work in a browser but fail here (403 for bots, or mites.gob.es sending an incomplete TLS chain). Check them by hand: https://www.mites.gob.es/fogasa/default.html, https://lnk.bio/, https://www.notion.so/help/connect-a-custom-domain-with-notion-sites",
+	"skip": [
+		"^https://bsky\\.app/intent/compose",
+		"^https://www\\.linkedin\\.com/shareArticle",
+		"^https://www\\.reddit\\.com/submit",
+		"^https://news\\.ycombinator\\.com/submit",
+		"^https://www\\.mites\\.gob\\.es/fogasa/",
+		"^https://lnk\\.bio/",
+		"^https://www\\.notion\\.so/help/connect-a-custom-domain-with-notion-sites"
+	]
+}

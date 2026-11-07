@@ -146,7 +146,7 @@ I hope you enjoyed this reading!
 [7]: https://gist.github.com/peterjmit/3864743
 [8]: https://angular.io/
 [9]: https://emberjs.com/
-[10]: https://facebook.github.io/react/
+[10]: https://react.dev/
 [11]: https://github.com/artberri/npm-yarn-benchmark
 [12]: https://travis-ci.org/artberri/npm-yarn-benchmark
 [15]: https://circleci.com/gh/artberri/npm-yarn-benchmark
