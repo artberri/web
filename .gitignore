@@ -10,6 +10,3 @@ resources/_gen/
 .hugo_build.lock
 hugo_stats.json
 static/fonts/
-
-# Link checker
-reports/
