@@ -2,9 +2,29 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="/fonts/de22ffac.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/3885fe28.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/98d62cbe.woff2" as="font" type="font/woff2" crossorigin>
+  {{/* Browsers to transform syntax (e.g. nesting) and add prefixes for:
+       roughly browserslist's "baseline widely available". */}}
+  {{ $opts := dict
+    "minify" hugo.IsProduction
+    "target" (slice "chrome115" "edge115" "firefox116" "ios16.4" "opera101" "safari16.4")
+  }}
+  {{ $css := resources.Get "css/main.css" | css.Build $opts }}
+  {{ $critical := resources.Get "css/critical.css" | css.Build $opts }}
+  {{ $printCss := resources.Get "css/print.css" | css.Build $opts }}
+  {{ if hugo.IsProduction }}
+    {{ $css = $css | resources.Fingerprint "sha512" }}
+    {{ $printCss = $printCss | resources.Fingerprint "sha512" }}
+  {{ end }}
+
+  {{/* Preload the fonts used above the fold. css.Build copies the font files
+       and rewrites their URLs, so take each URL from the built CSS. */}}
+  {{ range slice "fjalla-one-latin-400-normal" "karma-latin-400-normal" "karma-latin-700-normal" }}
+    {{ with findRESubmatch (printf `url\(["']?(/[^)"']*/%s-[^)"'/]+\.woff2)["']?\)` .) $critical.Content 1 }}
+      <link rel="preload" href="{{ index . 0 1 }}" as="font" type="font/woff2" crossorigin>
+    {{ else }}
+      {{ errorf "head.html: no woff2 URL for font %q in critical.css" . }}
+    {{ end }}
+  {{ end }}
 
   {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
@@ -18,24 +38,11 @@
     })();
   </script>
 
-  {{/* Deferred so PurgeCSS runs after hugo_stats.json lists every page's classes. */}}
-  {{ with (templates.Defer (dict "key" "global")) }}
-    {{- $css := resources.Get "css/main.css" | css.PostCSS }}
-    {{- $critical := resources.Get "css/critical.css" | css.PostCSS }}
-    {{- $printCss := resources.Get "css/print.css" | css.PostCSS }}
+  <style>{{ $critical.Content | safeCSS }}</style>
 
-    {{- if hugo.IsProduction }}
-      {{- $css = $css | resources.Minify | resources.Fingerprint "sha512" }}
-      {{- $critical = $critical | resources.Minify }}
-      {{- $printCss = $printCss | resources.Minify | resources.Fingerprint "sha512" }}
-    {{- end }}
-
-    {{- /* Deferred output skips HTML minification, so keep it on one line. */ -}}
-    <style>{{ $critical.Content | safeCSS }}</style>
-    {{- "" }}<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
-    {{- "" }}<noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
-    {{- "" }}<link rel="stylesheet" href="{{ $printCss.RelPermalink }}" integrity="{{ $printCss.Data.Integrity }}" media="print">
-  {{- end }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
+  <noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
+  <link rel="stylesheet" href="{{ $printCss.RelPermalink }}" integrity="{{ $printCss.Data.Integrity }}" media="print">
 
   {{ range .Params.custom_css }}
     <link rel="stylesheet" href="{{ . }}">

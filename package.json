@@ -25,22 +25,13 @@
   "devDependencies": {
     "@fontsource/fira-code": "^5.3.0",
     "@fontsource/fjalla-one": "^5.3.0",
-    "@fullhuman/postcss-purgecss": "^8.0.0",
-    "browserslist": "^4.29.5",
     "http-server": "^14.1.1",
     "linkinator": "^8.1.0",
-    "postcss": "^8.5.32",
-    "postcss-cli": "^12.0.0",
-    "postcss-import": "^17.0.1",
-    "postcss-normalize": "^13.0.1",
-    "postcss-preset-env": "^11.6.2",
-    "postcss-url": "^10.1.4",
     "prettier": "^3.9.10",
     "reset-css": "^5.0.2",
     "sidr": "^2.2.1",
     "wrangler": "^4.158.0"
   },
-  "browserslist": "last 2 versions",
   "dependencies": {
     "@fontsource/karma": "^5.3.0"
   }

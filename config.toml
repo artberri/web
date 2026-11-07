@@ -39,15 +39,7 @@ pygmentsUseClasses = true
     [privacy.youtube]
         disable = true
 
-[build]
-  writeStats = true
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[security.node.permissions]
-# postcss-url copies @fontsource files here (see postcss.config.js).
-# The /* is needed: Node only grants a missing folder itself, not files in it.
-allowWrite = ["public/fonts/*", "static/fonts/*"]
