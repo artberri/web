@@ -7,7 +7,7 @@
         {{- partial "footer.html" . -}}
         {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
         {{ if hugo.IsProduction }}
-        {{ $built = $built | resources.Minify | resources.PostProcess }}
+        {{ $built = $built | resources.Minify }}
         {{ end }}
         <script defer type="text/javascript" src="{{ $built.RelPermalink }}"></script>
         {{ range .Params.custom_scripts }}

@@ -10,16 +10,6 @@
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
 
-  {{ $css := resources.Get "css/main.css" | css.PostCSS }}
-  {{ $critical := resources.Get "css/critical.css" | css.PostCSS }}
-  {{ $printCss := resources.Get "css/print.css" | css.PostCSS }}
-
-  {{ if hugo.IsProduction }}
-    {{ $css = $css | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}
-    {{ $critical = $critical | resources.Minify | resources.PostProcess }}
-    {{ $printCss = $printCss | resources.Minify | resources.Fingerprint "sha512" | resources.PostProcess }}
-  {{ end }}
-
   <script type="text/javascript" nonce="themeswitch">
     (function () {
         var userCurrentPreference = localStorage.getItem("theme");
@@ -28,11 +18,24 @@
     })();
   </script>
 
-  <style>{{ $critical.Content | safeCSS }}</style>
+  {{/* Deferred so PurgeCSS runs after hugo_stats.json lists every page's classes. */}}
+  {{ with (templates.Defer (dict "key" "global")) }}
+    {{- $css := resources.Get "css/main.css" | css.PostCSS }}
+    {{- $critical := resources.Get "css/critical.css" | css.PostCSS }}
+    {{- $printCss := resources.Get "css/print.css" | css.PostCSS }}
 
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
-  <noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
-  <link rel="stylesheet" href="{{ $printCss.RelPermalink }}" integrity="{{ $printCss.Data.Integrity }}" media="print">
+    {{- if hugo.IsProduction }}
+      {{- $css = $css | resources.Minify | resources.Fingerprint "sha512" }}
+      {{- $critical = $critical | resources.Minify }}
+      {{- $printCss = $printCss | resources.Minify | resources.Fingerprint "sha512" }}
+    {{- end }}
+
+    {{- /* Deferred output skips HTML minification, so keep it on one line. */ -}}
+    <style>{{ $critical.Content | safeCSS }}</style>
+    {{- "" }}<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!=='all')media='all'" >
+    {{- "" }}<noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>
+    {{- "" }}<link rel="stylesheet" href="{{ $printCss.RelPermalink }}" integrity="{{ $printCss.Data.Integrity }}" media="print">
+  {{- end }}
 
   {{ range .Params.custom_css }}
     <link rel="stylesheet" href="{{ . }}">
