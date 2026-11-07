@@ -9,7 +9,7 @@
   },
   "scripts": {
     "check-links": "linkinator public",
-    "build": "hugo --minify",
+    "build": "hugo --minify --gc",
     "test": "pnpm run check-links",
     "serve": "hugo server",
     "draft": "hugo server --buildDrafts --buildFuture",
