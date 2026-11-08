@@ -2,6 +2,7 @@
 slug: about-me
 title: About me
 description: Alberto Varela's contact page
+profilePage: true
 ---
 
 I'm **Alberto Varela**, a 42 years old **full-stack developer** based in Bilbao with more than 20 years of experience. I'm passionate about everything related to web development, and I'm currently working as a Product Engineer at [Paired](https://www.paired.com/). The easiest way to get in touch is via email: [hello@albertovarela.net](mailto:hello@albertovarela.net).

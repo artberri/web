@@ -1,0 +1,79 @@
+{{- /*
+JSON-LD structured data. Every page describes the site and its author, so
+search engines and AI assistants can tie the posts and projects to one
+person. Blog posts add a BlogPosting, and a page with `profilePage: true` in
+its front matter becomes the author's ProfilePage.
+*/ -}}
+{{- $personID := printf "%s#person" site.BaseURL }}
+{{- $websiteID := printf "%s#website" site.BaseURL }}
+{{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+
+{{- $person := dict
+	"@type" "Person"
+	"@id" $personID
+	"name" site.Params.author
+	"url" site.BaseURL
+	"image" (resources.Get "img/alberto240.png").Permalink
+	"jobTitle" "Full Stack Developer"
+	"homeLocation" (dict "@type" "Place" "name" "Bilbao, Spain")
+	"sameAs" (slice
+		"https://github.com/artberri"
+		"https://bsky.app/profile/albertovarela.net"
+		"https://www.linkedin.com/in/artberri"
+	)
+}}
+
+{{- $website := dict
+	"@type" "WebSite"
+	"@id" $websiteID
+	"name" site.Title
+	"url" site.BaseURL
+	"description" site.Params.description
+	"inLanguage" site.Language.Locale
+	"author" (dict "@id" $personID)
+	"publisher" (dict "@id" $personID)
+}}
+
+{{- $graph := slice $website $person }}
+
+{{- if and .IsPage (eq .Section "blog") }}
+	{{- $post := dict
+		"@type" "BlogPosting"
+		"@id" (printf "%s#post" .Permalink)
+		"headline" (.Title | plainify)
+		"url" .Permalink
+		"mainEntityOfPage" .Permalink
+		"datePublished" (.PublishDate.Format $ISO8601)
+		"dateModified" (.Lastmod.Format $ISO8601)
+		"inLanguage" site.Language.Locale
+		"wordCount" .WordCount
+		"author" (dict "@id" $personID)
+		"publisher" (dict "@id" $personID)
+		"isPartOf" (dict "@id" $websiteID)
+	}}
+	{{- with .Description | default .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+		{{- $post = merge $post (dict "description" .) }}
+	{{- end }}
+	{{- with .GetTerms "tags" }}
+		{{- $keywords := slice }}
+		{{- range . }}{{ $keywords = $keywords | append .Title }}{{ end }}
+		{{- $post = merge $post (dict "keywords" $keywords) }}
+	{{- end }}
+	{{- $images := slice }}
+	{{- range partial "funcs/get-page-images" . }}{{ $images = $images | append .Permalink }}{{ end }}
+	{{- with .Resources.GetMatch "featured" }}{{ $images = $images | append .Permalink }}{{ end }}
+	{{- with $images }}
+		{{- $post = merge $post (dict "image" .) }}
+	{{- end }}
+	{{- $graph = $graph | append $post }}
+{{- else if .Params.profilePage }}
+	{{- $graph = $graph | append (dict
+		"@type" "ProfilePage"
+		"@id" .Permalink
+		"url" .Permalink
+		"name" (.Title | plainify)
+		"mainEntity" (dict "@id" $personID)
+		"isPartOf" (dict "@id" $websiteID)
+	) }}
+{{- end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
