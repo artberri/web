@@ -1,4 +1,18 @@
 {{ $featured_image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ if eq $featured_image.MediaType.SubType "gif" }}
+{{/* Animated GIFs are published as they are: resizing every frame exceeds Hugo's image memory limit. */}}
+<p class="content-img">
+  {{ if .Title }}<figure>{{ end }}
+  <img
+    src="{{ $featured_image.RelPermalink }}"
+    alt="{{ .Text }}"
+    style="aspect-ratio: {{ $featured_image.Width }} / {{ $featured_image.Height }}"
+    loading="lazy"
+  />
+  {{ if .Title }}<figcaption>{{ .Title | safeHTML }}</figcaption>{{ end }}
+  {{ if .Title }}</figure>{{ end }}
+</p>
+{{ else }}
 {{ $image := $featured_image.Resize "800x q90 Linear" }}
 {{ $image_medium := $featured_image.Resize "640x q90" }}
 {{ $image_small := $featured_image.Resize "360x" }}
@@ -29,3 +43,4 @@
   {{ if .Title }}<figcaption>{{ .Title | safeHTML }}</figcaption>{{ end }}
   {{ if .Title }}</figure>{{ end }}
 </p>
+{{ end }}
