@@ -68,7 +68,7 @@ strong {
 
 .post-details-info {
   font-size: 1rem;
-  font-family: Arial, sans-serif;
+  font-family: var(--monospace-font);
   color: var(--text-color-secondary);
   transition: var(--transition);
 }

@@ -8,32 +8,41 @@
   }
 
   & .image-link {
+    display: block;
+    border: var(--border);
+    border-radius: 0.6rem;
+    overflow: hidden;
     text-decoration: none;
 
     & img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
       background: rgba(0, 0, 0, 0.05);
       aspect-ratio: 1.91 / 1;
       max-width: 100%;
     }
   }
 
+  & .post-meta {
+    font-size: 0.85rem;
+  }
+
   & .summary {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
 
     &.more a {
-      border: var(--border);
-      border-color: var(--text-color-secondary);
-      text-decoration: none;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      font-family: var(--header-font);
-      font-size: 1rem;
-      color: var(--text-color-secondary);
-      transition: var(--transition);
-      border-radius: 2rem;
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      font-family: var(--monospace-font);
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-underline-offset: 0.25em;
 
       &:hover {
-        border-color: var(--text-color);
         color: var(--text-color);
       }
     }

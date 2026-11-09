@@ -2,9 +2,13 @@
   max-width: var(--content-with);
   margin: 0 auto;
   line-height: 1.4;
-  padding: 4rem 2rem;
-  border-top: var(--border);
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
   display: flex;
+  align-items: center;
   transition: var(--transition);
 
   & .image {
@@ -43,5 +47,12 @@
       height: 1.5rem;
       width: 1.5rem;
     }
+  }
+}
+
+@media (max-width: 58rem) {
+  .author {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }

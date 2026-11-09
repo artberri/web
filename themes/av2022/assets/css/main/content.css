@@ -32,9 +32,9 @@
   }
 
   & blockquote {
-    background: var(--bg-color-secondary);
+    border-left: 3px solid var(--accent);
     transition: var(--transition);
-    padding: 2rem;
+    padding: 0.25rem 0 0.25rem 1.5rem;
     margin-bottom: 1.5rem;
 
     & p {
