@@ -14,6 +14,11 @@ body {
   --text-color: #303030;
   --text-color-secondary: #707070;
   --border: 1px solid #eeeeee;
+  --accent: #5e52bd;
+  --accent-bg: #efedfb;
+  --card-bg: #faf9fc;
+  --spotlight: rgba(107, 95, 199, 0.1);
+  --spotlight-dot: rgba(48, 48, 48, 0.22);
 }
 .dark body {
   --bg-color: #292639;
@@ -22,6 +27,11 @@ body {
   --text-color: #ebeaf7;
   --text-color-secondary: #bebbd2;
   --border: 1px solid #3a3650;
+  --accent: #b6a9ff;
+  --accent-bg: #3a3556;
+  --card-bg: #2f2c42;
+  --spotlight: rgba(150, 135, 255, 0.16);
+  --spotlight-dot: rgba(235, 234, 247, 0.28);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +42,11 @@ body {
     --text-color: #ebeaf7;
     --text-color-secondary: #bebbd2;
     --border: 1px solid #3a3650;
+    --accent: #b6a9ff;
+    --accent-bg: #3a3556;
+    --card-bg: #2f2c42;
+    --spotlight: rgba(150, 135, 255, 0.16);
+    --spotlight-dot: rgba(235, 234, 247, 0.28);
   }
   .light body {
     --bg-color: #fff;
@@ -40,5 +55,10 @@ body {
     --text-color: #303030;
     --text-color-secondary: #707070;
     --border: 1px solid #eeeeee;
+    --accent: #5e52bd;
+    --accent-bg: #efedfb;
+    --card-bg: #faf9fc;
+    --spotlight: rgba(107, 95, 199, 0.1);
+    --spotlight-dot: rgba(48, 48, 48, 0.22);
   }
 }

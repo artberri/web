@@ -166,3 +166,7 @@
 		}
 	}
 }
+
+.header .menu-link[aria-current="page"] {
+	color: var(--accent);
+}
