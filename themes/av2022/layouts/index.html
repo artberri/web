@@ -1,21 +1,51 @@
 {{ define "main" }}
 <main class="home">
-  <div class="claim container">
-    <h1>
-      <span>I'm Alberto Varela,</span>
-      <span>a full stack developer</span>
-      <span>based in Bilbao</span>
-    </h1>
-  </div>
-  <div class="resume container">
-    <p>
-      Here you will find <a href="/projects/">my latest projects</a>,
-      <a href="/blog/">my blog</a>, and a little bit <a href="/about-me/">about me</a>.
-      The easiest way to get in touch is by <a href="mailto:hello@albertovarela.net">emailing me</a>,
-      but feel free <a rel="me" href="https://bsky.app/profile/albertovarela.net" target="_blank" rel="noopener noreferrer">to follow or DM me</a>,
-      take a gander at <a rel="me" href="https://www.linkedin.com/in/artberri" target="_blank" rel="noopener noreferrer">my resume</a>,
-      or review <a rel="me" href="https://github.com/artberri" target="_blank" rel="noopener noreferrer">my code</a>.
-    </p>
-  </div>
+	<div class="spotlight" aria-hidden="true"></div>
+	<div class="spotlight-dots" aria-hidden="true"></div>
+
+	<div class="home-inner container">
+		<p class="greeting">Kaixo! Hello! ¡Hola!</p>
+		<h1 class="claim">
+			<span>I'm <span class="name">Alberto Varela</span>,</span>
+			<span>a full stack developer</span>
+			<span>based in Bilbao</span>
+		</h1>
+		<p class="resume">
+			Lead Software Engineer at <a href="https://www.paired.com/">Paired</a>.
+			Here you will find <a href="/projects/">my latest projects</a>,
+			<a href="/blog/">my blog</a>, and a little bit <a href="/about-me/">about me</a>.
+			The easiest way to get in touch is by <a href="mailto:hello@albertovarela.net">emailing me</a>.
+		</p>
+
+		<div class="home-footer">
+			{{ with first 1 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+			{{ range . }}
+			<a class="latest-post" href="{{ .RelPermalink }}">
+				<span class="badge">New post</span>
+				<span class="latest-title">{{ .Title }}</span>
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+			</a>
+			{{ end }}
+			{{ end }}
+
+			<nav class="socials" aria-label="Elsewhere">
+				<a href="mailto:hello@albertovarela.net" aria-label="Email">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+				</a>
+				<a rel="me" href="https://bsky.app/profile/albertovarela.net" aria-label="Bluesky">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m 5.6257257,2.2683726 c 2.5815351,2.194998 5.3575693,6.6553138 6.3742703,9.0512264 1.0167,-2.3908897 3.792735,-6.8512056 6.374269,-9.0512264 1.861005,-1.58722955 4.875743,-2.81281185 4.875743,1.0949876 0,0.7785461 -0.393419,6.5548565 -0.623282,7.4941338 -0.80452,3.254826 -3.730849,4.088624 -6.334486,3.581312 4.54863,0.879004 5.706784,3.792274 3.204817,6.705543 -4.74755,5.535213 -6.820735,-1.386314 -7.351186,-3.15939 v 0 c -0.07516,-0.246121 -0.114931,-0.391785 -0.145875,-0.391785 -0.03095,0 -0.07072,0.150687 -0.145875,0.391785 v 0 C 11.323669,19.758035 9.2460635,26.679562 4.5029347,21.144349 2.0053878,18.23108 3.1591219,15.31781 7.7077515,14.438806 5.1041142,14.946118 2.1777848,14.11232 1.3776857,10.852472 1.1434026,9.913193 0.7499837,4.1368834 0.7499837,3.3583373 c 0,-3.90779944 3.014738,-2.68221712 4.875742,-1.0949876 z"/></svg>
+				</a>
+				<a rel="me" href="https://www.linkedin.com/in/artberri" aria-label="LinkedIn (resume)">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 7H4C2.9 7 2 7.9 2 9V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V9C22 7.9 21.1 7 20 7H16M8 7V3.6C8 3.3 8.3 3 8.6 3H15.4C15.7 3 16 3.3 16 3.6V7M8 7H16"/></svg>
+				</a>
+				<a rel="me" href="https://github.com/artberri" aria-label="GitHub">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 22V19.2C16 18.7 16 18.2 15.8 17.8C15.6 17.3 15.4 16.9 15.1 16.5C18.2 16.2 21.5 15 21.5 9.5C21.5 8.2 21 6.8 20 5.8C20.5 4.6 20.4 3.2 19.9 2C19.9 2 18.7 1.7 16 3.5C13.7 2.9 11.3 2.9 9 3.5C6.3 1.7 5.1 2 5.1 2C4.6 3.2 4.5 4.6 5 5.8C4 6.8 3.5 8.2 3.5 9.6C3.5 15 6.8 16.2 9.9 16.6C9.6 16.9 9.4 17.3 9.2 17.8C9 18.2 9 18.7 9 19.2V22"/><path d="M9 20C6 21 3.5 20 2 17"/></svg>
+				</a>
+				<a href="/blog/index.xml" aria-label="RSS feed">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+				</a>
+			</nav>
+		</div>
+	</div>
 </main>
 {{ end }}

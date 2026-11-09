@@ -12,3 +12,21 @@ btn.addEventListener("click", () => {
     : userSystemPreference;
   localStorage.setItem("theme", userCurrentPreference);
 });
+
+// Home: a soft spotlight follows the mouse. Touch screens and reduced motion
+// keep the static glow set in home.css.
+const home = document.querySelector(".home");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (home && !reducedMotion.matches) {
+  let frame = 0;
+  home.addEventListener("pointermove", (event) => {
+    if (event.pointerType !== "mouse" || frame) return;
+    frame = requestAnimationFrame(() => {
+      frame = 0;
+      const rect = home.getBoundingClientRect();
+      home.style.setProperty("--x", `${event.clientX - rect.left}px`);
+      home.style.setProperty("--y", `${event.clientY - rect.top}px`);
+    });
+  });
+}
