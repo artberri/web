@@ -6,10 +6,12 @@
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
         {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
+        {{/* Fingerprint it like main.css: the file is cached for hours, so a
+             new deploy needs a new URL or browsers keep running the old one. */}}
         {{ if hugo.IsProduction }}
-        {{ $built = $built | resources.Minify }}
+        {{ $built = $built | resources.Minify | resources.Fingerprint "sha512" }}
         {{ end }}
-        <script defer type="text/javascript" src="{{ $built.RelPermalink }}"></script>
+        <script defer type="text/javascript" src="{{ $built.RelPermalink }}"{{ with $built.Data.Integrity }} integrity="{{ . }}"{{ end }}></script>
         {{ range .Params.custom_scripts }}
         <script defer type="text/javascript" src="{{ . }}"></script>
         {{ end }}
