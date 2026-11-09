@@ -20,6 +20,8 @@ pygmentsUseClasses = true
 [params]
     author = "Alberto Varela"
     description = "Personal page of Alberto Varela, a Full Stack Web Developer based in Bilbao."
+    # Year and month only, for the {{< age >}} shortcode: the full date stays private.
+    birthMonth = "1982-12"
 
 [author]
     name = "Alberto Varela"

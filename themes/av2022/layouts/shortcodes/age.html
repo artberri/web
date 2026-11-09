@@ -1,0 +1,9 @@
+{{- /* My age at build time, from site.Params.birthMonth ("YYYY-MM"). The
+	birthday counts as the 1st of that month, so it can be a few days early. */ -}}
+{{- $birth := time.AsTime (printf "%s-01" site.Params.birthMonth) -}}
+{{- $now := time.Now -}}
+{{- $age := sub $now.Year $birth.Year -}}
+{{- if lt (int $now.Month) (int $birth.Month) -}}
+	{{- $age = sub $age 1 -}}
+{{- end -}}
+{{- $age -}}
