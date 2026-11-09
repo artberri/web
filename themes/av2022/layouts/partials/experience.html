@@ -1,0 +1,32 @@
+{{/* Work history from data/experience.yaml: the first `visible` roles, then
+     the rest inside a <details> so they work without JavaScript. */}}
+{{ with hugo.Data.experience }}
+	{{ $visible := .visible | default 4 }}
+	{{ $earlier := after $visible .jobs }}
+	<section class="experience" aria-labelledby="experience-title">
+		<div class="experience-header">
+			<h2 id="experience-title">Experience</h2>
+			<a href="https://www.linkedin.com/in/artberri">Full CV on LinkedIn ↗</a>
+		</div>
+
+		<ol class="jobs">
+			{{ range first $visible .jobs }}
+				{{ partial "experience-job.html" . }}
+			{{ end }}
+		</ol>
+
+		{{ with $earlier }}
+			<details class="earlier">
+				<summary>
+					<span class="show">Show earlier roles ({{ len . }})</span>
+					<span class="hide">Show fewer roles</span>
+				</summary>
+				<ol class="jobs">
+					{{ range . }}
+						{{ partial "experience-job.html" . }}
+					{{ end }}
+				</ol>
+			</details>
+		{{ end }}
+	</section>
+{{ end }}

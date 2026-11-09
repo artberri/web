@@ -1,0 +1,100 @@
+# Work history shown on the About page, newest first. The first `visible`
+# roles show by default; the rest sit behind "Show earlier roles". A job
+# without `url` shows its company as plain text (Travioor, Ve Global
+# and Alianzo are gone or moved on).
+visible: 4
+jobs:
+  - role: Lead Software Engineer
+    company: Paired
+    url: https://www.paired.com/
+    dates: Nov 2022 — Now
+    datetime: 2022-11
+    place: Remote
+    summary: >-
+      A relationship app for couples with hundreds of thousands of daily users.
+      Full stack in TypeScript, on the Node.js backend and the React Native app.
+      Promoted from Senior to Lead in October 2025; I moved our data from
+      Firestore to PostgreSQL with a 0% error rate, built our first LLM features
+      and lead how the team uses AI coding agents.
+    tech: [TypeScript, Node.js, React Native, PostgreSQL, Redis, Google Cloud, Terraform, CI/CD]
+
+  - role: Full Stack Developer / Tech Lead
+    company: Genially
+    url: https://genially.com/
+    dates: Dec 2020 — Nov 2022
+    datetime: 2020-12
+    place: Remote
+    summary: >-
+      A platform for interactive content used by more than 10 million people.
+      Tech lead of the identity and authorisation app, and of the change that
+      let teams, not just individuals, use the platform. Moved the apps into a
+      monorepo and from JavaScript to TypeScript.
+    tech: [TypeScript, Node.js, React, MongoDB, AWS, CI/CD]
+
+  - role: Software Development Engineer
+    company: Plain Concepts
+    url: https://www.plainconcepts.com/
+    dates: Sep 2017 — Dec 2020
+    datetime: 2017-09
+    place: Bilbao / Remote
+    summary: >-
+      A software consultancy: I built software for its clients, such as banks,
+      insurance and medical companies. C# backends, Angular, Vue and React
+      frontends, CI/CD pipelines and architecture, working directly with the
+      clients on requirements, plus training courses for them on Git, Azure
+      and automation.
+    tech: [C#, TypeScript, Angular, Vue, React, Azure, Terraform, CI/CD]
+
+  - role: Development Manager
+    company: Travioor
+    dates: Apr 2016 — Sep 2017
+    datetime: 2016-04
+    place: Bilbao
+    summary: >-
+      Acted as the CTO of a small start-up: line-managed a team of six, owned
+      the long-term technical view, ran the infrastructure on Azure and wrote
+      the information security policy.
+    tech: [Azure, Puppet, Terraform, CI/CD]
+
+  - role: Development Manager / Software Architect
+    company: Ve Global
+    dates: Nov 2014 — Apr 2016
+    datetime: 2014-11
+    place: Bilbao
+    summary: >-
+      Led the tech side of a new project with a team of six, and took part in
+      moving hundreds of servers from on-premise to Azure, fully automated.
+    tech: [Azure, Terraform, Puppet, CI/CD, Automation, Agile]
+
+  - role: Web Developer
+    company: LIN3S
+    url: https://www.lin3s.com/
+    dates: Jan 2012 — Nov 2014
+    datetime: 2012-01
+    place: Bilbao
+    summary: >-
+      Websites and REST APIs with WordPress and Symfony, frontends with jQuery
+      and AngularJS. Introduced version control and clean-code practices at the
+      company.
+    tech: [PHP, Symfony, WordPress, AngularJS, CI/CD]
+
+  - role: Web Developer
+    company: Alianzo Networks
+    dates: May 2007 — Jan 2012
+    datetime: 2007-05
+    place: Bilbao
+    summary: >-
+      Social networks with Symfony and an in-house framework, third-party APIs
+      (Facebook, Twitter, Google Maps), web scraping, SEO, performance and
+      server administration.
+    tech: [PHP, Symfony, SEO]
+
+  - role: Web Developer
+    company: Freelance
+    dates: Sep 2002 — May 2007
+    datetime: 2002-09
+    place: Bilbao
+    summary: >-
+      Websites for small companies while I was studying, built with PHP-Nuke,
+      WordPress and plain HTML and CSS.
+    tech: [PHP-Nuke, WordPress, HTML, CSS]

@@ -1,0 +1,21 @@
+<li class="job">
+	<div class="job-when">
+		<time datetime="{{ .datetime }}">{{ .dates }}</time>
+		<span>{{ .place }}</span>
+	</div>
+	<div class="job-what">
+		<h3>
+			{{ .role }}
+			{{ with .company }}
+				<span class="sep" aria-hidden="true">·</span>
+				{{ with $.url }}<a href="{{ . }}">{{ $.company }}</a>{{ else }}<span class="company">{{ $.company }}</span>{{ end }}
+			{{ end }}
+		</h3>
+		<p>{{ .summary }}</p>
+		{{ with .tech }}
+			<ul class="tags" aria-label="Technologies">
+				{{ range . }}<li>{{ . }}</li>{{ end }}
+			</ul>
+		{{ end }}
+	</div>
+</li>

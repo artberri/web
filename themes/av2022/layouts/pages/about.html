@@ -1,0 +1,38 @@
+{{ define "main" }}
+	<article class="page single about" role="main">
+		<header class="subheader">
+			<div class="container content">
+				<h1 class="title" itemprop="name headline">{{- .Title -}}</h1>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="about-intro">
+				{{ with .Params.photo }}
+					{{ with $.Resources.Get . }}
+						{{/* The photo is landscape with me on its left, so crop from there. */}}
+						{{ $jpg := .Fill "480x600 Left q85" }}
+						{{ $webp := .Fill "480x600 Left webp q85" }}
+						<picture class="about-photo">
+							<source type="image/webp" srcset="{{ $webp.RelPermalink }}" />
+							<img
+								src="{{ $jpg.RelPermalink }}"
+								width="{{ $jpg.Width }}"
+								height="{{ $jpg.Height }}"
+								alt="Alberto Varela"
+							/>
+						</picture>
+					{{ else }}
+						{{ errorf "about.html: photo %q not found in %s" . $.File.Path }}
+					{{ end }}
+				{{ end }}
+
+				<div class="about-text" itemprop="articleBody">
+					{{- .Content -}}
+				</div>
+			</div>
+
+			{{- partial "experience.html" . -}}
+		</div>
+	</article>
+{{ end }}

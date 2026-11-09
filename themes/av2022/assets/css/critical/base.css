@@ -93,3 +93,24 @@ strong {
     grid-template-columns: 1fr;
   }
 }
+
+/* `ul.tags` outweighs `.content ul` / `.content li` from the post styles. */
+ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  & li {
+    margin: 0;
+    padding: 0.45rem 0.65rem;
+    border-radius: 999px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-family: var(--monospace-font);
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+}
