@@ -4,6 +4,13 @@
 <p>Source code of my personal website and blog: <a href="https://www.albertovarela.net">www.albertovarela.net</a></p>
 </div>
 
+<a href="https://www.albertovarela.net">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset="./.github/readme/home-dark.webp">
+		<img src="./.github/readme/home-light.webp" alt="The home page of albertovarela.net: “I'm Alberto Varela, a full stack developer based in Bilbao”, a link to the latest post and social icons">
+	</picture>
+</a>
+
 ## Tech stack
 
 - [Hugo][hugo] (extended edition): static site generator. It also bundles the
@@ -116,10 +123,12 @@ text is in `themes/av2022/layouts/index.html`.
 ```text
 .
 ├── .github/workflows/deploy.yml  # CI: build and deploy to Cloudflare Pages
+├── .github/readme/               # screenshots shown in this README
 ├── archetypes/                   # templates for `hugo new content`
 ├── content/
 │   ├── blog/                     # one folder per post: YYYY-MM-DD-slug/
 │   └── pages/                    # about-me, projects, shop, 404, sidr docs
+├── data/                         # experience.yaml (about page) and projects.yaml
 ├── static/                       # copied as-is: favicons, _headers, _redirects, robots.txt
 ├── themes/av2022/
 │   ├── assets/
