@@ -4,295 +4,75 @@
 		<header class="subheader">
 			<div class="container">
 				<h1 class="title">My Pet Projects</h1>
+				<p class="intro">
+					Libraries, tools and small apps I build in my spare time.
+				</p>
 			</div>
 		</header>
 
-		<div class="content container">
-			<h2>Supported Projects</h2>
+		<div class="container">
+			<section aria-labelledby="supported">
+				<h2 id="supported">Supported Projects</h2>
+				<div class="project-grid">
+					{{ range hugo.Data.projects.supported }}
+						<article class="project-card">
+							<div class="project-head">
+								{{ with $.Resources.Get .image }}
+									{{ $img := .Fill "112x112 q90" }}
+									<img
+										src="{{ $img.RelPermalink }}"
+										width="56"
+										height="56"
+										alt=""
+									/>
+								{{ else }}
+									{{ errorf "projects.html: image %q not found" .image }}
+								{{ end }}
+								<div>
+									<h3><a href="{{ .url }}">{{ .name }}</a></h3>
+									<span class="kind">{{ .kind }}</span>
+								</div>
+							</div>
+							<p>
+								{{ .description }}
+								{{ with .post }}<a href="{{ . }}">Read why I built it</a>.{{ end }}
+							</p>
+							<div class="project-foot">
+								{{ with .tags }}
+									<ul class="tags" aria-label="Tags">
+										{{ range . }}<li>{{ . }}</li>{{ end }}
+									</ul>
+								{{ end }}
+								<a class="project-link" href="{{ .url }}"
+									>{{ .cta }} ↗<span class="visually-hidden">
+										({{ .name }})</span
+									></a
+								>
+							</div>
+						</article>
+					{{ end }}
+				</div>
+			</section>
 
-			<article class="project">
-				<div class="project-image">
-					<a href="https://github.com/artberri/sideline"
-						><img
-							height="200"
-							width="200"
-							src="images/sideline.png"
-							class="thumbnail"
-							alt="Sideline, a Claude Code mod"
-					/></a>
-				</div>
-
-				<div class="project-content">
-					<h1>
-						<a href="https://github.com/artberri/sideline">Sideline</a>
-					</h1>
-					<p>
-						A Claude Code mod that keeps the conversation clean: long commands,
-						diffs and tool chatter step aside into a tidy pane with your
-						changes, commits and commands.
-						<a href="/blog/2026/11/claude-code-talks-too-much/">Read why I built it</a>.
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a href="https://github.com/artberri/diod"
-						><img
-							height="200"
-							width="200"
-							src="images/diod.jpg"
-							class="thumbnail"
-							alt="DIOD, a dependency injection library for Typescript"
-					/></a>
-				</div>
-
-				<div class="project-content">
-					<h1>
-						<a href="https://github.com/artberri/diod">DIOD</a>
-						<a
-							class="icon"
-							title="DIOD, a dependency injection library for Typescript"
-							href="https://github.com/artberri/diod"
-						></a>
-					</h1>
-					<p>
-						A very opinionated and lightweight (under 2kB minified and gzipped)
-						inversion of control container and dependency injector for Node.js
-						or browser apps. It is available for vanilla Javascript usage but
-						its true power will be shown by building Typescript apps.
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a href="https://github.com/artberri/rollup-plugin-istanbul"
-						><img
-							height="200"
-							width="200"
-							src="images/rollup-javascript.png"
-							class="thumbnail"
-							alt="rollup-plugin-istanbul"
-					/></a>
-				</div>
-				<div class="project-content">
-					<h1>
-						<a href="https://github.com/artberri/rollup-plugin-istanbul"
-							>rollup-plugin-istanbul</a
-						>
-					</h1>
-					<p>
-						Seamless integration between the module bundler
-						<a href="https://rollupjs.org/">Rollup.js</a> and the code coverage
-						tool <a href="https://istanbul.js.org/">Istanbul</a> (node.js).
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a
-						href="https://marketplace.visualstudio.com/items?itemName=alberto-varela.unsafe-typescript"
-						><img
-							height="200"
-							width="200"
-							src="images/unsafe-ts.png"
-							class="thumbnail"
-							alt="Unsafe Typescript Highlighter, a Visual Studio Code extension"
-					/></a>
-				</div>
-
-				<div class="project-content">
-					<h1>
-						<a
-							href="https://marketplace.visualstudio.com/items?itemName=alberto-varela.unsafe-typescript"
-							>Unsafe Typescript Highlighter</a
-						>
-					</h1>
-					<p>
-						A Visual Studio Code extension that visually marks out unsafe
-						Typescript features in your code.
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a
-						href="https://marketplace.visualstudio.com/items?itemName=alberto-varela.monorepo-focus-workspace"
-						><img
-							height="200"
-							width="200"
-							src="images/monorepo-focus-workspace.png"
-							class="thumbnail"
-							alt="Monorepo Focus Workspace, a Visual Studio Code extension"
-					/></a>
-				</div>
-
-				<div class="project-content">
-					<h1>
-						<a
-							href="https://marketplace.visualstudio.com/items?itemName=alberto-varela.monorepo-focus-workspace"
-							>Monorepo Focus Workspace</a
-						>
-					</h1>
-					<p>
-						A Visual Studio Code extension that helps manage monorepos by
-						creating a partial tree view to focus on a single or multiple
-						workspaces. Supports NPM, Yarn, Pnpm, Lerna, and Bun.
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a href="https://izenak.eus/"
-						><img
-							height="200"
-							width="200"
-							src="images/izenak.png"
-							class="thumbnail"
-							alt="Izenak.eus"
-					/></a>
-				</div>
-				<div class="project-content">
-					<h1><a href="https://izenak.eus/">Izenak</a></h1>
-					<p>
-						A progressive web application (optimised for mobile) to find a
-						Basque name for your baby. I created it to choose the names of my
-						daughters and I've made it public to help other Basque parents find
-						the best names for their children.
-					</p>
-				</div>
-			</article>
-
-			<article class="project">
-				<div class="project-image">
-					<a href="https://github.com/artberri/express-http-context2"
-						><img
-							height="200"
-							width="200"
-							src="images/express-http-context2.png"
-							class="thumbnail"
-							alt="Express HTTP Context 2"
-					/></a>
-				</div>
-
-				<div class="project-content">
-					<h1>
-						<a href="https://github.com/artberri/express-http-context2"
-							>Express HTTP Context 2</a
-						>
-					</h1>
-					<p>
-						Modern request-scoped storage for Express.js, based on native
-						Node.js Asynchronous Local Storage: a place for user state, JWT
-						claims, correlation IDs and any other request data. A drop-in
-						replacement for express-http-context with ESM support and no
-						dependencies.
-					</p>
-				</div>
-			</article>
-
-			<article>
-				<div>
-					<h2>Unsupported / Deprecated Projects</h2>
-					<p>
-						I've built and I've used these projects in some moment but now I'm
-						not supporting them due to different reasons. You can use them but
-						I'm not going to give support to any issue you could have, at least
-						for now.
-					</p>
-					<ul>
+			<section class="unsupported" aria-labelledby="unsupported">
+				<h2 id="unsupported">Unsupported / Deprecated Projects</h2>
+				<p>
+					I've built and I've used these projects at some moment, but I'm no
+					longer supporting them. You can use them, but I'm not going to give
+					support to any issue you could have, at least for now.
+				</p>
+				<ul>
+					{{ range hugo.Data.projects.unsupported }}
 						<li>
-							<a
-								href="/sidr/"
-								>Sidr</a
-							>: jQuery plugin for creating off-canvas side menus and an
-							the easiest way for doing your menu responsive. It's the most
-							popular code I've ever wrote with almost 3,000 stars in Github
-							and used in more than 150.000
-							websites including fox.com, uscourts.gov,...
+							<div class="row">
+								<a href="{{ .url }}">{{ .name }}</a>
+								<span class="note">{{ .note }}</span>
+							</div>
+							<span class="description">{{ .description }}</span>
 						</li>
-
-						<li>
-							<a
-								href="https://github.com/artberri/efemerides20"
-								>Efemérides 2.0</a
-							>: My first pet project, online since 2008 until 2024. A website that took all
-							the Spanish ephemerides from Wikipedia, classified them and made
-							them available in a more structured way. It used to get more than 100k page
-							views per month, the most stupid and popular website I ever made. I used it
-							to learn different technologies and I rewrote it in several languages and frameworks.
-							I finally sold it in 2024.
-						</li>
-
-						<li>
-							<a
-								href="https://github.com/numcol/numcol"
-								>NumCol</a
-							>: The Brain Training Game About Matching Numbers And Colours. It's the
-							first and the unique game for phones I've ever developed. Originally
-							done with Cordova and vanilla Javascript, I've migrated it to Native
-							Script and later to Flutter. I know that is not the best game you
-							ever seen, but is fine for an elevator trip.
-						</li>
-						<li>
-							<a
-								href="https://www.npmjs.com/package/cordova-plugin-play-games-services"
-								>Google Play Games Services Cordova Plugin</a
-							>: Cordova plugin to use Google Play Games Services. It includes
-							methods for login, achievements, leaderboards,... (Available also
-							through npm, new Plugin Registry Format).
-						</li>
-						<li>
-							<a
-								href="https://market.nativescript.org/plugins/nativescript-wear-messaging"
-								>Wear Messaging Nativescript Plugin</a
-							>: A Nativescript Plugin that adds support for sending messages
-							between the phone and the watch using the Android MessageClient
-							API.
-						</li>
-						<li>
-							<a href="https://github.com/artberri/daddy">daddy</a>: A command
-							line interface (CLI) to manage DNS records in GoDaddy written in
-							Go.
-						</li>
-						<li>
-							<a href="https://forge.puppetlabs.com/modules/artberri/nvm"
-								>puppet-nvm</a
-							>: A Puppet module to simplify the task of installing Node Version
-							Manager (NVM) to install unique or multiple versions of Node.js.
-						</li>
-						<li>
-							<a href="https://forge.puppetlabs.com/modules/artberri/yarn"
-								>puppet-yarn</a
-							>
-							A Puppet module to simplify the task of installing yarn and that
-							supports package, npm or source installation methods.
-						</li>
-						<li>
-							<a href="https://plugins.jquery.com/html5storage/"
-								>Html5 Storage jQuery Plugin</a
-							>: A light (1,2K) jQuery Plugin to use Local Storage or Session
-							Storage without worrying about HTML5 support. It uses Cookies for
-							backward compatibility.
-						</li>
-						<li>
-							<a href="https://github.com/artberri/BerriartSitemapBundle"
-								>BerriartSitemapBundle</a
-							>: The BerriartSitemapBundle provides a way to create a xml
-							sitemap using doctrine in Symfony2.
-						</li>
-						<li>
-							<a href="https://profiles.wordpress.org/artberri/#content-plugins"
-								>Wordpress Plugins and Themes</a
-							>: All my Wordpress plugins/themes are unsupported/deprecated.
-						</li>
-					</ul>
-				</div>
-			</article>
+					{{ end }}
+				</ul>
+			</section>
 		</div>
 	</div>
 </main>

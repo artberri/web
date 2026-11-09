@@ -1,0 +1,133 @@
+# Projects page. `image` is a resource of content/pages/projects/.
+supported:
+  - name: Sideline
+    kind: Claude Code mod
+    url: https://github.com/artberri/sideline
+    cta: GitHub
+    image: images/sideline.png
+    description: >-
+      A Claude Code mod that keeps the conversation clean: long commands, diffs
+      and tool chatter step aside into a tidy pane with your changes, commits
+      and commands.
+    post: /blog/2026/11/claude-code-talks-too-much/
+    tags: [TypeScript, Claude Code]
+
+  - name: DIOD
+    kind: npm library
+    url: https://github.com/artberri/diod
+    cta: GitHub
+    image: images/diod.jpg
+    description: >-
+      A very opinionated and lightweight (under 2kB minified and gzipped)
+      inversion of control container and dependency injector for Node.js or
+      browser apps. Its true power shows when building Typescript apps.
+    tags: [TypeScript, IoC]
+
+  - name: rollup-plugin-istanbul
+    kind: npm library
+    url: https://github.com/artberri/rollup-plugin-istanbul
+    cta: GitHub
+    image: images/rollup-javascript.png
+    description: >-
+      Seamless integration between the module bundler Rollup.js and the code
+      coverage tool Istanbul.
+    tags: [JavaScript, Rollup]
+
+  - name: Unsafe Typescript Highlighter
+    kind: VS Code extension
+    url: https://marketplace.visualstudio.com/items?itemName=alberto-varela.unsafe-typescript
+    cta: Marketplace
+    image: images/unsafe-ts.png
+    description: >-
+      A Visual Studio Code extension that visually marks out unsafe Typescript
+      features in your code.
+    tags: [TypeScript, VS Code]
+
+  - name: Monorepo Focus Workspace
+    kind: VS Code extension
+    url: https://marketplace.visualstudio.com/items?itemName=alberto-varela.monorepo-focus-workspace
+    cta: Marketplace
+    image: images/monorepo-focus-workspace.png
+    description: >-
+      Helps manage monorepos by creating a partial tree view to focus on one or
+      more workspaces. Supports npm, Yarn, pnpm, Lerna and Bun.
+    tags: [Monorepos, VS Code]
+
+  - name: Izenak
+    kind: Web app
+    url: https://izenak.eus/
+    cta: izenak.eus
+    image: images/izenak.png
+    description: >-
+      A progressive web app, optimised for mobile, to find a Basque name for
+      your baby. I built it to choose the names of my daughters and made it
+      public to help other Basque parents.
+    tags: [PWA, Euskara]
+
+  - name: Express HTTP Context 2
+    kind: npm library
+    url: https://github.com/artberri/express-http-context2
+    cta: GitHub
+    image: images/express-http-context2.png
+    description: >-
+      Modern request-scoped storage for Express.js, based on native Node.js
+      Asynchronous Local Storage. A drop-in replacement for express-http-context
+      with ESM support and no dependencies.
+    tags: [TypeScript, Express]
+
+unsupported:
+  - name: Sidr
+    url: /sidr/
+    note: ~2.9k stars
+    description: >-
+      jQuery plugin for off-canvas side menus. My most popular code, used in
+      more than 150,000 websites including fox.com and uscourts.gov.
+  - name: Efemérides 2.0
+    url: https://github.com/artberri/efemerides20
+    note: 2008–2024
+    description: >-
+      My first pet project: the Spanish ephemerides from Wikipedia, classified.
+      Over 100k page views a month, the most stupid and popular website I ever
+      made. I sold it in 2024.
+  - name: NumCol
+    url: https://github.com/numcol/numcol
+    note: Mobile game
+    description: >-
+      The brain training game about matching numbers and colours. Cordova, then
+      NativeScript, then Flutter. Fine for an elevator trip.
+  - name: Google Play Games Services Cordova Plugin
+    url: https://www.npmjs.com/package/cordova-plugin-play-games-services
+    note: Cordova
+    description: Login, achievements and leaderboards with Google Play Games Services.
+  - name: Wear Messaging Nativescript Plugin
+    url: https://market.nativescript.org/plugins/nativescript-wear-messaging
+    note: NativeScript
+    description: >-
+      Messages between the phone and the watch with the Android MessageClient
+      API.
+  - name: daddy
+    url: https://github.com/artberri/daddy
+    note: Go
+    description: A command line interface to manage DNS records in GoDaddy.
+  - name: puppet-nvm
+    url: https://forge.puppetlabs.com/modules/artberri/nvm
+    note: Puppet
+    description: Installs Node Version Manager and one or several Node.js versions.
+  - name: puppet-yarn
+    url: https://forge.puppetlabs.com/modules/artberri/yarn
+    note: Puppet
+    description: Installs yarn by package, npm or source.
+  - name: Html5 Storage jQuery Plugin
+    url: https://plugins.jquery.com/html5storage/
+    note: jQuery
+    description: >-
+      Local or Session Storage without worrying about HTML5 support, with a
+      cookie fallback.
+  - name: BerriartSitemapBundle
+    url: https://github.com/artberri/BerriartSitemapBundle
+    note: Symfony2
+    description: XML sitemaps generated with Doctrine.
+  - name: Wordpress Plugins and Themes
+    url: https://profiles.wordpress.org/artberri/#content-plugins
+    note: WordPress
+    description: All my Wordpress plugins and themes are unsupported.
