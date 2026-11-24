@@ -4,4 +4,4 @@ Disallow: /feed.xml
 Disallow: /pages/
 Disallow: /categories/
 Disallow: /tags/
-Disallow: /404/
+Disallow: /404

@@ -27,7 +27,7 @@
   {{ end }}
 
   {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
+  <title>{{ block "title" . }}{{ if eq .Kind "404" }}Page Not Found - Error 404 | {{ else }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ end }} {{ .Site.Title }} {{ if .IsHome }} | Full Stack Developer {{ end }} {{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
 
   <script type="text/javascript" nonce="themeswitch">
