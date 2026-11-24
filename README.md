@@ -44,14 +44,15 @@ pnpm install  # fonts, reset-css and the tools
 
 ## Everyday commands
 
-| Command           | What it does                                                     |
-| ----------------- | ---------------------------------------------------------------- |
-| `pnpm run serve`  | Dev server with live reload at <http://localhost:1313>           |
-| `pnpm run draft`  | Same, including drafts and future-dated posts                    |
-| `pnpm run build`  | Production build into `public/` (minified, fingerprinted assets) |
-| `pnpm start`      | Serves the built `public/` folder at <http://localhost:1313>     |
-| `pnpm test`       | Checks every link in `public/` (run `pnpm run build` first)      |
-| `pnpm run deploy` | Uploads `public/` to Cloudflare Pages (normally CI does this)    |
+| Command            | What it does                                                                                        |
+| ------------------ | --------------------------------------------------------------------------------------------------- |
+| `pnpm run serve`   | Dev server with live reload at <http://localhost:1313>                                              |
+| `pnpm run draft`   | Same, including drafts and future-dated posts                                                       |
+| `pnpm run build`   | Production build into `public/` (minified, fingerprinted assets)                                    |
+| `pnpm start`       | Serves the built `public/` folder at <http://localhost:1313>                                        |
+| `pnpm run preview` | Serves `public/` with Cloudflare Pages' redirects, headers and 404 page, at <http://localhost:8788> |
+| `pnpm test`        | Checks every link in `public/` (run `pnpm run build` first)                                         |
+| `pnpm run deploy`  | Uploads `public/` to Cloudflare Pages (normally CI does this)                                       |
 
 ## Publishing
 
