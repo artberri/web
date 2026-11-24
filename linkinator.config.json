@@ -5,7 +5,7 @@
 	"retryErrors": true,
 	"retryErrorsCount": 5,
 	"verbosity": "error",
-	"//": "The last three skips are links that work in a browser but fail here (403 for bots, or mites.gob.es sending an incomplete TLS chain). Check them by hand: https://www.mites.gob.es/fogasa/default.html, https://lnk.bio/, https://www.notion.so/help/connect-a-custom-domain-with-notion-sites",
+	"//": "The last four skips are links that work in a browser but fail here (403 for bots, or mites.gob.es sending an incomplete TLS chain). Check them by hand: https://www.mites.gob.es/fogasa/default.html, https://lnk.bio/, https://www.notion.so/help/connect-a-custom-domain-with-notion-sites, https://techcrunch.com/2009/11/11/typekit-launches-hopes-to-save-typography-on-the-web/, https://techcrunch.com/2015/03/05/microsoft-and-google-collaborate-on-typescript-hell-has-not-frozen-over-yet/",
 	"skip": [
 		"^https://bsky\\.app/intent/compose",
 		"^https://www\\.linkedin\\.com/shareArticle",
@@ -13,6 +13,7 @@
 		"^https://news\\.ycombinator\\.com/submit",
 		"^https://www\\.mites\\.gob\\.es/fogasa/",
 		"^https://lnk\\.bio/",
-		"^https://www\\.notion\\.so/help/connect-a-custom-domain-with-notion-sites"
+		"^https://www\\.notion\\.so/help/connect-a-custom-domain-with-notion-sites",
+		"^https://techcrunch\\.com/"
 	]
 }
