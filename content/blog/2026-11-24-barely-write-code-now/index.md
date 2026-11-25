@@ -41,7 +41,7 @@ The [README](https://github.com/artberri/skills#installation) explains how to in
 
 Some of the skills are templates, and there's a reason for that. Every time I started a new project, or wanted to add these skills to an existing one, I found that I couldn't just copy and paste them. To do that, I would have had to make them less tailored and more generic, and I didn't want that: the best part of them is that each one is customised to its project. So **I wanted them adapted, not generic**, and I could get that with templates and a single skill that adapts them.
 
-That skill is `/adapt-skill`. You run it once per template, for example `/adapt-skill ship`, and it fills the template in from your project, asking you about whatever it can't find. Before that, run `/setup-review-docs` and `/setup-ocr` if you want the reviews tailored to your project too, because `ship` only uses the project's review checklist if it already exists when you adapt it.
+That skill is `/adapt-skill`. You run it once per template, for example `/adapt-skill deliver`, and it fills the template in from your project, asking you about whatever it can't find. Before that, run `/setup-review-docs` and `/setup-ocr` if you want the reviews tailored to your project too, because `deliver` only uses the project's review checklist if it already exists when you adapt it.
 
 ### A Real Example
 
@@ -49,7 +49,7 @@ My latest pet project is a small QR code generator. I wanted to know my options 
 
 Then I asked `/create-plan` for a plan, and gave it some screenshots of similar projects, a design prototype I made with Claude Design, the design system, and a description in my own words. I don't use a ticket tracker for this project, so I didn't run `/write-acceptance-criteria`.
 
-After that, I ran the plan with `/execute-plan`. The changes were small enough not to need an `/adversarial-review`, so I reviewed each phase myself. But I shipped each one with `/ship`, which also runs a review with [Open Code Review](https://open-codereview.ai/) (OCR), and the review found a few issues that I fixed with `/address-pr-comments`.
+After that, I ran the plan with `/execute-plan`. The changes were small enough not to need an `/adversarial-review`, so I reviewed each phase myself. But I shipped each one with `/deliver`, which also runs a review with [Open Code Review](https://open-codereview.ai/) (OCR), and the review found a few issues that I fixed with `/address-pr-comments`.
 
 When the whole loop was done, I ran `/capture-learnings`, and it added a few rules to the project docs, like updating the design system every time we add a new component.
 
